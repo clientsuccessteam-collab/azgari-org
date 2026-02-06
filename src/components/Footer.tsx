@@ -9,6 +9,7 @@ const footerLinks = {
   ],
   resources: [
     { label: "Blog", href: "https://azgari.blog" },
+    { label: "Courses", href: "/courses" },
     { label: "Free Guides", href: "/guides" },
     { label: "Business Tools", href: "/tools" },
   ],
