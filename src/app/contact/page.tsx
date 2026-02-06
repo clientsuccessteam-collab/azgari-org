@@ -1,137 +1,128 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
+import { GHL_LINKS } from "@/lib/links";
 
-export const metadata = {
-  title: "Contact Us | Azgari",
-  description: "Get in touch with Azgari. We help professionals build real wealth through service business ownership.",
+export const metadata: Metadata = {
+  title: "Contact Us | Azgari Foundation",
+  description: "Get in touch with Azgari Foundation. We help professionals launch and acquire profitable service businesses.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
-      
-      {/* Hero Section */}
-      <section 
-        className="pt-32 pb-16 text-center"
-        style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 
-            className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: 'var(--color-primary)' }}
-          >
-            Let&apos;s Talk About Your Business Goals
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to build real wealth through business ownership? We&apos;re here to help you take the first step.
-          </p>
-        </div>
-      </section>
+      <main>
+        {/* Hero */}
+        <section 
+          className="pt-32 pb-16 text-center"
+          style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
+        >
+          <div className="max-w-4xl mx-auto px-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+              Let&apos;s Talk About Your Business Goals
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Ready to start or acquire a service business? We&apos;re here to help you find the right path.
+            </p>
+          </div>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 
-                className="text-2xl font-bold mb-6"
-                style={{ color: 'var(--color-primary)' }}
-              >
-                Send Us a Message
+        {/* Main CTA */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-6">
+            <div 
+              className="rounded-2xl p-8 md:p-12 text-center"
+              style={{ backgroundColor: 'var(--color-primary)' }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Schedule a Discovery Call
               </h2>
-              <ContactForm />
+              <p className="text-white/90 mb-8 max-w-xl mx-auto">
+                Tell us about your goals and we&apos;ll help you determine the best path forward — whether that&apos;s starting fresh, buying an existing business, or scaling what you have.
+              </p>
+              <Link 
+                href={GHL_LINKS.forms.contact}
+                className="btn btn-primary text-lg px-10 py-5"
+              >
+                Start the Conversation →
+              </Link>
+              <p className="text-white/70 text-sm mt-4">
+                Takes about 2 minutes. No commitment required.
+              </p>
             </div>
+          </div>
+        </section>
 
-            {/* Alternative Contact */}
-            <div className="lg:pl-8">
-              <h2 
-                className="text-2xl font-bold mb-6"
-                style={{ color: 'var(--color-primary)' }}
-              >
-                Other Ways to Reach Us
-              </h2>
-              
-              <div className="space-y-8">
-                {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: 'var(--color-accent-light)' }}
-                  >
-                    <span className="text-xl">✉️</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a 
-                      href="mailto:info@azgari.org"
-                      className="text-gray-600 hover:underline"
-                      style={{ color: 'var(--color-primary)' }}
-                    >
-                      info@azgari.org
-                    </a>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: 'var(--color-accent-light)' }}
-                  >
-                    <span className="text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-                    <p className="text-gray-600">Austin, TX</p>
-                  </div>
-                </div>
-
-                {/* Response Time */}
-                <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: 'var(--color-accent-light)' }}
-                  >
-                    <span className="text-xl">⏱️</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Response Time</h3>
-                    <p className="text-gray-600">We typically respond within 24-48 hours</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* FAQ Teaser */}
-              <div 
-                className="mt-12 p-6 rounded-xl"
-                style={{ backgroundColor: 'white' }}
-              >
-                <h3 
-                  className="font-bold text-lg mb-2"
-                  style={{ color: 'var(--color-primary)' }}
+        {/* Alternative Contact Options */}
+        <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl font-bold text-center mb-12" style={{ color: 'var(--color-primary)' }}>
+              Other Ways to Reach Us
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Email */}
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: 'var(--color-accent-light)' }}
                 >
-                  Have questions?
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Check out our frequently asked questions for quick answers about our programs and services.
-                </p>
-                <Link 
-                  href="/faq"
-                  className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all"
+                  <span className="text-2xl">✉️</span>
+                </div>
+                <h3 className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>Email</h3>
+                <a 
+                  href="mailto:info@azgari.org" 
+                  className="hover:underline"
                   style={{ color: 'var(--color-accent)' }}
                 >
-                  Visit our FAQ →
-                </Link>
+                  info@azgari.org
+                </a>
+              </div>
+
+              {/* Location */}
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: 'var(--color-accent-light)' }}
+                >
+                  <span className="text-2xl">📍</span>
+                </div>
+                <h3 className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>Location</h3>
+                <p className="text-gray-600">Austin, TX</p>
+              </div>
+
+              {/* Response Time */}
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: 'var(--color-accent-light)' }}
+                >
+                  <span className="text-2xl">⏱️</span>
+                </div>
+                <h3 className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>Response Time</h3>
+                <p className="text-gray-600">Within 24-48 hours</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* FAQ Teaser */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+              Have Questions?
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Check out our FAQ for answers to common questions about our programs, pricing, and process.
+            </p>
+            <Link href="/faq" className="btn btn-secondary">
+              View FAQ →
+            </Link>
+          </div>
+        </section>
+      </main>
       <Footer />
     </>
   );
