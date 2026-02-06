@@ -1,39 +1,5 @@
 import Link from "next/link";
-
-const plans = [
-  {
-    name: "Quick Win Bundle",
-    price: "$500",
-    note: "Value: $2,000",
-    description: "Not ready to commit? Start here. Delivered in 48-72 hours. See exactly how we work.",
-    link: "https://go.azgari.org/quick-win",
-    featured: false,
-  },
-  {
-    name: "Foundation",
-    price: "$10,000",
-    note: "or $3,500 × 3 payments",
-    description: "Best for testing the model with guidance. Perfect for entrepreneurs ready to validate their business idea.",
-    link: "https://go.azgari.org/foundation",
-    featured: false,
-  },
-  {
-    name: "Full Launch",
-    price: "$25,000",
-    note: "or $8,500 × 3 payments",
-    description: "Best for professionals who want it built WITH them. Complete 180-day launch support.",
-    link: "https://go.azgari.org/full-launch",
-    featured: true,
-  },
-  {
-    name: "Scale",
-    price: "$50,000",
-    note: "or $10K + $6,667 × 6",
-    description: "Best for owners ready to step back. Make your business loan-ready as a franchise.",
-    link: "https://go.azgari.org/scale",
-    featured: false,
-  },
-];
+import { PROGRAMS } from "@/lib/links";
 
 export default function Pricing() {
   return (
@@ -47,7 +13,7 @@ export default function Pricing() {
         </p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan) => (
+          {PROGRAMS.map((plan) => (
             <div 
               key={plan.name}
               className="relative bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl"
@@ -75,7 +41,7 @@ export default function Pricing() {
               <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
               
               <Link 
-                href={plan.link}
+                href={plan.href}
                 className={`btn w-full ${plan.featured ? "btn-primary" : "btn-secondary"}`}
               >
                 Get Started

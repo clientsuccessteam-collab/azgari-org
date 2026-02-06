@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GHL_LINKS } from "@/lib/links";
 
 export default function CTA() {
   return (
@@ -15,7 +16,7 @@ export default function CTA() {
         </p>
         
         <Link 
-          href="https://go.azgari.org/landing-page-d" 
+          href={GHL_LINKS.qualify} 
           className="btn btn-primary text-lg px-10 py-5"
         >
           See If You Qualify →

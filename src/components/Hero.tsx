@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GHL_LINKS } from "@/lib/links";
 
 export default function Hero() {
   return (
@@ -20,7 +21,7 @@ export default function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link href="https://go.azgari.org/landing-page-d" className="btn btn-primary">
+          <Link href={GHL_LINKS.qualify} className="btn btn-primary">
             See If You Qualify →
           </Link>
           <Link href="#pricing" className="btn btn-secondary">

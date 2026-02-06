@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { GHL_LINKS } from "@/lib/links";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Navbar() {
           <li><Link href="/contact" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Contact</Link></li>
         </ul>
 
-        <Link href="https://go.azgari.org/landing-page-d" className="hidden md:block btn btn-primary">
+        <Link href={GHL_LINKS.qualify} className="hidden md:block btn btn-primary">
           Get Started
         </Link>
 
@@ -53,7 +54,7 @@ export default function Navbar() {
             <li><Link href="/about" className="block text-white/90 hover:text-amber-400">About</Link></li>
             <li><Link href="https://azgari.blog" className="block text-white/90 hover:text-amber-400">Blog</Link></li>
             <li><Link href="/contact" className="block text-white/90 hover:text-amber-400">Contact</Link></li>
-            <li><Link href="https://go.azgari.org/landing-page-d" className="btn btn-primary text-center mt-2">Get Started</Link></li>
+            <li><Link href={GHL_LINKS.qualify} className="btn btn-primary text-center mt-2">Get Started</Link></li>
           </ul>
         </div>
       )}
