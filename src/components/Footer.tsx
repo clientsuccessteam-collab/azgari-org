@@ -37,7 +37,7 @@ export default function Footer() {
                 height={24}
                 className="h-7 w-auto"
               />
-              <span className="text-lg font-bold">AZGARI</span>
+              <span className="text-lg font-bold">AZGARI FOUNDATION</span>
             </div>
             <p className="text-white/80 text-sm">
               Helping professionals build real wealth through service business ownership.
