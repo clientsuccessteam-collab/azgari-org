@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PROGRAMS } from "@/lib/links";
+import { PROGRAMS, GHL_LINKS } from "@/lib/links";
 
 export default function Pricing() {
   return (
@@ -16,7 +16,7 @@ export default function Pricing() {
           {PROGRAMS.map((plan) => (
             <div 
               key={plan.name}
-              className="relative bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="relative bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col"
               style={{ 
                 border: plan.featured ? '2px solid var(--color-accent)' : '2px solid #e5e7eb',
                 boxShadow: plan.featured ? '0 8px 30px rgba(212, 160, 41, 0.2)' : undefined
@@ -38,14 +38,23 @@ export default function Pricing() {
                   {plan.note}
                 </small>
               </div>
-              <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+              <p className="text-gray-600 text-sm mb-6 flex-grow">{plan.description}</p>
               
-              <Link 
-                href={plan.href}
-                className={`btn w-full ${plan.featured ? "btn-primary" : "btn-secondary"}`}
-              >
-                Get Started
-              </Link>
+              {/* Two-button layout */}
+              <div className="space-y-3">
+                <Link 
+                  href={plan.href}
+                  className={`btn w-full ${plan.featured ? "btn-primary" : "btn-primary"}`}
+                >
+                  Get Started Now
+                </Link>
+                <Link 
+                  href={GHL_LINKS.forms.bookCall}
+                  className="btn btn-secondary w-full text-sm py-3"
+                >
+                  Book a Call First
+                </Link>
+              </div>
             </div>
           ))}
         </div>

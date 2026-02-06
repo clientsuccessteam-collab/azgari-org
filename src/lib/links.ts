@@ -38,6 +38,7 @@ export const GHL_LINKS = {
   forms: {
     contact: "https://go.azgari.org/contact",
     scholarship: "https://go.azgari.org/scholarship",
+    bookCall: "https://go.azgari.org/book-call",
   },
 };
 
