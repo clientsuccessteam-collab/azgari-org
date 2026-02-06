@@ -2,89 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GHL_LINKS } from "@/lib/links";
+import { GHL_LINKS, COURSES } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Courses | Azgari Foundation",
   description: "Self-paced digital courses to help you buy, launch, or fund your service business. Learn from founders who've done it.",
 };
-
-const courses = [
-  {
-    title: "Small Business Acquisition Accelerator",
-    tagline: "Buy a real business without overpaying.",
-    price: "$297",
-    href: GHL_LINKS.courses.acquisitionAccelerator,
-    features: [
-      "How to value a business",
-      "How to read financials (real-life examples)",
-      "What sellers hide",
-      "Due-diligence templates",
-      "Deal negotiation scripts",
-    ],
-    perfectFor: "Anyone researching BizBuySell or thinking of replacing their job with a business purchase.",
-    featured: true,
-  },
-  {
-    title: "Franchise Buying Blueprint",
-    tagline: "Avoid the traps. Choose the RIGHT franchise.",
-    price: "$247",
-    href: GHL_LINKS.courses.franchiseBlueprint,
-    features: [
-      "Full due-diligence SOP",
-      "Item 19 breakdowns",
-      "Red flag detection",
-      "Interview scripts",
-      "Franchise broker scripts (to protect yourself)",
-    ],
-    perfectFor: "Buyers who want clarity BEFORE committing $50K–$150K to a franchise.",
-    featured: false,
-  },
-  {
-    title: "Start a Service Business in 30 Days",
-    tagline: "Launch a local service business fast — with proven templates.",
-    price: "$247",
-    href: GHL_LINKS.courses.thirtyDayLaunch,
-    features: [
-      "30-day launch roadmap",
-      "Pricing templates",
-      "Marketing scripts",
-      "Operations & workflow templates",
-      "Step-by-step launch instructions",
-    ],
-    perfectFor: "People who want a fast, profitable business they own 100%.",
-    featured: true,
-  },
-  {
-    title: "SBA Loan Approval Masterclass",
-    tagline: "Get SBA-approved without a broker. Step-by-step.",
-    price: "$297",
-    href: GHL_LINKS.courses.sbaLoanMasterclass,
-    features: [
-      "Exact documents, templates & loan packaging checklist",
-      "Funding readiness assessment",
-      "Underwriter psychology: what gets approved",
-      "Credit, debt, utilization, and income structuring",
-      "How to submit your application correctly",
-    ],
-    perfectFor: "Anyone who needs funding to start or buy a business.",
-    featured: false,
-  },
-  {
-    title: "Unlimited Slack Access + Weekly Live Calls",
-    tagline: "Get daily support. Get answers. Get unstuck.",
-    price: "$67",
-    href: GHL_LINKS.courses.slackCommunity,
-    features: [
-      "Unlimited Slack support",
-      "Weekly Coffee & Chat live Q&A",
-      "Fireside Chats",
-      "Daily help with any digital course",
-    ],
-    perfectFor: "Anyone who wants personal support with any of our digital programs.",
-    featured: false,
-  },
-];
 
 export default function CoursesPage() {
   return (
@@ -136,7 +59,7 @@ export default function CoursesPage() {
                 <span className="font-semibold">Need support?</span> → Slack + Weekly Calls
               </div>
               <div className="bg-white/10 rounded-lg p-3">
-                <Link href={GHL_LINKS.courses.allCourses} className="underline hover:text-amber-400">
+                <Link href={GHL_LINKS.allCourses} className="underline hover:text-amber-400">
                   View All Courses →
                 </Link>
               </div>
@@ -144,13 +67,13 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* Course Grid */}
+        {/* Course Grid - Uses COURSES from config */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-8">
-              {courses.map((course) => (
+              {COURSES.map((course) => (
                 <div 
-                  key={course.title}
+                  key={course.id}
                   className="relative bg-white rounded-2xl p-8 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col"
                   style={{ 
                     border: course.featured ? '2px solid var(--color-accent)' : '2px solid #e5e7eb',
@@ -239,7 +162,7 @@ export default function CoursesPage() {
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-primary">
                 Book a Free Call
               </Link>
-              <Link href={GHL_LINKS.courses.allCourses} className="btn btn-secondary">
+              <Link href={GHL_LINKS.allCourses} className="btn btn-secondary">
                 View All Courses on GHL
               </Link>
             </div>
