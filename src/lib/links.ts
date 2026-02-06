@@ -303,6 +303,117 @@ export const TOOLS = [
   },
 ];
 
+// ============================================
+// MEDIA / PODCASTS (Media Page)
+// To add a podcast: copy a block, update fields
+// ============================================
+export const MEDIA = [
+  {
+    id: "shebecameceo",
+    title: "SheBecameCEO Podcast",
+    description: "Azgari Lipshy shares her inspiring journey as a female entrepreneur and offers advice for women looking to make the leap into business ownership.",
+    highlights: [
+      "Starting businesses as a teenager",
+      "Overcoming imposter syndrome",
+      "Why women make excellent service business owners",
+      "Balancing business ownership with life responsibilities",
+      "Building confidence through action",
+    ],
+    videoUrl: "", // Add YouTube/Spotify embed URL when available
+    externalUrl: "", // Link to full episode
+  },
+  {
+    id: "built-online",
+    title: "Built Online with Cody McGuffie",
+    description: "In this episode of Built Online, we sit down with Azgari Lipshy, founder of Azgari.com and veteran operator across CPG and local services.",
+    highlights: [
+      "How to validate demand before you build",
+      "Why door knocking still works in 2025",
+      "Leveraging micro-influencers for local business growth",
+      "Building recurring revenue models",
+      "Taking a service business from zero to $300K in year one",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+  {
+    id: "amr-internet-guy",
+    title: "Amr The Internet Guy Podcast",
+    description: "Azgari Lipshy joins Amr to discuss digital marketing strategies specifically designed for local service businesses.",
+    highlights: [
+      "Local SEO for service businesses",
+      "Leveraging Google Business Profile",
+      "Social media strategies that work for local markets",
+      "Building a lead generation machine",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+  {
+    id: "default-profitable",
+    title: "Default Profitable Podcast",
+    description: "In this episode, we meet Azgari Lipshy, a true serial entrepreneur who's been hustling since she was 16, jumping from supplement manufacturing and garment exports to running two construction companies today.",
+    highlights: [
+      "Bootstrapping a supplement line as a teenager",
+      "The 8-phase blueprint that guarantees launches in 120 days",
+      "How to snag SBA loans",
+      "Starting cash-positive with pre-booked clients",
+      "Validating ideas to scaling with teams and tech",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+  {
+    id: "melvin-edwards",
+    title: "MelvinE.Edwards Show",
+    description: "Azgari Lipshy joins Melvin E. Edwards to discuss the fundamentals of building scalable service-based businesses.",
+    highlights: [
+      "Why service businesses offer the best path to ownership",
+      "How to identify profitable markets",
+      "Building systems that allow you to step back",
+      "Creating wealth through business equity",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+  {
+    id: "solution-for-that",
+    title: "There Is A Solution For That",
+    description: "Azgari Lipshy, founder of Azgari.com, discusses how to start a cash-flow positive business with a launch partner.",
+    highlights: [
+      "Why 90% of solo entrepreneurs fail",
+      "The importance of a seasoned launch team",
+      "Securing SBA loans for your business",
+      "Selecting profitable business models",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+  {
+    id: "elite-league",
+    title: "Elite League Podcast with Greg Carlson",
+    description: "Feeling stuck in a corporate job you don't love? Azgari Lipshy shares how professionals can quit corporate and start business ventures to achieve freedom.",
+    highlights: [
+      "The 'golden handcuffs' problem in corporate",
+      "Matching business models to lifestyle",
+      "The franchise trap (and better options)",
+      "When buying an existing business makes sense",
+      "Stop reading and start doing",
+    ],
+    videoUrl: "",
+    externalUrl: "",
+  },
+];
+
+// ============================================
+// TRUST BADGES (Homepage)
+// ============================================
+export const TRUST_LINKS = {
+  googleBusiness: "https://g.page/r/YOUR_GOOGLE_BUSINESS_ID", // Update with actual link
+  trustpilot: "https://www.trustpilot.com/review/azgari.org", // Update with actual link
+  bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultants/azgari-foundation-0000-0000000", // Update with actual link
+};
+
 // Lead magnet data (for guides page)
 export const LEAD_MAGNETS = [
   {
