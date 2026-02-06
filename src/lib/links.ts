@@ -34,6 +34,16 @@ export const GHL_LINKS = {
     completeVault: "https://go.azgari.org/tools",
   },
   
+  // Courses (GHL)
+  courses: {
+    allCourses: "https://go.azgari.org/digitalcoursespage",
+    acquisitionAccelerator: "https://uo7nasucjhbw16u2ktuq.app.clientclub.net/courses/offers/6b70d7f7-e171-4ad1-b70c-021e11a1df9c",
+    franchiseBlueprint: "https://uo7nasucjhbw16u2ktuq.app.clientclub.net/courses/offers/c1f6c6e1-e8e2-408e-a774-30e0ac14fe7e",
+    thirtyDayLaunch: "https://uo7nasucjhbw16u2ktuq.app.clientclub.net/courses/offers/faacdaaf-324b-40e7-9afe-960f742cfb20",
+    sbaLoanMasterclass: "https://uo7nasucjhbw16u2ktuq.app.clientclub.net/courses/offers/c15f4e9a-78cc-452b-96d6-08319f84ff99",
+    slackCommunity: "https://uo7nasucjhbw16u2ktuq.app.clientclub.net/courses/offers/90ec07f8-f6e9-4360-9a92-04c941af86e7",
+  },
+  
   // Forms
   forms: {
     contact: "https://go.azgari.org/contact",

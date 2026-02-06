@@ -6,44 +6,82 @@ import { GHL_LINKS } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Courses | Azgari Foundation",
-  description: "Self-paced courses to help you start, grow, and scale your service business. Learn from founders who've done it.",
+  description: "Self-paced digital courses to help you buy, launch, or fund your service business. Learn from founders who've done it.",
 };
 
 const courses = [
   {
-    title: "Service Business Fundamentals",
-    description: "The foundation every service business owner needs. Covers business model selection, pricing strategy, and operations basics.",
-    duration: "4 weeks",
-    level: "Beginner",
-    price: "Free",
-    href: GHL_LINKS.leadMagnets.checklist,
-    featured: false,
-  },
-  {
-    title: "Launch Your Service Business",
-    description: "Step-by-step roadmap from idea to first customer. Includes compliance, branding, and go-to-market strategy.",
-    duration: "8 weeks",
-    level: "Beginner to Intermediate",
-    price: "$497",
-    href: GHL_LINKS.programs.foundation,
+    title: "Small Business Acquisition Accelerator",
+    tagline: "Buy a real business without overpaying.",
+    price: "$297",
+    href: GHL_LINKS.courses.acquisitionAccelerator,
+    features: [
+      "How to value a business",
+      "How to read financials (real-life examples)",
+      "What sellers hide",
+      "Due-diligence templates",
+      "Deal negotiation scripts",
+    ],
+    perfectFor: "Anyone researching BizBuySell or thinking of replacing their job with a business purchase.",
     featured: true,
   },
   {
-    title: "Customer Acquisition Mastery",
-    description: "Proven strategies to find, attract, and convert customers for your service business. Local marketing that works.",
-    duration: "6 weeks",
-    level: "Intermediate",
-    price: "$297",
-    href: GHL_LINKS.products.tools,
+    title: "Franchise Buying Blueprint",
+    tagline: "Avoid the traps. Choose the RIGHT franchise.",
+    price: "$247",
+    href: GHL_LINKS.courses.franchiseBlueprint,
+    features: [
+      "Full due-diligence SOP",
+      "Item 19 breakdowns",
+      "Red flag detection",
+      "Interview scripts",
+      "Franchise broker scripts (to protect yourself)",
+    ],
+    perfectFor: "Buyers who want clarity BEFORE committing $50K–$150K to a franchise.",
     featured: false,
   },
   {
-    title: "Scale & Systemize",
-    description: "Turn your service business into a scalable operation. Hiring, SOPs, and building a business that runs without you.",
-    duration: "10 weeks",
-    level: "Advanced",
-    price: "$697",
-    href: GHL_LINKS.programs.scale,
+    title: "Start a Service Business in 30 Days",
+    tagline: "Launch a local service business fast — with proven templates.",
+    price: "$247",
+    href: GHL_LINKS.courses.thirtyDayLaunch,
+    features: [
+      "30-day launch roadmap",
+      "Pricing templates",
+      "Marketing scripts",
+      "Operations & workflow templates",
+      "Step-by-step launch instructions",
+    ],
+    perfectFor: "People who want a fast, profitable business they own 100%.",
+    featured: true,
+  },
+  {
+    title: "SBA Loan Approval Masterclass",
+    tagline: "Get SBA-approved without a broker. Step-by-step.",
+    price: "$297",
+    href: GHL_LINKS.courses.sbaLoanMasterclass,
+    features: [
+      "Exact documents, templates & loan packaging checklist",
+      "Funding readiness assessment",
+      "Underwriter psychology: what gets approved",
+      "Credit, debt, utilization, and income structuring",
+      "How to submit your application correctly",
+    ],
+    perfectFor: "Anyone who needs funding to start or buy a business.",
+    featured: false,
+  },
+  {
+    title: "Unlimited Slack Access + Weekly Live Calls",
+    tagline: "Get daily support. Get answers. Get unstuck.",
+    price: "$67",
+    href: GHL_LINKS.courses.slackCommunity,
+    features: [
+      "Unlimited Slack support",
+      "Weekly Coffee & Chat live Q&A",
+      "Fireside Chats",
+      "Daily help with any digital course",
+    ],
+    perfectFor: "Anyone who wants personal support with any of our digital programs.",
     featured: false,
   },
 ];
@@ -63,21 +101,53 @@ export default function CoursesPage() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              SELF-PACED LEARNING
+              SELF-PACED DIGITAL COURSES
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Learn at Your Own Pace
+              Build Your Business the Smart Way
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Practical courses designed by founders who&apos;ve built successful service businesses. No fluff, just actionable strategies.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+              The exact frameworks designed to get you fundable, confident, and ready. Pick the course that solves your problem today.
             </p>
+            <p className="text-lg font-semibold" style={{ color: 'var(--color-accent)' }}>
+              Full Refund Guarantee — No Questions Asked
+            </p>
+          </div>
+        </section>
+
+        {/* Quick Recommendation */}
+        <section className="py-8 border-b" style={{ backgroundColor: 'var(--color-primary)' }}>
+          <div className="max-w-4xl mx-auto px-6 text-white text-center">
+            <h2 className="text-lg font-semibold mb-4">Which Course Should You Pick?</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white/10 rounded-lg p-3">
+                <span className="font-semibold">Not fundable?</span> → SBA Masterclass
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <span className="font-semibold">Researching franchises?</span> → Franchise Blueprint
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <span className="font-semibold">Buying a business?</span> → Acquisition Accelerator
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <span className="font-semibold">Ready to launch?</span> → 30-Day Launch
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <span className="font-semibold">Need support?</span> → Slack + Weekly Calls
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <Link href={GHL_LINKS.courses.allCourses} className="underline hover:text-amber-400">
+                  View All Courses →
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Course Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8">
               {courses.map((course) => (
                 <div 
                   key={course.title}
@@ -92,40 +162,48 @@ export default function CoursesPage() {
                       className="absolute -top-3 left-6 text-xs font-bold px-4 py-1 rounded-full"
                       style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
                     >
-                      ⭐ MOST POPULAR
+                      ⭐ POPULAR
                     </span>
                   )}
                   
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold" style={{ color: 'var(--color-primary)' }}>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold pr-4" style={{ color: 'var(--color-primary)' }}>
                       {course.title}
                     </h3>
                     <span 
-                      className="text-lg font-bold whitespace-nowrap ml-4"
-                      style={{ color: course.price === "Free" ? 'var(--color-primary)' : 'var(--color-accent)' }}
+                      className="text-2xl font-bold whitespace-nowrap"
+                      style={{ color: 'var(--color-accent)' }}
                     >
                       {course.price}
                     </span>
                   </div>
                   
-                  <p className="text-gray-600 mb-6 flex-grow">
-                    {course.description}
+                  <p className="text-gray-600 italic mb-4">
+                    &quot;{course.tagline}&quot;
                   </p>
                   
-                  <div className="flex gap-4 mb-6 text-sm">
-                    <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600">
-                      ⏱️ {course.duration}
-                    </span>
-                    <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600">
-                      📊 {course.level}
-                    </span>
+                  <ul className="space-y-2 mb-6 flex-grow">
+                    {course.features.map((feature, i) => (
+                      <li key={i} className="flex gap-2 text-sm">
+                        <span style={{ color: 'var(--color-accent)' }}>✔</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div 
+                    className="text-sm p-3 rounded-lg mb-6"
+                    style={{ backgroundColor: 'var(--color-cream)' }}
+                  >
+                    <span className="font-semibold">Perfect for: </span>
+                    {course.perfectFor}
                   </div>
                   
                   <Link 
                     href={course.href}
-                    className={`btn w-full ${course.featured ? 'btn-primary' : 'btn-secondary'}`}
+                    className="btn btn-primary w-full text-center"
                   >
-                    {course.price === "Free" ? "Start Free Course" : "Enroll Now"}
+                    Enroll Now →
                   </Link>
                 </div>
               ))}
@@ -133,27 +211,18 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* What You Get */}
-        <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: 'var(--color-primary)' }}>
-              What&apos;s Included in Every Course
+        {/* Guarantee */}
+        <section className="py-16" style={{ backgroundColor: 'var(--color-primary)' }}>
+          <div className="max-w-3xl mx-auto px-6 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              FULL REFUND GUARANTEE
             </h2>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: "🎥", title: "Video Lessons", desc: "On-demand video content" },
-                { icon: "📝", title: "Worksheets", desc: "Actionable templates" },
-                { icon: "💬", title: "Community", desc: "Connect with peers" },
-                { icon: "📱", title: "Mobile Access", desc: "Learn anywhere" },
-              ].map((item) => (
-                <div key={item.title} className="bg-white rounded-xl p-6 text-center shadow-sm">
-                  <span className="text-3xl mb-3 block">{item.icon}</span>
-                  <h3 className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+            <p className="text-lg opacity-90 mb-4">
+              If you follow the courses and learn absolutely nothing new that moves you forward in your entrepreneurial journey... No Questions Asked Money Back Guarantee.
+            </p>
+            <p className="opacity-80">
+              You have no excuse to not take a bet on yourself and build that business and move forward towards the life and freedom you deserve.
+            </p>
           </div>
         </section>
 
@@ -161,7 +230,7 @@ export default function CoursesPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Not Sure Which Course Is Right for You?
+              Not Sure Where to Start?
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
               Book a free call with our team. We&apos;ll help you find the best path based on your goals, experience, and budget.
@@ -170,8 +239,8 @@ export default function CoursesPage() {
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-primary">
                 Book a Free Call
               </Link>
-              <Link href="/services" className="btn btn-secondary">
-                View Full Programs
+              <Link href={GHL_LINKS.courses.allCourses} className="btn btn-secondary">
+                View All Courses on GHL
               </Link>
             </div>
           </div>
