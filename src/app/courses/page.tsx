@@ -74,7 +74,7 @@ export default function CoursesPage() {
               {COURSES.map((course) => (
                 <div 
                   key={course.id}
-                  className="relative bg-white rounded-2xl p-8 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col"
+                  className="relative bg-white rounded-2xl p-8 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full"
                   style={{ 
                     border: course.featured ? '2px solid var(--color-accent)' : '2px solid #e5e7eb',
                     boxShadow: course.featured ? '0 8px 30px rgba(212, 160, 41, 0.2)' : undefined
@@ -114,17 +114,19 @@ export default function CoursesPage() {
                     ))}
                   </ul>
                   
+                  {/* Perfect For - fixed height container */}
                   <div 
-                    className="text-sm p-3 rounded-lg mb-6"
+                    className="text-sm p-3 rounded-lg mb-4"
                     style={{ backgroundColor: 'var(--color-cream)' }}
                   >
                     <span className="font-semibold">Perfect for: </span>
                     {course.perfectFor}
                   </div>
                   
+                  {/* CTA - always at bottom */}
                   <Link 
                     href={course.href}
-                    className="btn btn-primary w-full text-center"
+                    className="btn btn-primary w-full text-center mt-auto"
                   >
                     Enroll Now →
                   </Link>

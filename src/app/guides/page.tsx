@@ -154,7 +154,7 @@ export default function GuidesPage() {
                   href={`https://azgari.blog/${guide.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl"
+                  className="group bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full"
                   style={{ border: '2px solid #e5e7eb' }}
                 >
                   <div className="text-4xl mb-4">{guide.icon}</div>
@@ -164,9 +164,9 @@ export default function GuidesPage() {
                   >
                     {guide.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">{guide.description}</p>
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{guide.description}</p>
                   <span 
-                    className="inline-flex items-center gap-2 text-sm font-semibold"
+                    className="inline-flex items-center gap-2 text-sm font-semibold mt-auto"
                     style={{ color: 'var(--color-accent)' }}
                   >
                     Read Guide →
@@ -264,13 +264,13 @@ export default function GuidesPage() {
               {freeDownloads.map((download) => (
                 <div
                   key={download.title}
-                  className="bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl"
+                  className="bg-white rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full"
                   style={{ border: '2px solid #e5e7eb' }}
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl">{download.icon}</div>
                     <span 
-                      className="text-xs font-semibold px-3 py-1 rounded-full"
+                      className="text-xs font-semibold px-3 py-1 rounded-full flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
                     >
                       {download.type}
@@ -284,13 +284,13 @@ export default function GuidesPage() {
                     {download.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-sm mb-6">{download.description}</p>
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{download.description}</p>
                   
                   <a 
                     href={download.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary w-full"
+                    className="btn btn-primary w-full mt-auto"
                   >
                     {download.cta}
                   </a>
@@ -322,10 +322,10 @@ export default function GuidesPage() {
                   href="https://azgari.blog"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transition-all hover:bg-white/20"
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transition-all hover:bg-white/20 flex flex-col h-full"
                 >
                   <span 
-                    className="text-xs font-semibold px-3 py-1 rounded-full mb-4 inline-block"
+                    className="text-xs font-semibold px-3 py-1 rounded-full mb-4 inline-block self-start"
                     style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
                   >
                     {post.category}
@@ -333,7 +333,10 @@ export default function GuidesPage() {
                   <h3 className="text-xl font-bold mb-3 text-white">
                     {post.title}
                   </h3>
-                  <p className="text-white/80 text-sm">{post.excerpt}</p>
+                  <p className="text-white/80 text-sm flex-grow">{post.excerpt}</p>
+                  <span className="text-white/60 text-sm mt-4 inline-flex items-center gap-1">
+                    Read Article <span style={{ color: 'var(--color-accent)' }}>→</span>
+                  </span>
                 </a>
               ))}
             </div>

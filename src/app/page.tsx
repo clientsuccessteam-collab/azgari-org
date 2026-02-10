@@ -5,6 +5,7 @@ import Problem from "@/components/Problem";
 import Process from "@/components/Process";
 import Stats from "@/components/Stats";
 import Transformation from "@/components/Transformation";
+import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Transparency from "@/components/Transparency";
 import CTA from "@/components/CTA";
@@ -21,6 +22,7 @@ export default function Home() {
         <Process />
         <Stats />
         <Transformation />
+        <Testimonials />
         <Pricing />
         <Transparency />
         <CTA />

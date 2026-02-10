@@ -405,7 +405,7 @@ export default function ServicesPage() {
               {deliverables.map((category) => (
                 <div 
                   key={category.title}
-                  className="rounded-2xl p-6 transition-all hover:shadow-lg"
+                  className="rounded-2xl p-6 transition-all hover:shadow-lg flex flex-col h-full"
                   style={{ backgroundColor: 'var(--color-cream)' }}
                 >
                   <div className="text-4xl mb-4">{category.icon}</div>
@@ -415,7 +415,7 @@ export default function ServicesPage() {
                   >
                     {category.title}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-grow">
                     {category.items.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-gray-600">
                         <span style={{ color: 'var(--color-accent)' }}>✓</span>

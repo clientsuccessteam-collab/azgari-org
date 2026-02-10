@@ -52,16 +52,16 @@ export default function ToolsPage() {
               {freeTools.map((tool) => (
                 <div 
                   key={tool.id}
-                  className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
                 >
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-bold text-lg" style={{ color: 'var(--color-primary)' }}>
                       {tool.title}
                     </h3>
-                    <span className="text-green-600 font-bold">{tool.price}</span>
+                    <span className="text-green-600 font-bold flex-shrink-0">{tool.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-                  <Link href={tool.href} className="btn btn-secondary w-full text-center">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{tool.description}</p>
+                  <Link href={tool.href} className="btn btn-secondary w-full text-center mt-auto">
                     Free Download →
                   </Link>
                 </div>
@@ -82,7 +82,7 @@ export default function ToolsPage() {
               {starterTools.map((tool) => (
                 <div 
                   key={tool.id}
-                  className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-amber-500 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-amber-500 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
                 >
                   {tool.popular && (
                     <span 
@@ -96,10 +96,10 @@ export default function ToolsPage() {
                     <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>
                       {tool.title}
                     </h3>
-                    <span className="font-bold" style={{ color: 'var(--color-accent)' }}>{tool.price}</span>
+                    <span className="font-bold flex-shrink-0" style={{ color: 'var(--color-accent)' }}>{tool.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-                  <Link href={tool.href} className="btn btn-secondary w-full text-center text-sm py-3">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{tool.description}</p>
+                  <Link href={tool.href} className="btn btn-secondary w-full text-center text-sm py-3 mt-auto">
                     Get Access →
                   </Link>
                 </div>
@@ -120,7 +120,7 @@ export default function ToolsPage() {
               {premiumTools.map((tool) => (
                 <div 
                   key={tool.id}
-                  className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-amber-500 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-amber-500 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
                 >
                   {tool.popular && (
                     <span 
@@ -134,10 +134,10 @@ export default function ToolsPage() {
                     <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>
                       {tool.title}
                     </h3>
-                    <span className="font-bold" style={{ color: 'var(--color-accent)' }}>{tool.price}</span>
+                    <span className="font-bold flex-shrink-0" style={{ color: 'var(--color-accent)' }}>{tool.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-                  <Link href={tool.href} className="btn btn-primary w-full text-center text-sm py-3">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{tool.description}</p>
+                  <Link href={tool.href} className="btn btn-primary w-full text-center text-sm py-3 mt-auto">
                     Get Access →
                   </Link>
                 </div>

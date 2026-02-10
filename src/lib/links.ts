@@ -475,3 +475,174 @@ export const LEAD_MAGNETS = [
 // Helper to filter tools by category
 export const getToolsByCategory = (category: string) => 
   TOOLS.filter(tool => tool.category === category);
+
+// ============================================
+// CASE STUDIES (Case Studies Page)
+// Detailed client success stories with metrics
+// ============================================
+export const CASE_STUDIES = [
+  {
+    id: "pressure-washing-texas",
+    name: "Marcus T.",
+    location: "Austin, TX",
+    business: "Pressure Washing",
+    image: "/images/case-studies/marcus.jpg", // TODO: Add actual image
+    challenge: "Corporate burnout after 15 years in tech sales. Had savings but no idea how to start a business. Considered franchises but didn't want royalties eating into profits.",
+    solution: "Launched a residential pressure washing business with Azgari's Full Launch program. We helped with equipment selection, pricing strategy, and a customer acquisition plan targeting HOA neighborhoods.",
+    results: [
+      { metric: "$287K", label: "First Year Revenue" },
+      { metric: "47%", label: "Net Profit Margin" },
+      { metric: "68", label: "Days to First $10K Month" },
+      { metric: "3", label: "Crew Members Hired" },
+    ],
+    quote: "I went from dreading Mondays to genuinely loving what I do. The systems Azgari helped me build meant I wasn't reinventing the wheel—I was following a proven path.",
+    timeline: "Launch to $287K in 11 months",
+    featured: true,
+  },
+  {
+    id: "commercial-cleaning-florida",
+    name: "Jennifer & David R.",
+    location: "Tampa, FL",
+    business: "Commercial Cleaning",
+    image: "/images/case-studies/jennifer-david.jpg",
+    challenge: "Husband-wife team looking to build something together after David's layoff. Limited startup capital (~$15K) and no business experience.",
+    solution: "Started with office cleaning contracts. Azgari helped secure SBA microloan for equipment and provided sales scripts specifically for approaching property managers.",
+    results: [
+      { metric: "$412K", label: "Year 2 Revenue" },
+      { metric: "52%", label: "Net Margin" },
+      { metric: "14", label: "Recurring Contracts" },
+      { metric: "$0", label: "Spent on Paid Ads" },
+    ],
+    quote: "We built this entire business on referrals and cold outreach using the scripts Azgari gave us. No fancy marketing—just consistent execution.",
+    timeline: "Started with $15K, now doing $35K/month",
+    featured: true,
+  },
+  {
+    id: "lawn-care-ohio",
+    name: "Anthony M.",
+    location: "Columbus, OH",
+    business: "Lawn Care & Landscaping",
+    image: "/images/case-studies/anthony.jpg",
+    challenge: "Side hustle that was stuck at $3K/month. Wanted to go full-time but couldn't figure out how to scale beyond himself.",
+    solution: "Restructured pricing, built route density strategy, and created hiring/training SOPs. Transitioned from solo operator to managing a crew.",
+    results: [
+      { metric: "$189K", label: "Revenue (from $36K)" },
+      { metric: "425%", label: "Revenue Increase" },
+      { metric: "4", label: "Full-Time Employees" },
+      { metric: "20hrs", label: "Owner Hours/Week" },
+    ],
+    quote: "I was working 60 hours a week making $3K/month. Now I work 20 hours and clear $12K. The difference was systems.",
+    timeline: "Scaled 5x in 8 months",
+    featured: false,
+  },
+  {
+    id: "junk-removal-georgia",
+    name: "Robert K.",
+    location: "Atlanta, GA",
+    business: "Junk Removal",
+    image: "/images/case-studies/robert.jpg",
+    challenge: "Recently retired military, had GI Bill benefits but wanted to build equity instead of going back to school. Strong work ethic but zero business background.",
+    solution: "Used Azgari's veteran-specific pathway. Secured SBA loan with veteran advantage terms. Built junk removal operation targeting estate cleanouts and realtor partnerships.",
+    results: [
+      { metric: "$340K", label: "First Year Revenue" },
+      { metric: "$425", label: "Avg Job Ticket" },
+      { metric: "6", label: "Realtor Partners" },
+      { metric: "2", label: "Trucks Running" },
+    ],
+    quote: "The military taught me discipline. Azgari taught me business. Combining those two things changed my family's future.",
+    timeline: "From discharge to $340K in 14 months",
+    featured: false,
+  },
+  {
+    id: "hvac-california",
+    name: "Miguel S.",
+    location: "Sacramento, CA",
+    business: "HVAC Services",
+    image: "/images/case-studies/miguel.jpg",
+    challenge: "Licensed HVAC tech working for someone else for 12 years. Great at the trade but intimidated by the business side—pricing, marketing, hiring.",
+    solution: "Foundation program focused on business fundamentals. Built brand, set up pricing tiers, and created a service agreement model for recurring revenue.",
+    results: [
+      { metric: "$520K", label: "Year 1 Revenue" },
+      { metric: "$180K", label: "Owner Take-Home" },
+      { metric: "340", label: "Service Agreement Customers" },
+      { metric: "38%", label: "Recurring Revenue" },
+    ],
+    quote: "I knew HVAC. I didn't know business. Azgari filled that gap. Now I make more than my old boss.",
+    timeline: "Solo tech to $520K owner-operator",
+    featured: false,
+  },
+];
+
+// ============================================
+// TESTIMONIALS (Homepage Component)
+// Short quotes for social proof sections
+// ============================================
+export const TESTIMONIALS = [
+  {
+    id: "testimonial-1",
+    name: "Marcus T.",
+    role: "Pressure Washing Owner",
+    location: "Austin, TX",
+    image: "/images/testimonials/marcus.jpg",
+    quote: "I went from corporate burnout to $287K in my first year. Azgari gave me the roadmap—I just had to follow it.",
+    rating: 5,
+  },
+  {
+    id: "testimonial-2",
+    name: "Jennifer R.",
+    role: "Commercial Cleaning Owner",
+    location: "Tampa, FL",
+    image: "/images/testimonials/jennifer.jpg",
+    quote: "Started with $15K and no experience. Now we're doing $35K/month with 14 recurring contracts. The sales scripts alone were worth 10x what we paid.",
+    rating: 5,
+  },
+  {
+    id: "testimonial-3",
+    name: "Anthony M.",
+    role: "Lawn Care Owner",
+    location: "Columbus, OH",
+    image: "/images/testimonials/anthony.jpg",
+    quote: "Went from 60-hour weeks at $3K/month to 20-hour weeks at $12K. The difference? Systems.",
+    rating: 5,
+  },
+  {
+    id: "testimonial-4",
+    name: "Robert K.",
+    role: "Junk Removal Owner",
+    location: "Atlanta, GA",
+    image: "/images/testimonials/robert.jpg",
+    quote: "The military taught me discipline. Azgari taught me business. $340K first year.",
+    rating: 5,
+  },
+  {
+    id: "testimonial-5",
+    name: "Miguel S.",
+    role: "HVAC Business Owner",
+    location: "Sacramento, CA",
+    image: "/images/testimonials/miguel.jpg",
+    quote: "12 years working for someone else. Now I make more than my old boss ever did. Should've done this sooner.",
+    rating: 5,
+  },
+  {
+    id: "testimonial-6",
+    name: "Sarah L.",
+    role: "Mobile Pet Grooming Owner",
+    location: "Denver, CO",
+    image: "/images/testimonials/sarah.jpg",
+    quote: "I was terrified of the business side. Azgari made it simple. Booked solid within 90 days.",
+    rating: 5,
+  },
+];
+
+// ============================================
+// STATS (For Case Studies Page)
+// Aggregate metrics across all clients
+// ============================================
+export const AGGREGATE_STATS = {
+  businessesLaunched: "160+",
+  averageFirstYearRevenue: "$285K",
+  averageNetMargin: "42%",
+  clientSatisfaction: "94%",
+  averageDaysToFirstRevenue: "47",
+  totalClientRevenue: "$45M+",
+};

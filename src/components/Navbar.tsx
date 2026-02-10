@@ -26,6 +26,7 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 list-none">
           <li><Link href="#process" className="font-medium text-white/90 hover:text-amber-400 transition-colors">How It Works</Link></li>
           <li><Link href="#pricing" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Pricing</Link></li>
+          <li><Link href="/case-studies" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Case Studies</Link></li>
           <li><Link href="/about" className="font-medium text-white/90 hover:text-amber-400 transition-colors">About</Link></li>
           <li><Link href="https://azgari.blog" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Blog</Link></li>
           <li><Link href="/contact" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Contact</Link></li>
@@ -51,6 +52,7 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4">
             <li><Link href="#process" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>How It Works</Link></li>
             <li><Link href="#pricing" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Pricing</Link></li>
+            <li><Link href="/case-studies" className="block text-white/90 hover:text-amber-400">Case Studies</Link></li>
             <li><Link href="/about" className="block text-white/90 hover:text-amber-400">About</Link></li>
             <li><Link href="https://azgari.blog" className="block text-white/90 hover:text-amber-400">Blog</Link></li>
             <li><Link href="/contact" className="block text-white/90 hover:text-amber-400">Contact</Link></li>

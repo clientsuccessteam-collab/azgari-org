@@ -38,85 +38,108 @@ export default function MediaPage() {
         {/* Podcast Grid - Uses MEDIA from config */}
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="space-y-12">
-              {MEDIA.map((item, index) => (
-                <div 
-                  key={item.id}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex flex-col lg:flex-row gap-8">
-                    {/* Content */}
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span 
-                          className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
-                          style={{ backgroundColor: 'var(--color-primary)' }}
-                        >
-                          {index + 1}
-                        </span>
-                        <h2 className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>
-                          {item.title}
-                        </h2>
-                      </div>
-                      
-                      <p className="text-gray-600 mb-6">
-                        {item.description}
-                      </p>
-                      
-                      <div className="mb-6">
-                        <h3 className="font-semibold mb-3" style={{ color: 'var(--color-primary)' }}>
-                          Discussion Highlights:
-                        </h3>
-                        <ul className="space-y-2">
-                          {item.highlights.map((highlight, i) => (
-                            <li key={i} className="flex gap-2 text-sm">
-                              <span style={{ color: 'var(--color-accent)' }}>•</span>
-                              <span>{highlight}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {item.externalUrl && (
-                        <Link 
-                          href={item.externalUrl}
-                          className="btn btn-secondary inline-block"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Listen to Full Episode →
-                        </Link>
-                      )}
-                    </div>
-                    
-                    {/* Video Embed Placeholder */}
-                    {item.videoUrl ? (
-                      <div className="lg:w-80 flex-shrink-0">
-                        <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
-                          <iframe 
-                            src={item.videoUrl}
-                            className="w-full h-full"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          />
+            <div className="space-y-8">
+              {MEDIA.map((item, index) => {
+                const CardWrapper = item.externalUrl 
+                  ? ({ children }: { children: React.ReactNode }) => (
+                      <Link 
+                        href={item.externalUrl!}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        {children}
+                      </Link>
+                    )
+                  : ({ children }: { children: React.ReactNode }) => <>{children}</>;
+                
+                return (
+                  <CardWrapper key={item.id}>
+                    <div 
+                      className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 transition-all ${
+                        item.externalUrl 
+                          ? 'hover:shadow-xl hover:border-[var(--color-accent)] hover:scale-[1.005] cursor-pointer' 
+                          : 'hover:shadow-lg'
+                      }`}
+                    >
+                      <div className="flex flex-col lg:flex-row gap-8">
+                        {/* Podcast Icon - Left on desktop */}
+                        <div className="lg:w-48 flex-shrink-0 order-1 lg:order-none">
+                          {item.videoUrl ? (
+                            <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden">
+                              <iframe 
+                                src={item.videoUrl}
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            </div>
+                          ) : (
+                            <div 
+                              className="aspect-square rounded-xl flex items-center justify-center"
+                              style={{ backgroundColor: 'var(--color-cream)' }}
+                            >
+                              <div className="text-center">
+                                <span className="text-5xl block">🎙️</span>
+                              </div>
+                            </div>
+                          )}
                         </div>
-                      </div>
-                    ) : (
-                      <div className="lg:w-80 flex-shrink-0">
-                        <div 
-                          className="aspect-video rounded-xl flex items-center justify-center"
-                          style={{ backgroundColor: 'var(--color-cream)' }}
-                        >
-                          <div className="text-center p-6">
-                            <span className="text-4xl mb-2 block">🎙️</span>
-                            <span className="text-sm text-gray-500">Podcast Episode</span>
+                        
+                        {/* Content - Middle */}
+                        <div className="flex-1 flex flex-col min-h-[200px]">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span 
+                              className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                              style={{ backgroundColor: 'var(--color-primary)' }}
+                            >
+                              {index + 1}
+                            </span>
+                            <h2 className="text-xl font-bold" style={{ color: 'var(--color-primary)' }}>
+                              {item.title}
+                            </h2>
+                          </div>
+                          
+                          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                            {item.description}
+                          </p>
+                          
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-sm mb-2" style={{ color: 'var(--color-primary)' }}>
+                              Highlights:
+                            </h3>
+                            <ul className="space-y-1">
+                              {item.highlights.slice(0, 4).map((highlight, i) => (
+                                <li key={i} className="flex gap-2 text-sm text-gray-600">
+                                  <span style={{ color: 'var(--color-accent)' }}>•</span>
+                                  <span className="line-clamp-1">{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* CTA - Always at bottom left */}
+                          <div className="mt-4 pt-4 border-t border-gray-100">
+                            <span 
+                              className="inline-flex items-center gap-2 text-sm font-semibold"
+                              style={{ color: 'var(--color-primary)' }}
+                            >
+                              {item.externalUrl ? (
+                                <>
+                                  Listen to Episode
+                                  <span style={{ color: 'var(--color-accent)' }}>→</span>
+                                </>
+                              ) : (
+                                <span className="text-gray-400">Coming Soon</span>
+                              )}
+                            </span>
                           </div>
                         </div>
                       </div>
-                    )}
-                  </div>
-                </div>
-              ))}
+                    </div>
+                  </CardWrapper>
+                );
+              })}
             </div>
           </div>
         </section>
