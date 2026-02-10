@@ -244,6 +244,35 @@ export const TOOLS = [
     popular: false,
   },
   
+  // INDUSTRY STARTUP KITS ($47)
+  {
+    id: "pressure-washing-kit",
+    title: "Pressure Washing Startup Kit",
+    description: "Complete launch package: equipment checklist, pricing calculator, 30-day plan, customer scripts, and licensing guide.",
+    price: "$47",
+    href: GHL_LINKS.allTools, // TODO: Update with GHL product URL
+    category: "starter",
+    popular: true,
+  },
+  {
+    id: "lawn-care-kit",
+    title: "Lawn Care Startup Kit",
+    description: "Everything to launch a lawn care business: equipment guide, route pricing, 30-day plan, scripts, and insurance checklist.",
+    price: "$47",
+    href: GHL_LINKS.allTools, // TODO: Update with GHL product URL
+    category: "starter",
+    popular: false,
+  },
+  {
+    id: "junk-removal-kit",
+    title: "Junk Removal Startup Kit",
+    description: "Full junk removal launch package: truck buying guide, volume pricing calculator, dump site strategy, and customer scripts.",
+    price: "$47",
+    href: GHL_LINKS.allTools, // TODO: Update with GHL product URL
+    category: "starter",
+    popular: false,
+  },
+  
   // PREMIUM ($67-$147)
   {
     id: "boring-business-kit",
@@ -306,6 +335,7 @@ export const TOOLS = [
 // ============================================
 // MEDIA / PODCASTS (Media Page)
 // To add a podcast: copy a block, update fields
+// NOTE: Update externalUrl with actual podcast links
 // ============================================
 export const MEDIA = [
   {
@@ -320,7 +350,7 @@ export const MEDIA = [
       "Building confidence through action",
     ],
     videoUrl: "", // Add YouTube/Spotify embed URL when available
-    externalUrl: "", // Link to full episode
+    externalUrl: "https://shebecameceo.com", // TODO: Update with actual episode link
   },
   {
     id: "built-online",
@@ -334,7 +364,7 @@ export const MEDIA = [
       "Taking a service business from zero to $300K in year one",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://builtonline.co", // TODO: Update with actual episode link
   },
   {
     id: "amr-internet-guy",
@@ -347,7 +377,7 @@ export const MEDIA = [
       "Building a lead generation machine",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://theinternetguy.ca", // TODO: Update with actual episode link
   },
   {
     id: "default-profitable",
@@ -361,7 +391,7 @@ export const MEDIA = [
       "Validating ideas to scaling with teams and tech",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://defaultprofitable.com", // TODO: Update with actual episode link
   },
   {
     id: "melvin-edwards",
@@ -374,7 +404,7 @@ export const MEDIA = [
       "Creating wealth through business equity",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://melvine.edwards.com", // TODO: Update with actual episode link
   },
   {
     id: "solution-for-that",
@@ -387,7 +417,7 @@ export const MEDIA = [
       "Selecting profitable business models",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://thereisasolutionforthat.com", // TODO: Update with actual episode link
   },
   {
     id: "elite-league",
@@ -401,7 +431,7 @@ export const MEDIA = [
       "Stop reading and start doing",
     ],
     videoUrl: "",
-    externalUrl: "",
+    externalUrl: "https://eliteleaguepodcast.com", // TODO: Update with actual episode link
   },
 ];
 
