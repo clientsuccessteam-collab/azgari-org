@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MEDIA, GHL_LINKS } from "@/lib/links";
+import MediaPromoPlayer from "./MediaPromoPlayer";
 
 export const metadata: Metadata = {
   title: "Media & Podcasts | Azgari Foundation",
@@ -32,6 +33,19 @@ export default function MediaPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Azgari Lipshy shares insights on entrepreneurship, SBA financing, and building profitable service businesses.
             </p>
+          </div>
+        </section>
+
+        {/* Featured Video */}
+        <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
+              Featured Video
+            </h2>
+            <p className="text-gray-600 text-center mb-8">
+              Learn about our proven 8-phase launch framework
+            </p>
+            <MediaPromoPlayer />
           </div>
         </section>
 
