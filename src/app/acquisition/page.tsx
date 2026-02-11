@@ -151,8 +151,47 @@ export default function AcquisitionPage() {
           </div>
         </section>
 
+        {/* Franchise Comparison */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+                Buy a Business vs. Buy a Franchise
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Franchises offer structure but take your profits and control. Acquiring an existing business gives you everything a franchise promises — without the ongoing fees.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-3 gap-4 text-center mb-2">
+                <div></div>
+                <div className="font-bold text-sm py-2 rounded-t-lg" style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}>Acquire a Business</div>
+                <div className="font-bold text-sm py-2 rounded-t-lg bg-gray-100 text-gray-600">Buy a Franchise</div>
+              </div>
+              {[
+                { label: "Ownership", acquire: "100% yours", franchise: "You're a licensee" },
+                { label: "Ongoing Fees", acquire: "None", franchise: "3-8% royalties + fees" },
+                { label: "Cash Flow", acquire: "Immediate (day one)", franchise: "Uncertain timeline" },
+                { label: "Flexibility", acquire: "Full control", franchise: "Must follow their rules" },
+                { label: "Upfront Cost", acquire: "$50K-$200K", franchise: "$50K-$200K+" },
+                { label: "Exit Strategy", acquire: "Sell at full value", franchise: "Franchise approval needed" },
+                { label: "Brand", acquire: "Build your own equity", franchise: "Their brand, their rules" },
+              ].map((row, i) => (
+                <div key={i} className="grid grid-cols-3 gap-4 text-sm py-3 border-b border-gray-100">
+                  <div className="font-medium text-gray-700 text-left">{row.label}</div>
+                  <div className="text-center font-medium" style={{ color: 'var(--color-primary)' }}>{row.acquire}</div>
+                  <div className="text-center text-gray-500">{row.franchise}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-gray-500 text-sm mt-8 max-w-2xl mx-auto">
+              Azgari helps you find and acquire businesses with proven cash flow — so you get the structure of a franchise with the freedom of full ownership.
+            </p>
+          </div>
+        </section>
+
         {/* Our Process Section */}
-        <section 
+        <section
           id="process"
           className="py-16 md:py-24"
           style={{ backgroundColor: 'var(--color-cream)' }}
@@ -282,6 +321,8 @@ export default function AcquisitionPage() {
                   ))}
                 </div>
                 
+                <p className="mt-4 text-sm" style={{ color: 'var(--color-accent)' }}>Don&apos;t have $50K+ saved? SBA 7(a) loans can finance up to 90% of acquisition price — we&apos;ll guide you through the process.</p>
+
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <p className="text-white/70 text-sm">
                     Not sure if you qualify? Let&apos;s talk. Many successful acquisitions start with a conversation.

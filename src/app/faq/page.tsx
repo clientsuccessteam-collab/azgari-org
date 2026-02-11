@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQAccordion from "@/components/FAQAccordion";
+import JsonLd from "@/app/JsonLd";
 
 export const metadata: Metadata = {
   title: "FAQ | Azgari Foundation",
@@ -16,6 +17,31 @@ export const metadata: Metadata = {
 };
 
 const faqCategories = [
+  {
+    title: "Before You Decide",
+    items: [
+      {
+        question: "What if I fail?",
+        answer:
+          "Business outcomes depend on three things: our proven framework (we own this), your consistent execution (you own this), and market conditions (nobody controls this). We can\u2019t guarantee you won\u2019t face challenges \u2014 but we guarantee you won\u2019t face them alone. During our programs, you get weekly check-ins, honest feedback, and support when things get tough.",
+      },
+      {
+        question: "Can I do this while keeping my full-time job?",
+        answer:
+          "Yes \u2014 especially in the first 90 days. You\u2019ll need 2-3 hours per week for coaching calls and action items. As you approach launch (months 4-6), you may need to reduce hours or dedicate more time. Many successful clients launched while working full-time, then transitioned once revenue stabilized.",
+      },
+      {
+        question: "I don\u2019t have business experience. Am I qualified?",
+        answer:
+          "Most of our successful clients didn\u2019t have experience in their specific business. We teach the business model, operations, and systems. What matters is your consistency and willingness to follow the framework. We\u2019ve helped corporate professionals, veterans, trades workers, and career changers \u2014 all with different backgrounds.",
+      },
+      {
+        question: "How is Azgari different from buying a franchise?",
+        answer:
+          "Franchises give you structure but take your profits (3-8% royalties) and control. With Azgari, you get expert-guided structure AND 100% ownership. No ongoing fees, no restrictions on how you run your business, and you keep every dollar you earn.",
+      },
+    ],
+  },
   {
     title: "About Azgari",
     items: [
@@ -93,10 +119,26 @@ const faqCategories = [
   },
 ];
 
+const faqJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqCategories.flatMap((category) =>
+    category.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    }))
+  ),
+};
+
 export default function FAQPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
+      <JsonLd data={faqJsonLd} />
 
       {/* Hero Section */}
       <section

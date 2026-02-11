@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Azgari Foundation",
+  description: "Azgari Foundation privacy policy. Learn how we collect, use, and protect your personal information.",
+};
 
 const sections = [
   {

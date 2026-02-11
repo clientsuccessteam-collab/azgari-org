@@ -12,6 +12,32 @@ export default function Pricing() {
           Paid tuition funds free programs and scholarships for underserved founders.
         </p>
         
+        {/* Decision Guide */}
+        <div className="max-w-2xl mx-auto mb-12 rounded-2xl p-6 sm:p-8 border-2 border-gray-100">
+          <h3 className="text-lg font-bold mb-4 text-center" style={{ color: 'var(--color-primary)' }}>
+            Not sure which program fits?
+          </h3>
+          <div className="space-y-3 text-sm text-gray-600">
+            <div className="flex gap-3 items-start">
+              <span className="font-bold shrink-0" style={{ color: 'var(--color-accent)' }}>→</span>
+              <p><span className="font-semibold text-gray-800">Want to test our approach first?</span> Start with Quick Win ($500)</p>
+            </div>
+            <div className="flex gap-3 items-start">
+              <span className="font-bold shrink-0" style={{ color: 'var(--color-accent)' }}>→</span>
+              <p><span className="font-semibold text-gray-800">Have an idea you&apos;re committed to?</span> Foundation ($10K) validates and launches it</p>
+            </div>
+            <div className="flex gap-3 items-start">
+              <span className="font-bold shrink-0" style={{ color: 'var(--color-accent)' }}>→</span>
+              <p><span className="font-semibold text-gray-800">Want hands-on guidance every step?</span> Full Launch ($25K) is our most popular — 180 days of expert support</p>
+            </div>
+            <div className="flex gap-3 items-start">
+              <span className="font-bold shrink-0" style={{ color: 'var(--color-accent)' }}>→</span>
+              <p><span className="font-semibold text-gray-800">Already running a business?</span> Scale ($50K) makes it loan-ready and franchise-ready</p>
+            </div>
+          </div>
+          <p className="text-center mt-6 text-sm text-gray-500">Still unsure? <a href="/contact" className="font-medium underline" style={{ color: 'var(--color-accent)' }}>Book a free call</a> — we&apos;ll recommend the right fit.</p>
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PROGRAMS.map((plan) => (
             <div 

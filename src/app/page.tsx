@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Stats from "@/components/Stats";
 import Transformation from "@/components/Transformation";
 import Testimonials from "@/components/Testimonials";
+import HomeFAQ from "@/components/HomeFAQ";
 import Pricing from "@/components/Pricing";
 import Transparency from "@/components/Transparency";
 import CTA from "@/components/CTA";
@@ -19,10 +20,11 @@ export default function Home() {
         <Hero />
         <TrustBanner />
         <Problem />
-        <Process />
         <Stats />
+        <Process />
         <Transformation />
         <Testimonials />
+        <HomeFAQ />
         <Pricing />
         <Transparency />
         <CTA />
