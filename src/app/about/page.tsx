@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -61,8 +62,87 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission */}
+        {/* Meet Azgari */}
         <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image */}
+              <div className="relative order-2 lg:order-1">
+                <div className="relative">
+                  {/* Decorative background */}
+                  <div 
+                    className="absolute -inset-4 rounded-3xl opacity-20"
+                    style={{ backgroundColor: 'var(--color-accent)' }}
+                  />
+                  
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/images/founder/azgari-speaking.jpg"
+                      alt="Azgari Lipshy speaking at a conference"
+                      width={600}
+                      height={600}
+                      className="object-cover w-full"
+                    />
+                  </div>
+                  
+                  {/* Floating card */}
+                  <div 
+                    className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-5 border border-gray-100"
+                  >
+                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>160+</div>
+                    <div className="text-sm text-gray-600">Businesses Launched</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="order-1 lg:order-2">
+                <span 
+                  className="inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                  style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
+                >
+                  MEET THE FOUNDER
+                </span>
+                
+                <h2
+                  className="text-3xl md:text-4xl font-bold mb-6"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  Azgari Lipshy
+                </h2>
+                
+                <p className="text-lg text-gray-600 mb-6">
+                  Azgari founded the Azgari Foundation to help working professionals build 
+                  real wealth through local service business ownership — without the franchise 
+                  fees, royalties, or corporate restrictions.
+                </p>
+                
+                <p className="text-lg text-gray-600 mb-6">
+                  After seeing too many capable people fail at business — not from lack of 
+                  effort, but lack of structure — she created a proven 180-day framework 
+                  that transforms ambition into action.
+                </p>
+                
+                <p className="text-lg text-gray-600 mb-8">
+                  Today, she works with pre-retirees, veterans, and professionals ready to 
+                  escape the paycheck cycle and build something they truly own.
+                </p>
+                
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/media" className="btn btn-secondary">
+                    Watch Interviews →
+                  </Link>
+                  <Link href="/case-studies" className="btn btn-secondary">
+                    See Client Results →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission */}
+        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -92,8 +172,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div 
-                className="rounded-2xl p-6 sm:p-12 text-center"
-                style={{ backgroundColor: 'var(--color-cream)' }}
+                className="bg-white rounded-2xl p-6 sm:p-12 text-center shadow-sm"
               >
                 <div 
                   className="text-6xl font-bold mb-2"
@@ -115,7 +194,7 @@ export default function AboutPage() {
         </section>
 
         {/* Why We Exist */}
-        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
@@ -132,11 +211,11 @@ export default function AboutPage() {
               {whyWeExist.map((item, i) => (
                 <div 
                   key={i} 
-                  className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                  className="rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                  style={{ backgroundColor: 'var(--color-cream)' }}
                 >
                   <div 
-                    className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6"
-                    style={{ backgroundColor: 'var(--color-accent-light)' }}
+                    className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 bg-white"
                   >
                     <span 
                       className="text-xl font-bold"
@@ -159,7 +238,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Approach */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2
@@ -178,7 +257,7 @@ export default function AboutPage() {
               {ourApproach.map((item, i) => (
                 <div 
                   key={i} 
-                  className="p-6 rounded-xl border-2 border-gray-100 hover:border-gray-200 transition-colors"
+                  className="p-6 rounded-xl bg-white border-2 border-gray-100 hover:border-gray-200 transition-colors"
                 >
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h4 

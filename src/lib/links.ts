@@ -349,6 +349,7 @@ export const MEDIA = [
       "Balancing business ownership with life responsibilities",
       "Building confidence through action",
     ],
+    image: "/images/founder/azgari-headshot.jpg",
     videoUrl: "", // Add YouTube/Spotify embed URL when available
     externalUrl: "https://shebecameceo.com", // TODO: Update with actual episode link
   },
@@ -363,6 +364,7 @@ export const MEDIA = [
       "Building recurring revenue models",
       "Taking a service business from zero to $300K in year one",
     ],
+    image: "/images/founder/azgari-speaking.jpg",
     videoUrl: "",
     externalUrl: "https://builtonline.co", // TODO: Update with actual episode link
   },
@@ -376,6 +378,7 @@ export const MEDIA = [
       "Social media strategies that work for local markets",
       "Building a lead generation machine",
     ],
+    image: "/images/founder/azgari-headshot.jpg",
     videoUrl: "",
     externalUrl: "https://theinternetguy.ca", // TODO: Update with actual episode link
   },
@@ -390,6 +393,7 @@ export const MEDIA = [
       "Starting cash-positive with pre-booked clients",
       "Validating ideas to scaling with teams and tech",
     ],
+    image: "/images/founder/azgari-speaking.jpg",
     videoUrl: "",
     externalUrl: "https://defaultprofitable.com", // TODO: Update with actual episode link
   },
@@ -403,6 +407,7 @@ export const MEDIA = [
       "Building systems that allow you to step back",
       "Creating wealth through business equity",
     ],
+    image: "/images/founder/azgari-headshot.jpg",
     videoUrl: "",
     externalUrl: "https://melvine.edwards.com", // TODO: Update with actual episode link
   },
@@ -416,6 +421,7 @@ export const MEDIA = [
       "Securing SBA loans for your business",
       "Selecting profitable business models",
     ],
+    image: "/images/founder/azgari-speaking.jpg",
     videoUrl: "",
     externalUrl: "https://thereisasolutionforthat.com", // TODO: Update with actual episode link
   },
@@ -430,6 +436,7 @@ export const MEDIA = [
       "When buying an existing business makes sense",
       "Stop reading and start doing",
     ],
+    image: "/images/founder/azgari-headshot.jpg",
     videoUrl: "",
     externalUrl: "https://eliteleaguepodcast.com", // TODO: Update with actual episode link
   },

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MEDIA, GHL_LINKS } from "@/lib/links";
@@ -77,7 +78,7 @@ export default function MediaPage() {
                       }`}
                     >
                       <div className="flex flex-col lg:flex-row gap-8">
-                        {/* Podcast Icon - Left on desktop */}
+                        {/* Podcast Image - Left on desktop */}
                         <div className="lg:w-48 flex-shrink-0 order-1 lg:order-none">
                           {item.videoUrl ? (
                             <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden">
@@ -87,6 +88,19 @@ export default function MediaPage() {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                               />
+                            </div>
+                          ) : item.image ? (
+                            <div className="aspect-square rounded-xl overflow-hidden relative">
+                              <Image 
+                                src={item.image}
+                                alt={`Azgari Lipshy on ${item.title}`}
+                                fill
+                                className="object-cover"
+                              />
+                              {/* Podcast icon overlay */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center pb-3">
+                                <span className="text-3xl">🎙️</span>
+                              </div>
                             </div>
                           ) : (
                             <div 
