@@ -1,6 +1,19 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Service Business Programs & Pricing | Azgari Foundation",
+  description: "4 programs from $500-$50K. Expert business coaching, SBA loan prep, and acquisition advisory for service business owners.",
+  keywords: "service business programs, business consulting pricing, SBA loan guidance, business launch program, acquisition advisory",
+  openGraph: {
+    title: "Programs & Pricing — Launch Your Service Business with Expert Guidance",
+    description: "From Quick Win ($500) to Scale ($50K). Choose your path to service business ownership.",
+    url: "https://azgari.org/services",
+    type: "website",
+  },
+};
 
 const programs = [
   {

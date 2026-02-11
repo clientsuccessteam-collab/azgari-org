@@ -1,9 +1,9 @@
 const outcomes = [
-  "Someone who evaluates businesses with clarity",
-  "Someone who knows the difference between \"an idea\" and a viable model",
-  "Someone who builds responsibly, not impulsively",
-  "Someone who takes the next career step with confidence",
-  "Someone aligned with work that fits their life and income goals",
+  "Someone who makes decisions from clarity, not fear",
+  "Someone who owns a business their family is proud of",
+  "Someone building an asset they can sell or pass down",
+  "Someone who controls their time, income, and future",
+  "Someone aligned with work that fits their life \u2014 not the other way around",
 ];
 
 export default function Transformation() {
@@ -18,7 +18,7 @@ export default function Transformation() {
             <p className="text-gray-600 mb-8">
               When you build with structure instead of guesswork:
             </p>
-            
+
             <ul className="space-y-4">
               {outcomes.map((item, i) => (
                 <li key={i} className="flex gap-3">
@@ -28,14 +28,14 @@ export default function Transformation() {
               ))}
             </ul>
           </div>
-          
+
           <div className="text-center p-5 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100">
             <p className="text-gray-500 italic mb-4">
-              &quot;I want to start a business…&quot;
+              &quot;I want to start a business, but I&apos;m scared of failing...&quot;
             </p>
             <div className="text-4xl my-4" style={{ color: 'var(--color-accent)' }}>↓</div>
             <p className="font-semibold" style={{ color: 'var(--color-primary)' }}>
-              &quot;I understand exactly how to do it safely, legally, and with a structure that makes sense.&quot;
+              &quot;I have a clear plan, expert guidance, and the confidence to build something that lasts.&quot;
             </p>
           </div>
         </div>

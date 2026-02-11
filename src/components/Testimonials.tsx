@@ -26,7 +26,7 @@ export default function Testimonials({ limit = 6, showCTA = true }: Testimonials
             What Our Clients Say
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Real entrepreneurs. Real results. See why 160+ business owners chose Azgari to launch their service businesses.
+            Real struggles. Real breakthroughs. Real results. Hear from entrepreneurs who went from uncertain to unstoppable.
           </p>
         </div>
 

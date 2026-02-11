@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Azgari Foundation",
+  description: "Azgari Foundation terms of service. Read our terms and conditions for using our programs and services.",
+};
 
 const sections = [
   {

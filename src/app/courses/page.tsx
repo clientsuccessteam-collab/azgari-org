@@ -3,16 +3,44 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GHL_LINKS, COURSES } from "@/lib/links";
+import JsonLd from "@/app/JsonLd";
 
 export const metadata: Metadata = {
   title: "Courses | Azgari Foundation",
   description: "Self-paced digital courses to help you buy, launch, or fund your service business. Learn from founders who've done it.",
 };
 
+const coursesJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@graph": COURSES.map((course) => ({
+    "@type": "Course",
+    name: course.title,
+    description: course.tagline,
+    provider: {
+      "@type": "Organization",
+      name: "Azgari Foundation",
+      url: "https://azgari.org",
+    },
+    offers: {
+      "@type": "Offer",
+      price: course.price.replace("$", ""),
+      priceCurrency: "USD",
+      url: course.href,
+      availability: "https://schema.org/InStock",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      courseWorkload: "Self-paced",
+    },
+  })),
+};
+
 export default function CoursesPage() {
   return (
     <>
       <Navbar />
+      <JsonLd data={coursesJsonLd} />
       <main>
         {/* Hero */}
         <section 

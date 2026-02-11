@@ -1,7 +1,20 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Free Business Startup Guides & Resources | Azgari Foundation",
+  description: "Free guides, templates, and tools to start a profitable service business. State rankings, SBA loan guides, and launch checklists.",
+  keywords: "free business guides, startup resources, service business templates, SBA loan guide, business launch checklist",
+  openGraph: {
+    title: "Free Resources to Start Your Service Business",
+    description: "Guides, templates, and tools to help you start a profitable local service business.",
+    url: "https://azgari.org/guides",
+    type: "website",
+  },
+};
 
 const howToStartGuides = [
   {

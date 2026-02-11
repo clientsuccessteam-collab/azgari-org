@@ -591,7 +591,7 @@ export const TESTIMONIALS = [
     role: "Pressure Washing Owner",
     location: "Austin, TX",
     image: "/images/testimonials/marcus.jpg",
-    quote: "I went from corporate burnout to $287K in my first year. Azgari gave me the roadmap—I just had to follow it.",
+    quote: "I was terrified. Fifteen years in corporate, and I was about to bet everything on myself. Azgari's system was so clear that the fear turned into focus. Six months in, I hit $10K months. Year one: $287K. The framework works — you just have to show up.",
     rating: 5,
   },
   {
@@ -600,7 +600,7 @@ export const TESTIMONIALS = [
     role: "Commercial Cleaning Owner",
     location: "Tampa, FL",
     image: "/images/testimonials/jennifer.jpg",
-    quote: "Started with $15K and no experience. Now we're doing $35K/month with 14 recurring contracts. The sales scripts alone were worth 10x what we paid.",
+    quote: "We had $15K and zero business experience. I didn't think we could afford the program, but it paid for itself in 90 days. Now we're doing $35K/month with 14 recurring contracts. The sales scripts alone were worth 10x what we paid.",
     rating: 5,
   },
   {
@@ -609,7 +609,7 @@ export const TESTIMONIALS = [
     role: "Lawn Care Owner",
     location: "Columbus, OH",
     image: "/images/testimonials/anthony.jpg",
-    quote: "Went from 60-hour weeks at $3K/month to 20-hour weeks at $12K. The difference? Systems.",
+    quote: "I was grinding 60-hour weeks for $3K/month and going nowhere. Azgari showed me the difference between working hard and working smart. Now I do $12K/month in 20-hour weeks with a team of 4. Systems changed everything.",
     rating: 5,
   },
   {
@@ -618,7 +618,7 @@ export const TESTIMONIALS = [
     role: "Junk Removal Owner",
     location: "Atlanta, GA",
     image: "/images/testimonials/robert.jpg",
-    quote: "The military taught me discipline. Azgari taught me business. $340K first year.",
+    quote: "Leaving the military, I had discipline but no business direction. Azgari gave me the roadmap I was missing. $340K first year — and I hired three other vets. This is what I was meant to do.",
     rating: 5,
   },
   {
@@ -627,7 +627,7 @@ export const TESTIMONIALS = [
     role: "HVAC Business Owner",
     location: "Sacramento, CA",
     image: "/images/testimonials/miguel.jpg",
-    quote: "12 years working for someone else. Now I make more than my old boss ever did. Should've done this sooner.",
+    quote: "Twelve years turning wrenches for someone else. I knew HVAC inside out but business terrified me. Azgari made the business side simple. First year: $520K revenue, $180K take-home. Should've done this a decade ago.",
     rating: 5,
   },
   {
@@ -636,7 +636,7 @@ export const TESTIMONIALS = [
     role: "Mobile Pet Grooming Owner",
     location: "Denver, CO",
     image: "/images/testimonials/sarah.jpg",
-    quote: "I was terrified of the business side. Azgari made it simple. Booked solid within 90 days.",
+    quote: "I was paralyzed by the business side — pricing, marketing, licenses, all of it. Azgari broke it down into steps I could actually follow. Booked solid within 90 days. Now I'm turning away clients and hiring my first employee.",
     rating: 5,
   },
 ];
