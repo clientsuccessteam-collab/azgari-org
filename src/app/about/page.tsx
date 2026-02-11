@@ -35,7 +35,7 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section 
-          className="pt-32 pb-20 text-center"
+          className="pt-24 pb-12 md:pt-32 md:pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -62,11 +62,11 @@ export default function AboutPage() {
         </section>
 
         {/* Mission */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 
+                <h2
                   className="text-3xl md:text-4xl font-bold mb-6"
                   style={{ color: 'var(--color-primary)' }}
                 >
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div 
-                className="rounded-2xl p-12 text-center"
+                className="rounded-2xl p-6 sm:p-12 text-center"
                 style={{ backgroundColor: 'var(--color-cream)' }}
               >
                 <div 
@@ -115,9 +115,9 @@ export default function AboutPage() {
         </section>
 
         {/* Why We Exist */}
-        <section className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
@@ -159,10 +159,10 @@ export default function AboutPage() {
         </section>
 
         {/* Our Approach */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -195,7 +195,7 @@ export default function AboutPage() {
         </section>
 
         {/* Transparency */}
-        <section className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
+        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
               Our Commitment to Transparency
@@ -221,7 +221,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section 
-          className="py-24 text-center"
+          className="py-16 md:py-24 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">

@@ -16,7 +16,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section 
-          className="pt-32 pb-16 text-center"
+          className="pt-24 pb-12 md:pt-32 md:pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
@@ -44,7 +44,7 @@ export default function ContactPage() {
               </p>
               <Link 
                 href={GHL_LINKS.forms.contact}
-                className="btn btn-primary text-lg px-10 py-5"
+                className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
               >
                 Start the Conversation →
               </Link>

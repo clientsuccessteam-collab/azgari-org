@@ -7,7 +7,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: 'var(--color-primary)' }}>
           Business Works When the Fundamentals Are Right

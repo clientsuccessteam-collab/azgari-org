@@ -81,7 +81,7 @@ export default function ScholarshipsPage() {
       <main>
         {/* Hero Section */}
         <section 
-          className="pt-32 pb-20 text-center"
+          className="pt-24 md:pt-32 pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -111,10 +111,10 @@ export default function ScholarshipsPage() {
         </section>
 
         {/* Who Qualifies Section */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -146,10 +146,10 @@ export default function ScholarshipsPage() {
         </section>
 
         {/* What's Covered Section */}
-        <section className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -189,10 +189,10 @@ export default function ScholarshipsPage() {
         </section>
 
         {/* How to Apply Section */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -227,7 +227,7 @@ export default function ScholarshipsPage() {
 
         {/* Our Commitment Section */}
         <section 
-          className="py-24"
+          className="py-16 md:py-24"
           style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6 text-center text-white">
@@ -264,7 +264,7 @@ export default function ScholarshipsPage() {
         </section>
 
         {/* CTA Section */}
-        <section id="apply" className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <section id="apply" className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 
               className="text-3xl md:text-4xl font-bold mb-4"

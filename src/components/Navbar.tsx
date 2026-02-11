@@ -19,7 +19,7 @@ export default function Navbar() {
             height={28}
             className="h-8 w-auto"
           />
-          <span className="text-xl font-bold text-white tracking-wide">AZGARI FOUNDATION</span>
+          <span className="text-base sm:text-xl font-bold text-white tracking-wide">AZGARI FOUNDATION</span>
         </Link>
 
         {/* Desktop Nav */}

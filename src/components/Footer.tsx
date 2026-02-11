@@ -25,9 +25,9 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="text-white py-16" style={{ backgroundColor: 'var(--color-primary-dark)' }}>
+    <footer className="text-white py-12 md:py-16" style={{ backgroundColor: 'var(--color-primary-dark)' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 md:gap-12 md:mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">

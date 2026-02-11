@@ -16,7 +16,7 @@ export default function CoursesPage() {
       <main>
         {/* Hero */}
         <section 
-          className="pt-32 pb-16 text-center"
+          className="pt-24 pb-12 md:pt-32 md:pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
@@ -74,7 +74,7 @@ export default function CoursesPage() {
               {COURSES.map((course) => (
                 <div 
                   key={course.id}
-                  className="relative bg-white rounded-2xl p-8 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full"
+                  className="relative bg-white rounded-2xl p-5 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full"
                   style={{ 
                     border: course.featured ? '2px solid var(--color-accent)' : '2px solid #e5e7eb',
                     boxShadow: course.featured ? '0 8px 30px rgba(212, 160, 41, 0.2)' : undefined

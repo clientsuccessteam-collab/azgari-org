@@ -7,7 +7,7 @@ const commitments = [
 
 export default function Transparency() {
   return (
-    <section className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: 'var(--color-primary)' }}>
           Our Commitment to Transparency

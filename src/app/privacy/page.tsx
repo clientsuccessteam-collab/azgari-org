@@ -70,7 +70,7 @@ export default function PrivacyPage() {
       <main>
         {/* Hero */}
         <section
-          className="pt-32 pb-16 text-center"
+          className="pt-24 md:pt-32 pb-16 text-center"
           style={{ background: "linear-gradient(135deg, var(--color-cream) 0%, white 100%)" }}
         >
           <div className="max-w-7xl mx-auto px-6">

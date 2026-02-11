@@ -72,7 +72,7 @@ export default function AcquisitionPage() {
       <main>
         {/* Hero Section */}
         <section 
-          className="pt-32 pb-24 text-center" 
+          className="pt-24 md:pt-32 pb-24 text-center" 
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -118,10 +118,10 @@ export default function AcquisitionPage() {
         </section>
 
         {/* Why Buy vs Start Section */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2 
-              className="text-3xl md:text-4xl font-bold mb-4" 
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
               Why Buy Instead of Start?
@@ -153,8 +153,8 @@ export default function AcquisitionPage() {
 
         {/* Our Process Section */}
         <section 
-          id="process" 
-          className="py-24"
+          id="process"
+          className="py-16 md:py-24"
           style={{ backgroundColor: 'var(--color-cream)' }}
         >
           <div className="max-w-7xl mx-auto px-6 text-center">
@@ -191,7 +191,7 @@ export default function AcquisitionPage() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-24 bg-white">
+        <section id="pricing" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -259,7 +259,7 @@ export default function AcquisitionPage() {
               
               {/* Ideal Candidates Card */}
               <div 
-                className="p-8 rounded-2xl"
+                className="p-5 sm:p-8 rounded-2xl"
                 style={{ backgroundColor: 'var(--color-primary)' }}
               >
                 <h3 className="text-2xl font-bold text-white mb-6">
@@ -294,7 +294,7 @@ export default function AcquisitionPage() {
 
         {/* Final CTA Section */}
         <section 
-          className="py-24 text-white text-center"
+          className="py-16 md:py-24 text-white text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -307,7 +307,7 @@ export default function AcquisitionPage() {
             
             <Link 
               href="https://go.azgari.org/landing-page-d" 
-              className="btn btn-primary text-lg px-10 py-5"
+              className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
             >
               Schedule a Discovery Call →
             </Link>

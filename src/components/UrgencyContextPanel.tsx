@@ -123,7 +123,7 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
     >
       {/* Header */}
       <div
-        className="panel-header px-6 py-4 border-b-2 border-gray-100 flex justify-between items-center"
+        className="panel-header px-4 py-3 sm:px-6 sm:py-4 border-b-2 border-gray-100 flex justify-between items-center"
         style={{ backgroundColor: 'var(--color-cream)' }}
       >
         <div className="flex items-center gap-3">
@@ -249,7 +249,7 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
 
       {/* Footer */}
       {!isCollapsed && items.length > 0 && (
-        <div className="panel-footer px-6 py-3 bg-gray-50 border-t border-gray-100 text-xs text-gray-500 text-center">
+        <div className="panel-footer px-4 py-3 sm:px-6 bg-gray-50 border-t border-gray-100 text-xs text-gray-500 text-center">
           Last updated: {new Date().toLocaleDateString('en-US', {
             month: 'short',
             day: 'numeric',

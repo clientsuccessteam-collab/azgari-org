@@ -8,7 +8,7 @@ const outcomes = [
 
 export default function Transformation() {
   return (
-    <section className="py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
@@ -29,7 +29,7 @@ export default function Transformation() {
             </ul>
           </div>
           
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg border border-gray-100">
+          <div className="text-center p-5 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100">
             <p className="text-gray-500 italic mb-4">
               &quot;I want to start a business…&quot;
             </p>

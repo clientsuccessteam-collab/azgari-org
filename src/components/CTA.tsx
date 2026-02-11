@@ -4,7 +4,7 @@ import { GHL_LINKS } from "@/lib/links";
 export default function CTA() {
   return (
     <section 
-      className="py-24 text-white text-center"
+      className="py-16 md:py-24 text-white text-center"
       style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)' }}
     >
       <div className="max-w-7xl mx-auto px-6">
