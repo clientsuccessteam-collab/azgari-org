@@ -9,6 +9,56 @@ export const metadata: Metadata = {
   description: "Real results from real entrepreneurs. See how our clients built $200K-$500K service businesses with the Azgari method.",
 };
 
+// Video testimonials data
+const VIDEO_TESTIMONIALS = [
+  {
+    id: "antwain-davis",
+    name: "Antwain Davis",
+    title: "Business Owner",
+    videoSrc: "/videos/testimonials/antwain-davis.mp4",
+    thumbnail: "🎯",
+    quote: "Azgari helped me turn my idea into a real business.",
+  },
+  {
+    id: "matthew-p",
+    name: "Matthew P.",
+    title: "Service Business Owner",
+    videoSrc: "/videos/testimonials/matthew-p.mp4",
+    thumbnail: "💼",
+    quote: "The systems and guidance made all the difference.",
+  },
+  {
+    id: "window-washing",
+    name: "Window Washing Specialist",
+    title: "Cleaning Business Owner",
+    videoSrc: "/videos/testimonials/window-washing.mp4",
+    thumbnail: "🪟",
+    quote: "From zero to profitable in record time.",
+  },
+  {
+    id: "hardscaping",
+    name: "Hardscaping Professional",
+    title: "Landscaping Business Owner",
+    videoSrc: "/videos/testimonials/hardscaping.mp4",
+    thumbnail: "🧱",
+    quote: "Finally, a clear path to growth.",
+  },
+  {
+    id: "yoga-studio",
+    name: "Yoga Studio Owner",
+    title: "Wellness Entrepreneur",
+    videoSrc: "/videos/testimonials/yoga-studio.mp4",
+    thumbnail: "🧘",
+    quote: "Launching my dream studio became reality.",
+  },
+];
+
+// Map case study IDs to video testimonials
+const CASE_STUDY_VIDEOS: Record<string, string[]> = {
+  "commercial-cleaning-florida": ["/videos/testimonials/window-washing.mp4"],
+  "lawn-care-ohio": ["/videos/testimonials/hardscaping.mp4"],
+};
+
 export default function CaseStudiesPage() {
   const featuredStudies = CASE_STUDIES.filter(study => study.featured);
   const otherStudies = CASE_STUDIES.filter(study => !study.featured);
@@ -82,101 +132,86 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Video Testimonials */}
+        {/* Video Testimonials Section */}
         <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
-              Hear From Our Clients
-            </h2>
-            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Real video testimonials from entrepreneurs who built their businesses with Azgari Foundation.
-            </p>
+            <div className="text-center mb-12">
+              <span 
+                className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
+                style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
+              >
+                VIDEO TESTIMONIALS
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+                Hear From Our Clients
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Real stories from real entrepreneurs who transformed their lives through business ownership.
+              </p>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Matthew P - Pressure Washing */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <div className="aspect-video bg-black">
+            {/* Featured Video - Antwain Davis */}
+            <div className="max-w-3xl mx-auto mb-12">
+              <div 
+                className="rounded-2xl overflow-hidden shadow-xl"
+                style={{ backgroundColor: 'white', border: '2px solid var(--color-accent)' }}
+              >
+                <div className="aspect-video bg-gray-900">
                   <video
-                    src="/videos/testimonials/matthew-p.mp4"
                     controls
-                    playsInline
+                    className="w-full h-full"
+                    poster=""
                     preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
+                  >
+                    <source src="/videos/testimonials/antwain-davis.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Matthew P.</h3>
-                  <p className="text-sm text-gray-500">Pressure Washing • Texas</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>
+                    Antwain Davis
+                  </h3>
+                  <p className="text-sm font-semibold mb-3" style={{ color: 'var(--color-accent)' }}>
+                    Business Owner
+                  </p>
+                  <blockquote className="italic text-gray-600">
+                    &quot;Azgari helped me turn my idea into a real business.&quot;
+                  </blockquote>
                 </div>
               </div>
+            </div>
 
-              {/* Antwain Davis */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <div className="aspect-video bg-black">
-                  <video
-                    src="/videos/testimonials/antwain-davis.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
+            {/* Video Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {VIDEO_TESTIMONIALS.filter(v => v.id !== "antwain-davis").map((video) => (
+                <div 
+                  key={video.id}
+                  className="rounded-xl overflow-hidden shadow-lg transition-shadow hover:shadow-xl"
+                  style={{ backgroundColor: 'white' }}
+                >
+                  <div className="aspect-video bg-gray-900">
+                    <video
+                      controls
+                      className="w-full h-full"
+                      preload="metadata"
+                    >
+                      <source src={video.videoSrc} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-sm mb-1" style={{ color: 'var(--color-primary)' }}>
+                      {video.name}
+                    </h3>
+                    <p className="text-xs font-semibold mb-2" style={{ color: 'var(--color-accent)' }}>
+                      {video.title}
+                    </p>
+                    <p className="text-xs text-gray-500 italic">
+                      &quot;{video.quote}&quot;
+                    </p>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Antwain D.</h3>
-                  <p className="text-sm text-gray-500">Service Business Owner</p>
-                </div>
-              </div>
-
-              {/* Window Washing Case Study */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <div className="aspect-video bg-black">
-                  <video
-                    src="/videos/testimonials/window-washing.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Window Washing Success</h3>
-                  <p className="text-sm text-gray-500">Case Study</p>
-                </div>
-              </div>
-
-              {/* Hardscaping Case Study */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <div className="aspect-video bg-black">
-                  <video
-                    src="/videos/testimonials/hardscaping.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Hardscaping Business</h3>
-                  <p className="text-sm text-gray-500">Case Study</p>
-                </div>
-              </div>
-
-              {/* Yoga Studio Launch */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <div className="aspect-video bg-black">
-                  <video
-                    src="/videos/testimonials/yoga-studio.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Yoga Studio Launch</h3>
-                  <p className="text-sm text-gray-500">Case Study</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -197,18 +232,34 @@ export default function CaseStudiesPage() {
                   key={study.id}
                   className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
                 >
-                  {/* Image/Placeholder */}
-                  <div className="lg:w-2/5">
-                    <div 
-                      className="aspect-square rounded-2xl flex items-center justify-center text-6xl"
-                      style={{ backgroundColor: 'var(--color-cream)' }}
-                    >
-                      {study.business === "Pressure Washing" && "🚿"}
-                      {study.business === "Commercial Cleaning" && "🧹"}
-                      {study.business === "Lawn Care & Landscaping" && "🌿"}
-                      {study.business === "Junk Removal" && "🚛"}
-                      {study.business === "HVAC Services" && "❄️"}
-                    </div>
+                  {/* Image/Video Section */}
+                  <div className="lg:w-2/5 w-full">
+                    {CASE_STUDY_VIDEOS[study.id] ? (
+                      <div 
+                        className="aspect-square rounded-2xl overflow-hidden shadow-lg"
+                        style={{ backgroundColor: 'var(--color-cream)' }}
+                      >
+                        <video
+                          controls
+                          className="w-full h-full object-cover"
+                          preload="metadata"
+                        >
+                          <source src={CASE_STUDY_VIDEOS[study.id][0]} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    ) : (
+                      <div 
+                        className="aspect-square rounded-2xl flex items-center justify-center text-6xl"
+                        style={{ backgroundColor: 'var(--color-cream)' }}
+                      >
+                        {study.business === "Pressure Washing" && "🚿"}
+                        {study.business === "Commercial Cleaning" && "🧹"}
+                        {study.business === "Lawn Care & Landscaping" && "🌿"}
+                        {study.business === "Junk Removal" && "🚛"}
+                        {study.business === "HVAC Services" && "❄️"}
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -306,6 +357,20 @@ export default function CaseStudiesPage() {
                       <p className="text-sm text-gray-500">{study.business} • {study.location}</p>
                     </div>
                   </div>
+
+                  {/* Video for Lawn Care (Hardscaping) */}
+                  {study.id === "lawn-care-ohio" && (
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <video
+                        controls
+                        className="w-full aspect-video"
+                        preload="metadata"
+                      >
+                        <source src="/videos/testimonials/hardscaping.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
 
                   {/* Key Results */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
