@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "remotion:studio": "npx remotion studio remotion/index.ts",
+    "remotion:render:promo": "npx remotion render remotion/index.ts PromoVideo out/promo.mp4",
+    "remotion:render:stats": "npx remotion render remotion/index.ts StatsVideo out/stats.mp4",
+    "remotion:render:testimonials": "npx remotion render remotion/index.ts TestimonialVideo out/testimonials.mp4"
   },
   "dependencies": {
+    "@remotion/cli": "4.0.421",
+    "@remotion/player": "4.0.421",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "remotion": "4.0.421"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
