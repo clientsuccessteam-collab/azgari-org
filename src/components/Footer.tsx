@@ -8,6 +8,7 @@ const footerLinks = {
     { label: "Scholarships", href: "/scholarships" },
   ],
   resources: [
+    { label: "Free Training", href: "/webinar" },
     { label: "Blog", href: "https://azgari.blog" },
     { label: "Courses", href: "/courses" },
     { label: "Free Guides", href: "/guides" },

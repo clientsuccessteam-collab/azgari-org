@@ -24,6 +24,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8 list-none">
+          <li><Link href="/webinar" className="font-medium text-amber-400 hover:text-amber-300 transition-colors">Free Training</Link></li>
           <li><Link href="#process" className="font-medium text-white/90 hover:text-amber-400 transition-colors">How It Works</Link></li>
           <li><Link href="#pricing" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Pricing</Link></li>
           <li><Link href="/case-studies" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Case Studies</Link></li>
@@ -50,13 +51,14 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden px-6 py-4 border-t border-white/10" style={{ backgroundColor: 'var(--color-primary)' }}>
           <ul className="flex flex-col gap-4">
+            <li><Link href="/webinar" className="block text-amber-400 hover:text-amber-300 font-medium" onClick={() => setMobileOpen(false)}>Free Training</Link></li>
             <li><Link href="#process" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>How It Works</Link></li>
             <li><Link href="#pricing" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Pricing</Link></li>
-            <li><Link href="/case-studies" className="block text-white/90 hover:text-amber-400">Case Studies</Link></li>
-            <li><Link href="/about" className="block text-white/90 hover:text-amber-400">About</Link></li>
-            <li><Link href="https://azgari.blog" className="block text-white/90 hover:text-amber-400">Blog</Link></li>
-            <li><Link href="/contact" className="block text-white/90 hover:text-amber-400">Contact</Link></li>
-            <li><Link href={GHL_LINKS.qualify} className="btn btn-primary text-center mt-2">Get Started</Link></li>
+            <li><Link href="/case-studies" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Case Studies</Link></li>
+            <li><Link href="/about" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>About</Link></li>
+            <li><Link href="https://azgari.blog" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Blog</Link></li>
+            <li><Link href="/contact" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Contact</Link></li>
+            <li><Link href={GHL_LINKS.qualify} className="btn btn-primary text-center mt-2" onClick={() => setMobileOpen(false)}>Get Started</Link></li>
           </ul>
         </div>
       )}

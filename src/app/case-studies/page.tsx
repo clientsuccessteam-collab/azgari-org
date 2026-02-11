@@ -82,6 +82,105 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+        {/* Video Testimonials */}
+        <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
+              Hear From Our Clients
+            </h2>
+            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Real video testimonials from entrepreneurs who built their businesses with Azgari Foundation.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Matthew P - Pressure Washing */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-video bg-black">
+                  <video
+                    src="/videos/testimonials/matthew-p.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Matthew P.</h3>
+                  <p className="text-sm text-gray-500">Pressure Washing • Texas</p>
+                </div>
+              </div>
+
+              {/* Antwain Davis */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-video bg-black">
+                  <video
+                    src="/videos/testimonials/antwain-davis.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Antwain D.</h3>
+                  <p className="text-sm text-gray-500">Service Business Owner</p>
+                </div>
+              </div>
+
+              {/* Window Washing Case Study */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-video bg-black">
+                  <video
+                    src="/videos/testimonials/window-washing.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Window Washing Success</h3>
+                  <p className="text-sm text-gray-500">Case Study</p>
+                </div>
+              </div>
+
+              {/* Hardscaping Case Study */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-video bg-black">
+                  <video
+                    src="/videos/testimonials/hardscaping.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Hardscaping Business</h3>
+                  <p className="text-sm text-gray-500">Case Study</p>
+                </div>
+              </div>
+
+              {/* Yoga Studio Launch */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-video bg-black">
+                  <video
+                    src="/videos/testimonials/yoga-studio.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>Yoga Studio Launch</h3>
+                  <p className="text-sm text-gray-500">Case Study</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Case Studies */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
