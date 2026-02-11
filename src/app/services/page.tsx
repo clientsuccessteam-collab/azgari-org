@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <main>
         {/* Hero Section */}
         <section 
-          className="pt-32 pb-20 text-center"
+          className="pt-24 pb-12 md:pt-32 md:pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -153,7 +153,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Program Cards */}
-        <section id="programs" className="py-24 bg-white">
+        <section id="programs" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 
@@ -233,13 +233,13 @@ export default function ServicesPage() {
 
         {/* Acquisition Advisory Section */}
         <section 
-          className="py-24"
+          className="py-16 md:py-24"
           style={{ backgroundColor: 'var(--color-cream)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span 
+                <span
                   className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                   style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
                 >
@@ -323,7 +323,7 @@ export default function ServicesPage() {
               </div>
               
               <div 
-                className="rounded-2xl p-8 text-white"
+                className="rounded-2xl p-5 sm:p-8 text-white"
                 style={{ backgroundColor: 'var(--color-primary)' }}
               >
                 <h3 className="text-2xl font-bold mb-6">Why Buy Instead of Build?</h3>
@@ -387,10 +387,10 @@ export default function ServicesPage() {
         </section>
 
         {/* What's Included Grid */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -431,7 +431,7 @@ export default function ServicesPage() {
 
         {/* Final CTA */}
         <section 
-          className="py-24 text-white text-center"
+          className="py-16 md:py-24 text-white text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -444,7 +444,7 @@ export default function ServicesPage() {
             
             <Link 
               href="https://go.azgari.org/landing-page-d" 
-              className="btn btn-primary text-lg px-10 py-5"
+              className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
             >
               See If You Qualify →
             </Link>

@@ -12,7 +12,7 @@ export default function Testimonials({ limit = 6, showCTA = true }: Testimonials
   const displayedTestimonials = TESTIMONIALS.slice(0, limit);
 
   return (
-    <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">

@@ -91,79 +91,126 @@ export const PaymentCalculator: React.FC<PaymentCalculatorProps> = ({
   };
 
   return (
-    <div className={`payment-calculator ${className}`}>
-      <h2>Payment Calculator</h2>
-      
-      <div className="calculator-inputs">
-        <div className="input-group">
-          <label htmlFor="totalAmount">Total Amount</label>
-          <input
-            type="number"
-            id="totalAmount"
-            value={state.totalAmount}
-            onChange={(e) => handleInputChange('totalAmount', Number(e.target.value))}
-            min={0}
-            step={1000}
-          />
-        </div>
-
-        <div className="input-group">
-          <label htmlFor="downPayment">Down Payment</label>
-          <input
-            type="number"
-            id="downPayment"
-            value={state.downPayment}
-            onChange={(e) => handleInputChange('downPayment', Number(e.target.value))}
-            min={0}
-            step={1000}
-          />
-        </div>
-
-        <div className="input-group">
-          <label htmlFor="interestRate">Interest Rate (%)</label>
-          <input
-            type="number"
-            id="interestRate"
-            value={state.interestRate}
-            onChange={(e) => handleInputChange('interestRate', Number(e.target.value))}
-            min={0}
-            max={100}
-            step={0.01}
-          />
-        </div>
-
-        <div className="input-group">
-          <label htmlFor="termMonths">Term</label>
-          <select
-            id="termMonths"
-            value={state.termMonths}
-            onChange={(e) => handleInputChange('termMonths', Number(e.target.value))}
-          >
-            {PAYMENT_TERMS.map((term) => (
-              <option key={term.months} value={term.months}>
-                {term.label}
-              </option>
-            ))}
-          </select>
-        </div>
+    <div className={`rounded-2xl border-2 border-gray-200 bg-white overflow-hidden ${className}`}>
+      <div
+        className="px-4 py-4 sm:px-6 sm:py-5 border-b-2 border-gray-100"
+        style={{ backgroundColor: 'var(--color-cream)' }}
+      >
+        <h2
+          className="text-lg sm:text-xl font-bold"
+          style={{ color: 'var(--color-primary)' }}
+        >
+          Payment Calculator
+        </h2>
       </div>
 
-      <div className="calculator-results">
-        <div className="result-item">
-          <span className="result-label">Principal:</span>
-          <span className="result-value">{formatCurrency(result.principal)}</span>
+      <div className="p-4 sm:p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label
+              htmlFor="totalAmount"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Total Amount
+            </label>
+            <input
+              type="number"
+              id="totalAmount"
+              value={state.totalAmount}
+              onChange={(e) => handleInputChange('totalAmount', Number(e.target.value))}
+              min={0}
+              step={1000}
+              className="w-full rounded-lg border-2 border-gray-200 px-3 py-2.5 text-base focus:border-amber-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="downPayment"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Down Payment
+            </label>
+            <input
+              type="number"
+              id="downPayment"
+              value={state.downPayment}
+              onChange={(e) => handleInputChange('downPayment', Number(e.target.value))}
+              min={0}
+              step={1000}
+              className="w-full rounded-lg border-2 border-gray-200 px-3 py-2.5 text-base focus:border-amber-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="interestRate"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Interest Rate (%)
+            </label>
+            <input
+              type="number"
+              id="interestRate"
+              value={state.interestRate}
+              onChange={(e) => handleInputChange('interestRate', Number(e.target.value))}
+              min={0}
+              max={100}
+              step={0.01}
+              className="w-full rounded-lg border-2 border-gray-200 px-3 py-2.5 text-base focus:border-amber-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="termMonths"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Term
+            </label>
+            <select
+              id="termMonths"
+              value={state.termMonths}
+              onChange={(e) => handleInputChange('termMonths', Number(e.target.value))}
+              className="w-full rounded-lg border-2 border-gray-200 px-3 py-2.5 text-base focus:border-amber-500 focus:outline-none bg-white"
+            >
+              {PAYMENT_TERMS.map((term) => (
+                <option key={term.months} value={term.months}>
+                  {term.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-        <div className="result-item highlight">
-          <span className="result-label">Monthly Payment:</span>
-          <span className="result-value">{formatCurrency(result.monthlyPayment)}</span>
-        </div>
-        <div className="result-item">
-          <span className="result-label">Total Interest:</span>
-          <span className="result-value">{formatCurrency(result.totalInterest)}</span>
-        </div>
-        <div className="result-item">
-          <span className="result-label">Total Cost:</span>
-          <span className="result-value">{formatCurrency(result.totalCost)}</span>
+
+        <div className="rounded-xl p-4 sm:p-5 space-y-3" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="flex justify-between items-center text-sm sm:text-base">
+            <span className="text-gray-600">Principal:</span>
+            <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>
+              {formatCurrency(result.principal)}
+            </span>
+          </div>
+          <div
+            className="flex justify-between items-center text-base sm:text-lg font-bold rounded-lg px-3 py-2 -mx-3"
+            style={{ backgroundColor: 'var(--color-accent-light)' }}
+          >
+            <span style={{ color: 'var(--color-primary)' }}>Monthly Payment:</span>
+            <span style={{ color: 'var(--color-accent-hover)' }}>
+              {formatCurrency(result.monthlyPayment)}
+            </span>
+          </div>
+          <div className="flex justify-between items-center text-sm sm:text-base">
+            <span className="text-gray-600">Total Interest:</span>
+            <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>
+              {formatCurrency(result.totalInterest)}
+            </span>
+          </div>
+          <div className="flex justify-between items-center text-sm sm:text-base">
+            <span className="text-gray-600">Total Cost:</span>
+            <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>
+              {formatCurrency(result.totalCost)}
+            </span>
+          </div>
         </div>
       </div>
     </div>

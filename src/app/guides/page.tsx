@@ -99,7 +99,7 @@ export default function GuidesPage() {
       <main>
         {/* Hero Section */}
         <section 
-          className="pt-32 pb-20 text-center"
+          className="pt-24 md:pt-32 pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -133,7 +133,7 @@ export default function GuidesPage() {
         </section>
 
         {/* Featured Guides Section */}
-        <section id="guides" className="py-24 bg-white">
+        <section id="guides" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 
@@ -192,12 +192,12 @@ export default function GuidesPage() {
 
         {/* State Business Guides */}
         <section 
-          className="py-24"
+          className="py-16 md:py-24"
           style={{ backgroundColor: 'var(--color-cream)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -240,7 +240,7 @@ export default function GuidesPage() {
         </section>
 
         {/* Free Downloads Section */}
-        <section id="downloads" className="py-24 bg-white">
+        <section id="downloads" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span 
@@ -302,7 +302,7 @@ export default function GuidesPage() {
 
         {/* Blog Section */}
         <section 
-          className="py-24"
+          className="py-16 md:py-24"
           style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -357,11 +357,11 @@ export default function GuidesPage() {
 
         {/* Bottom CTA */}
         <section 
-          className="py-24"
+          className="py-16 md:py-24"
           style={{ backgroundColor: 'var(--color-cream)' }}
         >
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
