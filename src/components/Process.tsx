@@ -1,12 +1,12 @@
 const steps = [
-  { number: 1, title: "Industry Selection", desc: "Based on market demand, capital, and SBA-aligned criteria" },
-  { number: 2, title: "Business Model Mapping", desc: "Clear deliverables, pricing logic, and operational scope" },
-  { number: 3, title: "Compliance Setup", desc: "Entity, licensing, and required documentation" },
-  { number: 4, title: "Brand & Positioning", desc: "Simple messaging that resonates with your local market" },
-  { number: 5, title: "Go-to-Market Execution", desc: "Practical customer acquisition paths based on your service" },
-  { number: 6, title: "Operations Setup", desc: "Tools, onboarding, hiring, and delivery systems" },
-  { number: 7, title: "Early Revenue", desc: "Ethical, realistic ways to secure early customers" },
-  { number: 8, title: "Launch & Growth", desc: "Next steps for scaling or stabilizing operations" },
+  { number: 1, title: "Find Your Perfect-Fit Business", desc: "We analyze your local market, background, and capital to match you with the highest-demand, highest-margin service model in your area. You don't guess — you launch with data." },
+  { number: 2, title: "Build Your Revenue Blueprint", desc: "Pricing, service packages, and profit margins — mapped out before you spend a dollar. You'll know exactly how much you charge, what you deliver, and what you take home." },
+  { number: 3, title: "Set Up Legally Bulletproof", desc: "LLC formation, licensing, insurance, EIN, contracts — all handled. You launch compliant from day one, not scrambling to fix paperwork after the fact." },
+  { number: 4, title: "Create a Brand Customers Trust Instantly", desc: "Professional website, logo, brand guide, and social media presence — built in 14 days. You look like you've been in business for years, not weeks." },
+  { number: 5, title: "Get Customers Before You Launch", desc: "We build your lead pipeline — ads, local outreach, referral partnerships — so you have paying clients lined up BEFORE launch day. No hoping. No waiting." },
+  { number: 6, title: "Install the Machine That Runs Without You", desc: "CRM, booking systems, SOPs, hiring playbooks, and team training — so your business operates like a system, not a side hustle. You oversee, you don't operate." },
+  { number: 7, title: "Land Your First Revenue", desc: "Real customers, real invoices, real money in the bank. We don't celebrate plans — we celebrate deposits. Most clients hit $3K-$15K/month within 3-6 months." },
+  { number: 8, title: "Scale or Stabilize — Your Choice", desc: "Monthly optimization, growth strategy, and 12 months of support. Build toward a sellable asset worth $200K-$800K, or stabilize at a profit level that replaces your salary." },
 ];
 
 export default function Process() {
@@ -16,8 +16,8 @@ export default function Process() {
         <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
           Our 8-Step Launch Framework
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto mb-16">
-          From industry selection to first revenue — every step mapped out.
+        <p className="text-gray-600 max-w-2xl mx-auto mb-16">
+          From &ldquo;I have an idea&rdquo; to &ldquo;I have paying customers&rdquo; — every step handled.
         </p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
