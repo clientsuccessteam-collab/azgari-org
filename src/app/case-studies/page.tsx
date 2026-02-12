@@ -258,6 +258,11 @@ export default function CaseStudiesPage() {
                         {study.business === "Lawn Care & Landscaping" && "🌿"}
                         {study.business === "Junk Removal" && "🚛"}
                         {study.business === "HVAC Services" && "❄️"}
+                        {study.business === "Recruiting & Staffing" && "🤝"}
+                        {study.business === "Fractional C-Suite Consulting" && "👔"}
+                        {study.business === "Pest Control" && "🐛"}
+                        {study.business === "Handyman Services" && "🔧"}
+                        {study.business === "Flood & Water Remediation" && "💧"}
                       </div>
                     )}
                   </div>

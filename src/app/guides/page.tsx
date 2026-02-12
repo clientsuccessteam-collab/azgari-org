@@ -24,10 +24,10 @@ const howToStartGuides = [
     description: "Low startup costs, high demand, and scalable — learn how to launch a profitable pressure washing company.",
   },
   {
-    title: "How to Start a Moving Company",
-    slug: "how-to-start-a-moving-company",
-    icon: "🚚",
-    description: "Tap into the $18B moving industry with our step-by-step guide to licensing, trucks, and marketing.",
+    title: "How to Start a Pest Control Business",
+    slug: "how-to-start-a-pest-control-business",
+    icon: "🐛",
+    description: "Recurring revenue from residential and commercial contracts. Licensing, equipment, and route-building strategies.",
   },
   {
     title: "How to Start an HVAC Business",
@@ -36,10 +36,34 @@ const howToStartGuides = [
     description: "Recession-proof and essential — discover how to build a six-figure HVAC service company.",
   },
   {
+    title: "How to Start a Handyman Business",
+    slug: "how-to-start-a-handyman-business",
+    icon: "🔧",
+    description: "Low overhead, high demand. How to price jobs, get licensed, and build a referral engine that fills your calendar.",
+  },
+  {
+    title: "How to Start a Recruiting Agency",
+    slug: "how-to-start-a-recruiting-agency",
+    icon: "🤝",
+    description: "High margins, low startup costs. Build a staffing or executive recruiting firm using proven placement frameworks.",
+  },
+  {
+    title: "How to Start a Fractional C-Suite Practice",
+    slug: "how-to-start-a-fractional-csuite-practice",
+    icon: "👔",
+    description: "Turn your corporate experience into a six-figure consulting business. Serve multiple companies as a fractional CFO, COO, or CMO.",
+  },
+  {
     title: "How to Start a Cleaning Business",
     slug: "how-to-start-a-cleaning-business",
     icon: "🧹",
     description: "One of the easiest businesses to start. Learn commercial vs residential and how to scale fast.",
+  },
+  {
+    title: "How to Start a Flood Remediation Business",
+    slug: "how-to-start-a-flood-remediation-business",
+    icon: "💧",
+    description: "Insurance-paid, high-ticket jobs. Certifications, equipment, and how to build relationships with adjusters and contractors.",
   },
   {
     title: "How to Start a Lawn Care Business",
@@ -62,27 +86,27 @@ const featuredStates = [
 
 const freeDownloads = [
   {
-    title: "Service Business Startup Checklist",
-    type: "PDF Download",
-    description: "The exact 47-step checklist we use to launch service businesses. Covers legal, operations, marketing, and finance.",
+    title: "47-Step Service Business Launch Checklist",
+    type: "Instant Download",
+    description: "The exact checklist our team uses to launch 160+ businesses. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
     icon: "📋",
-    cta: "Get Free Download",
+    cta: "Get the Checklist →",
     link: "https://go.azgari.org/checklist",
   },
   {
-    title: "Is This Business Right for Me?",
-    type: "Self Assessment",
-    description: "Answer 12 questions to discover which service business matches your skills, budget, and lifestyle goals.",
+    title: "Which Business Is Right for Me?",
+    type: "2-Minute Quiz",
+    description: "Answer 12 questions about your skills, capital, and lifestyle goals — get a personalized business model recommendation from our library of 50+ proven models.",
     icon: "🎯",
-    cta: "Take Assessment",
+    cta: "Take the Quiz →",
     link: "https://go.azgari.org/assessment",
   },
   {
     title: "SBA Loan Readiness Guide",
-    type: "PDF Download",
-    description: "Everything you need to qualify for SBA financing: credit requirements, documentation, and lender matching.",
+    type: "Instant Download",
+    description: "The step-by-step guide to getting SBA-approved without a broker. Credit requirements, exact documents needed, underwriter psychology, and how to package your application for approval.",
     icon: "🏦",
-    cta: "Get Free Guide",
+    cta: "Get the SBA Guide →",
     link: "https://go.azgari.org/sba-guide",
   },
 ];
@@ -131,7 +155,7 @@ export default function GuidesPage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              No email required for most guides. Just click and learn.
+              Guides, quizzes, and tools from the same framework used to launch 160+ businesses.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
