@@ -6,11 +6,20 @@ export default function Pricing() {
     <section id="pricing" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-6">
+          <span
+            className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
+            style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
+          >
+            INVEST IN YOUR FUTURE
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            Find the Path That Matches Your Goals
+            Choose Your Investment Level
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Every program includes hands-on guidance and a launch guarantee. Paid tuition funds free programs and scholarships for underserved founders.
+          <p className="text-gray-600 max-w-2xl mx-auto mb-4">
+            Every program includes hands-on guidance, a launch guarantee, and systems you own forever. Your investment in a lower tier credits toward the next — so you never pay twice.
+          </p>
+          <p className="text-sm font-semibold max-w-xl mx-auto" style={{ color: 'var(--color-accent)' }}>
+            Remember: our average client generates $285K in first-year revenue. That&apos;s 11x return on our most popular program.
           </p>
         </div>
 

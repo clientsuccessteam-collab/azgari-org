@@ -200,13 +200,13 @@ export default function FAQPage() {
             Still have questions?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Let's talk. We're here to help you make the right decision for your future.
+            Let&apos;s talk. We&apos;re here to help you make the right decision for your future.
           </p>
           <Link
             href="/contact"
             className="btn btn-primary inline-block"
           >
-            Let's Talk
+            Let&apos;s Talk
           </Link>
         </div>
       </section>

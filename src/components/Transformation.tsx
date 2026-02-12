@@ -1,42 +1,112 @@
-const outcomes = [
-  "Someone who makes decisions from clarity, not fear",
-  "Someone who owns a business their family is proud of",
-  "Someone building an asset they can sell or pass down",
-  "Someone who controls their time, income, and future",
-  "Someone aligned with work that fits their life \u2014 not the other way around",
+const financialOutcomes = [
+  {
+    metric: "$285K",
+    label: "Avg First-Year Revenue",
+    detail: "Across 160+ launched businesses",
+  },
+  {
+    metric: "$95K+",
+    label: "Avg Owner Take-Home",
+    detail: "After expenses, year one",
+  },
+  {
+    metric: "47 Days",
+    label: "To First Revenue",
+    detail: "Average across all programs",
+  },
+  {
+    metric: "2–3x",
+    label: "Business Sale Value",
+    detail: "Based on annual profit multiple",
+  },
+];
+
+const lifeOutcomes = [
+  "You own 100% of a business — no boss, no royalties, no permission needed",
+  "You have a sellable asset worth 2–3x annual profit that grows every year",
+  "You control your schedule — work 20–40 hours on your terms, not someone else's",
+  "You have systems that run without you, so the business works even when you don't",
+  "You have a proven framework you can replicate to launch a second business",
 ];
 
 export default function Transformation() {
   return (
     <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Who You Become
-            </h2>
-            <p className="text-gray-600 mb-8">
-              When you build with structure instead of guesswork:
-            </p>
+        <div className="text-center mb-12">
+          <span
+            className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
+            style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
+          >
+            THE OUTCOME
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+            What Changes When You Build With a Proven System
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            This isn&apos;t about motivation or mindset. It&apos;s about what actually happens when you follow a framework built on 160+ real launches.
+          </p>
+        </div>
 
+        {/* Financial Proof Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {financialOutcomes.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-xl p-5 text-center shadow-sm"
+              style={{ borderBottom: '3px solid var(--color-accent)' }}
+            >
+              <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>
+                {item.metric}
+              </div>
+              <p className="font-semibold text-sm text-gray-800 mb-1">{item.label}</p>
+              <p className="text-xs text-gray-500">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Life Outcomes + Before/After */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-xl font-bold mb-6" style={{ color: 'var(--color-primary)' }}>
+              12 Months From Now, You Could Be:
+            </h3>
             <ul className="space-y-4">
-              {outcomes.map((item, i) => (
+              {lifeOutcomes.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="font-bold" style={{ color: 'var(--color-accent)' }}>✓</span>
-                  <span>{item}</span>
+                  <span className="font-bold flex-shrink-0" style={{ color: 'var(--color-accent)' }}>✓</span>
+                  <span className="text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="text-center p-5 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100">
-            <p className="text-gray-500 italic mb-4">
-              &quot;I want to start a business, but I&apos;m scared of failing...&quot;
-            </p>
-            <div className="text-4xl my-4" style={{ color: 'var(--color-accent)' }}>↓</div>
-            <p className="font-semibold" style={{ color: 'var(--color-primary)' }}>
-              &quot;I have a clear plan, expert guidance, and the confidence to build something that lasts.&quot;
-            </p>
+          <div className="space-y-6">
+            {/* Before */}
+            <div className="p-6 rounded-xl bg-gray-100 border border-gray-200">
+              <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-wider">Today</p>
+              <p className="text-gray-500 italic leading-relaxed">
+                &quot;I want to start a business, but I don&apos;t know what kind, I&apos;m afraid of picking wrong, and I can&apos;t afford to lose $50K on a franchise that might not work.&quot;
+              </p>
+            </div>
+
+            {/* Arrow */}
+            <div className="text-center">
+              <div className="text-3xl" style={{ color: 'var(--color-accent)' }}>↓</div>
+            </div>
+
+            {/* After */}
+            <div
+              className="p-6 rounded-xl shadow-lg"
+              style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
+            >
+              <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--color-accent)' }}>
+                12 Months Later
+              </p>
+              <p className="font-semibold leading-relaxed">
+                &quot;My business did $285K in revenue last year. I work 25 hours a week, I have a team of 3, and I just turned down an offer to buy my company for $180K. I&apos;m building an empire.&quot;
+              </p>
+            </div>
           </div>
         </div>
       </div>
