@@ -17,36 +17,42 @@ export const metadata: Metadata = {
 
 const programs = [
   {
-    name: "Quick Win Bundle",
-    price: "$500",
-    note: "Value: $2,000",
-    delivery: "48-72 hour delivery",
-    description: "Not ready to commit? Start here. Get a complete validation package to see exactly how we work before going all-in.",
+    name: "Launch Validation",
+    price: "$2,500",
+    note: "or 3 × $958",
+    delivery: "60-day program · 40+ hrs/wk",
+    description: "Prove the concept, land your first paying customers, and validate it works — before investing more. This is where smart entrepreneurs willing to get their hands dirty start.",
+    whoItsFor: "$5K–$10K available capital · Ready to hustle full-time",
+    guarantee: "Launched in 60 days or continued support until you do",
     features: [
-      "Market validation report",
-      "Competitor analysis",
-      "Pricing strategy overview",
-      "1:1 strategy call (30 min)",
-      "Business model canvas",
+      "Business name + tagline",
+      "Simple logo + brand colors",
+      "Instagram & Facebook profile setup",
+      "Payment system (Square or Stripe)",
+      "Website or landing page",
+      "Weekly check-in calls for 8 weeks",
     ],
+    graduation: "Your $2.5K investment credits toward Foundation if you upgrade.",
     link: "https://go.azgari.org/quick-win",
     featured: false,
-    tag: null,
+    tag: "STARTER",
   },
   {
     name: "Foundation",
     price: "$10,000",
     note: "or 3 × $3,500",
-    delivery: "60-day program",
-    description: "Best for testing the model with guidance. Perfect for entrepreneurs ready to validate their idea with expert support.",
+    delivery: "90-day program · 10–15 hrs/wk",
+    description: "Test the model, land your first paying customers, and prove this works for you — before investing $25K or more. Most of our successful clients started exactly here.",
+    whoItsFor: "$10K–$25K available capital · Validating before scaling",
+    guarantee: "Launched in 90 days or continued support until you do",
     features: [
-      "Everything in Quick Win",
-      "Complete business plan",
-      "Brand identity package",
-      "Website design & copy",
-      "Marketing launch kit",
-      "Bi-weekly coaching calls",
+      "Business model selection (50+ proven models)",
+      "Market validation",
+      "Brand foundation (name, positioning, presence)",
+      "Turn contacts into customers system",
+      "Weekly group coaching for 90 days",
     ],
+    graduation: "Your $10K investment credits toward Full Launch if you upgrade.",
     link: "https://go.azgari.org/foundation",
     featured: false,
     tag: null,
@@ -55,37 +61,40 @@ const programs = [
     name: "Full Launch",
     price: "$25,000",
     note: "or 3 × $8,500",
-    delivery: "180-day program",
-    description: "Best for professionals who want it built WITH them. Complete support from idea to first customers.",
+    delivery: "120-day program · 20–30 hrs/wk",
+    description: "We build the business WITH you — marketing, systems, customer acquisition. You'll have paying customers before you officially launch. Our strongest guarantee.",
+    whoItsFor: "$25K–$50K available capital · Ready to go all-in",
+    guarantee: "Launched in 120 days or continued support — plus $3,000 cash if we miss",
     features: [
       "Everything in Foundation",
-      "Operations playbook",
-      "Hiring & training systems",
-      "CRM & automation setup",
-      "Lead generation campaigns",
-      "Weekly coaching calls",
-      "180-day launch guarantee",
+      "Done-with-you business buildout",
+      "Complete marketing systems (website, funnels, lead gen)",
+      "Sales team hiring + training support",
+      "Client acquisition & referral system",
+      "120-day launch timeline",
     ],
+    graduation: "SBA funding can cover your Scale upgrade — pay from loan proceeds, not pocket.",
     link: "https://go.azgari.org/full-launch",
     featured: true,
-    tag: "⭐ MOST POPULAR",
+    tag: "MOST POPULAR",
   },
   {
     name: "Scale",
     price: "$50,000",
-    note: "or $10K + 6 × $6,667",
-    delivery: "12-month program",
-    description: "Best for owners ready to step back. Build franchise-ready systems and make your business loan-ready.",
+    note: "SBA financing available",
+    delivery: "180-day program · 5–10 hrs/wk",
+    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
+    whoItsFor: "$50K+ capital or SBA loan · Existing $100K+ revenue · Oversight only",
+    guarantee: "Business operational in 180 days with manager in seat or continued support",
     features: [
       "Everything in Full Launch",
-      "Franchise documentation",
-      "SBA loan preparation",
-      "Multi-location playbook",
-      "Management team training",
-      "Financial modeling suite",
-      "Dedicated success manager",
-      "Investor-ready materials",
+      "Full operational team (hired + trained)",
+      "Manager recruited and in place",
+      "Funding concierge (if qualified)",
+      "12-month ongoing support",
+      "180-day launch timeline",
     ],
+    graduation: null,
     link: "https://go.azgari.org/scale",
     featured: false,
     tag: "ENTERPRISE",
@@ -221,9 +230,12 @@ export default function ServicesPage() {
                     </small>
                   </div>
                   
-                  <p className="text-gray-600 text-sm mb-6">{program.description}</p>
-                  
-                  <ul className="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                  <p className="text-gray-600 text-sm mb-3">{program.description}</p>
+
+                  {/* Who it's for */}
+                  <p className="text-xs text-gray-500 mb-4 italic">{program.whoItsFor}</p>
+
+                  <ul className="text-sm text-gray-600 mb-4 space-y-2 flex-grow">
                     {program.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span style={{ color: 'var(--color-accent)' }}>✓</span>
@@ -231,8 +243,19 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
+
+                  {/* Guarantee */}
+                  <div className="rounded-lg p-3 mb-3 text-xs" style={{ backgroundColor: 'var(--color-cream)' }}>
+                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Guarantee:</span>{" "}
+                    <span className="text-gray-600">{program.guarantee}</span>
+                  </div>
+
+                  {/* Graduation path */}
+                  {program.graduation && (
+                    <p className="text-xs text-gray-400 mb-4 italic">{program.graduation}</p>
+                  )}
+
+                  <Link
                     href={program.link}
                     className={`btn w-full mt-auto ${program.featured ? "btn-primary" : "btn-secondary"}`}
                   >
@@ -241,6 +264,25 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Quick Win Entry Point */}
+        <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-sm font-semibold mb-2" style={{ color: 'var(--color-accent)' }}>NOT READY TO COMMIT?</p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: 'var(--color-primary)' }}>
+              Quick Win Bundle — $500
+            </h3>
+            <p className="text-gray-600 mb-2 max-w-xl mx-auto">
+              Get a Business Model Report (48hrs), Competitor Analysis (72hrs), 90-Day Action Plan, and a 1-hour Strategy Call. See exactly how we work before going all-in.
+            </p>
+            <p className="text-sm text-gray-500 mb-6">
+              Credits toward any full program if you upgrade within 30 days.
+            </p>
+            <Link href="https://go.azgari.org/quick-win" className="btn btn-secondary">
+              Start with Quick Win →
+            </Link>
           </div>
         </section>
 

@@ -48,14 +48,26 @@ export const DEFAULT_CTA = {
 };
 
 // ============================================
-// PROGRAMS (Services Page)
+// PROGRAMS (Services Page & Homepage Pricing)
 // ============================================
 export const PROGRAMS = [
   {
-    name: "Quick Win Bundle",
-    price: "$500",
-    note: "Value: $2,000",
-    description: "Not ready to commit? Start here. Delivered in 48-72 hours. See exactly how we work.",
+    name: "Launch Validation",
+    price: "$2,500",
+    note: "or $958 × 3 payments",
+    description: "Prove the concept, land your first paying customers, and validate it works — before investing more. Perfect for entrepreneurs willing to get their hands dirty.",
+    whoItsFor: "40+ hrs/wk available, $5K–$10K capital, ready to hustle",
+    guarantee: "Launched in 60 days or continued support until you do",
+    timeCommitment: "40+ hrs/wk",
+    features: [
+      "Business name + tagline",
+      "Simple logo + brand colors",
+      "Social media profile setup",
+      "Payment system (Square/Stripe)",
+      "Website or landing page",
+      "Weekly check-in calls (8 weeks)",
+    ],
+    graduation: "Credits toward Foundation if you upgrade",
     href: GHL_LINKS.programs.quickWin,
     featured: false,
   },
@@ -63,7 +75,18 @@ export const PROGRAMS = [
     name: "Foundation",
     price: "$10,000",
     note: "or $3,500 × 3 payments",
-    description: "Best for testing the model with guidance. Perfect for entrepreneurs ready to validate their business idea.",
+    description: "Test the model, land your first paying customers, and prove this works for you — before investing $25K or more. Most of our successful clients started exactly here.",
+    whoItsFor: "10–15 hrs/wk available, $10K–$25K capital, want to validate before scaling",
+    guarantee: "Launched in 90 days or continued support until you do",
+    timeCommitment: "10–15 hrs/wk",
+    features: [
+      "Business model selection (50+ proven models)",
+      "Market validation",
+      "Brand foundation (name, positioning, presence)",
+      "Turn contacts into customers system",
+      "Weekly group coaching for 90 days",
+    ],
+    graduation: "$10K credits toward Full Launch if you upgrade",
     href: GHL_LINKS.programs.foundation,
     featured: false,
   },
@@ -71,19 +94,52 @@ export const PROGRAMS = [
     name: "Full Launch",
     price: "$25,000",
     note: "or $8,500 × 3 payments",
-    description: "Best for professionals who want it built WITH them. Complete 180-day launch support.",
+    description: "We build the business WITH you — marketing, systems, customer acquisition. You'll have paying customers before you officially launch. For people ready to go all-in.",
+    whoItsFor: "20–30 hrs/wk available, $25K–$50K capital, ready to commit fully",
+    guarantee: "Launched in 120 days or continued support — plus $3,000 cash if we miss",
+    timeCommitment: "20–30 hrs/wk",
+    features: [
+      "Everything in Foundation",
+      "Done-with-you business buildout",
+      "Complete marketing systems (website, funnels, lead gen)",
+      "Sales team hiring + training support",
+      "Client acquisition & referral system",
+      "120-day launch timeline",
+    ],
+    graduation: "SBA funding can cover Scale upgrade",
     href: GHL_LINKS.programs.fullLaunch,
     featured: true,
   },
   {
     name: "Scale",
     price: "$50,000",
-    note: "or $10K + $6,667 × 6",
-    description: "Best for owners ready to step back. Make your business loan-ready as a franchise.",
+    note: "SBA financing available",
+    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
+    whoItsFor: "5–10 hrs/wk (oversight only), $50K+ capital or SBA loan, existing revenue",
+    guarantee: "Business operational in 180 days with manager in seat or continued support",
+    timeCommitment: "5–10 hrs/wk",
+    features: [
+      "Everything in Full Launch",
+      "Full operational team (hired + trained)",
+      "Manager in place",
+      "Funding concierge (if qualified)",
+      "12-month support",
+      "180-day launch timeline",
+    ],
+    graduation: null,
     href: GHL_LINKS.programs.scale,
     featured: false,
   },
 ];
+
+// Quick Win Bundle — entry-level closing incentive
+export const QUICK_WIN = {
+  name: "Quick Win Bundle",
+  price: "$500",
+  note: "Value: $2,000",
+  description: "Not ready to commit? Start here. Get a Business Model Report (48hrs), Competitor Analysis (72hrs), 90-Day Action Plan, and a 1-hour Strategy Call. Credits toward any full program if you upgrade within 30 days.",
+  href: GHL_LINKS.programs.quickWin,
+};
 
 // ============================================
 // COURSES (Courses Page)
