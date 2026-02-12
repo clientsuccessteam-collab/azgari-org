@@ -13,6 +13,9 @@ import HomeFAQ from "@/components/HomeFAQ";
 import Transparency from "@/components/Transparency";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import MissionWrapper from "@/components/MissionWrapper";
+import ImpactModule from "@/components/ImpactModule";
+import ScholarshipCallout from "@/components/ScholarshipCallout";
 
 export default function Home() {
   return (
@@ -21,6 +24,7 @@ export default function Home() {
       <main>
         {/* 1. HOOK — Promise + credibility */}
         <Hero />
+        <MissionWrapper variant="hero" />
         <TrustBanner />
 
         {/* 2. COST OF INACTION — Quantify what staying stuck costs them */}
@@ -38,6 +42,9 @@ export default function Home() {
         {/* 6. THE OUTCOME — Financial proof + life transformation */}
         <Transformation />
 
+        {/* 6.5. IMPACT — Social mission metrics */}
+        <ImpactModule />
+
         {/* 7. SOCIAL PROOF — Real client testimonials */}
         <Testimonials />
 
@@ -46,6 +53,11 @@ export default function Home() {
 
         {/* 9. PRICING — All tiers with decision tree (after value is built) */}
         <Pricing />
+
+        {/* 9.5. SCHOLARSHIPS — Scholarship availability callout */}
+        <div className="max-w-2xl mx-auto px-6 py-8">
+          <ScholarshipCallout />
+        </div>
 
         {/* 10. OBJECTION HANDLING */}
         <HomeFAQ />

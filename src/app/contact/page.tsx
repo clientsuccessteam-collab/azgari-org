@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionWrapper from "@/components/MissionWrapper";
 import { GHL_LINKS } from "@/lib/links";
 
 export const metadata: Metadata = {
@@ -29,10 +30,17 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Mission Statement */}
+        <section className="pt-8 pb-0">
+          <div className="max-w-3xl mx-auto px-6">
+            <MissionWrapper variant="section" />
+          </div>
+        </section>
+
         {/* Main CTA */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6">
-            <div 
+            <div
               className="rounded-2xl p-8 md:p-12 text-center"
               style={{ backgroundColor: 'var(--color-primary)' }}
             >

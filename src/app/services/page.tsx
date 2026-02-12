@@ -2,10 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionWrapper from "@/components/MissionWrapper";
+import ReinvestmentDisclosure from "@/components/ReinvestmentDisclosure";
+import ScholarshipCallout from "@/components/ScholarshipCallout";
 
 export const metadata: Metadata = {
   title: "Service Business Programs & Pricing | Azgari Foundation",
-  description: "4 programs from $500-$50K. Expert business coaching, SBA loan prep, and acquisition advisory for service business owners.",
+  description: "Nonprofit entrepreneurship training — 4 programs from $500-$50K. Expert business coaching, SBA loan prep, and acquisition advisory for service business owners.",
   keywords: "service business programs, business consulting pricing, SBA loan guidance, business launch program, acquisition advisory",
   openGraph: {
     title: "Programs & Pricing — Launch Your Service Business with Expert Guidance",
@@ -177,8 +180,11 @@ export default function ServicesPage() {
         {/* Program Cards */}
         <section id="programs" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-3xl mx-auto mb-8">
+              <MissionWrapper variant="section" />
+            </div>
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
@@ -263,6 +269,14 @@ export default function ServicesPage() {
                   </Link>
                 </div>
               ))}
+            </div>
+
+            <div className="max-w-2xl mx-auto mt-8 mb-12">
+              <ReinvestmentDisclosure />
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-8">
+              <ScholarshipCallout variant="banner" />
             </div>
           </div>
         </section>

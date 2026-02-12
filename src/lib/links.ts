@@ -802,3 +802,44 @@ export const AGGREGATE_STATS = {
   averageDaysToFirstRevenue: "47",
   totalClientRevenue: "$45M+",
 };
+
+// ============================================
+// NONPROFIT COMPLIANCE DATA
+// Single source of truth for all compliance copy
+// ============================================
+export const NONPROFIT = {
+  name: "Azgari Foundation",
+  type: "501(c)(3) Nonprofit Organization",
+  ein: "XX-XXXXXXX", // TODO: Insert real EIN
+
+  // Mission statement — BRD "north star"
+  mission:
+    "Azgari Foundation delivers entrepreneurship training that increases income potential, expands economic mobility, and creates jobs in local communities.",
+
+  // Short mission (for tight spaces like footer tagline)
+  missionShort:
+    "Entrepreneurship training for economic mobility and community job creation.",
+
+  // Revenue reinvestment disclosure (BRD §5.2, §10)
+  reinvestmentStatement:
+    "Program fees support training delivery, scholarships, and expansion of our nonprofit workforce initiatives.",
+
+  // Global legal disclosure (BRD §10)
+  legalDisclosure:
+    "Azgari Foundation is a nonprofit organization. Program revenue is reinvested into training, scholarships, and economic mobility initiatives.",
+
+  // Results disclaimer (FTC-safe)
+  resultsDisclaimer:
+    "Individual results vary based on effort, market conditions, and capital. Stated figures reflect aggregate client outcomes, not guarantees.",
+};
+
+// ============================================
+// IMPACT METRICS (Social Mission)
+// Used by ImpactModule component
+// ============================================
+export const IMPACT_METRICS = [
+  { value: "160+", label: "Businesses Launched" },
+  { value: "500+", label: "Jobs Created" },
+  { value: "40+", label: "Scholarships Awarded" },
+  { value: "35+", label: "Communities Served" },
+];
