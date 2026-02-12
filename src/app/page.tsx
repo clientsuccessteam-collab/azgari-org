@@ -42,11 +42,11 @@ export default function Home() {
         {/* 6. THE OUTCOME — Financial proof + life transformation */}
         <Transformation />
 
-        {/* 6.5. IMPACT — Social mission metrics */}
-        <ImpactModule />
-
         {/* 7. SOCIAL PROOF — Real client testimonials */}
         <Testimonials />
+
+        {/* 7.5. IMPACT — "Why this matters beyond you" bridge into value/pricing */}
+        <ImpactModule />
 
         {/* 8. VALUE STACK — Everything included + what it costs separately */}
         <ValueStack />
@@ -54,9 +54,9 @@ export default function Home() {
         {/* 9. PRICING — All tiers with decision tree (after value is built) */}
         <Pricing />
 
-        {/* 9.5. SCHOLARSHIPS — Scholarship availability callout */}
-        <div className="max-w-2xl mx-auto px-6 py-8">
-          <ScholarshipCallout />
+        {/* 9.5. SCHOLARSHIPS — Compliance visibility, minimal footprint */}
+        <div className="max-w-4xl mx-auto px-6 pt-2 pb-8">
+          <ScholarshipCallout variant="banner" />
         </div>
 
         {/* 10. OBJECTION HANDLING */}
