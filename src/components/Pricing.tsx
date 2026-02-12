@@ -135,6 +135,35 @@ export default function Pricing() {
           ))}
         </div>
 
+        {/* SBA Investment Callout */}
+        <div className="max-w-3xl mx-auto mb-12 rounded-2xl p-6 sm:p-8 border-2" style={{ borderColor: 'var(--color-primary)', backgroundColor: 'var(--color-cream)' }}>
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <span className="text-3xl shrink-0">🏦</span>
+            <div>
+              <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
+                Your Investment Counts Toward SBA Funding
+              </h3>
+              <p className="text-sm text-gray-700 mb-3">
+                To qualify for an SBA loan, you need to show <strong>$64,000 invested in your business</strong>. Our program fees count toward that investment threshold. You&apos;re not financing our service with an SBA loan — you&apos;re building toward one.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-3 text-xs">
+                <div className="rounded-lg bg-white p-3">
+                  <p className="font-bold" style={{ color: 'var(--color-primary)' }}>Step 1</p>
+                  <p className="text-gray-600">Invest in your program with Azgari</p>
+                </div>
+                <div className="rounded-lg bg-white p-3">
+                  <p className="font-bold" style={{ color: 'var(--color-primary)' }}>Step 2</p>
+                  <p className="text-gray-600">Our fees + your business expenses count toward the $64K threshold</p>
+                </div>
+                <div className="rounded-lg bg-white p-3">
+                  <p className="font-bold" style={{ color: 'var(--color-primary)' }}>Step 3</p>
+                  <p className="text-gray-600">Once qualified, apply for SBA funding to scale further</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Quick Win Bundle — Entry Point */}
         <div className="max-w-2xl mx-auto rounded-2xl p-6 sm:p-8 text-center border-2 border-dashed border-gray-200">
           <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-accent)' }}>NOT READY TO COMMIT?</p>
