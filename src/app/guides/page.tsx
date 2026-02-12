@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -180,7 +180,7 @@ export default function GuidesPage() {
                 How to Start Guides
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Step-by-step guides for the most profitable service businesses. Written by founders who've done it.
+                Step-by-step guides for the most profitable service businesses. Written by founders who&apos;ve done it.
               </p>
             </div>
             
