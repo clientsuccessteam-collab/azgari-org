@@ -5,70 +5,79 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-6">
-          <span
-            className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
-            style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
-          >
-            INVEST IN YOUR FUTURE
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--color-primary)' }}>
             Choose Your Investment Level
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-4">
-            Every program includes hands-on guidance, a launch guarantee, and systems you own forever. Your investment in a lower tier credits toward the next — so you never pay twice.
+          <p className="text-gray-600 max-w-xl mx-auto mb-5">
+            Every tier includes a launch guarantee and systems you own forever. Pay into a lower tier? It credits toward the next — you never pay twice.
           </p>
-          <p className="text-sm font-semibold max-w-xl mx-auto" style={{ color: 'var(--color-accent)' }}>
-            Remember: our average client generates $285K in first-year revenue. That&apos;s 11x return on our most popular program.
-          </p>
+          <div
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold"
+            style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary-dark)' }}
+          >
+            Average client first-year revenue: <span style={{ color: 'var(--color-accent-hover)' }}>$285K</span> — that&apos;s 11x return
+          </div>
         </div>
 
-        {/* Decision Tree */}
-        <div className="max-w-2xl mx-auto mb-12 rounded-2xl p-6 sm:p-8 border-2 border-gray-100" style={{ backgroundColor: 'var(--color-cream)' }}>
-          <h3 className="text-lg font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
-            Which program is right for you?
-          </h3>
-          <p className="text-sm text-gray-500 text-center mb-5">Answer these questions to find your fit:</p>
-          <div className="space-y-4 text-sm text-gray-600">
-            <div className="flex gap-3 items-start">
-              <span className="font-bold shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs text-white" style={{ backgroundColor: 'var(--color-primary)' }}>1</span>
-              <div>
-                <p className="font-semibold text-gray-800 mb-1">How much time can you commit per week?</p>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-500">
-                  <span>40+ hrs → <strong className="text-gray-700">Launch Validation</strong></span>
-                  <span>20–30 hrs → <strong className="text-gray-700">Full Launch</strong></span>
-                  <span>10–15 hrs → <strong className="text-gray-700">Foundation</strong></span>
-                  <span>&lt;10 hrs → <strong className="text-gray-700">Scale</strong></span>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3 items-start">
-              <span className="font-bold shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs text-white" style={{ backgroundColor: 'var(--color-primary)' }}>2</span>
-              <div>
-                <p className="font-semibold text-gray-800 mb-1">Do you want to be hands-on, or have us build it?</p>
-                <div className="text-xs text-gray-500 space-y-1">
-                  <p>&quot;I want to learn and do it myself&quot; → <strong className="text-gray-700">Launch Validation or Foundation</strong></p>
-                  <p>&quot;Build it with me&quot; → <strong className="text-gray-700">Full Launch</strong></p>
-                  <p>&quot;I want to own, not operate&quot; → <strong className="text-gray-700">Scale</strong></p>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3 items-start">
-              <span className="font-bold shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs text-white" style={{ backgroundColor: 'var(--color-primary)' }}>3</span>
-              <div>
-                <p className="font-semibold text-gray-800 mb-1">What&apos;s your available capital?</p>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-500">
-                  <span>$5K–$10K → <strong className="text-gray-700">Launch Validation</strong></span>
-                  <span>$10K–$25K → <strong className="text-gray-700">Foundation</strong></span>
-                  <span>$25K–$50K → <strong className="text-gray-700">Full Launch</strong></span>
-                  <span>$50K+ → <strong className="text-gray-700">Scale</strong></span>
-                </div>
-              </div>
-            </div>
+        {/* Quick-Match Grid */}
+        <div className="max-w-4xl mx-auto mb-12 rounded-2xl border-2 border-gray-100 overflow-hidden" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="px-6 pt-6 pb-4 text-center">
+            <h3 className="text-lg font-bold" style={{ color: 'var(--color-primary)' }}>
+              Find your fit in 10 seconds
+            </h3>
           </div>
-          <p className="text-center mt-5 text-sm text-gray-500">
-            Still unsure? <Link href={GHL_LINKS.forms.bookCall} className="font-medium underline" style={{ color: 'var(--color-accent)' }}>Book a free 20-minute call</Link> — we&apos;ll recommend the right fit.
-          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-t border-gray-200">
+                  <th className="text-left py-3 px-4 sm:px-6 font-medium text-gray-500 w-28 sm:w-36"></th>
+                  <th className="py-3 px-3 sm:px-4 font-bold text-center" style={{ color: 'var(--color-primary)' }}>Launch Validation</th>
+                  <th className="py-3 px-3 sm:px-4 font-bold text-center" style={{ color: 'var(--color-primary)' }}>Foundation</th>
+                  <th className="py-3 px-3 sm:px-4 font-bold text-center relative" style={{ color: 'var(--color-primary)' }}>
+                    Full Launch
+                    <span className="block text-[10px] font-semibold mt-0.5" style={{ color: 'var(--color-accent)' }}>MOST POPULAR</span>
+                  </th>
+                  <th className="py-3 px-3 sm:px-4 font-bold text-center" style={{ color: 'var(--color-primary)' }}>Scale</th>
+                </tr>
+              </thead>
+              <tbody className="text-xs text-gray-600">
+                <tr className="border-t border-gray-200">
+                  <td className="py-3 px-4 sm:px-6 font-semibold text-gray-700">Your time</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">40+ hrs/wk</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">10–15 hrs/wk</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">20–30 hrs/wk</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">&lt;10 hrs/wk</td>
+                </tr>
+                <tr className="border-t border-gray-200">
+                  <td className="py-3 px-4 sm:px-6 font-semibold text-gray-700">Your role</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">I do it myself</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">I learn &amp; build</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">We build together</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">I own, not operate</td>
+                </tr>
+                <tr className="border-t border-gray-200">
+                  <td className="py-3 px-4 sm:px-6 font-semibold text-gray-700">Capital</td>
+                  <td className="py-3 px-3 sm:px-4 text-center font-medium">$5K–$10K</td>
+                  <td className="py-3 px-3 sm:px-4 text-center font-medium">$10K–$25K</td>
+                  <td className="py-3 px-3 sm:px-4 text-center font-medium">$25K–$50K</td>
+                  <td className="py-3 px-3 sm:px-4 text-center font-medium">$50K+</td>
+                </tr>
+                <tr className="border-t border-gray-200">
+                  <td className="py-3 px-4 sm:px-6 font-semibold text-gray-700">Best for</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">Prove the concept fast</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">Validate before scaling</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">Go all-in with support</td>
+                  <td className="py-3 px-3 sm:px-4 text-center">True business ownership</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="px-6 pb-5 pt-3 text-center border-t border-gray-200">
+            <p className="text-sm text-gray-500">
+              Still unsure? <Link href={GHL_LINKS.forms.bookCall} className="font-medium underline" style={{ color: 'var(--color-accent)' }}>Book a free 20-minute call</Link> — we&apos;ll match you.
+            </p>
+          </div>
         </div>
 
         {/* Program Cards */}
