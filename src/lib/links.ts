@@ -552,7 +552,7 @@ export const CASE_STUDIES = [
     name: "Marcus T.",
     location: "Austin, TX",
     business: "Pressure Washing",
-    image: "/images/case-studies/marcus.jpg", // TODO: Add actual image
+    image: "/images/case-studies/marcus.svg",
     challenge: "Corporate burnout after 15 years in tech sales. Had savings but no idea how to start a business. Considered franchises but didn't want royalties eating into profits.",
     solution: "Launched a residential pressure washing business with Azgari's Full Launch program. We helped with equipment selection, pricing strategy, and a customer acquisition plan targeting HOA neighborhoods.",
     results: [
@@ -570,7 +570,7 @@ export const CASE_STUDIES = [
     name: "Jennifer & David R.",
     location: "Tampa, FL",
     business: "Commercial Cleaning",
-    image: "/images/case-studies/jennifer-david.jpg",
+    image: "/images/case-studies/jennifer-david.svg",
     challenge: "Husband-wife team looking to build something together after David's layoff. Limited startup capital (~$15K) and no business experience.",
     solution: "Started with office cleaning contracts. Azgari helped secure SBA microloan for equipment and provided sales scripts specifically for approaching property managers.",
     results: [
@@ -588,7 +588,7 @@ export const CASE_STUDIES = [
     name: "Anthony M.",
     location: "Columbus, OH",
     business: "Lawn Care & Landscaping",
-    image: "/images/case-studies/anthony.jpg",
+    image: "/images/case-studies/anthony.svg",
     challenge: "Side hustle that was stuck at $3K/month. Wanted to go full-time but couldn't figure out how to scale beyond himself.",
     solution: "Restructured pricing, built route density strategy, and created hiring/training SOPs. Transitioned from solo operator to managing a crew.",
     results: [
@@ -606,7 +606,7 @@ export const CASE_STUDIES = [
     name: "Robert K.",
     location: "Atlanta, GA",
     business: "Junk Removal",
-    image: "/images/case-studies/robert.jpg",
+    image: "/images/case-studies/robert.svg",
     challenge: "Recently retired military, had GI Bill benefits but wanted to build equity instead of going back to school. Strong work ethic but zero business background.",
     solution: "Used Azgari's veteran-specific pathway. Secured SBA loan with veteran advantage terms. Built junk removal operation targeting estate cleanouts and realtor partnerships.",
     results: [
@@ -624,7 +624,7 @@ export const CASE_STUDIES = [
     name: "Miguel S.",
     location: "Sacramento, CA",
     business: "HVAC Services",
-    image: "/images/case-studies/miguel.jpg",
+    image: "/images/case-studies/miguel.svg",
     challenge: "Licensed HVAC tech working for someone else for 12 years. Great at the trade but intimidated by the business side—pricing, marketing, hiring.",
     solution: "Foundation program focused on business fundamentals. Built brand, set up pricing tiers, and created a service agreement model for recurring revenue.",
     results: [
@@ -642,7 +642,7 @@ export const CASE_STUDIES = [
     name: "Danielle W.",
     location: "Dallas, TX",
     business: "Recruiting & Staffing",
-    image: "/images/case-studies/danielle.jpg", // TODO: Add actual image
+    image: "/images/case-studies/danielle.svg",
     challenge: "Former corporate HR director tired of building teams for someone else. Had deep recruiting skills but no idea how to run her own agency — pricing, contracts, client acquisition.",
     solution: "Foundation program to validate the model, then upgraded to Full Launch. Built a niche staffing agency specializing in healthcare placements with a retainer-based revenue model.",
     results: [
@@ -660,7 +660,7 @@ export const CASE_STUDIES = [
     name: "James H.",
     location: "Denver, CO",
     business: "Fractional C-Suite Consulting",
-    image: "/images/case-studies/james.jpg", // TODO: Add actual image
+    image: "/images/case-studies/james.svg",
     challenge: "20-year corporate CFO who was laid off at 52. Didn't want another corporate job but thought consulting meant starting from zero. Had the expertise but no client pipeline or business structure.",
     solution: "Foundation program to build the practice framework, then Full Launch to build marketing systems and client acquisition. Positioned as a fractional CFO serving 4-6 companies simultaneously.",
     results: [
@@ -678,7 +678,7 @@ export const CASE_STUDIES = [
     name: "Carlos M.",
     location: "Phoenix, AZ",
     business: "Pest Control",
-    image: "/images/case-studies/carlos.jpg", // TODO: Add actual image
+    image: "/images/case-studies/carlos.svg",
     challenge: "Worked for a national pest control chain for 8 years. Knew the industry inside out but was capped at $55K salary. Wanted his own routes but didn't know how to handle licensing, marketing, or scaling beyond himself.",
     solution: "Launch Validation to land first customers fast, then upgraded to Foundation. Built residential pest control routes in Phoenix suburbs with recurring monthly service contracts.",
     results: [
@@ -696,7 +696,7 @@ export const CASE_STUDIES = [
     name: "Kevin B.",
     location: "Charlotte, NC",
     business: "Handyman Services",
-    image: "/images/case-studies/kevin.jpg", // TODO: Add actual image
+    image: "/images/case-studies/kevin.svg",
     challenge: "Retired firefighter with strong fix-it skills but zero business background. Was doing odd jobs for neighbors at low rates. No pricing structure, no marketing, no systems — just word of mouth.",
     solution: "Launch Validation program. Built pricing tiers (small/medium/large jobs), set up Google Business Profile and lead gen, created a referral system targeting real estate agents and property managers.",
     results: [
@@ -714,7 +714,7 @@ export const CASE_STUDIES = [
     name: "Patricia & Tom R.",
     location: "Jacksonville, FL",
     business: "Flood & Water Remediation",
-    image: "/images/case-studies/patricia-tom.jpg", // TODO: Add actual image
+    image: "/images/case-studies/patricia-tom.svg",
     challenge: "Husband-wife team living in flood-prone Florida. Tom had construction experience but no insurance restoration knowledge. Saw the opportunity after Hurricane Idalia but didn't know how to break into the industry.",
     solution: "Full Launch program. Secured IICRC certifications, built relationships with insurance adjusters, and created a rapid-response system. SBA loan covered equipment (dehumidifiers, extractors, vehicles).",
     results: [
@@ -739,7 +739,7 @@ export const TESTIMONIALS = [
     name: "Marcus T.",
     role: "Pressure Washing Owner",
     location: "Austin, TX",
-    image: "/images/testimonials/marcus.jpg",
+    image: "/images/case-studies/marcus.svg",
     quote: "I was terrified. Fifteen years in corporate, and I was about to bet everything on myself. Azgari's system was so clear that the fear turned into focus. Six months in, I hit $10K months. Year one: $287K. The framework works — you just have to show up.",
     rating: 5,
   },
@@ -748,7 +748,7 @@ export const TESTIMONIALS = [
     name: "Jennifer R.",
     role: "Commercial Cleaning Owner",
     location: "Tampa, FL",
-    image: "/images/testimonials/jennifer.jpg",
+    image: "/images/case-studies/jennifer-david.svg",
     quote: "We had $15K and zero business experience. I didn't think we could afford the program, but it paid for itself in 90 days. Now we're doing $35K/month with 14 recurring contracts. The sales scripts alone were worth 10x what we paid.",
     rating: 5,
   },
@@ -757,7 +757,7 @@ export const TESTIMONIALS = [
     name: "Anthony M.",
     role: "Lawn Care Owner",
     location: "Columbus, OH",
-    image: "/images/testimonials/anthony.jpg",
+    image: "/images/case-studies/anthony.svg",
     quote: "I was grinding 60-hour weeks for $3K/month and going nowhere. Azgari showed me the difference between working hard and working smart. Now I do $12K/month in 20-hour weeks with a team of 4. Systems changed everything.",
     rating: 5,
   },
@@ -766,7 +766,7 @@ export const TESTIMONIALS = [
     name: "Robert K.",
     role: "Junk Removal Owner",
     location: "Atlanta, GA",
-    image: "/images/testimonials/robert.jpg",
+    image: "/images/case-studies/robert.svg",
     quote: "Leaving the military, I had discipline but no business direction. Azgari gave me the roadmap I was missing. $340K first year — and I hired three other vets. This is what I was meant to do.",
     rating: 5,
   },
@@ -775,7 +775,7 @@ export const TESTIMONIALS = [
     name: "Miguel S.",
     role: "HVAC Business Owner",
     location: "Sacramento, CA",
-    image: "/images/testimonials/miguel.jpg",
+    image: "/images/case-studies/miguel.svg",
     quote: "Twelve years turning wrenches for someone else. I knew HVAC inside out but business terrified me. Azgari made the business side simple. First year: $520K revenue, $180K take-home. Should've done this a decade ago.",
     rating: 5,
   },
@@ -784,7 +784,7 @@ export const TESTIMONIALS = [
     name: "Sarah L.",
     role: "Mobile Pet Grooming Owner",
     location: "Denver, CO",
-    image: "/images/testimonials/sarah.jpg",
+    image: "/images/case-studies/marcus.svg",
     quote: "I was paralyzed by the business side — pricing, marketing, licenses, all of it. Azgari broke it down into steps I could actually follow. Booked solid within 90 days. Now I'm turning away clients and hiring my first employee.",
     rating: 5,
   },
