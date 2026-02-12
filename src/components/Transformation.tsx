@@ -1,3 +1,5 @@
+import { NONPROFIT } from "@/lib/links";
+
 const financialOutcomes = [
   {
     metric: "$285K",
@@ -109,6 +111,9 @@ export default function Transformation() {
             </div>
           </div>
         </div>
+        <p className="text-xs text-gray-400 mt-6 max-w-lg mx-auto text-center">
+          {NONPROFIT.resultsDisclaimer}
+        </p>
       </div>
     </section>
   );

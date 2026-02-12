@@ -35,7 +35,7 @@ export default function Hero() {
                 Book Your Free Discovery Call →
               </Link>
               <Link href="#pricing" className="btn btn-secondary">
-                View Pricing
+                Compare Programs
               </Link>
             </div>
 

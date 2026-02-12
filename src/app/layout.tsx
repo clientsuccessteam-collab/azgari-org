@@ -4,14 +4,14 @@ import JsonLd from "@/app/JsonLd";
 
 export const metadata: Metadata = {
   title: "Start a Service Business in 180 Days | Azgari Foundation",
-  description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties, full ownership. Expert guidance from idea to revenue.",
+  description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties, full ownership. Expert guidance from idea to revenue. A 501(c)(3) nonprofit expanding economic mobility through entrepreneurship.",
   keywords: "service business, SBA loan, franchise alternative, business consulting, business ownership",
   alternates: {
     canonical: "https://azgari.org",
   },
   openGraph: {
     title: "Build Real Wealth. Own 100% | Azgari Foundation",
-    description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties.",
+    description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties. A 501(c)(3) nonprofit expanding economic mobility through entrepreneurship.",
     type: "website",
     url: "https://azgari.org",
   },
