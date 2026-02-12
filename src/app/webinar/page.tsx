@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionWrapper from "@/components/MissionWrapper";
 import { GHL_LINKS, TESTIMONIALS } from "@/lib/links";
 
 const learningPoints = [
@@ -313,8 +314,15 @@ export default function WebinarPage() {
           </div>
         </section>
 
+        {/* Mission Statement */}
+        <section className="py-8 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <MissionWrapper variant="section" />
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section 
+        <section
           className="py-16 md:py-24 text-center"
           style={{ backgroundColor: 'var(--color-primary)' }}
         >

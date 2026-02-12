@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { PROGRAMS, QUICK_WIN, GHL_LINKS } from "@/lib/links";
+import { PROGRAMS, QUICK_WIN, GHL_LINKS, NONPROFIT } from "@/lib/links";
+import ReinvestmentDisclosure from "@/components/ReinvestmentDisclosure";
 
 export default function Pricing() {
   return (
@@ -18,6 +19,9 @@ export default function Pricing() {
           >
             Average client first-year revenue: <span style={{ color: 'var(--color-accent-hover)' }}>$285K</span> — that&apos;s 11x return
           </div>
+          <p className="text-xs text-gray-400 mt-3 max-w-lg mx-auto">
+            {NONPROFIT.resultsDisclaimer}
+          </p>
         </div>
 
         {/* Quick-Match Grid */}
@@ -142,6 +146,10 @@ export default function Pricing() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto mb-12">
+          <ReinvestmentDisclosure />
         </div>
 
         {/* SBA Investment Callout */}

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GHL_LINKS, COURSES } from "@/lib/links";
 import JsonLd from "@/app/JsonLd";
+import ReinvestmentDisclosure from "@/components/ReinvestmentDisclosure";
 
 export const metadata: Metadata = {
   title: "Courses | Azgari Foundation",
@@ -160,6 +161,10 @@ export default function CoursesPage() {
                   </Link>
                 </div>
               ))}
+            </div>
+
+            <div className="max-w-2xl mx-auto mt-8 mb-4">
+              <ReinvestmentDisclosure />
             </div>
           </div>
         </section>

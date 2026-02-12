@@ -1,3 +1,5 @@
+import { NONPROFIT } from "@/lib/links";
+
 const stats = [
   { number: "160+", label: "Businesses Launched", detail: "and counting" },
   { number: "$285K", label: "Avg. First-Year Revenue", detail: "across all business types" },
@@ -27,6 +29,9 @@ export default function Stats() {
             </div>
           ))}
         </div>
+        <p className="text-xs text-white/50 mt-6 max-w-lg mx-auto text-center">
+          {NONPROFIT.resultsDisclaimer}
+        </p>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ImpactModule from "@/components/ImpactModule";
 
 const missionPoints = [
   "Help pre-retirees, veterans, and working professionals launch or acquire local service businesses",
@@ -225,6 +226,9 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Impact Metrics */}
+        <ImpactModule />
 
         {/* Why We Exist */}
         <section className="py-16 md:py-24 bg-white">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { NONPROFIT } from "@/lib/links";
 
 const footerLinks = {
   programs: [
@@ -42,7 +43,7 @@ export default function Footer() {
               <span className="text-lg font-bold">AZGARI FOUNDATION</span>
             </div>
             <p className="text-white/80 text-sm">
-              Helping professionals build real wealth through service business ownership.
+              {NONPROFIT.missionShort}
             </p>
           </div>
 
@@ -78,19 +79,35 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             {footerLinks.company.map((link) => (
-              <Link 
-                key={link.href} 
+              <Link
+                key={link.href}
                 href={link.href}
                 className="block text-white/80 hover:text-amber-400 py-1 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
+            {/* Future: Financials link */}
+            {/* Future: Governance link */}
+            {/* Future: Impact Reports link */}
           </div>
         </div>
 
+        {/* Nonprofit Compliance */}
+        <div className="border-t border-white/10 pt-6 mb-6 text-center">
+          <p className="text-xs text-white/50">
+            {NONPROFIT.type} · EIN: {NONPROFIT.ein}
+          </p>
+          <p className="text-xs text-white/40 mt-2 max-w-2xl mx-auto">
+            {NONPROFIT.reinvestmentStatement}
+          </p>
+          <p className="text-xs text-white/30 mt-1 max-w-2xl mx-auto">
+            {NONPROFIT.resultsDisclaimer}
+          </p>
+        </div>
+
         <div className="border-t border-white/10 pt-8 text-center text-sm text-white/60">
-          <p>© {new Date().getFullYear()} Azgari Foundation. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {NONPROFIT.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
