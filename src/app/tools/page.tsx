@@ -40,17 +40,51 @@ export default function ToolsPage() {
           </div>
         </section>
 
-        {/* Free Tools */}
+        {/* Free Training Video */}
+        <section className="py-16" style={{ backgroundColor: 'var(--color-primary)' }}>
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20 text-white">
+                  FREE TRAINING
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  How to Launch a Profitable Service Business in 180 Days
+                </h2>
+                <p className="text-white/80 mb-6">
+                  Watch our free 30-minute training where Azgari Lipshy breaks down the exact 8-step framework used to launch 160+ businesses. Learn which business models work, how to get your first customers, and the #1 mistake that kills new businesses.
+                </p>
+                <Link
+                  href={GHL_LINKS.qualify}
+                  className="btn btn-primary"
+                >
+                  Watch Free Training →
+                </Link>
+                <p className="text-white/50 text-xs mt-3">Enter your email and phone to get instant access.</p>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gray-900 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 bg-white/20">
+                    <span className="text-3xl text-white">▶</span>
+                  </div>
+                  <p className="text-white/60 text-sm">Free 30-min training</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Free Resources */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-              Free Lead Magnets
+              Free Resources to Get Started
             </h2>
-            <p className="text-gray-600 mb-8">Start here — no credit card required</p>
-            
+            <p className="text-gray-600 mb-8">Enter your email for instant access — no credit card required</p>
+
             <div className="grid md:grid-cols-2 gap-6">
               {freeTools.map((tool) => (
-                <div 
+                <div
                   key={tool.id}
                   className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
                 >
@@ -62,7 +96,7 @@ export default function ToolsPage() {
                   </div>
                   <p className="text-gray-600 text-sm mb-4 flex-grow">{tool.description}</p>
                   <Link href={tool.href} className="btn btn-secondary w-full text-center mt-auto">
-                    Free Download →
+                    Get Instant Access →
                   </Link>
                 </div>
               ))}

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GHL_LINKS, CASE_STUDIES, AGGREGATE_STATS } from "@/lib/links";
@@ -249,15 +250,14 @@ export default function CaseStudiesPage() {
                         </video>
                       </div>
                     ) : (
-                      <div 
-                        className="aspect-square rounded-2xl flex items-center justify-center text-6xl"
-                        style={{ backgroundColor: 'var(--color-cream)' }}
-                      >
-                        {study.business === "Pressure Washing" && "🚿"}
-                        {study.business === "Commercial Cleaning" && "🧹"}
-                        {study.business === "Lawn Care & Landscaping" && "🌿"}
-                        {study.business === "Junk Removal" && "🚛"}
-                        {study.business === "HVAC Services" && "❄️"}
+                      <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                        <Image
+                          src={study.image}
+                          alt={`${study.name} - ${study.business}`}
+                          width={600}
+                          height={600}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     )}
                   </div>
@@ -265,7 +265,7 @@ export default function CaseStudiesPage() {
                   {/* Content */}
                   <div className="lg:w-3/5">
                     <div className="flex items-center gap-3 mb-3">
-                      <span 
+                      <span
                         className="px-3 py-1 rounded-full text-sm font-semibold"
                         style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
                       >
@@ -340,15 +340,14 @@ export default function CaseStudiesPage() {
                   className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div 
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                      style={{ backgroundColor: 'var(--color-cream)' }}
-                    >
-                      {study.business === "Pressure Washing" && "🚿"}
-                      {study.business === "Commercial Cleaning" && "🧹"}
-                      {study.business === "Lawn Care & Landscaping" && "🌿"}
-                      {study.business === "Junk Removal" && "🚛"}
-                      {study.business === "HVAC Services" && "❄️"}
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src={study.image}
+                        alt={study.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>
