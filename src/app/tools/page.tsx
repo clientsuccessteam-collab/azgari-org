@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GHL_LINKS, TOOLS, getToolsByCategory } from "@/lib/links";
+import { GHL_LINKS, getToolsByCategory } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Business Tools & Templates | Azgari Foundation",

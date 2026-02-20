@@ -318,7 +318,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-center text-white/70 max-w-2xl mx-auto mb-12">
               We believe in honest conversations about what business ownership takes.
-              Here's what you can expect from us.
+              Here&apos;s what you can expect from us.
             </p>
 
             <div className="max-w-3xl mx-auto">
