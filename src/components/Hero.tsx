@@ -13,7 +13,7 @@ export default function Hero() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              FROM SERVICE BUSINESS EXPERTS
+              STRUCTURED PATH TO BUSINESS OWNERSHIP
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight" style={{ color: 'var(--color-primary)' }}>
@@ -24,30 +24,30 @@ export default function Hero() {
             </span>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
-              Join 160+ professionals who launched profitable service businesses — no franchise fees, no royalties, no bosses. Just expert guidance and proven systems.
+              We help corporate operators, veterans, and professionals acquire and launch a profitable service business using a proven market-first model — no franchise fees, no royalties, no guesswork.
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mb-8">
-              For corporate professionals, veterans, service operators, and career changers ready for ownership.
+              Requires capital, commitment, and urgency. Not a side hustle. Not a course. A real business built with you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                Book Your Free Discovery Call →
+                See If You Qualify →
               </Link>
-              <Link href="#pricing" className="btn btn-secondary">
-                Compare Programs
+              <Link href="#how-it-works" className="btn btn-secondary">
+                Watch How Launches Work
               </Link>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-sm text-gray-600">
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Keep 100% of Your Profits
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 100% Ownership — Zero Royalties
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 180-Day Launch Framework
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Customers Before Launch Day
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> SBA Financing Guidance
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 120-Day Launch Guarantee
               </span>
             </div>
           </div>
@@ -85,8 +85,8 @@ export default function Hero() {
               <div
                 className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>$285K</div>
-                <div className="text-sm text-gray-600">Avg First Year Revenue</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>47 Days</div>
+                <div className="text-sm text-gray-600">Avg. to First Revenue</div>
               </div>
             </div>
           </div>
