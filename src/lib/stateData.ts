@@ -165,7 +165,7 @@ export const stateData: StateData[] = states.map(state => {
   const regionalBusinesses = getRegionalBusinesses(state.slug);
   return {
     ...state,
-    topBusinesses: regionalBusinesses.map((business, index) => ({
+    topBusinesses: regionalBusinesses.map((business) => ({
       ...business,
       whyItWorks: stateReasons[business.id] || 'Strong market demand and growth potential in this region',
     })),
