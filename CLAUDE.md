@@ -26,6 +26,8 @@ npm run lint     # Run ESLint (eslint flat config)
 
 Always run `npm run build` to verify changes compile without errors. Run `npm run lint` to check for lint issues.
 
+**Lint must pass with 0 errors and 0 warnings before committing.** Fix all issues before pushing.
+
 ## Project Structure
 
 ```
@@ -55,6 +57,8 @@ src/
 │   ├── Problem.tsx
 │   ├── Process.tsx
 │   ├── Stats.tsx
+│   ├── Qualification.tsx   # "Who this is for / not for" pre-qualification
+│   ├── CallPreview.tsx     # Strategy call agenda + "Don't book if" sidebar
 │   ├── Transformation.tsx
 │   ├── Pricing.tsx
 │   ├── Transparency.tsx
@@ -78,6 +82,14 @@ src/
 - **`src/app/layout.tsx`** — Root layout with global metadata (OpenGraph, Twitter cards), Inter font, Navbar, and Footer.
 
 ## Code Conventions
+
+### Code Quality Rules (Enforced)
+- **Zero lint errors and zero warnings** — `npm run lint` must pass clean before every commit
+- **No unused imports** — remove any `import` that isn't referenced in the file
+- **No unused variables/parameters** — remove or prefix with `_` only if semantically needed (e.g. `_event`)
+- **Escape all entities in JSX** — use `&apos;` not `'`, `&quot;` not `"`, `&amp;` not `&` in rendered text
+- **No dead code** — delete commented-out code, unused functions, and orphaned components
+- **Build must succeed** — `npm run build` must complete without errors before every commit
 
 ### Component Patterns
 - **Functional components only** — no class components
@@ -114,6 +126,30 @@ src/
 - Target: ES2017
 - Module resolution: bundler
 - All props typed with interfaces
+
+## Homepage Funnel Order
+
+The homepage (`src/app/page.tsx`) follows a mechanism-first conversion funnel designed for paid traffic (Facebook ads). Sections must stay in this order:
+
+1. **Hero** — Qualification-first CTAs ("See If You Qualify", not "Book a Call")
+2. **MissionWrapper** — Mission statement
+3. **TrustBanner** — Third-party trust badges
+4. **Problem** — Cost of inaction
+5. **Process** — 8-step mechanism (builds belief before proof)
+6. **ValueComparison** — Franchise vs MBA vs DIY vs Azgari
+7. **Stats** — Proof numbers (AFTER mechanism, not before)
+8. **Transformation** — Financial + life outcomes
+9. **Testimonials** — Client social proof
+10. **Qualification** — "This IS for you / This is NOT for you" (filters before pricing)
+11. **ImpactModule** — Mission bridge
+12. **ValueStack** — What's included
+13. **Pricing** — Program tiers
+14. **ScholarshipCallout** — Compliance
+15. **HomeFAQ + Transparency** — Objection handling
+16. **CallPreview** — What happens on the strategy call (reduces call uncertainty)
+17. **CTA** — Final "Apply for a Strategy Call"
+
+**Key principle:** Mechanism (how it works) → Proof (that it works) → Qualification (who it's for) → Call. Never lead with revenue claims before explaining the process.
 
 ## Brand & Design Context
 
