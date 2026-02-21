@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MEDIA, GHL_LINKS } from "@/lib/links";
-import MediaPromoPlayer from "./MediaPromoPlayer";
+// import MediaPromoPlayer from "./MediaPromoPlayer"; // Disabled: Remotion dependency issue
 
 export const metadata: Metadata = {
   title: "Media & Podcasts | Azgari Foundation",
@@ -46,7 +46,14 @@ export default function MediaPage() {
             <p className="text-gray-600 text-center mb-8">
               Learn about our proven 8-phase launch framework
             </p>
-            <MediaPromoPlayer />
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/ajjRBZXrEiQ"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </section>
 
@@ -78,10 +85,10 @@ export default function MediaPage() {
                       }`}
                     >
                       <div className="flex flex-col lg:flex-row gap-8">
-                        {/* Podcast Image - Left on desktop */}
-                        <div className="lg:w-48 flex-shrink-0 order-1 lg:order-none">
+                        {/* Video Embed or Podcast Image - Left on desktop */}
+                        <div className="lg:w-80 flex-shrink-0 order-1 lg:order-none">
                           {item.videoUrl ? (
-                            <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden">
+                            <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
                               <iframe 
                                 src={item.videoUrl}
                                 className="w-full h-full"
