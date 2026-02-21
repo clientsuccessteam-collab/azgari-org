@@ -168,16 +168,15 @@ export default function QualifyPage() {
             className="text-4xl md:text-5xl lg:text-[3.4rem] font-bold mb-8 leading-tight"
             style={{ color: "var(--color-primary)" }}
           >
-            Own a profitable, fully-operational service business in{" "}
-            <span style={{ color: "var(--color-accent)" }}>90 days</span>
+            We build service businesses for people who are done building{" "}
+            <span style={{ color: "var(--color-accent)" }}>someone else&apos;s.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-3 leading-relaxed">
-            With paying customers before you officially open, a team running daily operations,
-            and $75K–$300K in year-one revenue potential.
-          </p>
-          <p className="text-lg md:text-xl font-semibold mb-8" style={{ color: "var(--color-primary)" }}>
-            You own 100%. No franchise fees. No royalties. Ever.
+          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+            You tell us your background and your budget. We find the right business,
+            build it with you, and get you paying customers — usually before you officially open.
+            You keep 100% of everything. No franchise. No royalties.
+            And if we don&apos;t deliver, we keep working until we do.
           </p>
 
           {/* Guarantee callout */}
