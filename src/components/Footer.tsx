@@ -93,6 +93,14 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Social Links */}
+        <div className="border-t border-white/10 pt-6 mb-6 flex justify-center gap-6">
+          <a href="https://www.youtube.com/@azgarilipshy" target="_blank" rel="noopener" className="text-white/60 hover:text-amber-400 transition-colors text-sm">YouTube</a>
+          <a href="https://www.instagram.com/azgarilipshy" target="_blank" rel="noopener" className="text-white/60 hover:text-amber-400 transition-colors text-sm">Instagram</a>
+          <a href="https://www.linkedin.com/company/azgari-foundation" target="_blank" rel="noopener" className="text-white/60 hover:text-amber-400 transition-colors text-sm">LinkedIn</a>
+          <a href="https://azgari.blog" target="_blank" rel="noopener" className="text-white/60 hover:text-amber-400 transition-colors text-sm">Blog</a>
+        </div>
+
         {/* Nonprofit Compliance */}
         <div className="border-t border-white/10 pt-6 mb-6 text-center">
           <p className="text-xs text-white/50">
