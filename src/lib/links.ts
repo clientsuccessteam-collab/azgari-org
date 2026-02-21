@@ -9,7 +9,8 @@
 
 export const GHL_LINKS = {
   // Main CTA (used across navbar, hero, footers)
-  qualify: "https://go.azgari.org/landing-page-d",
+  qualify: "/qualify",
+  qualifyQuiz: "https://go.azgari.org/landing-page-d",
   
   // Program Pages
   programs: {
