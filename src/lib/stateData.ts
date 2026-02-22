@@ -16,19 +16,19 @@ export interface StateData {
 // Regional business priorities based on climate, population density, and market demand
 const getRegionalBusinesses = (stateSlug: string): Omit<Business, 'whyItWorks'>[] => {
   const baseBusinesses = [
-    { id: 'pressure-washing', name: 'Pressure Washing', startupCost: '$3,000 - $10,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-pressure-washing-business' },
-    { id: 'hvac', name: 'HVAC Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/how-to-start-an-hvac-business' },
-    { id: 'lawn-care', name: 'Lawn Care & Landscaping', startupCost: '$5,000 - $20,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-lawn-care-business' },
-    { id: 'cleaning', name: 'Residential Cleaning', startupCost: '$2,000 - $8,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-cleaning-business' },
-    { id: 'pest-control', name: 'Pest Control', startupCost: '$10,000 - $40,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-pest-control-business' },
-    { id: 'pool-service', name: 'Pool Service', startupCost: '$5,000 - $15,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-pool-service-business' },
-    { id: 'junk-removal', name: 'Junk Removal', startupCost: '$10,000 - $30,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-junk-removal-business' },
-    { id: 'moving', name: 'Moving Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-moving-business' },
+    { id: 'pressure-washing', name: 'Pressure Washing', startupCost: '$3,000 - $10,000', blogPostUrl: 'https://azgari.blog/pressure-washing-equipment-guide-2026' },
+    { id: 'hvac', name: 'HVAC Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/hvac-tools-equipment-guide-2026-technician-startup-kit' },
+    { id: 'lawn-care', name: 'Lawn Care & Landscaping', startupCost: '$5,000 - $20,000', blogPostUrl: 'https://azgari.blog/how-much-does-it-cost-to-start-a-lawn-care-business' },
+    { id: 'cleaning', name: 'Residential Cleaning', startupCost: '$2,000 - $8,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-house-cleaning-business' },
+    { id: 'pest-control', name: 'Pest Control', startupCost: '$10,000 - $40,000', blogPostUrl: 'https://azgari.blog/pest-control-equipment-guide' },
+    { id: 'pool-service', name: 'Pool Service', startupCost: '$5,000 - $15,000', blogPostUrl: 'https://azgari.blog/pool-service-equipment-guide-2026-testing-cleaning-chemical-startup-kit' },
+    { id: 'junk-removal', name: 'Junk Removal', startupCost: '$10,000 - $30,000', blogPostUrl: 'https://azgari.blog/junk-removal-truck-equipment-guide-2026' },
+    { id: 'moving', name: 'Moving Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/moving-company-equipment-guide-2026-trucks-dollies-supplies' },
     { id: 'roofing', name: 'Roofing Services', startupCost: '$25,000 - $75,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-roofing-business' },
     { id: 'plumbing', name: 'Plumbing Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-plumbing-business' },
-    { id: 'electrical', name: 'Electrical Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/how-to-start-an-electrical-business' },
+    { id: 'electrical', name: 'Electrical Services', startupCost: '$15,000 - $50,000', blogPostUrl: 'https://azgari.blog/how-to-start-an-electrical-contracting-business' },
     { id: 'gutter-cleaning', name: 'Gutter Cleaning', startupCost: '$2,000 - $8,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-gutter-cleaning-business' },
-    { id: 'window-cleaning', name: 'Window Cleaning', startupCost: '$2,000 - $7,000', blogPostUrl: 'https://azgari.blog/how-to-start-a-window-cleaning-business' },
+    { id: 'window-cleaning', name: 'Window Cleaning', startupCost: '$2,000 - $7,000', blogPostUrl: 'https://azgari.blog/window-cleaning-equipment-guide-2026' },
   ];
 
   // Regional modifiers based on climate and demographics

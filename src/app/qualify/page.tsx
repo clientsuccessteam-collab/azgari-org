@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 /* ── GHL quiz link (configurable via env var) ── */
 const QUIZ_URL =
   process.env.NEXT_PUBLIC_QUALIFY_QUIZ_URL ||
-  "https://go.azgari.org/landing-page-business-launch-n-452699";
+  "https://go.azgari.org/question-flow-d";
 
 /* ── Real client proof — add verified testimonials here ── */
 

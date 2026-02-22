@@ -10,7 +10,7 @@
 export const GHL_LINKS = {
   // Main CTA (used across navbar, hero, footers)
   qualify: "/qualify",
-  qualifyQuiz: "https://go.azgari.org/landing-page-d",
+  qualifyQuiz: "https://go.azgari.org/question-flow-d",
   
   // Program Pages
   programs: {
@@ -18,7 +18,7 @@ export const GHL_LINKS = {
     foundation: "https://go.azgari.org/foundation",
     fullLaunch: "https://go.azgari.org/full-launch",
     scale: "https://go.azgari.org/scale",
-    acquisition: "https://go.azgari.org/landing-page-d",
+    acquisition: "https://go.azgari.org/question-flow-d",
   },
   
   // Lead Magnets (Free Downloads — routed through store for email capture)
@@ -39,7 +39,7 @@ export const GHL_LINKS = {
   allCourses: "https://go.azgari.org/digitalcoursespage",
   
   // All Tools Page  
-  allTools: "https://go.azgari.org/tools",
+  allTools: "https://go.azgari.org/products-list",
 };
 
 // Default CTA configuration
@@ -550,9 +550,12 @@ export const MEDIA = [
 // TRUST BADGES (Homepage)
 // ============================================
 export const TRUST_LINKS = {
-  googleBusiness: "https://g.page/r/YOUR_GOOGLE_BUSINESS_ID", // Update with actual link
-  trustpilot: "https://www.trustpilot.com/review/azgari.org", // Update with actual link
-  bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultants/azgari-foundation-0000-0000000", // Update with actual link
+  googleBusiness: "https://share.google/SlJmbdLaQ1oJGkgeX",
+  trustpilot: "https://www.trustpilot.com/review/azgari.com",
+  bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultant/azgari-0825-1000247694",
+  linkedin: "https://www.linkedin.com/company/azgari",
+  instagram: "https://www.instagram.com/azgari.lipshy/",
+  youtube: "https://www.youtube.com/@azgarilipshy",
 };
 
 // Lead magnet data (for guides page)

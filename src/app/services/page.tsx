@@ -92,7 +92,7 @@ export default function ServicesPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://go.azgari.org/landing-page-d" className="btn btn-primary">
+              <Link href="https://go.azgari.org/question-flow-d" className="btn btn-primary">
                 See If You Qualify →
               </Link>
               <Link href="#details" className="btn btn-secondary">
@@ -261,7 +261,7 @@ export default function ServicesPage() {
                 
                 <div>
                   <Link 
-                    href="https://go.azgari.org/landing-page-d" 
+                    href="https://go.azgari.org/question-flow-d" 
                     className="btn btn-primary"
                   >
                     Explore Acquisition Advisory →
@@ -390,7 +390,7 @@ export default function ServicesPage() {
             </p>
             
             <Link 
-              href="https://go.azgari.org/landing-page-d" 
+              href="https://go.azgari.org/question-flow-d" 
               className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
             >
               See If You Qualify →

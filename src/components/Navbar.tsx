@@ -39,7 +39,7 @@ export default function Navbar() {
           className="hidden md:block btn btn-primary"
           style={{ padding: '0.5rem 1.25rem', fontSize: '0.8125rem' }}
         >
-          Get Started
+          Apply Now
         </Link>
 
         {/* Mobile Menu Button */}
@@ -71,7 +71,7 @@ export default function Navbar() {
                 style={{ padding: '0.625rem 1.25rem', fontSize: '0.875rem' }}
                 onClick={() => setMobileOpen(false)}
               >
-                Get Started
+                Apply Now
               </Link>
             </li>
           </ul>
