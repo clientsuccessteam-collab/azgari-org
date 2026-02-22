@@ -71,6 +71,24 @@ const howToStartGuides = [
     icon: "🌱",
     description: "Seasonal or year-round revenue. Real startup costs, equipment, and recurring service models.",
   },
+  {
+    title: "How to Start a Recruiting Agency",
+    slug: "how-to-start-a-recruiting-agency-in-2026-complete-guide",
+    icon: "🤝",
+    description: "High margins, low startup costs. Build a staffing or executive recruiting firm using proven placement frameworks.",
+  },
+  {
+    title: "How to Start a Fractional C-Suite Practice",
+    slug: "how-to-start-a-fractional-c-suite-practice-in-2026-complete-guide",
+    icon: "👔",
+    description: "Turn your corporate experience into a six-figure consulting business. Serve multiple companies as a fractional CFO, COO, or CMO.",
+  },
+  {
+    title: "How to Start a Flood Remediation Business",
+    slug: "how-to-start-a-flood-remediation-business-in-2026-complete-guide",
+    icon: "💧",
+    description: "Insurance-paid, high-ticket jobs. Certifications, equipment, and how to build relationships with adjusters and contractors.",
+  },
 ];
 
 const featuredStates = [
