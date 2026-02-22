@@ -1,8 +1,8 @@
 const commitments = [
-  "We give you proven frameworks tested by 160+ entrepreneurs \u2014 not theories, not hype",
-  "We provide weekly accountability, honest feedback, and expert guidance when you\u2019re stuck",
-  "Your success depends on your execution \u2014 we maximize the framework, you bring the consistency",
-  "We\u2019re not a franchise and not a lender \u2014 you own 100% of what you build, and SBA decisions are made by independent lenders",
+  "We build your business using frameworks proven over 20+ years — not theories, not hype",
+  "Our team handles execution — entity setup, branding, marketing, hiring, operations",
+  "Your success depends on choosing the right market and business model — we use data to eliminate guesswork",
+  "We\u2019re not a franchise and not a lender — you own 100% of what we build, and SBA decisions are made by independent lenders",
 ];
 
 export default function Transparency() {

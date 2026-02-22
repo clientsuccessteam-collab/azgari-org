@@ -16,54 +16,62 @@ import Footer from "@/components/Footer";
 import MissionWrapper from "@/components/MissionWrapper";
 import ImpactModule from "@/components/ImpactModule";
 import ScholarshipCallout from "@/components/ScholarshipCallout";
+import Qualification from "@/components/Qualification";
+import CallPreview from "@/components/CallPreview";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <main>
-        {/* 1. HOOK — Promise + credibility */}
+        {/* 1. HOOK — Promise + qualification-first hero */}
         <Hero />
         <MissionWrapper variant="hero" />
         <TrustBanner />
 
-        {/* 2. COST OF INACTION — Quantify what staying stuck costs them */}
+        {/* 2. PROBLEM — Cost of inaction (why now) */}
         <Problem />
 
-        {/* 3. PROOF IT WORKS — Hard numbers from real clients */}
-        <Stats />
-
-        {/* 4. HOW IT WORKS — 8-step framework (simple, clear) */}
+        {/* 3. MECHANISM — How it works (process certainty before proof) */}
         <Process />
 
-        {/* 5. COMPARE ALTERNATIVES — Franchise vs MBA vs DIY vs Azgari */}
+        {/* 4. COMPARE ALTERNATIVES — Franchise vs MBA vs DIY vs Azgari */}
         <ValueComparison />
 
-        {/* 6. THE OUTCOME — Financial proof + life transformation */}
+        {/* 5. PROOF — Numbers that back the mechanism */}
+        <Stats />
+
+        {/* 6. OUTCOMES — Financial + life transformation */}
         <Transformation />
 
         {/* 7. SOCIAL PROOF — Real client testimonials */}
         <Testimonials />
 
-        {/* 7.5. IMPACT — "Why this matters beyond you" bridge into value/pricing */}
+        {/* 8. QUALIFICATION — Who this is for / not for (filter before pricing) */}
+        <Qualification />
+
+        {/* 9. IMPACT — Mission bridge into value/pricing */}
         <ImpactModule />
 
-        {/* 8. VALUE STACK — Everything included + what it costs separately */}
+        {/* 10. VALUE STACK — Everything included + what it costs separately */}
         <ValueStack />
 
-        {/* 9. PRICING — All tiers with decision tree (after value is built) */}
+        {/* 11. PRICING — All tiers with decision tree */}
         <Pricing />
 
-        {/* 9.5. SCHOLARSHIPS — Compliance visibility, minimal footprint */}
+        {/* 11.5. SCHOLARSHIPS — Compliance visibility */}
         <div className="max-w-4xl mx-auto px-6 pt-2 pb-8">
           <ScholarshipCallout variant="banner" />
         </div>
 
-        {/* 10. OBJECTION HANDLING */}
+        {/* 12. OBJECTION HANDLING */}
         <HomeFAQ />
         <Transparency />
 
-        {/* 11. FINAL CTA */}
+        {/* 13. CALL PREVIEW — What happens on the call (reduce uncertainty) */}
+        <CallPreview />
+
+        {/* 14. FINAL CTA */}
         <CTA />
       </main>
       <Footer />

@@ -88,10 +88,10 @@ const freeDownloads = [
   {
     title: "47-Step Service Business Launch Checklist",
     type: "Instant Download",
-    description: "The exact checklist our team uses to launch 160+ businesses. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
+    description: "The exact checklist our team uses when building businesses for clients. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
     icon: "📋",
     cta: "Get the Checklist →",
-    link: "https://go.azgari.org/checklist",
+    link: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
   },
   {
     title: "Which Business Is Right for Me?",
@@ -99,7 +99,7 @@ const freeDownloads = [
     description: "Answer 12 questions about your skills, capital, and lifestyle goals — get a personalized business model recommendation from our library of 50+ proven models.",
     icon: "🎯",
     cta: "Take the Quiz →",
-    link: "https://go.azgari.org/assessment",
+    link: "https://go.azgari.org/product-details/product/699b4bd9c0607441c091969e",
   },
   {
     title: "SBA Loan Readiness Guide",
@@ -107,7 +107,7 @@ const freeDownloads = [
     description: "The step-by-step guide to getting SBA-approved without a broker. Credit requirements, exact documents needed, underwriter psychology, and how to package your application for approval.",
     icon: "🏦",
     cta: "Get the SBA Guide →",
-    link: "https://go.azgari.org/sba-guide",
+    link: "https://go.azgari.org/product-details/product/699b4bf1aec1c12d84307715",
   },
 ];
 
@@ -155,7 +155,7 @@ export default function GuidesPage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Guides, quizzes, and tools from the same framework used to launch 160+ businesses.
+              Guides, quizzes, and tools from the same framework we use to build businesses for our clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -416,7 +416,7 @@ export default function GuidesPage() {
                 Explore Our Programs →
               </Link>
               <Link 
-                href="https://go.azgari.org/landing-page-d"
+                href="https://go.azgari.org/question-flow-d"
                 className="btn btn-secondary"
               >
                 See If You Qualify

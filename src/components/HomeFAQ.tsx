@@ -4,34 +4,34 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 const homeFaqItems = [
   {
-    question: "Which program is right for me?",
+    question: "What exactly do you build for me?",
     answer:
-      "It depends on your time and capital. Launch Validation ($2,500) if you can commit 40+ hours/week and want to prove the concept fast. Foundation ($10K) if you have 10\u201315 hours/week and want to validate before going bigger. Full Launch ($25K) is our most popular \u2014 we build the business WITH you in 120 days. Scale ($50K) if you already have revenue and want to step back from day-to-day operations. Not sure? Start with our Quick Win Bundle ($500) to see how we work, or book a free call.",
-  },
-  {
-    question: "Can I do this while keeping my full-time job?",
-    answer:
-      "Yes \u2014 Foundation is specifically designed for people with 10\u201315 hours per week. Many clients start part-time, prove the model, then transition to full-time once revenue stabilizes. Launch Validation requires 40+ hours/week, so that\u2019s better if you\u2019re ready to go all-in from day one.",
-  },
-  {
-    question: "What if I don't have business experience?",
-    answer:
-      "Most of our successful clients didn\u2019t. We provide the business model, operations systems, and step-by-step framework \u2014 you bring the consistency. That\u2019s why our lower tiers help you acquire customers for one business first, before investing in scaling.",
-  },
-  {
-    question: "How long until I see revenue?",
-    answer:
-      "Our clients average 47 days to first revenue. Each program has a specific launch guarantee: Launch Validation in 60 days, Foundation in 90 days, Full Launch in 120 days. If we miss the timeline, you get continued support at no extra cost \u2014 and Full Launch includes a $3,000 cash guarantee.",
-  },
-  {
-    question: "Do you guarantee results?",
-    answer:
-      "Every program includes a launch guarantee with specific timelines. Full Launch has our strongest: launched in 120 days or continued support plus $3,000 cash. Your results still depend on your execution and market \u2014 we\u2019re transparent about that. What we can tell you: 160+ businesses launched, 94% client satisfaction, $285K average first-year revenue.",
+      "Everything. We select the right business model for your market, form the entity, handle licensing and compliance, build the brand, create marketing systems, hire and train your team, place a manager, and deliver paying customers. You spend about an hour a week on oversight. We handle the rest.",
   },
   {
     question: "How is this different from a franchise?",
     answer:
-      "Franchises give you a brand but take 3\u20138% in royalties forever and control how you run your business. With Azgari, you get expert-guided structure AND 100% ownership. No ongoing fees, no restrictions, no royalty payments. You keep every dollar you earn, and you can sell the business whenever you want \u2014 on your terms.",
+      "Franchises give you a brand but take 3\u20138% in royalties forever and control how you run your business. With Azgari, you get the same level of structure AND 100% ownership. No ongoing fees, no restrictions, no royalty payments. You keep every dollar you earn, and you can sell the business whenever you want \u2014 on your terms.",
+  },
+  {
+    question: "How long does it take?",
+    answer:
+      "Our guarantee is an operational business with a manager in seat within 180 days. Most clients see their first paying customers well before that. If we miss the timeline, we keep working until we deliver.",
+  },
+  {
+    question: "Can I do this while keeping my full-time job?",
+    answer:
+      "Yes. That\u2019s the point. Because we handle execution and place a manager to run day-to-day operations, your time commitment is about an hour a week for oversight calls and key decisions. Most clients keep their jobs until the business is generating consistent revenue.",
+  },
+  {
+    question: "What if I don\u2019t have business experience?",
+    answer:
+      "Most of our clients don\u2019t. That\u2019s why this is done-for-you, not done-with-you. Our team has 20+ years of experience building service businesses. You bring the capital and the commitment \u2014 we bring the expertise and execution.",
+  },
+  {
+    question: "Do you guarantee results?",
+    answer:
+      "We guarantee an operational business with a manager in seat and paying customers within 180 days. If we don\u2019t deliver, we keep working at no additional cost until we do. Individual revenue results vary based on market, business model, and many factors \u2014 we\u2019re transparent about that.",
   },
 ];
 

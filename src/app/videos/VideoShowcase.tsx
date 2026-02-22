@@ -11,7 +11,7 @@ const videos = [
   {
     id: "stats-reveal",
     title: "Client Results",
-    description: "Animated statistics showcasing aggregate client outcomes — 160+ businesses launched, $285K average first-year revenue.",
+    description: "Animated statistics showcasing our done-for-you business building framework and client ownership model.",
     src: "/videos/stats-reveal.mp4",
   },
   {

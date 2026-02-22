@@ -4,22 +4,22 @@ import "./globals.css";
 import JsonLd from "@/app/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Start a Service Business in 180 Days | Azgari Foundation",
-  description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties, full ownership. Expert guidance from idea to revenue. A 501(c)(3) nonprofit expanding economic mobility through entrepreneurship.",
-  keywords: "service business, SBA loan, franchise alternative, business consulting, business ownership",
+  title: "We Build Service Businesses You Own 100% | Azgari Foundation",
+  description: "Done-for-you business building. We select the business, set up operations, hire your team, and deliver paying customers. You own 100% — no franchise fees, no royalties.",
+  keywords: "service business, done for you business, franchise alternative, business building, business ownership",
   alternates: {
     canonical: "https://azgari.org",
   },
   openGraph: {
-    title: "Build Real Wealth. Own 100% | Azgari Foundation",
-    description: "Launch a profitable local service business in 180 days — no franchise fees, no royalties. A 501(c)(3) nonprofit expanding economic mobility through entrepreneurship.",
+    title: "We Build Service Businesses You Own 100% | Azgari Foundation",
+    description: "Done-for-you business building. We handle everything — you become an owner, not an operator. No franchise fees. No royalties. Full ownership.",
     type: "website",
     url: "https://azgari.org",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Build Real Wealth. Own 100% | Azgari Foundation",
-    description: "Launch a profitable local service business in 180 days.",
+    title: "We Build Service Businesses You Own 100% | Azgari Foundation",
+    description: "Done-for-you business building. You invest, we build, you own everything.",
   },
 };
 

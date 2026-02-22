@@ -1,20 +1,20 @@
 import { NONPROFIT } from "@/lib/links";
 
-const financialOutcomes = [
+const outcomes = [
   {
-    metric: "$285K",
-    label: "Avg First-Year Revenue",
-    detail: "Across 160+ launched businesses",
+    metric: "100%",
+    label: "Ownership",
+    detail: "No franchise fees, no royalties, ever",
   },
   {
-    metric: "$95K+",
-    label: "Avg Owner Take-Home",
-    detail: "After expenses, year one",
+    metric: "~1 hr/wk",
+    label: "Your Time Commitment",
+    detail: "Manager runs day-to-day operations",
   },
   {
-    metric: "47 Days",
-    label: "To First Revenue",
-    detail: "Average across all programs",
+    metric: "180 Days",
+    label: "To Operational Business",
+    detail: "With team in place and customers paying",
   },
   {
     metric: "2–3x",
@@ -25,10 +25,10 @@ const financialOutcomes = [
 
 const lifeOutcomes = [
   "You own 100% of a business — no boss, no royalties, no permission needed",
-  "You have a sellable asset worth 2–3x annual profit that grows every year",
-  "You control your schedule — work 20–40 hours on your terms, not someone else's",
-  "You have systems that run without you, so the business works even when you don't",
-  "You have a proven framework you can replicate to launch a second business",
+  "You have a sellable asset that grows in value every year",
+  "Your team runs daily operations — you oversee, not operate",
+  "You have systems that run without you, so the business works even when you don&apos;t",
+  "You have an asset you can replicate to build a second business",
 ];
 
 export default function Transformation() {
@@ -43,16 +43,16 @@ export default function Transformation() {
             THE OUTCOME
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            What Changes When You Build With a Proven System
+            What You Get When We Build It for You
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            This isn&apos;t about motivation or mindset. It&apos;s about what actually happens when you follow a framework built on 160+ real launches.
+            This isn&apos;t about motivation or mindset. It&apos;s about what actually happens when a professional team builds your business from the ground up.
           </p>
         </div>
 
-        {/* Financial Proof Row */}
+        {/* Outcomes Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {financialOutcomes.map((item, i) => (
+          {outcomes.map((item, i) => (
             <div
               key={i}
               className="bg-white rounded-xl p-5 text-center shadow-sm"
@@ -88,7 +88,7 @@ export default function Transformation() {
             <div className="p-6 rounded-xl bg-gray-100 border border-gray-200">
               <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-wider">Today</p>
               <p className="text-gray-500 italic leading-relaxed">
-                &quot;I want to start a business, but I don&apos;t know what kind, I&apos;m afraid of picking wrong, and I can&apos;t afford to lose $50K on a franchise that might not work.&quot;
+                &quot;I want to own a business, but I don&apos;t know what kind, I&apos;m afraid of picking wrong, and I can&apos;t afford to lose $50K on a franchise that might not work.&quot;
               </p>
             </div>
 
@@ -106,7 +106,7 @@ export default function Transformation() {
                 12 Months Later
               </p>
               <p className="font-semibold leading-relaxed">
-                &quot;My business did $285K in revenue last year. I work 25 hours a week, I have a team of 3, and I just turned down an offer to buy my company for $180K. I&apos;m building an empire.&quot;
+                &quot;My business has a team of 3, a manager running daily ops, and customers coming in every week. I spend about an hour a week on it. I own 100% and I&apos;m building real equity.&quot;
               </p>
             </div>
           </div>

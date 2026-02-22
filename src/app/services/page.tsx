@@ -7,101 +7,26 @@ import ReinvestmentDisclosure from "@/components/ReinvestmentDisclosure";
 import ScholarshipCallout from "@/components/ScholarshipCallout";
 
 export const metadata: Metadata = {
-  title: "Service Business Programs & Pricing | Azgari Foundation",
-  description: "Nonprofit entrepreneurship training — 4 programs from $500-$50K. Expert business coaching, SBA loan prep, and acquisition advisory for service business owners.",
-  keywords: "service business programs, business consulting pricing, SBA loan guidance, business launch program, acquisition advisory",
+  title: "Done-for-You Business Build | Azgari Foundation",
+  description: "We build service businesses you own 100%. Full entity, brand, marketing, team, and operations — built for you in 180 days. $50,000 investment.",
+  keywords: "done-for-you business, service business building, business ownership, SBA loan guidance, business launch",
   openGraph: {
-    title: "Programs & Pricing — Launch Your Service Business with Expert Guidance",
-    description: "From Quick Win ($500) to Scale ($50K). Choose your path to service business ownership.",
+    title: "Done-for-You Business Build | Azgari Foundation",
+    description: "We build your entire service business — entity, brand, marketing, team, operations. You own 100%.",
     url: "https://azgari.org/services",
     type: "website",
   },
 };
 
-const programs = [
-  {
-    name: "Launch Validation",
-    price: "$2,500",
-    note: "or 3 × $958",
-    delivery: "60-day program · 40+ hrs/wk",
-    description: "Prove the concept, land your first paying customers, and validate it works — before investing more. This is where smart entrepreneurs willing to get their hands dirty start.",
-    whoItsFor: "$5K–$10K available capital · Ready to hustle full-time",
-    guarantee: "Launched in 60 days or continued support until you do",
-    features: [
-      "Business name + tagline",
-      "Simple logo + brand colors",
-      "Instagram & Facebook profile setup",
-      "Payment system (Square or Stripe)",
-      "Website or landing page",
-      "Weekly check-in calls for 8 weeks",
-    ],
-    graduation: "Your $2.5K investment credits toward Foundation if you upgrade.",
-    link: "https://go.azgari.org/quick-win",
-    featured: false,
-    tag: "STARTER",
-  },
-  {
-    name: "Foundation",
-    price: "$10,000",
-    note: "or 3 × $3,500",
-    delivery: "90-day program · 10–15 hrs/wk",
-    description: "Test the model, land your first paying customers, and prove this works for you — before investing $25K or more. Most of our successful clients started exactly here.",
-    whoItsFor: "$10K–$25K available capital · Validating before scaling",
-    guarantee: "Launched in 90 days or continued support until you do",
-    features: [
-      "Business model selection (50+ proven models)",
-      "Market validation",
-      "Brand foundation (name, positioning, presence)",
-      "Turn contacts into customers system",
-      "Weekly group coaching for 90 days",
-    ],
-    graduation: "Your $10K investment credits toward Full Launch if you upgrade.",
-    link: "https://go.azgari.org/foundation",
-    featured: false,
-    tag: null,
-  },
-  {
-    name: "Full Launch",
-    price: "$25,000",
-    note: "or 3 × $8,500",
-    delivery: "120-day program · 20–30 hrs/wk",
-    description: "We build the business WITH you — marketing, systems, customer acquisition. You'll have paying customers before you officially launch. Our strongest guarantee.",
-    whoItsFor: "$25K–$50K available capital · Ready to go all-in",
-    guarantee: "Launched in 120 days or continued support — plus $3,000 cash if we miss",
-    features: [
-      "Everything in Foundation",
-      "Done-with-you business buildout",
-      "Complete marketing systems (website, funnels, lead gen)",
-      "Sales team hiring + training support",
-      "Client acquisition & referral system",
-      "120-day launch timeline",
-    ],
-    graduation: "SBA funding can cover your Scale upgrade — pay from loan proceeds, not pocket.",
-    link: "https://go.azgari.org/full-launch",
-    featured: true,
-    tag: "MOST POPULAR",
-  },
-  {
-    name: "Scale",
-    price: "$50,000",
-    note: "SBA financing available",
-    delivery: "180-day program · 5–10 hrs/wk",
-    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
-    whoItsFor: "$50K+ capital or SBA loan · Existing $100K+ revenue · Oversight only",
-    guarantee: "Business operational in 180 days with manager in seat or continued support",
-    features: [
-      "Everything in Full Launch",
-      "Full operational team (hired + trained)",
-      "Manager recruited and in place",
-      "Funding concierge (if qualified)",
-      "12-month ongoing support",
-      "180-day launch timeline",
-    ],
-    graduation: null,
-    link: "https://go.azgari.org/scale",
-    featured: false,
-    tag: "ENTERPRISE",
-  },
+const flagshipFeatures = [
+  "Data-driven business model selection (50+ proven models)",
+  "Full entity formation, licensing, and compliance — handled",
+  "Complete brand buildout (name, logo, website, marketing systems)",
+  "Customer acquisition — paying clients before official launch",
+  "Full operational team hired and trained",
+  "Manager placed and running day-to-day operations",
+  "Funding concierge for SBA loan qualification",
+  "12 months of ongoing support",
 ];
 
 const deliverables = [
@@ -132,7 +57,7 @@ const deliverables = [
   },
   {
     title: "Ongoing Support",
-    items: ["Coaching calls", "Community access", "Resource library", "Priority support"],
+    items: ["12-month post-launch support", "Performance monitoring", "Resource library", "Priority access to our team"],
     icon: "🤝",
   },
 ];
@@ -143,132 +68,104 @@ export default function ServicesPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section 
+        <section
           className="pt-24 pb-12 md:pt-32 md:pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
-            <span 
+            <span
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              PROGRAMS & PRICING
+              DONE-FOR-YOU BUSINESS BUILD
             </span>
-            
-            <h1 
+
+            <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{ color: 'var(--color-primary)' }}
             >
-              Programs Designed for Your Journey
+              We Build It. You Own It.
             </h1>
-            
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Whether you're testing an idea, launching your first business, or scaling to multiple locations — we have a path that fits your goals, budget, and timeline.
+              We build your entire service business — entity, brand, marketing, team, customers, operations. You own 100%, pay zero royalties, and spend about an hour a week overseeing it.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://go.azgari.org/landing-page-d" className="btn btn-primary">
+              <Link href="https://go.azgari.org/question-flow-d" className="btn btn-primary">
                 See If You Qualify →
               </Link>
-              <Link href="#programs" className="btn btn-secondary">
-                Compare Programs
+              <Link href="#details" className="btn btn-secondary">
+                See What&apos;s Included
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Program Cards */}
-        <section id="programs" className="py-16 md:py-24 bg-white">
+        {/* Flagship Offer */}
+        <section id="details" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mx-auto mb-8">
               <MissionWrapper variant="section" />
             </div>
-            <div className="text-center mb-16">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: 'var(--color-primary)' }}
+
+            <div className="max-w-3xl mx-auto">
+              <div
+                className="relative bg-white rounded-2xl p-8 sm:p-10"
+                style={{ border: '2px solid var(--color-accent)', boxShadow: '0 8px 30px rgba(212, 160, 41, 0.2)' }}
               >
-                Choose Your Program
-              </h2>
-              <p className="text-gray-600 max-w-xl mx-auto">
-                Every program includes hands-on guidance. Paid tuition funds free programs and scholarships for underserved founders.
-              </p>
-            </div>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {programs.map((program) => (
-                <div 
-                  key={program.name}
-                  className="relative bg-white rounded-2xl p-6 flex flex-col transition-all hover:-translate-y-1 hover:shadow-xl"
-                  style={{ 
-                    border: program.featured ? '2px solid var(--color-accent)' : '2px solid #e5e7eb',
-                    boxShadow: program.featured ? '0 8px 30px rgba(212, 160, 41, 0.2)' : undefined
-                  }}
+                <span
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap"
+                  style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
                 >
-                  {program.tag && (
-                    <span 
-                      className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap"
-                      style={{ 
-                        backgroundColor: program.featured ? 'var(--color-accent)' : 'var(--color-primary)',
-                        color: program.featured ? 'var(--color-primary-dark)' : 'white'
-                      }}
-                    >
-                      {program.tag}
-                    </span>
-                  )}
-                  
-                  <h3 
-                    className="text-xl font-bold mb-1"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    {program.name}
-                  </h3>
-                  
-                  <p className="text-sm text-gray-500 mb-4">{program.delivery}</p>
-                  
-                  <div 
-                    className="text-3xl font-bold my-2"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    {program.price}
-                    <small className="block text-sm font-normal text-gray-500 mt-1">
-                      {program.note}
-                    </small>
-                  </div>
-                  
-                  <p className="text-gray-600 text-sm mb-3">{program.description}</p>
+                  FLAGSHIP OFFER
+                </span>
 
-                  {/* Who it's for */}
-                  <p className="text-xs text-gray-500 mb-4 italic">{program.whoItsFor}</p>
+                <h2
+                  className="text-2xl md:text-3xl font-bold mb-2"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  Done-for-You Business Build
+                </h2>
 
-                  <ul className="text-sm text-gray-600 mb-4 space-y-2 flex-grow">
-                    {program.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span style={{ color: 'var(--color-accent)' }}>✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                <p className="text-sm text-gray-500 mb-6">180-day build · ~1 hr/wk your time (oversight only)</p>
 
-                  {/* Guarantee */}
-                  <div className="rounded-lg p-3 mb-3 text-xs" style={{ backgroundColor: 'var(--color-cream)' }}>
-                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Guarantee:</span>{" "}
-                    <span className="text-gray-600">{program.guarantee}</span>
-                  </div>
-
-                  {/* Graduation path */}
-                  {program.graduation && (
-                    <p className="text-xs text-gray-400 mb-4 italic">{program.graduation}</p>
-                  )}
-
-                  <Link
-                    href={program.link}
-                    className={`btn w-full mt-auto ${program.featured ? "btn-primary" : "btn-secondary"}`}
-                  >
-                    Get Started
-                  </Link>
+                <div
+                  className="text-4xl font-bold mb-1"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  $50,000
+                  <small className="block text-sm font-normal text-gray-500 mt-1">
+                    Payment plans and SBA funding paths available
+                  </small>
                 </div>
-              ))}
+
+                <p className="text-gray-600 mt-4 mb-6">
+                  We build your service business from scratch — you get a fully operational company with a team in place, customers paying, and a manager running day-to-day. You own 100% and pay zero royalties.
+                </p>
+
+                <ul className="text-sm text-gray-600 mb-6 space-y-3">
+                  {flagshipFeatures.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span style={{ color: 'var(--color-accent)' }}>✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Guarantee */}
+                <div className="rounded-lg p-4 mb-6" style={{ backgroundColor: 'var(--color-cream)' }}>
+                  <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Guarantee:</span>{" "}
+                  <span className="text-gray-600">Business operational with manager in seat within 180 days, or we continue building at no additional cost.</span>
+                </div>
+
+                <Link
+                  href="https://go.azgari.org/landing-page-d"
+                  className="btn btn-primary w-full text-center"
+                >
+                  See If You Qualify →
+                </Link>
+              </div>
             </div>
 
             <div className="max-w-2xl mx-auto mt-8 mb-12">
@@ -278,25 +175,6 @@ export default function ServicesPage() {
             <div className="max-w-4xl mx-auto mt-8">
               <ScholarshipCallout variant="banner" />
             </div>
-          </div>
-        </section>
-
-        {/* Quick Win Entry Point */}
-        <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="text-sm font-semibold mb-2" style={{ color: 'var(--color-accent)' }}>NOT READY TO COMMIT?</p>
-            <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: 'var(--color-primary)' }}>
-              Quick Win Bundle — $500
-            </h3>
-            <p className="text-gray-600 mb-2 max-w-xl mx-auto">
-              Get a Business Model Report (48hrs), Competitor Analysis (72hrs), 90-Day Action Plan, and a 1-hour Strategy Call. See exactly how we work before going all-in.
-            </p>
-            <p className="text-sm text-gray-500 mb-6">
-              Credits toward any full program if you upgrade within 30 days.
-            </p>
-            <Link href="https://go.azgari.org/quick-win" className="btn btn-secondary">
-              Start with Quick Win →
-            </Link>
           </div>
         </section>
 
@@ -383,7 +261,7 @@ export default function ServicesPage() {
                 
                 <div>
                   <Link 
-                    href="https://go.azgari.org/landing-page-d" 
+                    href="https://go.azgari.org/question-flow-d" 
                     className="btn btn-primary"
                   >
                     Explore Acquisition Advisory →
@@ -463,10 +341,10 @@ export default function ServicesPage() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                What's Included
+                What&apos;s Included
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Every program is built on proven systems that have launched hundreds of successful service businesses.
+                Every build follows our proven systems, refined over 20+ years of building service businesses.
               </p>
             </div>
             
@@ -505,21 +383,21 @@ export default function ServicesPage() {
         >
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Your Journey?
+              Ready to Own a Business Without Running It?
             </h2>
             <p className="opacity-90 max-w-xl mx-auto mb-8">
-              Answer a few quick questions to see which program fits your goals — and whether you qualify for our scholarship fund.
+              Answer a few quick questions to see if you qualify — and whether our scholarship fund can help.
             </p>
             
             <Link 
-              href="https://go.azgari.org/landing-page-d" 
+              href="https://go.azgari.org/question-flow-d" 
               className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
             >
               See If You Qualify →
             </Link>
             
             <p className="mt-6 text-white/70 text-sm">
-              No commitment required. We'll recommend the best path for you.
+              No commitment required. We&apos;ll tell you honestly if it&apos;s a fit.
             </p>
           </div>
         </section>

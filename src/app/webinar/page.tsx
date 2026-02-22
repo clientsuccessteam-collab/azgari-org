@@ -3,18 +3,16 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MissionWrapper from "@/components/MissionWrapper";
-import { GHL_LINKS, TESTIMONIALS } from "@/lib/links";
+import { GHL_LINKS } from "@/lib/links";
 
 const learningPoints = [
-  "The exact 3 business models that generate $10K-$35K/month in 90 days or less",
+  "The 3 business models with the highest margins and lowest startup costs",
   "How to validate demand BEFORE you spend a dollar on equipment or inventory",
-  "The 'Debt Stacking' strategy to fund your launch without risking personal savings",
+  "How SBA funding works and how to position yourself for approval",
   "Why most new business owners fail (and the simple system that prevents it)",
-  "How to book your first 10 customers before you even launch",
-  "The step-by-step blueprint to go from idea to first paying customer in 30 days",
+  "What a done-for-you business build actually looks like, step by step",
+  "The difference between owning a business and buying yourself a job",
 ];
-
-const featuredTestimonials = TESTIMONIALS.slice(0, 3);
 
 export default function WebinarPage() {
   return (
@@ -62,7 +60,7 @@ export default function WebinarPage() {
                     <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 47 Minutes
                   </span>
                   <span className="flex items-center justify-center lg:justify-start gap-2">
-                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 160+ Success Stories
+                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Real Client Examples
                   </span>
                   <span className="flex items-center justify-center lg:justify-start gap-2">
                     <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 100% Free
@@ -106,11 +104,11 @@ export default function WebinarPage() {
                   </div>
                   
                   {/* Floating stat card */}
-                  <div 
+                  <div
                     className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
                   >
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>160+</div>
-                    <div className="text-sm text-gray-600">Businesses Launched</div>
+                    <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>20+</div>
+                    <div className="text-sm text-gray-600">Years of Experience</div>
                   </div>
                 </div>
               </div>
@@ -135,7 +133,7 @@ export default function WebinarPage() {
                 Everything You Need to Launch Your First $10K Month
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                In this free training, Azgari breaks down the exact framework she&apos;s used to help 160+ entrepreneurs build profitable service businesses.
+                In this free training, Azgari breaks down the exact framework her team uses to build profitable service businesses for clients.
               </p>
             </div>
             
@@ -185,11 +183,11 @@ export default function WebinarPage() {
                   </div>
                   
                   {/* Floating card */}
-                  <div 
+                  <div
                     className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-5 border border-gray-100"
                   >
-                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>160+</div>
-                    <div className="text-sm text-gray-600">Businesses Launched</div>
+                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>100%</div>
+                    <div className="text-sm text-gray-600">Client Ownership</div>
                   </div>
                 </div>
               </div>
@@ -237,77 +235,34 @@ export default function WebinarPage() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Client Stories */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-6">
-            {/* Header */}
             <div className="text-center mb-12">
-              <span 
+              <span
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                SUCCESS STORIES
+                CLIENT STORIES
               </span>
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                What People Are Saying
+                Hear From Real Clients
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Real entrepreneurs who used this framework to build profitable service businesses.
+                Real business owners sharing their experience on camera.
               </p>
             </div>
 
-            {/* Testimonials Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-10">
-              {featuredTestimonials.map((testimonial) => (
-                <div 
-                  key={testimonial.id}
-                  className="rounded-xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
-                  style={{ backgroundColor: 'var(--color-cream)' }}
-                >
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    &quot;{testimonial.quote}&quot;
-                  </p>
-
-                  {/* Author */}
-                  <div className="flex items-center gap-3">
-                    <div 
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold"
-                      style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
-                    >
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-semibold" style={{ color: 'var(--color-primary)' }}>
-                        {testimonial.name}
-                      </p>
-                      <p className="text-sm text-gray-500">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
             <div className="text-center">
-              <Link 
+              <Link
                 href="/case-studies"
                 className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Read Full Case Studies
+                Watch Video Testimonials
                 <span>→</span>
               </Link>
             </div>
