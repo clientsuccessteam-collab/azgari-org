@@ -56,11 +56,11 @@ export const PROGRAMS = [
   {
     name: "Done-for-You Business Build",
     price: "$50,000",
-    note: "Payment plans and SBA funding paths available",
-    description: "We build your service business from scratch — business selection, entity setup, branding, marketing, hiring, operations, and customer acquisition. You become an owner, not an operator.",
-    whoItsFor: "Professionals, veterans, and operators with $50K+ capital ready to own a business",
-    guarantee: "Operational business with manager in seat in 180 days — or we keep working until it is",
-    timeCommitment: "~1 hr/wk (oversight only)",
+    note: "$50K upfront or $10K down + $6,667.67/mo × 6",
+    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
+    whoItsFor: "5–10 hrs/wk (oversight only), $50K+ capital, existing revenue",
+    guarantee: "Business operational in 180 days with manager in seat or continued support",
+    timeCommitment: "5–10 hrs/wk",
     features: [
       "Data-driven business model selection (50+ proven models)",
       "Full entity formation, licensing, and compliance — handled",

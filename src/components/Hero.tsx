@@ -35,7 +35,7 @@ export default function Hero() {
                 See If You Qualify →
               </Link>
               <Link href="#how-it-works" className="btn btn-secondary">
-                Watch How Launches Work
+                See How Launches Work
               </Link>
             </div>
 
