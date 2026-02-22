@@ -615,7 +615,7 @@ export const MEDIA = [
 // TRUST BADGES (Homepage)
 // ============================================
 export const TRUST_LINKS = {
-  googleBusiness: "https://g.page/r/YOUR_GOOGLE_BUSINESS_ID", // Update with actual link
+  googleBusiness: "https://share.google/SlJmbdLaQ1oJGkgeX",
   trustpilot: "https://www.trustpilot.com/review/azgari.com",
   bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultant/azgari-0825-1000247694",
 };
