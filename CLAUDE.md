@@ -58,7 +58,7 @@ src/
 │   ├── media/MediaPromoPlayer.tsx  # Remotion player ("use client", currently disabled)
 │   ├── privacy/page.tsx
 │   ├── qualify/page.tsx            # Belief-first qualification page with GHL quiz
-│   ├── scholarships/page.tsx
+│   ├── scholarships/page.tsx    # Scholarship application (links to GHL nonprofit page)
 │   ├── services/page.tsx
 │   ├── state/page.tsx
 │   ├── state/[state]/page.tsx      # Dynamic route for 50 US states
@@ -68,7 +68,7 @@ src/
 │   ├── videos/VideoShowcase.tsx    # Video gallery ("use client")
 │   └── webinar/page.tsx
 ├── components/           # Reusable React components
-│   ├── Navbar.tsx        # Fixed nav with mobile menu ("use client")
+│   ├── Navbar.tsx        # Fixed nav with mobile menu ("use client") — includes Scholarships link
 │   ├── Hero.tsx
 │   ├── MissionWrapper.tsx
 │   ├── TrustBanner.tsx

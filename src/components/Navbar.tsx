@@ -29,6 +29,7 @@ export default function Navbar() {
           <li><Link href="#pricing" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Pricing</Link></li>
           <li><Link href="/case-studies" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Case Studies</Link></li>
           <li><Link href="/about" className="font-medium text-white/90 hover:text-amber-400 transition-colors">About</Link></li>
+          <li><Link href="/scholarships" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Scholarships</Link></li>
           <li><Link href="https://azgari.blog" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Blog</Link></li>
           <li><Link href="/contact" className="font-medium text-white/90 hover:text-amber-400 transition-colors">Contact</Link></li>
         </ul>
@@ -60,6 +61,7 @@ export default function Navbar() {
             <li><Link href="#pricing" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Pricing</Link></li>
             <li><Link href="/case-studies" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Case Studies</Link></li>
             <li><Link href="/about" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>About</Link></li>
+            <li><Link href="/scholarships" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Scholarships</Link></li>
             <li><Link href="https://azgari.blog" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Blog</Link></li>
             <li><Link href="/contact" className="block text-white/90 hover:text-amber-400" onClick={() => setMobileOpen(false)}>Contact</Link></li>
             <li>
