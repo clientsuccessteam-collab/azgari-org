@@ -616,8 +616,8 @@ export const MEDIA = [
 // ============================================
 export const TRUST_LINKS = {
   googleBusiness: "https://g.page/r/YOUR_GOOGLE_BUSINESS_ID", // Update with actual link
-  trustpilot: "https://www.trustpilot.com/review/azgari.org", // Update with actual link
-  bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultants/azgari-foundation-0000-0000000", // Update with actual link
+  trustpilot: "https://www.trustpilot.com/review/azgari.com",
+  bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultant/azgari-0825-1000247694",
 };
 
 // Lead magnet data (for guides page)
