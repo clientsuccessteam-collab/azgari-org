@@ -128,8 +128,9 @@ export default function QualifyPage() {
       {/* ── Minimal top bar ── */}
       <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold" style={{ color: "var(--color-primary)" }}>
-            AZGARI
+          <Link href="/" className="flex items-center gap-2 text-lg font-bold" style={{ color: "var(--color-primary)" }}>
+            <Image src="/logo-black.svg" alt="Azgari Foundation Logo" width={24} height={21} className="h-6 w-auto" />
+            Azgari Foundation
           </Link>
           <Link
             href={QUIZ_URL}

@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <Image 
             src="/logo-white.svg" 
-            alt="Azgari Logo" 
+            alt="Azgari Foundation Logo" 
             width={32} 
             height={28}
             className="h-8 w-auto"

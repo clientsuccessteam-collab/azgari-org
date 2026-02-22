@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import JsonLd from "@/app/JsonLd";
 
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className="font-sans">
         <JsonLd data={organizationJsonLd} />
         {children}
+        <Analytics />
       </body>
     </html>
   );
