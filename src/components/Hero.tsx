@@ -34,8 +34,8 @@ export default function Hero() {
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
                 Book Your Free Discovery Call →
               </Link>
-              <Link href="#pricing" className="btn btn-secondary">
-                Compare Programs
+              <Link href="#how-it-works" className="btn btn-secondary">
+                See How Launches Work
               </Link>
             </div>
 
