@@ -91,7 +91,7 @@ const freeDownloads = [
     description: "The exact checklist our team uses to launch 160+ businesses. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
     icon: "📋",
     cta: "Get the Checklist →",
-    link: "https://go.azgari.org/checklist",
+    link: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
   },
   {
     title: "Which Business Is Right for Me?",
@@ -99,7 +99,7 @@ const freeDownloads = [
     description: "Answer 12 questions about your skills, capital, and lifestyle goals — get a personalized business model recommendation from our library of 50+ proven models.",
     icon: "🎯",
     cta: "Take the Quiz →",
-    link: "https://go.azgari.org/assessment",
+    link: "https://go.azgari.org/product-details/product/699b4bd9c0607441c091969e",
   },
   {
     title: "SBA Loan Readiness Guide",
@@ -107,7 +107,7 @@ const freeDownloads = [
     description: "The step-by-step guide to getting SBA-approved without a broker. Credit requirements, exact documents needed, underwriter psychology, and how to package your application for approval.",
     icon: "🏦",
     cta: "Get the SBA Guide →",
-    link: "https://go.azgari.org/sba-guide",
+    link: "https://go.azgari.org/product-details/product/699b4bf1aec1c12d84307715",
   },
 ];
 
