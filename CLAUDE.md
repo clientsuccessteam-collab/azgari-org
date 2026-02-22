@@ -12,6 +12,8 @@ Marketing website for **Azgari Foundation**, a service business consulting compa
 - **UI:** React 19.x with TypeScript
 - **Styling:** Tailwind CSS 4.x via PostCSS
 - **Linting:** ESLint 9.x (flat config) with `next/core-web-vitals` and `next/typescript`
+- **Analytics:** Vercel Analytics (`@vercel/analytics`)
+- **Video:** Remotion 4.x for generated promo/stats/testimonial videos
 - **No testing framework** is currently configured
 - **No CI/CD pipelines** are configured
 
@@ -24,6 +26,14 @@ npm run start    # Run production server
 npm run lint     # Run ESLint (eslint flat config)
 ```
 
+Remotion scripts (video generation):
+```bash
+npm run remotion:studio               # Open Remotion Studio
+npm run remotion:render:promo         # Render promo video
+npm run remotion:render:stats         # Render stats video
+npm run remotion:render:testimonials  # Render testimonial video
+```
+
 Always run `npm run build` to verify changes compile without errors. Run `npm run lint` to check for lint issues.
 
 **Lint must pass with 0 errors and 0 warnings before committing.** Fix all issues before pushing.
@@ -33,53 +43,72 @@ Always run `npm run build` to verify changes compile without errors. Run `npm ru
 ```
 src/
 ├── app/                  # Next.js App Router pages
-│   ├── layout.tsx        # Root layout (metadata, fonts, global providers)
-│   ├── page.tsx          # Homepage — composes ~11 section components
+│   ├── layout.tsx        # Root layout (metadata, JSON-LD, Vercel Analytics)
+│   ├── page.tsx          # Homepage — 17-section conversion funnel
 │   ├── globals.css       # Theme variables, base styles, .btn classes
+│   ├── JsonLd.tsx        # JSON-LD structured data component
 │   ├── about/page.tsx
 │   ├── acquisition/page.tsx
+│   ├── case-studies/page.tsx
 │   ├── contact/page.tsx
 │   ├── courses/page.tsx
 │   ├── faq/page.tsx
 │   ├── guides/page.tsx
 │   ├── media/page.tsx
+│   ├── media/MediaPromoPlayer.tsx  # Remotion player ("use client", currently disabled)
 │   ├── privacy/page.tsx
+│   ├── qualify/page.tsx            # Belief-first qualification page with GHL quiz
 │   ├── scholarships/page.tsx
 │   ├── services/page.tsx
 │   ├── state/page.tsx
-│   ├── state/[state]/page.tsx   # Dynamic route for 50 US states
+│   ├── state/[state]/page.tsx      # Dynamic route for 50 US states
 │   ├── terms/page.tsx
-│   └── tools/page.tsx
+│   ├── tools/page.tsx
+│   ├── videos/page.tsx
+│   ├── videos/VideoShowcase.tsx    # Video gallery ("use client")
+│   └── webinar/page.tsx
 ├── components/           # Reusable React components
 │   ├── Navbar.tsx        # Fixed nav with mobile menu ("use client")
 │   ├── Hero.tsx
+│   ├── MissionWrapper.tsx
 │   ├── TrustBanner.tsx
 │   ├── Problem.tsx
 │   ├── Process.tsx
+│   ├── ValueComparison.tsx  # Franchise vs MBA vs DIY vs Azgari
 │   ├── Stats.tsx
-│   ├── Qualification.tsx   # "Who this is for / not for" pre-qualification
-│   ├── CallPreview.tsx     # Strategy call agenda + "Don't book if" sidebar
 │   ├── Transformation.tsx
+│   ├── Testimonials.tsx     # Client social proof ("use client")
+│   ├── Qualification.tsx    # "Who this is for / not for" pre-qualification
+│   ├── ImpactModule.tsx     # Mission bridge
+│   ├── ValueStack.tsx       # What's included breakdown
 │   ├── Pricing.tsx
+│   ├── ScholarshipCallout.tsx
+│   ├── HomeFAQ.tsx          # Homepage FAQ section ("use client")
 │   ├── Transparency.tsx
+│   ├── CallPreview.tsx      # Strategy call agenda + disqualifiers
 │   ├── CTA.tsx
-│   ├── CTAButton.tsx     # Shared CTA button with variant support
-│   ├── Footer.tsx
-│   ├── FAQAccordion.tsx  # Interactive accordion ("use client")
-│   ├── PaymentCalculator.tsx  # Monthly payment calc ("use client")
-│   ├── ShareButton.tsx
-│   └── UrgencyContextPanel.tsx
+│   ├── CTAButton.tsx        # Shared CTA button with variant support
+│   ├── Footer.tsx           # Footer with YouTube, Instagram, LinkedIn links
+│   ├── Card.tsx
+│   ├── FAQAccordion.tsx     # Interactive accordion ("use client")
+│   ├── PaymentCalculator.tsx
+│   ├── ReinvestmentDisclosure.tsx
+│   ├── ShareButton.tsx      # ("use client")
+│   ├── UrgencyContextPanel.tsx
+│   └── VideoPlayer.tsx      # ("use client")
 └── lib/                  # Utilities and data
-    ├── links.ts          # Centralized GHL links, pricing, courses, tools config
+    ├── links.ts          # Centralized GHL links, pricing, courses, tools, media config
     └── stateData.ts      # US state business data and ranking logic
 ```
 
 ## Key Files
 
-- **`src/lib/links.ts`** — Single source of truth for all external links (GoHighLevel CRM), program pricing, course data, and tool data. Update here when links or pricing change.
+- **`src/lib/links.ts`** — Single source of truth for all external links (GoHighLevel CRM), program pricing, course data, tool data, and media entries. Update here when links or pricing change.
 - **`src/lib/stateData.ts`** — State-level business ranking data with regional prioritization logic. Used by dynamic `/state/[state]` routes.
 - **`src/app/globals.css`** — Theme definition using Tailwind v4 `@theme` block. Defines brand colors, fonts, and button classes.
-- **`src/app/layout.tsx`** — Root layout with global metadata (OpenGraph, Twitter cards), Inter font, Navbar, and Footer.
+- **`src/app/layout.tsx`** — Root layout with global metadata (OpenGraph, Twitter cards), JSON-LD structured data, and Vercel Analytics.
+- **`src/app/JsonLd.tsx`** — Reusable JSON-LD structured data component for SEO.
+- **`src/app/qualify/page.tsx`** — Belief-first qualification page. Main qualify CTA routes here instead of directly to GHL. Quiz URL configurable via `NEXT_PUBLIC_QUALIFY_QUIZ_URL` env var.
 
 ## Code Conventions
 
@@ -96,7 +125,7 @@ src/
 - **Default exports** for page components (`export default function PageName()`)
 - **TypeScript interfaces** for all component props (defined in same file)
 - **`"use client"` directive** only on components that need browser APIs (useState, onClick handlers, etc.). Most components are server components by default.
-- Client components: `Navbar`, `FAQAccordion`, `PaymentCalculator`, `UrgencyContextPanel`, `ShareButton`
+- Client components: `Navbar`, `FAQAccordion`, `HomeFAQ`, `Testimonials`, `ShareButton`, `VideoPlayer`, `VideoShowcase`, `MediaPromoPlayer`
 
 ### Naming
 - Components: PascalCase files (`CTAButton.tsx`, `FAQAccordion.tsx`)
@@ -164,4 +193,6 @@ The site uses a professional, trust-focused design:
 ## External Integrations
 
 - **GoHighLevel (GHL):** CRM and booking platform. All lead capture, booking, and enrollment links point to GHL. Links are centralized in `src/lib/links.ts`.
-- No other third-party APIs, analytics, or backend services.
+- **Vercel Analytics:** Page-level analytics via `@vercel/analytics`, loaded in root layout.
+- **Remotion:** Video generation framework for promo, stats, and testimonial videos. Studio and render scripts in `package.json`.
+- **IndexNow:** SEO indexing key at `public/fc4bdac4958808d967a1608b1cf413b8.txt`.
