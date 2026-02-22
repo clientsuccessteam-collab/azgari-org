@@ -39,7 +39,7 @@ export const GHL_LINKS = {
   allCourses: "https://go.azgari.org/digitalcoursespage",
   
   // All Tools Page  
-  allTools: "https://go.azgari.org/tools",
+  allTools: "https://go.azgari.org/products-list",
 };
 
 // Default CTA configuration
