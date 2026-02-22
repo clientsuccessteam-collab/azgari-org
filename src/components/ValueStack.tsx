@@ -4,43 +4,43 @@ import { GHL_LINKS } from "@/lib/links";
 const valueItems = [
   {
     item: "Business Model Selection & Market Validation",
-    separate: "$3,000–$5,000",
+    separate: "$5,000",
     detail: "We analyze 50+ models against your local market and pick the best fit",
   },
   {
     item: "Entity Formation, Licensing & Compliance Setup",
-    separate: "$2,500–$5,000",
+    separate: "$5,000",
     detail: "LLC, permits, insurance, EIN — all handled by our team",
   },
   {
     item: "Brand Development (Name, Logo, Positioning)",
-    separate: "$3,000–$8,000",
+    separate: "$8,000",
     detail: "Professional brand identity that builds instant credibility",
   },
   {
     item: "Website, Funnels & Marketing Systems",
-    separate: "$5,000–$15,000",
+    separate: "$15,000",
     detail: "Complete digital presence and lead generation built for you",
   },
   {
     item: "Customer Acquisition (Pre-Launch Revenue)",
-    separate: "$3,000–$8,000",
+    separate: "$8,000",
     detail: "Paying customers before your official launch day",
   },
   {
     item: "Team Hiring, Training & Manager Placement",
-    separate: "$5,000–$10,000",
+    separate: "$10,000",
     detail: "Full operational team recruited, trained, and managed",
   },
   {
     item: "Operations Systems & SOPs",
-    separate: "$3,000–$7,000",
+    separate: "$7,000",
     detail: "The systems that let the business run without you",
   },
   {
     item: "12 Months of Ongoing Support",
-    separate: "$8,000–$16,000",
-    detail: "Continued guidance through growth, hiring, and scaling",
+    separate: "$16,000",
+    detail: "Continued guidance through growth, hiring, and scaling"
   },
 ];
 
@@ -86,7 +86,7 @@ export default function ValueStack() {
                 Total value if purchased separately:
               </p>
               <p className="text-3xl font-bold text-gray-400 line-through mb-4">
-                $32,500–$74,000
+                $74,000+
               </p>
 
               <p className="text-sm font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>
@@ -96,7 +96,7 @@ export default function ValueStack() {
                 $50,000
               </p>
               <p className="text-sm text-gray-500 mb-6">
-                Payment plans and SBA funding paths available
+                $50K upfront or $10K down + $6,667.67/mo × 6
               </p>
 
               <Link href={GHL_LINKS.qualify} className="btn btn-primary text-lg px-10 py-4">
