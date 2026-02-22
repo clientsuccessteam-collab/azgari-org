@@ -618,6 +618,9 @@ export const TRUST_LINKS = {
   googleBusiness: "https://share.google/SlJmbdLaQ1oJGkgeX",
   trustpilot: "https://www.trustpilot.com/review/azgari.com",
   bbb: "https://www.bbb.org/us/tx/austin/profile/business-consultant/azgari-0825-1000247694",
+  linkedin: "https://www.linkedin.com/company/azgari",
+  instagram: "https://www.instagram.com/azgari.lipshy/",
+  youtube: "https://www.youtube.com/@azgarilipshy",
 };
 
 // Lead magnet data (for guides page)
