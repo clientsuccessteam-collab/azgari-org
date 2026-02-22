@@ -114,7 +114,7 @@ export const PROGRAMS = [
   {
     name: "Scale",
     price: "$50,000",
-    note: "Payment plans available",
+    note: "$50K upfront or $10K down + $6,667.67/mo × 6",
     description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
     whoItsFor: "5–10 hrs/wk (oversight only), $50K+ capital, existing revenue",
     guarantee: "Business operational in 180 days with manager in seat or continued support",
