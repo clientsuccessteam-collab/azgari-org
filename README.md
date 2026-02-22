@@ -8,6 +8,8 @@ Marketing website for **Azgari Foundation**, a service business consulting compa
 - **UI:** React 19.x with TypeScript
 - **Styling:** Tailwind CSS 4.x
 - **Linting:** ESLint 9.x (flat config)
+- **Analytics:** Vercel Analytics
+- **Video:** Remotion 4.x (promo/stats/testimonial generation)
 
 ## Getting Started
 
@@ -26,6 +28,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `npm run build` | Production build |
 | `npm run start` | Run production server |
 | `npm run lint` | Run ESLint |
+| `npm run remotion:studio` | Open Remotion Studio |
+| `npm run remotion:render:promo` | Render promo video |
+| `npm run remotion:render:stats` | Render stats video |
+| `npm run remotion:render:testimonials` | Render testimonial video |
 
 ## Code Quality
 
@@ -47,18 +53,35 @@ npm run build    # Must complete without errors
 
 ```
 src/
-├── app/            # Next.js App Router pages
-├── components/     # Reusable React components
+├── app/            # Next.js App Router pages (19 routes)
+│   ├── layout.tsx  # Root layout (metadata, JSON-LD, Vercel Analytics)
+│   ├── page.tsx    # Homepage — 17-section conversion funnel
+│   └── ...         # about, acquisition, case-studies, contact, courses,
+│                   # faq, guides, media, privacy, qualify, scholarships,
+│                   # services, state/[state], terms, tools, videos, webinar
+├── components/     # 28 reusable React components
 └── lib/            # Utilities, data, and configuration
+    ├── links.ts    # All external URLs, pricing, course/tool/media data
+    └── stateData.ts # US state business ranking data
 ```
 
 ### Key Files
 
-- `src/lib/links.ts` — Single source of truth for all external URLs, program pricing, course/tool data
+- `src/lib/links.ts` — Single source of truth for all external URLs, program pricing, course/tool/media data
 - `src/lib/stateData.ts` — US state business ranking data
 - `src/app/globals.css` — Theme colors, fonts, button classes
 - `src/app/page.tsx` — Homepage funnel (see CLAUDE.md for section order)
+- `src/app/qualify/page.tsx` — Belief-first qualification page with GHL quiz integration
 
 ## External Integrations
 
 - **GoHighLevel (GHL)** — CRM, booking, and enrollment. All links centralized in `src/lib/links.ts`.
+- **Vercel Analytics** — Page-level analytics loaded in root layout.
+- **Remotion** — Video generation for promo, stats, and testimonial content.
+- **IndexNow** — SEO indexing key for search engines.
+
+## Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NEXT_PUBLIC_QUALIFY_QUIZ_URL` | GHL qualification quiz URL | GHL landing page |

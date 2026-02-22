@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ShareButton from "@/components/ShareButton";
+import { GHL_LINKS } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Scholarships & Free Programs | Azgari Foundation",
@@ -104,7 +105,7 @@ export default function ScholarshipsPage() {
               If you qualify, you get the same world-class training — at no cost.
             </p>
             
-            <Link href="#apply" className="btn btn-primary">
+            <Link href={GHL_LINKS.forms.scholarship} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Apply for Scholarship →
             </Link>
           </div>
@@ -278,9 +279,11 @@ export default function ScholarshipsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link 
-                href="mailto:scholarships@azgari.org?subject=Scholarship Application Inquiry"
+              <Link
+                href={GHL_LINKS.forms.scholarship}
                 className="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Apply for Scholarship →
               </Link>
