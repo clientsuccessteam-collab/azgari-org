@@ -163,7 +163,7 @@ export default function ServicesPage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Whether you're testing an idea, launching your first business, or scaling to multiple locations — we have a path that fits your goals, budget, and timeline.
+              Whether you&apos;re testing an idea, launching your first business, or scaling to multiple locations — we have a path that fits your goals, budget, and timeline.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -463,7 +463,7 @@ export default function ServicesPage() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                What's Included
+                What&apos;s Included
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
                 Every program is built on proven systems that have launched hundreds of successful service businesses.
@@ -519,7 +519,7 @@ export default function ServicesPage() {
             </Link>
             
             <p className="mt-6 text-white/70 text-sm">
-              No commitment required. We'll recommend the best path for you.
+              No commitment required. We&apos;ll recommend the best path for you.
             </p>
           </div>
         </section>

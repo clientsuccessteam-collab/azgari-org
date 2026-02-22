@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { MEDIA, GHL_LINKS } from "@/lib/links";
+import { MEDIA } from "@/lib/links";
 // import MediaPromoPlayer from "./MediaPromoPlayer"; // Disabled: Remotion dependency issue
 
 export const metadata: Metadata = {

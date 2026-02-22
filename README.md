@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Azgari Foundation
+
+Marketing website for **Azgari Foundation**, a service business consulting company that helps entrepreneurs launch local service businesses.
+
+## Tech Stack
+
+- **Framework:** Next.js 16.x (App Router)
+- **UI:** React 19.x with TypeScript
+- **Styling:** Tailwind CSS 4.x
+- **Linting:** ESLint 9.x (flat config)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server (localhost:3000) |
+| `npm run build` | Production build |
+| `npm run start` | Run production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Code Quality
 
-To learn more about Next.js, take a look at the following resources:
+**Both checks must pass before every commit:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint     # Must exit with 0 errors and 0 warnings
+npm run build    # Must complete without errors
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Rules
 
-## Deploy on Vercel
+- **No unused imports** — remove any `import` not referenced in the file
+- **No unused variables** — remove parameters and variables that aren't used
+- **Escape JSX entities** — use `&apos;` `&quot;` `&amp;` in rendered text, not raw characters
+- **No dead code** — delete commented-out code and orphaned components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/            # Next.js App Router pages
+├── components/     # Reusable React components
+└── lib/            # Utilities, data, and configuration
+```
+
+### Key Files
+
+- `src/lib/links.ts` — Single source of truth for all external URLs, program pricing, course/tool data
+- `src/lib/stateData.ts` — US state business ranking data
+- `src/app/globals.css` — Theme colors, fonts, button classes
+- `src/app/page.tsx` — Homepage funnel (see CLAUDE.md for section order)
+
+## External Integrations
+
+- **GoHighLevel (GHL)** — CRM, booking, and enrollment. All links centralized in `src/lib/links.ts`.
