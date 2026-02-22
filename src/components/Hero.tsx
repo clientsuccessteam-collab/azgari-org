@@ -13,21 +13,21 @@ export default function Hero() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              STRUCTURED PATH TO BUSINESS OWNERSHIP
+              DONE-FOR-YOU BUSINESS BUILDING
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight" style={{ color: 'var(--color-primary)' }}>
-              Stop Building Someone Else&apos;s Dream.
+              We Build Service Businesses You Own 100%.
             </h1>
             <span className="block text-2xl md:text-3xl font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>
-              Launch a Business You Own 100%.
+              You invest. We build. You own everything.
             </span>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
-              We help corporate operators, veterans, and professionals acquire and launch a profitable service business using a proven market-first model — no franchise fees, no royalties, no guesswork.
+              We select the business, set up operations, hire your team, and deliver paying customers — so you become an owner, not an operator. No franchise fees. No royalties. No guesswork.
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mb-8">
-              Requires capital, commitment, and urgency. Not a side hustle. Not a course. A real business built with you.
+              Requires capital, commitment, and urgency. Not a side hustle. Not a course. A real business built for you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
@@ -47,7 +47,7 @@ export default function Hero() {
                 <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Customers Before Launch Day
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 120-Day Launch Guarantee
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Done-for-You Operations
               </span>
             </div>
           </div>
@@ -77,16 +77,16 @@ export default function Hero() {
               <div
                 className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>160+</div>
-                <div className="text-sm text-gray-600">Businesses Launched</div>
+                <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>20+ Years</div>
+                <div className="text-sm text-gray-600">Building Businesses</div>
               </div>
 
               {/* Floating stat card - right */}
               <div
                 className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
-                <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>47 Days</div>
-                <div className="text-sm text-gray-600">Avg. to First Revenue</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>100%</div>
+                <div className="text-sm text-gray-600">Client Ownership</div>
               </div>
             </div>
           </div>

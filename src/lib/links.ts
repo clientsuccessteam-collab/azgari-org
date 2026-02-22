@@ -51,96 +51,31 @@ export const DEFAULT_CTA = {
 // ============================================
 // PROGRAMS (Services Page & Homepage Pricing)
 // ============================================
+// One flagship offer — done-for-you business building
 export const PROGRAMS = [
   {
-    name: "Launch Validation",
-    price: "$2,500",
-    note: "or $958 × 3 payments",
-    description: "Prove the concept, land your first paying customers, and validate it works — before investing more. Perfect for entrepreneurs willing to get their hands dirty.",
-    whoItsFor: "40+ hrs/wk available, $5K–$10K capital, ready to hustle",
-    guarantee: "Launched in 60 days or continued support until you do",
-    timeCommitment: "40+ hrs/wk",
-    features: [
-      "Business name + tagline",
-      "Simple logo + brand colors",
-      "Social media profile setup",
-      "Payment system (Square/Stripe)",
-      "Website or landing page",
-      "Weekly check-in calls (8 weeks)",
-    ],
-    graduation: "Credits toward Foundation if you upgrade",
-    href: GHL_LINKS.programs.quickWin,
-    featured: false,
-  },
-  {
-    name: "Foundation",
-    price: "$10,000",
-    note: "or $3,500 × 3 payments",
-    description: "Test the model, land your first paying customers, and prove this works for you — before investing $25K or more. Most of our successful clients started exactly here.",
-    whoItsFor: "10–15 hrs/wk available, $10K–$25K capital, want to validate before scaling",
-    guarantee: "Launched in 90 days or continued support until you do",
-    timeCommitment: "10–15 hrs/wk",
-    features: [
-      "Business model selection (50+ proven models)",
-      "Market validation",
-      "Brand foundation (name, positioning, presence)",
-      "Turn contacts into customers system",
-      "Weekly group coaching for 90 days",
-    ],
-    graduation: "$10K credits toward Full Launch if you upgrade",
-    href: GHL_LINKS.programs.foundation,
-    featured: false,
-  },
-  {
-    name: "Full Launch",
-    price: "$25,000",
-    note: "or $8,500 × 3 payments",
-    description: "We build the business WITH you — marketing, systems, customer acquisition. You'll have paying customers before you officially launch. For people ready to go all-in.",
-    whoItsFor: "20–30 hrs/wk available, $25K–$50K capital, ready to commit fully",
-    guarantee: "Launched in 120 days or continued support — plus $3,000 cash if we miss",
-    timeCommitment: "20–30 hrs/wk",
-    features: [
-      "Everything in Foundation",
-      "Done-with-you business buildout",
-      "Complete marketing systems (website, funnels, lead gen)",
-      "Sales team hiring + training support",
-      "Client acquisition & referral system",
-      "120-day launch timeline",
-    ],
-    graduation: "Investment credits toward Scale if you upgrade",
-    href: GHL_LINKS.programs.fullLaunch,
-    featured: true,
-  },
-  {
-    name: "Scale",
+    name: "Done-for-You Business Build",
     price: "$50,000",
-    note: "Payment plans available",
-    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
-    whoItsFor: "5–10 hrs/wk (oversight only), $50K+ capital, existing revenue",
-    guarantee: "Business operational in 180 days with manager in seat or continued support",
-    timeCommitment: "5–10 hrs/wk",
+    note: "Payment plans and SBA funding paths available",
+    description: "We build your service business from scratch — business selection, entity setup, branding, marketing, hiring, operations, and customer acquisition. You become an owner, not an operator.",
+    whoItsFor: "Professionals, veterans, and operators with $50K+ capital ready to own a business",
+    guarantee: "Operational business with manager in seat in 180 days — or we keep working until it is",
+    timeCommitment: "~1 hr/wk (oversight only)",
     features: [
-      "Everything in Full Launch",
-      "Full operational team (hired + trained)",
-      "Manager in place",
-      "Funding concierge (if qualified)",
-      "12-month support",
-      "180-day launch timeline",
+      "Data-driven business model selection (50+ proven models)",
+      "Full entity formation, licensing, and compliance — handled",
+      "Complete brand buildout (name, logo, website, marketing systems)",
+      "Customer acquisition — paying clients before official launch",
+      "Full operational team hired and trained",
+      "Manager placed and running day-to-day operations",
+      "Funding concierge for SBA loan qualification",
+      "12 months of ongoing support",
     ],
     graduation: null,
     href: GHL_LINKS.programs.scale,
-    featured: false,
+    featured: true,
   },
 ];
-
-// Quick Win Bundle — entry-level closing incentive
-export const QUICK_WIN = {
-  name: "Quick Win Bundle",
-  price: "$500",
-  note: "Value: $2,000",
-  description: "Not ready to commit? Start here. Get a Business Model Report (48hrs), Competitor Analysis (72hrs), 90-Day Action Plan, and a 1-hour Strategy Call. Credits toward any full program if you upgrade within 30 days.",
-  href: GHL_LINKS.programs.quickWin,
-};
 
 // ============================================
 // COURSES (Courses Page)
@@ -659,248 +594,38 @@ export const getToolsByCategory = (category: string) =>
 // CASE STUDIES (Case Studies Page)
 // Detailed client success stories with metrics
 // ============================================
-export const CASE_STUDIES = [
-  {
-    id: "pressure-washing-texas",
-    name: "Marcus T.",
-    location: "Austin, TX",
-    business: "Pressure Washing",
-    image: "/images/case-studies/marcus.svg",
-    challenge: "Corporate burnout after 15 years in tech sales. Had savings but no idea how to start a business. Considered franchises but didn't want royalties eating into profits.",
-    solution: "Launched a residential pressure washing business with Azgari's Full Launch program. We helped with equipment selection, pricing strategy, and a customer acquisition plan targeting HOA neighborhoods.",
-    results: [
-      { metric: "$287K", label: "First Year Revenue" },
-      { metric: "47%", label: "Net Profit Margin" },
-      { metric: "68", label: "Days to First $10K Month" },
-      { metric: "3", label: "Crew Members Hired" },
-    ],
-    quote: "I went from dreading Mondays to genuinely loving what I do. The systems Azgari helped me build meant I wasn't reinventing the wheel—I was following a proven path.",
-    timeline: "Launch to $287K in 11 months",
-    featured: true,
-  },
-  {
-    id: "commercial-cleaning-florida",
-    name: "Jennifer & David R.",
-    location: "Tampa, FL",
-    business: "Commercial Cleaning",
-    image: "/images/case-studies/jennifer-david.svg",
-    challenge: "Husband-wife team looking to build something together after David's layoff. Limited startup capital (~$15K) and no business experience.",
-    solution: "Started with office cleaning contracts. Azgari helped secure SBA microloan for equipment and provided sales scripts specifically for approaching property managers.",
-    results: [
-      { metric: "$412K", label: "Year 2 Revenue" },
-      { metric: "52%", label: "Net Margin" },
-      { metric: "14", label: "Recurring Contracts" },
-      { metric: "$0", label: "Spent on Paid Ads" },
-    ],
-    quote: "We built this entire business on referrals and cold outreach using the scripts Azgari gave us. No fancy marketing—just consistent execution.",
-    timeline: "Started with $15K, now doing $35K/month",
-    featured: true,
-  },
-  {
-    id: "lawn-care-ohio",
-    name: "Anthony M.",
-    location: "Columbus, OH",
-    business: "Lawn Care & Landscaping",
-    image: "/images/case-studies/anthony.svg",
-    challenge: "Side hustle that was stuck at $3K/month. Wanted to go full-time but couldn't figure out how to scale beyond himself.",
-    solution: "Restructured pricing, built route density strategy, and created hiring/training SOPs. Transitioned from solo operator to managing a crew.",
-    results: [
-      { metric: "$189K", label: "Revenue (from $36K)" },
-      { metric: "425%", label: "Revenue Increase" },
-      { metric: "4", label: "Full-Time Employees" },
-      { metric: "20hrs", label: "Owner Hours/Week" },
-    ],
-    quote: "I was working 60 hours a week making $3K/month. Now I work 20 hours and clear $12K. The difference was systems.",
-    timeline: "Scaled 5x in 8 months",
-    featured: false,
-  },
-  {
-    id: "junk-removal-georgia",
-    name: "Robert K.",
-    location: "Atlanta, GA",
-    business: "Junk Removal",
-    image: "/images/case-studies/robert.svg",
-    challenge: "Recently retired military, had GI Bill benefits but wanted to build equity instead of going back to school. Strong work ethic but zero business background.",
-    solution: "Used Azgari's veteran-specific pathway. Secured SBA loan with veteran advantage terms. Built junk removal operation targeting estate cleanouts and realtor partnerships.",
-    results: [
-      { metric: "$340K", label: "First Year Revenue" },
-      { metric: "$425", label: "Avg Job Ticket" },
-      { metric: "6", label: "Realtor Partners" },
-      { metric: "2", label: "Trucks Running" },
-    ],
-    quote: "The military taught me discipline. Azgari taught me business. Combining those two things changed my family's future.",
-    timeline: "From discharge to $340K in 14 months",
-    featured: false,
-  },
-  {
-    id: "hvac-california",
-    name: "Miguel S.",
-    location: "Sacramento, CA",
-    business: "HVAC Services",
-    image: "/images/case-studies/miguel.svg",
-    challenge: "Licensed HVAC tech working for someone else for 12 years. Great at the trade but intimidated by the business side—pricing, marketing, hiring.",
-    solution: "Foundation program focused on business fundamentals. Built brand, set up pricing tiers, and created a service agreement model for recurring revenue.",
-    results: [
-      { metric: "$520K", label: "Year 1 Revenue" },
-      { metric: "$180K", label: "Owner Take-Home" },
-      { metric: "340", label: "Service Agreement Customers" },
-      { metric: "38%", label: "Recurring Revenue" },
-    ],
-    quote: "I knew HVAC. I didn't know business. Azgari filled that gap. Now I make more than my old boss.",
-    timeline: "Solo tech to $520K owner-operator",
-    featured: false,
-  },
-  {
-    id: "recruiting-texas",
-    name: "Danielle W.",
-    location: "Dallas, TX",
-    business: "Recruiting & Staffing",
-    image: "/images/case-studies/danielle.svg",
-    challenge: "Former corporate HR director tired of building teams for someone else. Had deep recruiting skills but no idea how to run her own agency — pricing, contracts, client acquisition.",
-    solution: "Foundation program to validate the model, then upgraded to Full Launch. Built a niche staffing agency specializing in healthcare placements with a retainer-based revenue model.",
-    results: [
-      { metric: "$380K", label: "Year 1 Revenue" },
-      { metric: "$195K", label: "Owner Take-Home" },
-      { metric: "22", label: "Active Client Contracts" },
-      { metric: "68%", label: "Gross Margin" },
-    ],
-    quote: "I spent 15 years placing talent for companies. Now I place talent for MY company. The margins in recruiting are incredible when you have the right systems.",
-    timeline: "Corporate HR to $380K agency owner in 10 months",
-    featured: false,
-  },
-  {
-    id: "fractional-cfo-colorado",
-    name: "James H.",
-    location: "Denver, CO",
-    business: "Fractional C-Suite Consulting",
-    image: "/images/case-studies/james.svg",
-    challenge: "20-year corporate CFO who was laid off at 52. Didn't want another corporate job but thought consulting meant starting from zero. Had the expertise but no client pipeline or business structure.",
-    solution: "Foundation program to build the practice framework, then Full Launch to build marketing systems and client acquisition. Positioned as a fractional CFO serving 4-6 companies simultaneously.",
-    results: [
-      { metric: "$420K", label: "Year 1 Revenue" },
-      { metric: "$340K", label: "Owner Take-Home" },
-      { metric: "5", label: "Retainer Clients" },
-      { metric: "15hrs", label: "Avg Hours/Week" },
-    ],
-    quote: "I went from one company paying me $180K to five companies paying me $420K total — and I work fewer hours. Azgari showed me how to package my experience as a service business.",
-    timeline: "Laid-off CFO to $420K fractional practice in 8 months",
-    featured: false,
-  },
-  {
-    id: "pest-control-arizona",
-    name: "Carlos M.",
-    location: "Phoenix, AZ",
-    business: "Pest Control",
-    image: "/images/case-studies/carlos.svg",
-    challenge: "Worked for a national pest control chain for 8 years. Knew the industry inside out but was capped at $55K salary. Wanted his own routes but didn't know how to handle licensing, marketing, or scaling beyond himself.",
-    solution: "Launch Validation to land first customers fast, then upgraded to Foundation. Built residential pest control routes in Phoenix suburbs with recurring monthly service contracts.",
-    results: [
-      { metric: "$295K", label: "Year 1 Revenue" },
-      { metric: "420", label: "Monthly Service Contracts" },
-      { metric: "92%", label: "Customer Retention" },
-      { metric: "3", label: "Technicians Hired" },
-    ],
-    quote: "My old employer charged customers $65/month and paid me $22/hour. Now I charge $55/month and keep the profit. Recurring revenue changes everything.",
-    timeline: "Pest control tech to $295K owner in 11 months",
-    featured: false,
-  },
-  {
-    id: "handyman-north-carolina",
-    name: "Kevin B.",
-    location: "Charlotte, NC",
-    business: "Handyman Services",
-    image: "/images/case-studies/kevin.svg",
-    challenge: "Retired firefighter with strong fix-it skills but zero business background. Was doing odd jobs for neighbors at low rates. No pricing structure, no marketing, no systems — just word of mouth.",
-    solution: "Launch Validation program. Built pricing tiers (small/medium/large jobs), set up Google Business Profile and lead gen, created a referral system targeting real estate agents and property managers.",
-    results: [
-      { metric: "$175K", label: "Year 1 Revenue" },
-      { metric: "$425", label: "Avg Job Ticket" },
-      { metric: "8", label: "Realtor Partners" },
-      { metric: "42%", label: "Net Margin" },
-    ],
-    quote: "I was charging neighbors $20/hour and feeling guilty about it. Azgari showed me how to price by the job, not the hour. My average ticket is now $425.",
-    timeline: "Odd jobs to $175K handyman business in 9 months",
-    featured: false,
-  },
-  {
-    id: "flood-remediation-florida",
-    name: "Patricia & Tom R.",
-    location: "Jacksonville, FL",
-    business: "Flood & Water Remediation",
-    image: "/images/case-studies/patricia-tom.svg",
-    challenge: "Husband-wife team living in flood-prone Florida. Tom had construction experience but no insurance restoration knowledge. Saw the opportunity after Hurricane Idalia but didn't know how to break into the industry.",
-    solution: "Full Launch program. Secured IICRC certifications, built relationships with insurance adjusters, and created a rapid-response system. SBA loan covered equipment (dehumidifiers, extractors, vehicles).",
-    results: [
-      { metric: "$610K", label: "Year 1 Revenue" },
-      { metric: "$8,200", label: "Avg Job Ticket" },
-      { metric: "12", label: "Insurance Adjuster Contacts" },
-      { metric: "4", label: "Response Crews" },
-    ],
-    quote: "Insurance pays the bills — literally. Our average job is $8,200 and it's paid directly by the insurance company. Azgari showed us how to build the relationships that keep the phone ringing.",
-    timeline: "Zero experience to $610K remediation company in 14 months",
-    featured: false,
-  },
-];
+// Case studies — only include real, verified clients
+// Add entries here as real client stories become available.
+export const CASE_STUDIES: {
+  id: string;
+  name: string;
+  location: string;
+  business: string;
+  image: string;
+  challenge: string;
+  solution: string;
+  results: { metric: string; label: string }[];
+  quote: string;
+  timeline: string;
+  featured: boolean;
+}[] = [];
 
 // ============================================
 // TESTIMONIALS (Homepage Component)
-// Short quotes for social proof sections
+// Only real, verified client testimonials
 // ============================================
-export const TESTIMONIALS = [
-  {
-    id: "testimonial-1",
-    name: "Marcus T.",
-    role: "Pressure Washing Owner",
-    location: "Austin, TX",
-    image: "/images/case-studies/marcus.svg",
-    quote: "I was terrified. Fifteen years in corporate, and I was about to bet everything on myself. Azgari's system was so clear that the fear turned into focus. Six months in, I hit $10K months. Year one: $287K. The framework works — you just have to show up.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-2",
-    name: "Jennifer R.",
-    role: "Commercial Cleaning Owner",
-    location: "Tampa, FL",
-    image: "/images/case-studies/jennifer-david.svg",
-    quote: "We had $15K and zero business experience. I didn't think we could afford the program, but it paid for itself in 90 days. Now we're doing $35K/month with 14 recurring contracts. The sales scripts alone were worth 10x what we paid.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-3",
-    name: "Anthony M.",
-    role: "Lawn Care Owner",
-    location: "Columbus, OH",
-    image: "/images/case-studies/anthony.svg",
-    quote: "I was grinding 60-hour weeks for $3K/month and going nowhere. Azgari showed me the difference between working hard and working smart. Now I do $12K/month in 20-hour weeks with a team of 4. Systems changed everything.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-4",
-    name: "Robert K.",
-    role: "Junk Removal Owner",
-    location: "Atlanta, GA",
-    image: "/images/case-studies/robert.svg",
-    quote: "Leaving the military, I had discipline but no business direction. Azgari gave me the roadmap I was missing. $340K first year — and I hired three other vets. This is what I was meant to do.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-5",
-    name: "Miguel S.",
-    role: "HVAC Business Owner",
-    location: "Sacramento, CA",
-    image: "/images/case-studies/miguel.svg",
-    quote: "Twelve years turning wrenches for someone else. I knew HVAC inside out but business terrified me. Azgari made the business side simple. First year: $520K revenue, $180K take-home. Should've done this a decade ago.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-6",
-    name: "Sarah L.",
-    role: "Mobile Pet Grooming Owner",
-    location: "Denver, CO",
-    image: "/images/case-studies/marcus.svg",
-    quote: "I was paralyzed by the business side — pricing, marketing, licenses, all of it. Azgari broke it down into steps I could actually follow. Booked solid within 90 days. Now I'm turning away clients and hiring my first employee.",
-    rating: 5,
-  },
+export const TESTIMONIALS: {
+  id: string;
+  name: string;
+  role: string;
+  location: string;
+  quote: string;
+  rating: number;
+  videoSrc?: string;
+}[] = [
+  // NOTE: Add real client testimonials here as they are collected.
+  // Only include clients who have given permission and can be verified.
+  // Video testimonials are preferred — reference /videos/testimonials/ directory.
 ];
 
 // ============================================
@@ -908,12 +633,10 @@ export const TESTIMONIALS = [
 // Aggregate metrics across all clients
 // ============================================
 export const AGGREGATE_STATS = {
-  businessesLaunched: "160+",
-  averageFirstYearRevenue: "$285K",
-  averageNetMargin: "42%",
-  clientSatisfaction: "94%",
-  averageDaysToFirstRevenue: "47",
-  totalClientRevenue: "$45M+",
+  yearsExperience: "20+",
+  businessModels: "50+",
+  clientOwnership: "100%",
+  launchGuarantee: "120 days",
 };
 
 // ============================================
@@ -935,15 +658,15 @@ export const NONPROFIT = {
 
   // Revenue reinvestment disclosure (BRD §5.2, §10)
   reinvestmentStatement:
-    "Program fees support training delivery, scholarships, and expansion of our nonprofit workforce initiatives.",
+    "Program fees support business building services, scholarships, and expansion of our workforce initiatives.",
 
   // Global legal disclosure (BRD §10)
   legalDisclosure:
-    "Azgari Foundation is a nonprofit organization. Program revenue is reinvested into training, scholarships, and economic mobility initiatives.",
+    "Azgari Foundation is a 501(c)(3) nonprofit. Revenue is reinvested into services, scholarships, and economic mobility initiatives.",
 
   // Results disclaimer (FTC-safe)
   resultsDisclaimer:
-    "Individual results vary based on effort, market conditions, and capital. Stated figures reflect aggregate client outcomes, not guarantees.",
+    "Individual results vary based on effort, market conditions, and capital. We do not guarantee any level of income or business success.",
 };
 
 // ============================================
@@ -951,8 +674,8 @@ export const NONPROFIT = {
 // Used by ImpactModule component
 // ============================================
 export const IMPACT_METRICS = [
-  { value: "160+", label: "Businesses Launched" },
-  { value: "500+", label: "Jobs Created" },
-  { value: "40+", label: "Scholarships Awarded" },
+  { value: "20+", label: "Years of Experience" },
+  { value: "50+", label: "Business Models Available" },
+  { value: "100%", label: "Client Ownership" },
   { value: "35+", label: "Communities Served" },
 ];

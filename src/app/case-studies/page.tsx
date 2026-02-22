@@ -1,31 +1,28 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GHL_LINKS, CASE_STUDIES, AGGREGATE_STATS } from "@/lib/links";
+import { GHL_LINKS } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Azgari Foundation",
-  description: "Real results from real entrepreneurs. See how our clients built $200K-$500K service businesses with the Azgari method.",
+  title: "Client Stories | Azgari Foundation",
+  description: "Real video testimonials from real business owners. See how Azgari builds businesses people own 100%.",
 };
 
-// Video testimonials data
+// Video testimonials data — real clients only
 const VIDEO_TESTIMONIALS = [
   {
     id: "antwain-davis",
     name: "Antwain Davis",
     title: "Business Owner",
     videoSrc: "/videos/testimonials/antwain-davis.mp4",
-    thumbnail: "🎯",
     quote: "Azgari helped me turn my idea into a real business.",
   },
   {
     id: "matthew-p",
     name: "Matthew P.",
-    title: "Service Business Owner",
+    title: "Staffing Agency Owner",
     videoSrc: "/videos/testimonials/matthew-p.mp4",
-    thumbnail: "💼",
     quote: "The systems and guidance made all the difference.",
   },
   {
@@ -33,7 +30,6 @@ const VIDEO_TESTIMONIALS = [
     name: "Window Washing Specialist",
     title: "Cleaning Business Owner",
     videoSrc: "/videos/testimonials/window-washing.mp4",
-    thumbnail: "🪟",
     quote: "From zero to profitable in record time.",
   },
   {
@@ -41,7 +37,6 @@ const VIDEO_TESTIMONIALS = [
     name: "Hardscaping Professional",
     title: "Landscaping Business Owner",
     videoSrc: "/videos/testimonials/hardscaping.mp4",
-    thumbnail: "🧱",
     quote: "Finally, a clear path to growth.",
   },
   {
@@ -49,95 +44,41 @@ const VIDEO_TESTIMONIALS = [
     name: "Yoga Studio Owner",
     title: "Wellness Entrepreneur",
     videoSrc: "/videos/testimonials/yoga-studio.mp4",
-    thumbnail: "🧘",
     quote: "Launching my dream studio became reality.",
   },
 ];
 
-// Map case study IDs to video testimonials
-const CASE_STUDY_VIDEOS: Record<string, string[]> = {
-  "commercial-cleaning-florida": ["/videos/testimonials/window-washing.mp4"],
-  "lawn-care-ohio": ["/videos/testimonials/hardscaping.mp4"],
-};
-
 export default function CaseStudiesPage() {
-  const featuredStudies = CASE_STUDIES.filter(study => study.featured);
-  const otherStudies = CASE_STUDIES.filter(study => !study.featured);
-
   return (
     <>
       <Navbar />
       <main>
         {/* Hero */}
-        <section 
+        <section
           className="pt-24 md:pt-32 pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
-            <span 
+            <span
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              REAL RESULTS • REAL PEOPLE
+              REAL CLIENTS • REAL VIDEO
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              From Zero to Profitable Business Owner
+              Hear From People We&apos;ve Built Businesses For
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-              These aren&apos;t hypotheticals. These are real entrepreneurs who built real businesses using our proven system.
+              No stock photos. No fake names. Real business owners sharing their experience on camera.
             </p>
           </div>
         </section>
 
-        {/* Aggregate Stats Bar */}
-        <section className="py-8" style={{ backgroundColor: 'var(--color-primary)' }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white">
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.businessesLaunched}
-                </div>
-                <div className="text-sm opacity-80">Businesses Launched</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.averageFirstYearRevenue}
-                </div>
-                <div className="text-sm opacity-80">Avg First Year Revenue</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.averageNetMargin}
-                </div>
-                <div className="text-sm opacity-80">Avg Net Margin</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.averageDaysToFirstRevenue}
-                </div>
-                <div className="text-sm opacity-80">Days to First Revenue</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.clientSatisfaction}
-                </div>
-                <div className="text-sm opacity-80">Client Satisfaction</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  {AGGREGATE_STATS.totalClientRevenue}
-                </div>
-                <div className="text-sm opacity-80">Total Client Revenue</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Video Testimonials Section */}
+        {/* Featured Video - Antwain Davis */}
         <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <span 
+              <span
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
@@ -147,21 +88,20 @@ export default function CaseStudiesPage() {
                 Hear From Our Clients
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Real stories from real entrepreneurs who transformed their lives through business ownership.
+                Real stories from real entrepreneurs who built businesses with Azgari.
               </p>
             </div>
 
-            {/* Featured Video - Antwain Davis */}
+            {/* Featured Video */}
             <div className="max-w-3xl mx-auto mb-12">
-              <div 
+              <div
                 className="rounded-2xl overflow-hidden shadow-xl"
                 style={{ backgroundColor: 'white', border: '2px solid var(--color-accent)' }}
               >
                 <div className="aspect-video bg-gray-900">
                   <video
                     controls
-                    className="w-full h-full"
-                    poster=""
+                    className="w-full h-full object-contain"
                     preload="metadata"
                   >
                     <source src="/videos/testimonials/antwain-davis.mp4" type="video/mp4" />
@@ -185,7 +125,7 @@ export default function CaseStudiesPage() {
             {/* Video Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {VIDEO_TESTIMONIALS.filter(v => v.id !== "antwain-davis").map((video) => (
-                <div 
+                <div
                   key={video.id}
                   className="rounded-xl overflow-hidden shadow-lg transition-shadow hover:shadow-xl"
                   style={{ backgroundColor: 'white' }}
@@ -193,7 +133,7 @@ export default function CaseStudiesPage() {
                   <div className="aspect-video bg-gray-900">
                     <video
                       controls
-                      className="w-full h-full"
+                      className="w-full h-full object-contain"
                       preload="metadata"
                     >
                       <source src={video.videoSrc} type="video/mp4" />
@@ -217,195 +157,12 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Featured Case Studies */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
-              Featured Success Stories
-            </h2>
-            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Deep dives into how our clients built their businesses from the ground up.
-            </p>
-
-            <div className="space-y-16">
-              {featuredStudies.map((study, index) => (
-                <div 
-                  key={study.id}
-                  className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
-                >
-                  {/* Image/Video Section */}
-                  <div className="lg:w-2/5 w-full">
-                    {CASE_STUDY_VIDEOS[study.id] ? (
-                      <div 
-                        className="aspect-square rounded-2xl overflow-hidden shadow-lg"
-                        style={{ backgroundColor: 'var(--color-cream)' }}
-                      >
-                        <video
-                          controls
-                          className="w-full h-full object-cover"
-                          preload="metadata"
-                        >
-                          <source src={CASE_STUDY_VIDEOS[study.id][0]} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    ) : (
-                      <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                        <Image
-                          src={study.image}
-                          alt={`${study.name} - ${study.business}`}
-                          width={600}
-                          height={600}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="lg:w-3/5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="px-3 py-1 rounded-full text-sm font-semibold"
-                        style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
-                      >
-                        {study.business}
-                      </span>
-                      <span className="text-gray-500 text-sm">{study.location}</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-                      {study.name}
-                    </h3>
-                    <p className="text-sm font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>
-                      {study.timeline}
-                    </p>
-
-                    {/* Results Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                      {study.results.map((result, i) => (
-                        <div 
-                          key={i}
-                          className="text-center p-3 rounded-lg"
-                          style={{ backgroundColor: 'var(--color-cream)' }}
-                        >
-                          <div className="text-xl font-bold" style={{ color: 'var(--color-primary)' }}>
-                            {result.metric}
-                          </div>
-                          <div className="text-xs text-gray-600">{result.label}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Challenge & Solution */}
-                    <div className="space-y-3 mb-6">
-                      <div>
-                        <span className="font-semibold text-gray-700">The Challenge: </span>
-                        <span className="text-gray-600">{study.challenge}</span>
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-700">The Solution: </span>
-                        <span className="text-gray-600">{study.solution}</span>
-                      </div>
-                    </div>
-
-                    {/* Quote */}
-                    <blockquote 
-                      className="border-l-4 pl-4 italic text-gray-700"
-                      style={{ borderColor: 'var(--color-accent)' }}
-                    >
-                      &quot;{study.quote}&quot;
-                    </blockquote>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* More Success Stories */}
-        <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-2 text-center" style={{ color: 'var(--color-primary)' }}>
-              More Success Stories
-            </h2>
-            <p className="text-gray-600 text-center mb-12">
-              Every business model. Every background. Same proven system.
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {otherStudies.map((study) => (
-                <div 
-                  key={study.id}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                      <Image
-                        src={study.image}
-                        alt={study.name}
-                        width={48}
-                        height={48}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-bold" style={{ color: 'var(--color-primary)' }}>
-                        {study.name}
-                      </h3>
-                      <p className="text-sm text-gray-500">{study.business} • {study.location}</p>
-                    </div>
-                  </div>
-
-                  {/* Video for Lawn Care (Hardscaping) */}
-                  {study.id === "lawn-care-ohio" && (
-                    <div className="mb-4 rounded-lg overflow-hidden">
-                      <video
-                        controls
-                        className="w-full aspect-video"
-                        preload="metadata"
-                      >
-                        <source src="/videos/testimonials/hardscaping.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                  )}
-
-                  {/* Key Results */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {study.results.slice(0, 2).map((result, i) => (
-                      <div 
-                        key={i}
-                        className="text-center p-2 rounded-lg"
-                        style={{ backgroundColor: 'var(--color-cream)' }}
-                      >
-                        <div className="text-lg font-bold" style={{ color: 'var(--color-accent)' }}>
-                          {result.metric}
-                        </div>
-                        <div className="text-xs text-gray-600">{result.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p className="text-sm text-gray-600 italic mb-3">
-                    &quot;{study.quote}&quot;
-                  </p>
-
-                  <p className="text-xs font-semibold" style={{ color: 'var(--color-accent)' }}>
-                    {study.timeline}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Disclaimer */}
         <section className="py-8 border-t border-b bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-sm text-gray-500">
-              <strong>Earnings Disclaimer:</strong> These results are from individual clients and are not typical. 
-              Your results will vary based on effort, market conditions, experience, and many other factors. 
+              <strong>Disclaimer:</strong> These are real client experiences shared voluntarily.
+              Your results will vary based on effort, market conditions, experience, and many other factors.
               We do not guarantee any level of income or business success.
             </p>
           </div>
@@ -415,17 +172,17 @@ export default function CaseStudiesPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Ready to Write Your Success Story?
+              Ready to Have Us Build Your Business?
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              Join 160+ entrepreneurs who&apos;ve built profitable service businesses with our proven system.
+              We build it. You own it. Start with a 20-minute strategy call.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
                 See If You Qualify →
               </Link>
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-secondary">
-                Book a Free Discovery Call
+                Book a Free Strategy Call
               </Link>
             </div>
           </div>

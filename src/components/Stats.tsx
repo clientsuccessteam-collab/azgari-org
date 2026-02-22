@@ -1,10 +1,10 @@
 import { NONPROFIT } from "@/lib/links";
 
 const stats = [
-  { number: "160+", label: "Businesses Launched", detail: "and counting" },
-  { number: "$285K", label: "Avg. First-Year Revenue", detail: "across all business types" },
-  { number: "47", label: "Days to First Revenue", detail: "average time to first paying customer" },
-  { number: "11.4x", label: "Avg Return on Investment", detail: "$285K revenue on $25K Full Launch" },
+  { number: "20+", label: "Years Building Businesses", detail: "across dozens of service industries" },
+  { number: "50+", label: "Proven Business Models", detail: "data-selected for your local market" },
+  { number: "100%", label: "Client Ownership", detail: "no franchise fees, no royalties, ever" },
+  { number: "180", label: "Days to Operational Business", detail: "with manager in seat and customers paying" },
 ];
 
 export default function Stats() {
@@ -12,10 +12,10 @@ export default function Stats() {
     <section className="py-16 md:py-24 text-white text-center" style={{ backgroundColor: 'var(--color-primary)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          The Numbers Don&apos;t Lie
+          What We Bring to the Table
         </h2>
         <p className="opacity-90 max-w-2xl mx-auto mb-12">
-          These aren&apos;t projections — they&apos;re actual outcomes from clients who followed our framework and did the work.
+          Two decades of hands-on experience building service businesses — distilled into a done-for-you system.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

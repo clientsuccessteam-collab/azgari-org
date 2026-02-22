@@ -148,15 +148,15 @@ const valueStackItems = [
 ];
 
 const acquisitionCaseStudy = {
-  name: "David & Lisa M.",
-  location: "Tampa, FL",
+  name: "Hypothetical Example",
+  location: "Based on typical SBA acquisition",
   business: "Commercial HVAC Service Company",
-  purchasePrice: "$285K",
-  downPayment: "$35K",
-  annualRevenue: "$420K",
-  ownerTakeHome: "$145K",
-  timeline: "Found deal to closed in 67 days",
-  quote: "We looked at franchises for 6 months — all wanted $150K+ and 6% royalties. With Azgari, we bought an existing HVAC company with $420K in revenue for $285K using an SBA loan. Our down payment was $35K. We're cash-flow positive from month one and take home more than we did in corporate — combined.",
+  purchasePrice: "$250K",
+  downPayment: "$30K",
+  annualRevenue: "$350K",
+  ownerTakeHome: "$120K",
+  timeline: "Typical timeline: 60–90 days from LOI to close",
+  quote: "This is a representative example of a typical SBA-financed service business acquisition. Actual results vary significantly based on deal quality, market conditions, and buyer execution. We help you find, evaluate, and close the right deal for your situation.",
 };
 
 const idealCandidates = [
@@ -509,19 +509,19 @@ export default function AcquisitionPage() {
                     </p>
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-lg font-bold" style={{ color: 'var(--color-primary)' }}>$35K</div>
+                        <div className="text-lg font-bold" style={{ color: 'var(--color-primary)' }}>$30K</div>
                         <div className="text-xs text-gray-500">Down Payment</div>
                       </div>
                       <div className="flex items-center justify-center">
                         <span className="text-xl" style={{ color: 'var(--color-accent)' }}>→</span>
                       </div>
                       <div>
-                        <div className="text-lg font-bold" style={{ color: 'var(--color-accent)' }}>$420K</div>
-                        <div className="text-xs text-gray-500">Year 1 Revenue</div>
+                        <div className="text-lg font-bold" style={{ color: 'var(--color-accent)' }}>$250K</div>
+                        <div className="text-xs text-gray-500">Business Value</div>
                       </div>
                     </div>
-                    <p className="text-center mt-3 text-sm font-bold" style={{ color: 'var(--color-primary)' }}>
-                      = 12x return on your out-of-pocket investment
+                    <p className="text-center mt-3 text-xs text-gray-500">
+                      Hypothetical example. Actual results vary based on deal, market, and execution.
                     </p>
                   </div>
 
@@ -545,7 +545,7 @@ export default function AcquisitionPage() {
                 REAL ACQUISITION
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                From Corporate Couple to $420K Business Owners
+                What a Typical Acquisition Looks Like
               </h2>
             </div>
 
@@ -594,7 +594,7 @@ export default function AcquisitionPage() {
                 </blockquote>
 
                 <p className="text-xs text-gray-400 mt-4 italic">
-                  *Placeholder — actual client story. Individual results vary based on deal, market, and execution.
+                  *Hypothetical example for illustrative purposes. Individual results vary based on deal, market, and execution.
                 </p>
               </div>
             </div>
@@ -621,7 +621,7 @@ export default function AcquisitionPage() {
                 Our fee structure is designed so our incentives match yours. The retainer covers our work to find you the right deal. The success fee means we&apos;re invested in your outcome.
               </p>
               <p className="text-sm font-semibold max-w-xl mx-auto" style={{ color: 'var(--color-accent)' }}>
-                Remember: the average acquisition generates $300K+ in year-one revenue. Your retainer is less than 1% of that.
+                Our retainer is a fraction of what you&apos;d pay hiring advisors separately — and it credits toward your success fee.
               </p>
             </div>
 

@@ -67,7 +67,7 @@ export default function ValueComparison() {
             Compare Your Options — Then Decide
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            There are many paths to business ownership. Only one gives you a proven framework, hands-on guidance, full ownership, AND a launch guarantee.
+            There are many paths to business ownership. Only one gives you a done-for-you buildout, full ownership, AND a launch guarantee.
           </p>
         </div>
 
@@ -113,11 +113,11 @@ export default function ValueComparison() {
                 THE AZGARI ALTERNATIVE
               </span>
               <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                Full Launch: $25,000
+                Done-for-You Business Build: $50,000
               </h3>
-              <p className="text-sm text-white/60 mb-4">or $8,500 × 3 payments</p>
+              <p className="text-sm text-white/60 mb-4">Payment plans and SBA funding available</p>
               <p className="text-white/90 mb-6">
-                Done-with-you business buildout in 120 days. You keep 100% ownership, pay zero royalties, and get our strongest launch guarantee — or we keep working for free plus $3,000 cash.
+                We build your entire business — entity, brand, marketing, team, customers, operations. You own 100%, pay zero royalties, and spend about an hour a week overseeing it.
               </p>
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
                 See If You Qualify →
@@ -126,11 +126,11 @@ export default function ValueComparison() {
             <div className="space-y-3">
               {[
                 "100% ownership — no royalties, ever",
-                "Launched in 120 days or $3K cash guarantee",
+                "Operational in 180 days with manager in seat",
                 "50+ proven business models to choose from",
-                "Marketing systems, hiring, operations — built with you",
-                "Avg client: $285K first-year revenue (11.4x return)",
-                "Your investment credits toward the next tier",
+                "Marketing, hiring, operations — all built for you",
+                "12 months of ongoing support",
+                "SBA funding concierge included",
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 items-start">
                   <span className="flex-shrink-0" style={{ color: 'var(--color-accent)' }}>✓</span>
