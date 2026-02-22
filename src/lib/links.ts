@@ -21,11 +21,11 @@ export const GHL_LINKS = {
     acquisition: "https://go.azgari.org/landing-page-d",
   },
   
-  // Lead Magnets (Free Downloads)
+  // Lead Magnets (Free Downloads — routed through store for email capture)
   leadMagnets: {
-    checklist: "https://go.azgari.org/checklist",
-    assessment: "https://go.azgari.org/assessment",
-    sbaGuide: "https://go.azgari.org/sba-guide",
+    checklist: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
+    assessment: "https://go.azgari.org/product-details/product/699b4bd9c0607441c091969e",
+    sbaGuide: "https://go.azgari.org/product-details/product/699b4bf1aec1c12d84307715",
   },
   
   // Forms
