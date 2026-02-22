@@ -923,7 +923,7 @@ export const AGGREGATE_STATS = {
 export const NONPROFIT = {
   name: "Azgari Foundation",
   type: "501(c)(3) Nonprofit Organization",
-  ein: "XX-XXXXXXX", // TODO: Insert real EIN
+  ein: "32-1032584-33",
 
   // Mission statement — BRD "north star"
   mission:
