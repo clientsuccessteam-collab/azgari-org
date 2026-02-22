@@ -52,7 +52,7 @@ export default function ToolsPage() {
                   How to Launch a Profitable Service Business in 180 Days
                 </h2>
                 <p className="text-white/80 mb-6">
-                  Watch our free 30-minute training where Azgari Lipshy breaks down the exact 8-step framework used to launch 160+ businesses. Learn which business models work, how to get your first customers, and the #1 mistake that kills new businesses.
+                  Watch our free 30-minute training where Azgari Lipshy breaks down the exact 8-step framework we use to build businesses for our clients. Learn which business models work, how to get your first customers, and the #1 mistake that kills new businesses.
                 </p>
                 <Link
                   href={GHL_LINKS.qualify}

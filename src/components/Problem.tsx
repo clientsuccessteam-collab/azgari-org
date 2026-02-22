@@ -1,23 +1,23 @@
 const costItems = [
   {
-    cost: "$23,750/mo",
-    label: "Lost Revenue",
-    detail: "Our average client generates $285K in year one. Every month you wait is another $23,750 you're leaving on the table — going to a competitor who started sooner.",
+    cost: "$50K–$500K",
+    label: "Franchise Cost",
+    detail: "Plus 3-8% royalties forever. You follow their playbook, use their name, and never truly own it. We build you a business you own 100%.",
   },
   {
     cost: "$15K–$50K",
     label: "Cost of Trial & Error",
-    detail: "Most first-time founders burn $15K–$50K figuring things out alone — wrong entity, bad marketing, underpricing, legal mistakes. Our framework eliminates the expensive learning curve.",
+    detail: "Most first-time founders burn $15K–$50K figuring things out alone — wrong entity, bad marketing, underpricing, legal mistakes. Our team eliminates the expensive learning curve.",
   },
   {
     cost: "80%",
     label: "Failure Rate (DIY)",
-    detail: "80% of new businesses fail within the first 18 months. The difference isn't talent or luck — it's having a proven system and expert guidance from day one.",
+    detail: "80% of new businesses fail within the first 18 months. The difference isn&apos;t talent or luck — it&apos;s having a proven system and an experienced team building it for you.",
   },
   {
     cost: "2–5 Years",
     label: "Time Lost to Guesswork",
-    detail: "Without a framework, most entrepreneurs spend 2–5 years reaching the revenue our clients hit in under 12 months. Your time has a cost — and it's the one asset you can't get back.",
+    detail: "Without a framework, most entrepreneurs spend years reaching profitability. Your time has a cost — and it&apos;s the one asset you can&apos;t get back.",
   },
 ];
 
@@ -30,13 +30,13 @@ export default function Problem() {
             className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
             style={{ backgroundColor: '#FEE2E2', color: '#991B1B' }}
           >
-            THE REAL COST OF WAITING
+            THE REAL COST OF GOING IT ALONE
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            Every Month You Delay Is Costing You Money
+            The Expensive Way vs. the Smart Way
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            The biggest expense isn&apos;t what you spend — it&apos;s what you lose by staying stuck. Here&apos;s what inaction actually costs:
+            Most aspiring business owners choose one of these paths — and pay the price. There&apos;s a better option.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ export default function Problem() {
             style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
           >
             <p className="text-lg font-semibold mb-2">
-              The question isn&apos;t &quot;Can I afford to invest in guidance?&quot;
+              The question isn&apos;t &quot;Can I afford professional help?&quot;
             </p>
             <p className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-              It&apos;s &quot;Can I afford NOT to?&quot;
+              It&apos;s &quot;Can I afford to build alone?&quot;
             </p>
           </div>
         </div>

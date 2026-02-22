@@ -4,7 +4,7 @@ Guide for AI assistants working on the Azgari Foundation codebase.
 
 ## Project Overview
 
-Marketing website for **Azgari Foundation**, a service business consulting company that helps entrepreneurs launch local service businesses. Built with Next.js App Router, React, TypeScript, and Tailwind CSS.
+Marketing website for **Azgari Foundation**, a done-for-you business building firm that builds service businesses professionals own 100%. Single flagship offer: $50K done-for-you business build with manager in seat within 180 days. Built with Next.js App Router, React, TypeScript, and Tailwind CSS.
 
 ## Tech Stack
 
@@ -49,7 +49,7 @@ src/
 │   ├── JsonLd.tsx        # JSON-LD structured data component
 │   ├── about/page.tsx
 │   ├── acquisition/page.tsx
-│   ├── case-studies/page.tsx
+│   ├── case-studies/page.tsx   # Real video testimonials only (no fake case studies)
 │   ├── contact/page.tsx
 │   ├── courses/page.tsx
 │   ├── faq/page.tsx
@@ -57,9 +57,9 @@ src/
 │   ├── media/page.tsx
 │   ├── media/MediaPromoPlayer.tsx  # Remotion player ("use client", currently disabled)
 │   ├── privacy/page.tsx
-│   ├── qualify/page.tsx            # Belief-first qualification page with GHL quiz
+│   ├── qualify/page.tsx            # Qualification page with GHL quiz (single $50K offer)
 │   ├── scholarships/page.tsx    # Scholarship application (links to GHL nonprofit page)
-│   ├── services/page.tsx
+│   ├── services/page.tsx           # Single flagship $50K done-for-you offer + acquisition advisory
 │   ├── state/page.tsx
 │   ├── state/[state]/page.tsx      # Dynamic route for 50 US states
 │   ├── terms/page.tsx
@@ -77,11 +77,11 @@ src/
 │   ├── ValueComparison.tsx  # Franchise vs MBA vs DIY vs Azgari
 │   ├── Stats.tsx
 │   ├── Transformation.tsx
-│   ├── Testimonials.tsx     # Client social proof ("use client")
+│   ├── Testimonials.tsx     # Real video testimonials only ("use client")
 │   ├── Qualification.tsx    # "Who this is for / not for" pre-qualification
 │   ├── ImpactModule.tsx     # Mission bridge
 │   ├── ValueStack.tsx       # What's included breakdown
-│   ├── Pricing.tsx
+│   ├── Pricing.tsx          # Single $50K flagship offer (was 4-tier grid)
 │   ├── ScholarshipCallout.tsx
 │   ├── HomeFAQ.tsx          # Homepage FAQ section ("use client")
 │   ├── Transparency.tsx
@@ -103,12 +103,12 @@ src/
 
 ## Key Files
 
-- **`src/lib/links.ts`** — Single source of truth for all external links (GoHighLevel CRM), program pricing, course data, tool data, and media entries. Update here when links or pricing change.
+- **`src/lib/links.ts`** — Single source of truth for all external links (GoHighLevel CRM), flagship program pricing ($50K done-for-you), course data, tool data, and media entries. Update here when links or pricing change. Note: `TESTIMONIALS` and `CASE_STUDIES` arrays are empty — all fake testimonials were removed. Only real video testimonials (Antwain Davis, Matthew P.) are used, hardcoded in `Testimonials.tsx` and `case-studies/page.tsx`.
 - **`src/lib/stateData.ts`** — State-level business ranking data with regional prioritization logic. Used by dynamic `/state/[state]` routes.
 - **`src/app/globals.css`** — Theme definition using Tailwind v4 `@theme` block. Defines brand colors, fonts, and button classes.
 - **`src/app/layout.tsx`** — Root layout with global metadata (OpenGraph, Twitter cards), JSON-LD structured data, and Vercel Analytics.
 - **`src/app/JsonLd.tsx`** — Reusable JSON-LD structured data component for SEO.
-- **`src/app/qualify/page.tsx`** — Belief-first qualification page. Main qualify CTA routes here instead of directly to GHL. Quiz URL configurable via `NEXT_PUBLIC_QUALIFY_QUIZ_URL` env var.
+- **`src/app/qualify/page.tsx`** — Qualification page for the $50K done-for-you offer. Main qualify CTA routes here instead of directly to GHL. Quiz URL configurable via `NEXT_PUBLIC_QUALIFY_QUIZ_URL` env var.
 
 ## Code Conventions
 
@@ -172,13 +172,32 @@ The homepage (`src/app/page.tsx`) follows a mechanism-first conversion funnel de
 10. **Qualification** — "This IS for you / This is NOT for you" (filters before pricing)
 11. **ImpactModule** — Mission bridge
 12. **ValueStack** — What's included
-13. **Pricing** — Program tiers
+13. **Pricing** — Single $50K flagship offer
 14. **ScholarshipCallout** — Compliance
 15. **HomeFAQ + Transparency** — Objection handling
 16. **CallPreview** — What happens on the strategy call (reduces call uncertainty)
 17. **CTA** — Final "Apply for a Strategy Call"
 
 **Key principle:** Mechanism (how it works) → Proof (that it works) → Qualification (who it's for) → Call. Never lead with revenue claims before explaining the process.
+
+## Brand Positioning
+
+The site is positioned as a **done-for-you business building firm**, NOT coaching or consulting:
+- **What we sell:** We build service businesses clients own 100%. Single flagship offer at $50,000.
+- **Tagline:** "Own a Business. Own Your Future."
+- **Headline:** "We Build Service Businesses You Own 100%."
+- **Key differentiator:** No franchise fees, no royalties, no coaching — we build the entire business.
+- **Time commitment:** ~1 hour/week oversight. Manager runs day-to-day operations.
+- **Timeline:** 180 days to operational business with manager in seat.
+- **Testimonials:** Only real video testimonials (Antwain Davis, Matthew P.). No fake text testimonials.
+- **Stats:** Only honest numbers — 20+ years experience, 50+ business models, 100% client ownership, 180 days to launch. Never use inflated claims.
+
+**Language rules:**
+- Say "done-for-you" not "done-with-you"
+- Say "we build" not "we teach" or "we coach"
+- Say "business owner" not "entrepreneur" or "student"
+- Never reference multiple pricing tiers — there is ONE flagship offer
+- Never fabricate testimonials, stats, or case studies
 
 ## Brand & Design Context
 

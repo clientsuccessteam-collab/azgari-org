@@ -88,7 +88,7 @@ const freeDownloads = [
   {
     title: "47-Step Service Business Launch Checklist",
     type: "Instant Download",
-    description: "The exact checklist our team uses to launch 160+ businesses. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
+    description: "The exact checklist our team uses when building businesses for clients. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
     icon: "📋",
     cta: "Get the Checklist →",
     link: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
@@ -155,7 +155,7 @@ export default function GuidesPage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Guides, quizzes, and tools from the same framework used to launch 160+ businesses.
+              Guides, quizzes, and tools from the same framework we use to build businesses for our clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

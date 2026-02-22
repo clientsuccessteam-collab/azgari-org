@@ -1,6 +1,6 @@
 # Azgari Foundation
 
-Marketing website for **Azgari Foundation**, a service business consulting company that helps entrepreneurs launch local service businesses.
+Marketing website for **Azgari Foundation**, a done-for-you business building firm. We build service businesses professionals own 100% — single flagship offer at $50K with manager in seat within 180 days.
 
 ## Tech Stack
 
@@ -67,11 +67,11 @@ src/
 
 ### Key Files
 
-- `src/lib/links.ts` — Single source of truth for all external URLs, program pricing, course/tool/media data
+- `src/lib/links.ts` — Single source of truth for all external URLs, flagship pricing ($50K), course/tool/media data. Fake testimonials/case studies removed.
 - `src/lib/stateData.ts` — US state business ranking data
 - `src/app/globals.css` — Theme colors, fonts, button classes
 - `src/app/page.tsx` — Homepage funnel (see CLAUDE.md for section order)
-- `src/app/qualify/page.tsx` — Belief-first qualification page with GHL quiz integration
+- `src/app/qualify/page.tsx` — Qualification page for $50K done-for-you offer with GHL quiz integration
 
 ## External Integrations
 

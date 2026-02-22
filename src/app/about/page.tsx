@@ -57,7 +57,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Founded by serial entrepreneur Azgari Lipshy, who&apos;s launched 4 businesses, failed twice, and turned those lessons into a framework that&apos;s helped 160+ entrepreneurs succeed.
+              Founded by serial entrepreneur Azgari Lipshy, who&apos;s launched 4 businesses, failed twice, and turned those lessons into a done-for-you framework that helps professionals build businesses they own 100%.
             </p>
           </div>
         </section>
@@ -123,8 +123,8 @@ export default function AboutPage() {
                   <div
                     className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-5 border border-gray-100"
                   >
-                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>160+</div>
-                    <div className="text-sm text-gray-600">Businesses Launched</div>
+                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>20+</div>
+                    <div className="text-sm text-gray-600">Years of Experience</div>
                   </div>
                 </div>
               </div>

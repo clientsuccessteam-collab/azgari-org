@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "See If You Qualify | Azgari Foundation",
   description:
-    "Own a profitable, fully-operational service business in 90 days — with paying customers before you officially open. 100% ownership. No franchise fees. No royalties. Ever.",
+    "We build profitable service businesses you own 100%. Done-for-you — entity, brand, marketing, team, customers, operations. No franchise fees. No royalties.",
 };
 
 /* ── GHL quiz link (configurable via env var) ── */
@@ -13,42 +13,7 @@ const QUIZ_URL =
   process.env.NEXT_PUBLIC_QUALIFY_QUIZ_URL ||
   "https://go.azgari.org/question-flow-d";
 
-/* ── Testimonials with ICP matching ── */
-const PROOF = [
-  {
-    name: "Marcus T.",
-    role: "Former Operations Manager → Pressure Washing Owner",
-    location: "Austin, TX",
-    image: "/images/testimonials/marcus.jpg",
-    before: "Stuck in corporate ops, managing someone else's P&L.",
-    quote:
-      "I went from corporate burnout to $287K in my first year. Azgari gave me the roadmap — I just had to follow it.",
-    metric: "$287K year one",
-    timeline: "First customer: Day 41",
-  },
-  {
-    name: "Jennifer R.",
-    role: "Former Admin Assistant → Commercial Cleaning Owner",
-    location: "Tampa, FL",
-    image: "/images/testimonials/jennifer.jpg",
-    before: "Making $38K/year with no path to more.",
-    quote:
-      "Started with $15K and no experience. Now we're doing $35K/month with 14 recurring contracts. My operator runs daily ops.",
-    metric: "$35K/month recurring",
-    timeline: "First revenue: Day 52",
-  },
-  {
-    name: "Anthony M.",
-    role: "Former Warehouse Supervisor → Lawn Care Owner",
-    location: "Columbus, OH",
-    image: "/images/testimonials/anthony.jpg",
-    before: "60-hour weeks, $3K/month, no equity.",
-    quote:
-      "Went from 60-hour weeks at $3K/month to 20-hour weeks at $12K. The difference? Systems. The business runs without me.",
-    metric: "4x income, half the hours",
-    timeline: "Fully operational: Day 87",
-  },
-];
+/* ── Real client proof — add verified testimonials here ── */
 
 /* ── Rewritten 8-Step Framework (outcomes, not activities) ── */
 const FRAMEWORK_STEPS = [
@@ -175,7 +140,7 @@ export default function QualifyPage() {
 
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
             You tell us your background and your budget. We find the right business,
-            build it with you, and get you paying customers — usually before you officially open.
+            build it for you, and get you paying customers — usually before you officially open.
             You keep 100% of everything. No franchise. No royalties.
             And if we don&apos;t deliver, we keep working until we do.
           </p>
@@ -370,8 +335,8 @@ export default function QualifyPage() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-500 text-sm max-w-xl mx-auto">
-              Average time from qualification to first paying customer:{" "}
-              <strong style={{ color: "var(--color-primary)" }}>47 days</strong>.
+              Operational business with manager in seat:{" "}
+              <strong style={{ color: "var(--color-primary)" }}>180 days</strong>.
               Not because we rush — because the system removes guesswork.
             </p>
           </div>
@@ -425,82 +390,12 @@ export default function QualifyPage() {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-6">
-            Programs start at $10,000. Flexible payment plans and SBA funding paths available.
+            Investment: $50,000. Payment plans and SBA funding paths available.
           </p>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════
-          SECTION 5 — PROOF (with before/after + timelines)
-          ════════════════════════════════════════════ */}
-      <section
-        className="py-16 md:py-24"
-        style={{ backgroundColor: "var(--color-cream)" }}
-      >
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: "var(--color-primary)" }}
-            >
-              They were where you are now
-            </h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              They weren&apos;t special. They were ready. Here&apos;s what happened.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {PROOF.map((t) => (
-              <div
-                key={t.name}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      width={56}
-                      height={56}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold"
-                      style={{ color: "var(--color-primary)" }}
-                    >
-                      {t.name}
-                    </div>
-                    <div className="text-sm text-gray-500">{t.location}</div>
-                  </div>
-                </div>
-
-                {/* Before state */}
-                <p className="text-xs text-red-600 font-semibold mb-1">BEFORE:</p>
-                <p className="text-sm text-gray-500 mb-3">{t.before}</p>
-
-                <p className="text-sm text-gray-500 mb-2">{t.role}</p>
-                <p className="text-gray-700 mb-4 italic text-sm">&quot;{t.quote}&quot;</p>
-
-                <div className="flex items-center gap-3">
-                  <span
-                    className="inline-block px-3 py-1 rounded-full text-sm font-semibold"
-                    style={{
-                      backgroundColor: "var(--color-accent-light)",
-                      color: "var(--color-primary)",
-                    }}
-                  >
-                    {t.metric}
-                  </span>
-                  <span className="text-xs text-gray-400">{t.timeline}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* PROOF section — add real video testimonials here when available */}
 
       {/* ════════════════════════════════════════════
           SECTION 6 — GUARANTEE STACK
@@ -520,54 +415,25 @@ export default function QualifyPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                tier: "Foundation",
-                price: "$10K",
-                guarantee: "If we can't validate your business model in 60 days — full refund.",
-                fear: 'Eliminates: "What if it doesn\'t work?"',
-              },
-              {
-                tier: "Full Launch",
-                price: "$25K",
-                guarantee: "5-10 paying clients in 120 days — or full refund + $3,000 cash back to you.",
-                fear: 'Eliminates: "What if I don\'t get customers?"',
-                highlight: true,
-              },
-              {
-                tier: "Scale",
-                price: "$50K",
-                guarantee: "Operational team + $100K revenue pipeline in 180 days — or we keep working free until done.",
-                fear: 'Eliminates: "What if it can\'t run without me?"',
-              },
-            ].map((g) => (
-              <div
-                key={g.tier}
-                className={`rounded-2xl p-7 border-2 ${
-                  g.highlight ? "shadow-lg relative" : ""
-                }`}
-                style={{
-                  borderColor: g.highlight ? "var(--color-accent)" : "#e5e7eb",
-                  backgroundColor: g.highlight ? "rgba(212, 160, 41, 0.04)" : "white",
-                }}
-              >
-                {g.highlight && (
-                  <span
-                    className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-3 py-1 rounded-full"
-                    style={{ backgroundColor: "var(--color-accent)", color: "white" }}
-                  >
-                    MOST POPULAR
-                  </span>
-                )}
-                <p className="text-sm font-bold text-gray-400 mb-1">{g.tier}</p>
-                <p className="text-2xl font-bold mb-4" style={{ color: "var(--color-primary)" }}>
-                  {g.price}
-                </p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">{g.guarantee}</p>
-                <p className="text-xs italic text-gray-500">{g.fear}</p>
-              </div>
-            ))}
+          <div className="max-w-xl mx-auto">
+            <div
+              className="rounded-2xl p-8 border-2 shadow-lg text-center"
+              style={{
+                borderColor: "var(--color-accent)",
+                backgroundColor: "rgba(212, 160, 41, 0.04)",
+              }}
+            >
+              <p className="text-sm font-bold text-gray-400 mb-1">Done-for-You Business Build</p>
+              <p className="text-3xl font-bold mb-4" style={{ color: "var(--color-primary)" }}>
+                $50K
+              </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                Operational business with manager in seat and paying customers in 180 days — or we keep working at no additional cost until we deliver.
+              </p>
+              <p className="text-xs italic text-gray-500">
+                Eliminates: &quot;What if it can&apos;t run without me?&quot;
+              </p>
+            </div>
           </div>
         </div>
       </section>
