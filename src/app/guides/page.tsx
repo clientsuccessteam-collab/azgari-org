@@ -416,7 +416,7 @@ export default function GuidesPage() {
                 Explore Our Programs →
               </Link>
               <Link 
-                href="https://go.azgari.org/landing-page-d"
+                href="https://go.azgari.org/question-flow-d"
                 className="btn btn-secondary"
               >
                 See If You Qualify
