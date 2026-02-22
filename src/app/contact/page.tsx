@@ -51,7 +51,7 @@ export default function ContactPage() {
                 Tell us about your goals and we&apos;ll help you determine the best path forward — whether that&apos;s starting fresh, buying an existing business, or scaling what you have.
               </p>
               <Link 
-                href={GHL_LINKS.forms.contact}
+                href="/qualify"
                 className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
               >
                 Start the Conversation →
