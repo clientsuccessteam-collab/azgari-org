@@ -20,7 +20,7 @@ export default function Hero() {
               We Build Service Businesses You Own 100%.
             </h1>
             <span className="block text-2xl md:text-3xl font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>
-              You invest. We build. You own everything.
+              Own a Business. Own Your Future.
             </span>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
