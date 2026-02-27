@@ -3,7 +3,6 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MissionWrapper from "@/components/MissionWrapper";
-import { GHL_LINKS } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Contact Us | Azgari Foundation",

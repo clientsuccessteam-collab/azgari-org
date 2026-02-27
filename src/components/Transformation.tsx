@@ -14,7 +14,7 @@ const outcomes = [
   {
     metric: "180 Days",
     label: "To Operational Business",
-    detail: "With team in place and customers paying",
+    detail: "With team in place and contracts signed",
   },
   {
     metric: "2–3x",
@@ -106,7 +106,7 @@ export default function Transformation() {
                 12 Months Later
               </p>
               <p className="font-semibold leading-relaxed">
-                &quot;My business has a team of 3, a manager running daily ops, and customers coming in every week. I spend about an hour a week on it. I own 100% and I&apos;m building real equity.&quot;
+                &quot;My business has a team of 3, a manager running daily ops, and B2B contracts bringing in recurring revenue. I spend about an hour a week on it. I own 100% and I&apos;m building real equity.&quot;
               </p>
             </div>
           </div>

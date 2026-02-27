@@ -68,7 +68,7 @@ const faqCategories = [
       {
         question: "What does the $50,000 investment cover?",
         answer:
-          "Everything needed to build a fully operational service business you own 100%. That includes: data-driven business model selection from 50+ proven models, complete entity formation and compliance, full brand buildout (name, logo, website, marketing systems), customer acquisition so you have paying clients before launch, a full operational team hired and trained, a manager placed to run day-to-day operations, SBA funding concierge if needed, and 12 months of ongoing support.",
+          "Everything needed to build a fully operational service business you own 100%. That includes: data-driven business model selection from 50+ proven models, complete entity formation and compliance, full brand buildout (name, logo, website, marketing systems), B2B contract acquisition through our inside sales team so you have signed accounts before launch, a full operational team hired and trained, a manager placed to run day-to-day operations, SBA funding concierge if needed, and 12 months of ongoing support.",
       },
       {
         question: "Do you offer payment plans?",
@@ -88,12 +88,17 @@ const faqCategories = [
       {
         question: "What types of businesses do you build?",
         answer:
-          "We build a wide range of service businesses. Physical services: pressure washing, HVAC, pest control, lawn care, cleaning (residential and commercial), handyman services, flood and water remediation, junk removal, moving, pool service, roofing, and painting. Professional services: fractional C-suite consulting, recruiting and staffing agencies, bookkeeping, IT services, and business consulting. We match the right business model to your skills, capital, and market \u2014 from our library of 50+ proven models.",
+          "We build B2B service businesses that win contracts with other businesses \u2014 not retail or walk-in models. Examples include commercial cleaning, commercial pressure washing, commercial HVAC, pest control (commercial accounts), staffing and recruiting agencies, fractional C-suite consulting, IT services, bookkeeping, and business consulting. At the $50K tier, your business sells to other businesses through our inside sales model: our team builds relationships remotely, and you\u2019re the face who meets decision-makers and signs the contract. We match the right model to your skills, capital, and market from our library of 50+ proven models.",
       },
       {
         question: "Can I start a professional services business, not just trades?",
         answer:
-          "Absolutely. We\u2019ve built recruiting firms, fractional CFO and COO practices, HR consulting businesses, and other professional service companies for clients. The same done-for-you framework applies: we select the model, build the systems, acquire the clients, and put the team in place. The difference is startup costs are often lower and margins can be higher with professional services.",
+          "Absolutely. We\u2019ve built recruiting firms, fractional CFO and COO practices, HR consulting businesses, and other professional service companies for clients. The same done-for-you framework applies: we select the model, build the systems, land the contracts through inside sales, and put the team in place. The difference is startup costs are often lower and margins can be higher with professional services.",
+      },
+      {
+        question: "How do you land B2B contracts for my business?",
+        answer:
+          "Through inside sales. Our team builds relationships with businesses in your market remotely \u2014 prospecting, outreach, follow-up, and qualifying leads. When a prospect is ready, you\u2019re the face who meets the decision-maker and signs the contract. This is how B2B service businesses work: relationships first, then contracts. You don\u2019t need to cold call or run ads to homeowners. Our inside sales model handles the pipeline so you can focus on closing and oversight.",
       },
       {
         question: "Do I need experience in the industry I choose?",
@@ -118,7 +123,7 @@ const faqCategories = [
       {
         question: "How long until the business is running?",
         answer:
-          "Our target is 180 days from kickoff to having an operational business with a manager in seat and customers paying. The exact timeline depends on the business model, licensing requirements, hiring market, and other factors specific to your build.",
+          "Our target is 180 days from kickoff to having an operational business with a manager in seat and contracts paying. The exact timeline depends on the business model, licensing requirements, hiring market, and other factors specific to your build.",
       },
       {
         question: "What happens after the build is complete?",
