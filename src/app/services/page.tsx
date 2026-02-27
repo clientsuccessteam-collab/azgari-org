@@ -22,7 +22,7 @@ const flagshipFeatures = [
   "Data-driven business model selection (50+ proven models)",
   "Full entity formation, licensing, and compliance — handled",
   "Complete brand buildout (name, logo, website, marketing systems)",
-  "Customer acquisition — paying clients before official launch",
+  "B2B contract acquisition via inside sales — signed accounts before launch",
   "Full operational team hired and trained",
   "Manager placed and running day-to-day operations",
   "Funding concierge for SBA loan qualification",
@@ -52,7 +52,7 @@ const deliverables = [
   },
   {
     title: "Growth Systems",
-    items: ["Lead generation", "Sales scripts", "Referral programs", "Review management"],
+    items: ["Inside sales & B2B prospecting", "Contract proposals & pricing", "Relationship management", "Account retention systems"],
     icon: "📈",
   },
   {
@@ -88,7 +88,7 @@ export default function ServicesPage() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We build your entire service business — entity, brand, marketing, team, customers, operations. You own 100%, pay zero royalties, and spend about an hour a week overseeing it.
+              We build your entire B2B service business — entity, brand, inside sales, team, contracts, operations. You own 100%, pay zero royalties, and spend about an hour a week overseeing it.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -141,7 +141,7 @@ export default function ServicesPage() {
                 </div>
 
                 <p className="text-gray-600 mt-4 mb-6">
-                  We build your service business from scratch — you get a fully operational company with a team in place, customers paying, and a manager running day-to-day. You own 100% and pay zero royalties.
+                  We build your B2B service business from scratch — you get a fully operational company with a team in place, contracts signed, and a manager running day-to-day. You own 100% and pay zero royalties.
                 </p>
 
                 <ul className="text-sm text-gray-600 mb-6 space-y-3">

@@ -24,7 +24,7 @@ export default function Hero() {
             </span>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
-              We select the business, set up operations, hire your team, and deliver paying customers — so you become an owner, not an operator. No franchise fees. No royalties. No guesswork.
+              We select the business, set up operations, hire your team, and land B2B contracts — so you become an owner, not an operator. No franchise fees. No royalties. No guesswork.
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mb-8">
               Requires capital, commitment, and urgency. Not a side hustle. Not a course. A real business built for you.
@@ -44,7 +44,7 @@ export default function Hero() {
                 <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 100% Ownership — Zero Royalties
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Customers Before Launch Day
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Contracts Before Launch Day
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
                 <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Done-for-You Operations
@@ -86,7 +86,7 @@ export default function Hero() {
                 className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
                 <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>100%</div>
-                <div className="text-sm text-gray-600">Client Ownership</div>
+                <div className="text-sm text-gray-600">Owner Ownership</div>
               </div>
             </div>
           </div>

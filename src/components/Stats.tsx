@@ -3,8 +3,8 @@ import { NONPROFIT } from "@/lib/links";
 const stats = [
   { number: "20+", label: "Years Building Businesses", detail: "across dozens of service industries" },
   { number: "50+", label: "Proven Business Models", detail: "data-selected for your local market" },
-  { number: "100%", label: "Client Ownership", detail: "no franchise fees, no royalties, ever" },
-  { number: "180", label: "Days to Operational Business", detail: "with manager in seat and customers paying" },
+  { number: "100%", label: "Your Ownership", detail: "no franchise fees, no royalties, ever" },
+  { number: "180", label: "Days to Operational Business", detail: "with manager in seat and contracts paying" },
 ];
 
 export default function Stats() {

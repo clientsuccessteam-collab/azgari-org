@@ -23,9 +23,9 @@ const valueItems = [
     detail: "Complete digital presence and lead generation built for you",
   },
   {
-    item: "Customer Acquisition (Pre-Launch Revenue)",
+    item: "Contract Acquisition via Inside Sales (Pre-Launch Revenue)",
     separate: "$8,000",
-    detail: "Paying customers before your official launch day",
+    detail: "Our team builds relationships remotely, you close B2B contracts before launch",
   },
   {
     item: "Team Hiring, Training & Manager Placement",
