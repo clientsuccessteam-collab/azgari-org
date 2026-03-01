@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ImpactModule from "@/components/ImpactModule";
 
 const missionPoints = [
-  "Help pre-retirees, veterans, and working professionals launch or acquire local service businesses",
+  "Help corporate professionals leverage their industry expertise into businesses they own 100%",
   "Alternative to franchises — expert guidance without franchise fees or royalties",
   "Based in Austin, TX",
 ];
@@ -158,8 +158,8 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-lg text-gray-600 mb-8">
-                  Today, she works with pre-retirees, veterans, and professionals ready to
-                  escape the paycheck cycle and build something they truly own.
+                  Today, she works with corporate professionals ready to leverage their
+                  industry expertise into businesses they truly own.
                 </p>
 
                 <div className="flex flex-wrap gap-4">

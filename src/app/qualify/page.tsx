@@ -63,14 +63,14 @@ const FRAMEWORK_STEPS = [
   {
     num: "07",
     title: "Land Your First Revenue",
-    desc: "Real customers, real invoices, real deposits. $3K-$15K/month within 90 days. We don't celebrate plans. We celebrate deposits.",
+    desc: "Real customers, real invoices, real deposits. A fully operational business with prospects in your pipeline. We don't celebrate plans. We celebrate deposits.",
     outcome: "Walk away with: Cash-flowing business with recurring revenue.",
     timeline: "Week 8-12",
   },
   {
     num: "08",
     title: "Scale or Stabilize — Your Choice",
-    desc: "12 months of hands-on growth support. Build toward a $200K-$800K asset, or replace your salary and enjoy the freedom. Your business, your call.",
+    desc: "12 months of hands-on growth support. Build toward a sellable asset, or stabilize at a profit level that replaces your salary. Your business, your call.",
     outcome: "Walk away with: A business that runs — with or without you.",
     timeline: "Month 4-12",
   },
@@ -157,7 +157,7 @@ export default function QualifyPage() {
               THE GUARANTEE
             </p>
             <p className="text-gray-700">
-              5-10 paying clients in 120 days — or <strong>full refund + $3,000 cash</strong>.
+              Operational business with manager in seat and paying customers in <strong>180 days</strong> — or we keep working at no additional cost until we deliver.
             </p>
           </div>
 
@@ -206,9 +206,9 @@ export default function QualifyPage() {
               </h3>
               <ul className="space-y-4">
                 {[
-                  "You have less than $10,000 liquid to invest",
+                  "You have less than $25,000 liquid to invest or no funding plan",
                   'You\'re looking for "passive income" with zero involvement',
-                  "You want someone to run the entire business for you",
+                  "You have no domain expertise or professional background to leverage",
                   "You're not ready to commit within the next 60 days",
                   "You're still browsing ideas with no real urgency",
                   "You want a side hustle — this builds real equity",
@@ -237,9 +237,9 @@ export default function QualifyPage() {
               </h3>
               <ul className="space-y-4">
                 {[
-                  "You're a professional, veteran, nurse, or operator ready to own something",
-                  "You have $10K–$100K+ to invest in a real business asset",
-                  "You can dedicate 10-15 hours/week — we handle execution",
+                  "You're a corporate professional with 7+ years of specialized expertise",
+                  "You have $25K–$50K+ to invest in a real business asset",
+                  "You can dedicate a few hours/week during the build — ~1 hr/week once operational",
                   "You want a proven, data-selected model — not another experiment",
                   "You're ready to move in the next 30-60 days",
                   "You want 100% ownership with franchise-level systems",
@@ -502,39 +502,71 @@ export default function QualifyPage() {
       </section>
 
       {/* ════════════════════════════════════════════
-          SECTION 8 — FINAL CTA
+          SECTION 8 — PRE-QUALIFICATION + FINAL CTA
           ════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-6"
-            style={{ color: "var(--color-primary)" }}
-          >
-            Ready to find out if you qualify?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-4">
-            We only onboard 12 clients per month. Answer 4 quick questions to see if there&apos;s a fit.
-          </p>
-          <p className="text-sm text-gray-500 max-w-md mx-auto mb-10">
-            5-10 paying clients in 120 days — or full refund + $3,000. That&apos;s our promise.
-          </p>
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Pre-qualification checklist */}
+          <div className="text-center mb-12">
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: "var(--color-primary)" }}
+            >
+              Before You Apply
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Our application asks about your background so we can evaluate fit. You should be able to answer these:
+            </p>
+          </div>
 
-          <Link
-            href={QUIZ_URL}
-            className="inline-block text-lg font-bold px-10 py-5 rounded-xl shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
-            style={{
-              backgroundColor: "var(--color-accent)",
-              color: "white",
-            }}
-          >
-            Start the Qualification Quiz →
-          </Link>
+          <div className="grid sm:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+            {[
+              { question: "What is your current or most recent professional role?", hint: "e.g. Director of Operations, RN, VP of Sales" },
+              { question: "How many years of industry experience do you have?", hint: "We work best with 7+ years of specialized expertise" },
+              { question: "What industry is your expertise in?", hint: "e.g. Healthcare, Finance, Construction, IT" },
+              { question: "What is your available investment capital?", hint: "Minimum $25K liquid or SBA loan eligibility" },
+            ].map((item) => (
+              <div
+                key={item.question}
+                className="rounded-xl p-5 border border-gray-200 bg-gray-50"
+              >
+                <p className="font-semibold text-sm mb-1" style={{ color: "var(--color-primary)" }}>
+                  {item.question}
+                </p>
+                <p className="text-xs text-gray-500">{item.hint}</p>
+              </div>
+            ))}
+          </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-            <span>✓ 90 seconds</span>
-            <span>✓ No commitment</span>
-            <span>✓ Instant result</span>
-            <span>✓ 12 spots/month</span>
+          {/* Final CTA */}
+          <div className="text-center">
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4"
+              style={{ color: "var(--color-primary)" }}
+            >
+              Ready to apply?
+            </h3>
+            <p className="text-sm text-gray-500 max-w-md mx-auto mb-8">
+              Operational business in 180 days — or we keep building until it is. That&apos;s our promise.
+            </p>
+
+            <Link
+              href={QUIZ_URL}
+              className="inline-block text-lg font-bold px-10 py-5 rounded-xl shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
+              style={{
+                backgroundColor: "var(--color-accent)",
+                color: "white",
+              }}
+            >
+              Start the Application →
+            </Link>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+              <span>✓ 4 questions</span>
+              <span>✓ No commitment</span>
+              <span>✓ Instant result</span>
+              <span>✓ 12 spots/month</span>
+            </div>
           </div>
         </div>
       </section>

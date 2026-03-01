@@ -30,9 +30,9 @@ export default function Qualification() {
             </div>
             <ul className="space-y-4">
               {[
-                "You're a corporate professional, veteran, or skilled operator ready to own",
-                "You have $10K–$50K+ in available capital (or SBA loan eligibility)",
-                "You can commit 10–40 hours/week to building this",
+                "You're a corporate professional with 7+ years of industry expertise ready to go independent",
+                "You have $25K–$50K+ in available capital (or SBA loan eligibility)",
+                "You can commit a few hours/week during the build — about 1 hr/week once operational",
                 "You want a proven system, not another course or coaching program",
                 "You're ready to make a decision within 90 days",
                 "You value process certainty over motivational hype",
@@ -58,9 +58,9 @@ export default function Qualification() {
             <ul className="space-y-4">
               {[
                 "You're looking for a side hustle or passive income idea",
-                "You have no capital and no plan to secure funding",
-                "You're still shopping for ideas and not ready to commit",
-                "You want someone to do it all for you (this is done WITH you)",
+                "You have less than $25K and no plan to secure funding",
+                "You're still browsing ideas and not ready to commit",
+                "You have no domain expertise or professional background to leverage",
                 "You're not willing to follow a structured process",
                 "You expect overnight results without putting in the work",
               ].map((item, i) => (

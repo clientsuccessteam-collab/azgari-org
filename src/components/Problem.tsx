@@ -25,6 +25,19 @@ export default function Problem() {
   return (
     <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
       <div className="max-w-7xl mx-auto px-6">
+        {/* Emotional lead-in — speak to the corporate professional's internal monologue */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+            You&apos;ve spent years building expertise, managing teams, driving results — for someone else&apos;s company. You&apos;ve thought about going out on your own.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            But between the LLC paperwork, building a website, figuring out marketing, finding clients, hiring people... when exactly are you supposed to do all that while still working 50+ hours a week?
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Most &quot;business coaches&quot; will sell you a course and wish you luck. We do something different.
+          </p>
+        </div>
+
         <div className="text-center mb-4">
           <span
             className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
@@ -36,7 +49,7 @@ export default function Problem() {
             The Expensive Way vs. the Smart Way
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Most aspiring business owners choose one of these paths — and pay the price. There&apos;s a better option.
+            Here&apos;s what most professionals face when they try to figure it out alone.
           </p>
         </div>
 
