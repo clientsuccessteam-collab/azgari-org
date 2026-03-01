@@ -49,10 +49,10 @@ export default function Testimonials() {
               key={video.id}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
             >
-              <div className="aspect-video bg-gray-900">
+              <div className="aspect-[4/5] bg-gray-900">
                 <video
                   controls
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   preload="metadata"
                 >
                   <source src={video.videoSrc} type="video/mp4" />

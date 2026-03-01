@@ -99,10 +99,10 @@ export default function CaseStudiesPage() {
                 className="rounded-2xl overflow-hidden shadow-xl"
                 style={{ backgroundColor: 'white', border: '2px solid var(--color-accent)' }}
               >
-                <div className="aspect-video bg-gray-900">
+                <div className="aspect-[4/5] bg-gray-900">
                   <video
                     controls
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                     preload="metadata"
                   >
                     <source src="/videos/testimonials/matthew-p.mp4" type="video/mp4" />
@@ -131,10 +131,10 @@ export default function CaseStudiesPage() {
                   className="rounded-xl overflow-hidden shadow-lg transition-shadow hover:shadow-xl"
                   style={{ backgroundColor: 'white' }}
                 >
-                  <div className="aspect-video bg-gray-900">
+                  <div className="aspect-[4/5] bg-gray-900">
                     <video
                       controls
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                       preload="metadata"
                     >
                       <source src={video.videoSrc} type="video/mp4" />
