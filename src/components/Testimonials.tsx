@@ -2,20 +2,21 @@
 
 import Link from "next/link";
 
+// Lead with strongest vertical-aligned testimonials
 const VIDEO_TESTIMONIALS = [
+  {
+    id: "matthew-p",
+    name: "Matthew P.",
+    title: "Healthcare Director → Staffing Agency Owner",
+    videoSrc: "/videos/testimonials/matthew-p.mp4",
+    quote: "The systems and guidance made all the difference.",
+  },
   {
     id: "antwain-davis",
     name: "Antwain Davis",
     title: "Business Owner",
     videoSrc: "/videos/testimonials/antwain-davis.mp4",
     quote: "Azgari helped me turn my idea into a real business.",
-  },
-  {
-    id: "matthew-p",
-    name: "Matthew P.",
-    title: "Staffing Agency Owner",
-    videoSrc: "/videos/testimonials/matthew-p.mp4",
-    quote: "The systems and guidance made all the difference.",
   },
 ];
 
@@ -37,7 +38,7 @@ export default function Testimonials() {
             Hear From Real Clients
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Real people. Real businesses. Real video.
+            Corporate professionals who leveraged their expertise into businesses they own. Real people. Real video.
           </p>
         </div>
 

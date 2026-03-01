@@ -10,20 +10,21 @@ export const metadata: Metadata = {
 };
 
 // Video testimonials data — real clients only
+// Lead with healthcare + consulting verticals (strongest case studies)
 const VIDEO_TESTIMONIALS = [
+  {
+    id: "matthew-p",
+    name: "Matthew P.",
+    title: "Healthcare Director → Staffing Agency Owner",
+    videoSrc: "/videos/testimonials/matthew-p.mp4",
+    quote: "The systems and guidance made all the difference.",
+  },
   {
     id: "antwain-davis",
     name: "Antwain Davis",
     title: "Business Owner",
     videoSrc: "/videos/testimonials/antwain-davis.mp4",
     quote: "Azgari helped me turn my idea into a real business.",
-  },
-  {
-    id: "matthew-p",
-    name: "Matthew P.",
-    title: "Staffing Agency Owner",
-    videoSrc: "/videos/testimonials/matthew-p.mp4",
-    quote: "The systems and guidance made all the difference.",
   },
   {
     id: "window-washing",
@@ -88,11 +89,11 @@ export default function CaseStudiesPage() {
                 Hear From Our Clients
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Real stories from real entrepreneurs who built businesses with Azgari.
+                Real stories from corporate professionals who leveraged their expertise into businesses they own.
               </p>
             </div>
 
-            {/* Featured Video */}
+            {/* Featured Video — Lead with healthcare vertical */}
             <div className="max-w-3xl mx-auto mb-12">
               <div
                 className="rounded-2xl overflow-hidden shadow-xl"
@@ -104,19 +105,19 @@ export default function CaseStudiesPage() {
                     className="w-full h-full object-contain"
                     preload="metadata"
                   >
-                    <source src="/videos/testimonials/antwain-davis.mp4" type="video/mp4" />
+                    <source src="/videos/testimonials/matthew-p.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>
-                    Antwain Davis
+                    Matthew P.
                   </h3>
                   <p className="text-sm font-semibold mb-3" style={{ color: 'var(--color-accent)' }}>
-                    Business Owner
+                    Healthcare Director → Staffing Agency Owner
                   </p>
                   <blockquote className="italic text-gray-600">
-                    &quot;Azgari helped me turn my idea into a real business.&quot;
+                    &quot;The systems and guidance made all the difference.&quot;
                   </blockquote>
                 </div>
               </div>
@@ -124,7 +125,7 @@ export default function CaseStudiesPage() {
 
             {/* Video Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {VIDEO_TESTIMONIALS.filter(v => v.id !== "antwain-davis").map((video) => (
+              {VIDEO_TESTIMONIALS.filter(v => v.id !== "matthew-p").map((video) => (
                 <div
                   key={video.id}
                   className="rounded-xl overflow-hidden shadow-lg transition-shadow hover:shadow-xl"

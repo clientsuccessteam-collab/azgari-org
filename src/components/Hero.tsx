@@ -17,25 +17,23 @@ export default function Hero() {
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight" style={{ color: 'var(--color-primary)' }}>
-              We Build Service Businesses You Own 100%.
+              Your Expertise Deserves Its Own Business.{" "}
+              <span style={{ color: 'var(--color-accent)' }}>We&apos;ll Build It For You.</span>
             </h1>
-            <span className="block text-2xl md:text-3xl font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>
-              Own a Business. Own Your Future.
-            </span>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
-              We select the business, set up operations, hire your team, and land B2B contracts — so you become an owner, not an operator. No franchise fees. No royalties. No guesswork.
+              We take corporate professionals with 7+ years of industry experience and launch fully operational businesses — from legal formation to first paying clients — in 180 days.
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mb-8">
-              Requires capital, commitment, and urgency. Not a side hustle. Not a course. A real business built for you.
+              You bring the expertise. We build the entity, brand, marketing, team, and client pipeline. You own 100%. No franchise fees. No royalties.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                See If You Qualify →
+                Apply For A Strategy Call →
               </Link>
               <Link href="#how-it-works" className="btn btn-secondary">
-                See How Launches Work
+                See How It Works
               </Link>
             </div>
 
@@ -44,10 +42,10 @@ export default function Hero() {
                 <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 100% Ownership — Zero Royalties
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Contracts Before Launch Day
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> ~1 hr/wk Once Operational
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Done-for-You Operations
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Done-for-You — We Build Everything
               </span>
             </div>
           </div>
