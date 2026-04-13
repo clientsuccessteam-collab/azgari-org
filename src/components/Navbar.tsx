@@ -12,10 +12,9 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/scholarships", label: "Scholarships" },
   { href: "/guides", label: "Free Resources" },
-  { href: "/tools", label: "Free Tools" },
-  { href: "/case-studies", label: "Participant Stories" },
+  { href: "/funders", label: "For Funders" },
+  { href: "/transparency", label: "Transparency" },
   { href: "/faq", label: "FAQ" },
-  { href: "https://azgari.blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 

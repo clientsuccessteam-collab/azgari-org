@@ -20,6 +20,8 @@ const footerLinks = {
     { label: "Blog", href: "https://azgari.blog" },
   ],
   company: [
+    { label: "For Funders", href: "/funders" },
+    { label: "Governance & Transparency", href: "/transparency" },
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" },
     { label: "Privacy Policy", href: "/privacy" },
