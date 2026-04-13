@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import { MEDIA } from "@/lib/links";
 // import MediaPromoPlayer from "./MediaPromoPlayer"; // Disabled: Remotion dependency issue
 
@@ -15,10 +16,11 @@ export default function MediaPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero */}
-        <section 
-          className="pt-24 md:pt-32 pb-16 text-center"
+        <section
+          className="pt-12 md:pt-16 pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
@@ -29,10 +31,10 @@ export default function MediaPage() {
               MEDIA & PODCASTS
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              As Seen & Heard On
+              As Seen &amp; Heard On
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Azgari Lipshy shares insights on entrepreneurship, SBA financing, and building profitable service businesses.
+              Azgari Lipshy shares educational insights on entrepreneurship, SBA financing, and service business fundamentals on behalf of the Foundation.
             </p>
           </div>
         </section>
@@ -44,7 +46,7 @@ export default function MediaPage() {
               Featured Video
             </h2>
             <p className="text-gray-600 text-center mb-8">
-              Learn about our proven 8-phase launch framework
+              Learn about the Foundation&apos;s 8-phase educational launch framework
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
               <iframe
@@ -186,7 +188,7 @@ export default function MediaPage() {
               Want Azgari on Your Podcast?
             </h2>
             <p className="opacity-90 mb-8 max-w-xl mx-auto">
-              Azgari is available for podcast interviews, speaking engagements, and media appearances on topics including entrepreneurship, SBA financing, and service business ownership.
+              Azgari is available for podcast interviews, speaking engagements, and media appearances representing the Foundation on topics including entrepreneurship education, SBA financing, and service business ownership.
             </p>
             <Link href="/contact" className="btn btn-primary">
               Get in Touch →

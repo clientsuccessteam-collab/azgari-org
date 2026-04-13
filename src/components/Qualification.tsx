@@ -7,10 +7,10 @@ export default function Qualification() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            This Isn&apos;t for Everyone
+            Is This Program the Right Fit?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We&apos;re selective about who we work with — because your success depends on fit, not just desire. Here&apos;s how to know if this path is right for you.
+            Our flagship entrepreneurship program serves a specific type of learner. These eligibility criteria help participants self-assess whether this educational path aligns with their current situation.
           </p>
         </div>
 
@@ -30,12 +30,12 @@ export default function Qualification() {
             </div>
             <ul className="space-y-4">
               {[
-                "You're a corporate professional with 7+ years of industry expertise ready to go independent",
-                "You have $25K–$50K+ in available capital (or SBA loan eligibility)",
-                "You can commit a few hours/week during the build — about 1 hr/week once operational",
-                "You want a proven system, not another course or coaching program",
-                "You're ready to make a decision within 90 days",
-                "You value process certainty over motivational hype",
+                "You're a corporate professional with 7+ years of industry expertise preparing to launch your own business",
+                "You have $25K–$50K+ in available capital (or SBA loan eligibility) for program tuition and launch costs",
+                "You can commit a few hours/week to coursework during the program — about 1 hr/week once operational",
+                "You want a structured, mentor-supported curriculum rather than self-directed learning",
+                "You're prepared to begin an enrollment decision within 90 days",
+                "You value process and accountability over motivational content",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-0.5 font-bold" style={{ color: 'var(--color-primary)' }}>✓</span>
@@ -58,11 +58,11 @@ export default function Qualification() {
             <ul className="space-y-4">
               {[
                 "You're looking for a side hustle or passive income idea",
-                "You have less than $25K and no plan to secure funding",
-                "You're still browsing ideas and not ready to commit",
+                "You don't have capital available and no plan to secure funding",
+                "You're still exploring options and not ready to enroll in a structured program",
                 "You have no domain expertise or professional background to leverage",
-                "You're not willing to follow a structured process",
-                "You expect overnight results without putting in the work",
+                "You prefer self-directed learning to a structured curriculum",
+                "You expect guaranteed outcomes without active participation in coursework",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-0.5 font-bold text-red-500">✗</span>
@@ -75,7 +75,7 @@ export default function Qualification() {
 
         <div className="text-center mt-12">
           <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-            See If You Qualify →
+            Check Program Eligibility →
           </Link>
           <p className="text-sm text-gray-500 mt-3">
             Takes 2 minutes. No commitment required.

@@ -3,14 +3,15 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MissionWrapper from "@/components/MissionWrapper";
-import { GHL_LINKS } from "@/lib/links";
+import MissionBanner from "@/components/MissionBanner";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 const learningPoints = [
-  "The 3 business models with the highest margins and lowest startup costs",
-  "How to validate demand BEFORE you spend a dollar on equipment or inventory",
+  "The 3 service business models with the highest margins and lowest startup costs",
+  "How to validate demand before committing capital to equipment or inventory",
   "How SBA funding works and how to position yourself for approval",
-  "Why most new business owners fail (and the simple system that prevents it)",
-  "What a done-for-you business build actually looks like, step by step",
+  "Why most new business owners struggle — and the educational framework that helps prevent common mistakes",
+  "What a guided, mentor-supported business launch curriculum actually covers, step by step",
   "The difference between owning a business and buying yourself a job",
 ];
 
@@ -18,9 +19,10 @@ export default function WebinarPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="strip" />
       <main>
         {/* Hero Section */}
-        <section 
+        <section
           className="pt-24 pb-12 md:pt-32 md:pb-20"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
@@ -28,22 +30,22 @@ export default function WebinarPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left - Text Content */}
               <div className="text-center lg:text-left">
-                <span 
+                <span
                   className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6"
                   style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
                 >
-                  FREE TRAINING
+                  FREE COMMUNITY TRAINING
                 </span>
-                
-                <h1 
+
+                <h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
                   style={{ color: 'var(--color-primary)' }}
                 >
-                  How to Launch a $10K-$35K/Month Service Business
+                  How to Launch a Local Service Business
                 </h1>
-                
+
                 <p className="text-xl md:text-2xl text-gray-600 mb-8">
-                  Without Quitting Your Job or Risking Your Savings
+                  A free educational training from Azgari Foundation — no cost, no pitch, no obligation.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
@@ -60,7 +62,7 @@ export default function WebinarPage() {
                     <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 47 Minutes
                   </span>
                   <span className="flex items-center justify-center lg:justify-start gap-2">
-                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Real Client Examples
+                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Educational Examples
                   </span>
                   <span className="flex items-center justify-center lg:justify-start gap-2">
                     <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 100% Free
@@ -126,14 +128,14 @@ export default function WebinarPage() {
               >
                 WHAT YOU&apos;LL DISCOVER
               </span>
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Everything You Need to Launch Your First $10K Month
+                What the Training Covers
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                In this free training, Azgari breaks down the exact framework her team uses to build profitable service businesses for clients.
+                In this free community training, Azgari walks through the educational framework the Foundation&apos;s curriculum covers for participants launching local service businesses.
               </p>
             </div>
             
@@ -209,20 +211,18 @@ export default function WebinarPage() {
                 </h2>
                 
                 <p className="text-lg text-gray-600 mb-6">
-                  Azgari founded the Azgari Foundation to help working professionals build 
-                  real wealth through local service business ownership — without the franchise 
-                  fees, royalties, or corporate restrictions.
+                  Azgari founded the Azgari Foundation to expand access to entrepreneurship education for working professionals pursuing local service business ownership — outside of franchise models and their ongoing royalty structures.
                 </p>
-                
+
                 <p className="text-lg text-gray-600 mb-6">
-                  After seeing too many capable people fail at business — not from lack of 
-                  effort, but lack of structure — she created a proven 180-day framework 
-                  that transforms ambition into action.
+                  After observing how many capable people struggled with business launches due to lack of structured guidance, she developed a 180-day educational framework that the Foundation now delivers as curriculum and mentorship.
                 </p>
-                
+
                 <p className="text-lg text-gray-600 mb-8">
-                  Today, she works with pre-retirees, veterans, and professionals ready to 
-                  escape the paycheck cycle and build something they truly own.
+                  Today, the Foundation serves pre-retirees, veterans, single parents, and career-change professionals through its entrepreneurship education and scholarship programs.
+                </p>
+                <p className="text-sm text-gray-500 italic mb-8">
+                  {NONPROFIT.resultsDisclaimer}
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
@@ -243,16 +243,16 @@ export default function WebinarPage() {
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                CLIENT STORIES
+                PARTICIPANT STORIES
               </span>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Hear From Real Clients
+                Hear From Program Participants
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Real business owners sharing their experience on camera.
+                Program graduates sharing their experience on camera.
               </p>
             </div>
 
@@ -282,25 +282,25 @@ export default function WebinarPage() {
           style={{ backgroundColor: 'var(--color-primary)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-4 text-white"
             >
-              Ready to Take the Next Step?
+              Want to Learn More About Our Programs?
             </h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              After watching the training, book a free strategy call to discuss your specific situation and get a personalized roadmap.
+              After watching the training, you can apply for a strategy session to discuss whether the Foundation&apos;s curriculum and mentorship are a fit for your situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href={GHL_LINKS.forms.bookCall}
                 className="btn text-lg px-8 py-4 bg-white hover:bg-gray-100 font-semibold"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Book Your Free Strategy Call →
+                Apply for a Strategy Session →
               </a>
             </div>
             <p className="mt-6 text-white/60 text-sm">
-              No pressure. No obligation. Just a conversation about your goals.
+              Educational conversation only. No obligation.
             </p>
           </div>
         </section>

@@ -2,13 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import { GHL_LINKS, COURSES } from "@/lib/links";
 import JsonLd from "@/app/JsonLd";
 import ReinvestmentDisclosure from "@/components/ReinvestmentDisclosure";
 
 export const metadata: Metadata = {
-  title: "Courses | Azgari Foundation",
-  description: "Self-paced digital courses to help you buy, launch, or fund your service business. Learn from founders who've done it.",
+  title: "Educational Courses | Azgari Foundation",
+  description: "Self-paced educational courses from Azgari Foundation covering acquisition, franchising, service business launch, and SBA readiness.",
 };
 
 const coursesJsonLd: Record<string, unknown> = {
@@ -41,28 +42,29 @@ export default function CoursesPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <JsonLd data={coursesJsonLd} />
       <main>
         {/* Hero */}
-        <section 
-          className="pt-24 pb-12 md:pt-32 md:pb-16 text-center"
+        <section
+          className="pt-12 pb-12 md:pt-16 md:pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
-            <span 
+            <span
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              SELF-PACED DIGITAL COURSES
+              501(C)(3) ENTREPRENEURSHIP EDUCATION
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Build Your Business the Smart Way
+              Foundation Educational Resources
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-              The exact frameworks designed to get you fundable, confident, and ready. Pick the course that solves your problem today.
+              Self-paced courses and educational resources developed by the Foundation to support aspiring entrepreneurs, program participants, and the broader community.
             </p>
             <p className="text-lg font-semibold" style={{ color: 'var(--color-accent)' }}>
-              Full Refund Guarantee — No Questions Asked
+              Learner Satisfaction Commitment — refund available if coursework does not meet your educational needs.
             </p>
           </div>
         </section>
@@ -70,7 +72,7 @@ export default function CoursesPage() {
         {/* Quick Recommendation */}
         <section className="py-8 border-b" style={{ backgroundColor: 'var(--color-primary)' }}>
           <div className="max-w-4xl mx-auto px-6 text-white text-center">
-            <h2 className="text-lg font-semibold mb-4">Which Course Should You Pick?</h2>
+            <h2 className="text-lg font-semibold mb-4">Which Educational Resource Fits Your Goals?</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/10 rounded-lg p-3">
                 <span className="font-semibold">Not fundable?</span> → SBA Masterclass
@@ -89,7 +91,7 @@ export default function CoursesPage() {
               </div>
               <div className="bg-white/10 rounded-lg p-3">
                 <Link href={GHL_LINKS.allCourses} className="underline hover:text-amber-400">
-                  View All Courses →
+                  View All Educational Resources →
                 </Link>
               </div>
             </div>
@@ -153,11 +155,11 @@ export default function CoursesPage() {
                   </div>
                   
                   {/* CTA - always at bottom */}
-                  <Link 
+                  <Link
                     href={course.href}
                     className="btn btn-primary w-full text-center mt-auto"
                   >
-                    Enroll Now →
+                    Access This Course →
                   </Link>
                 </div>
               ))}
@@ -169,17 +171,17 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* Guarantee */}
+        {/* Learner Satisfaction Commitment */}
         <section className="py-16" style={{ backgroundColor: 'var(--color-primary)' }}>
           <div className="max-w-3xl mx-auto px-6 text-center text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              FULL REFUND GUARANTEE
+              LEARNER SATISFACTION COMMITMENT
             </h2>
             <p className="text-lg opacity-90 mb-4">
-              If you follow the courses and learn absolutely nothing new that moves you forward in your entrepreneurial journey... No Questions Asked Money Back Guarantee.
+              If a Foundation course does not deliver meaningful educational value, contact us and we will provide a refund. Our mission is education and access, not sales.
             </p>
             <p className="opacity-80">
-              You have no excuse to not take a bet on yourself and build that business and move forward towards the life and freedom you deserve.
+              Foundation courses are designed to expand entrepreneurship knowledge for learners at every stage of their journey.
             </p>
           </div>
         </section>
@@ -191,14 +193,14 @@ export default function CoursesPage() {
               Not Sure Where to Start?
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              Book a free call with our team. We&apos;ll help you find the best path based on your goals, experience, and budget.
+              Speak with the Foundation about which educational resources, scholarships, or programs best match your learning goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-primary">
-                Book a Free Call
+                Apply for a Strategy Session
               </Link>
               <Link href={GHL_LINKS.allCourses} className="btn btn-secondary">
-                View All Courses on GHL
+                View All Educational Resources
               </Link>
             </div>
           </div>

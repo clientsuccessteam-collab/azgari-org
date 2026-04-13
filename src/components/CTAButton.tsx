@@ -2,7 +2,7 @@ import Link from "next/link";
 import { DEFAULT_CTA } from "@/lib/links";
 
 interface CTAButtonProps {
-  /** Button text (defaults to "See If You Qualify →") */
+  /** Button text (defaults to "Check Program Eligibility →") */
   text?: string;
   /** Link URL (defaults to main GHL qualify page) */
   href?: string;
@@ -41,7 +41,7 @@ export default function CTAButton({
 
 // Pre-configured CTA variants for common use cases
 export function QualifyCTA({ className = "", large = false }: { className?: string; large?: boolean }) {
-  return <CTAButton text="See If You Qualify →" large={large} className={className} />;
+  return <CTAButton text="Check Program Eligibility →" large={large} className={className} />;
 }
 
 export function GetStartedCTA({ className = "" }: { className?: string }) {
@@ -53,5 +53,5 @@ export function LearnMoreCTA({ href, className = "" }: { href: string; className
 }
 
 export function ContactCTA({ className = "" }: { className?: string }) {
-  return <CTAButton text="Let's Talk →" href="/contact" variant="secondary" className={className} />;
+  return <CTAButton text="Contact Us →" href="/contact" variant="secondary" className={className} />;
 }

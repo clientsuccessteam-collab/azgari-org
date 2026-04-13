@@ -29,7 +29,7 @@ export default function ScholarshipCallout({ variant = "card" }: ScholarshipCall
       </h3>
       <p className="text-sm text-gray-600 mb-2 max-w-lg mx-auto">
         We fund scholarships for foster youth, veterans, single parents, and first-generation entrepreneurs.
-        10% of every paid enrollment goes directly to scholarship funding.
+        100% of proceeds to the Foundation go directly to scholarship funding and free programs.
       </p>
       <Link href="/scholarships" className="btn btn-secondary mt-4 inline-block">
         Learn About Scholarships →

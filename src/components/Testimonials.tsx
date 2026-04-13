@@ -32,13 +32,13 @@ export default function Testimonials() {
             className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
             style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
           >
-            CLIENT STORIES
+            PARTICIPANT STORIES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            Hear From Real Clients
+            Hear From Program Graduates
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Corporate professionals who leveraged their expertise into businesses they own. Real people. Real video.
+            Corporate professionals who leveraged their expertise through our curriculum into businesses they own. Real people. Real video.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function Testimonials() {
             className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all"
             style={{ color: 'var(--color-primary)' }}
           >
-            See More Client Stories
+            See More Participant Stories
             <span>→</span>
           </Link>
         </div>

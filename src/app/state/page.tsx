@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import { stateData } from "@/lib/stateData";
 
 export const metadata: Metadata = {
@@ -13,8 +14,9 @@ export default function StateSelectorPage() {
   return (
     <>
       <Navbar />
-      
-      <main className="pt-24">
+      <MissionBanner variant="strip" />
+
+      <main className="pt-8">
         {/* Hero Section */}
         <section className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-4xl mx-auto px-6 text-center">
@@ -78,17 +80,17 @@ export default function StateSelectorPage() {
               Not Sure Which Business is Right for You?
             </h2>
             <p className="text-lg text-white/90 mb-8">
-              Our team can help you evaluate your skills, market conditions, and local opportunities to find the perfect fit.
+              The Foundation&apos;s educational programs can help you evaluate your skills, market conditions, and local opportunities to find the right educational path.
             </p>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="inline-block px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-xl hover:-translate-y-1"
-              style={{ 
+              style={{
                 backgroundColor: 'var(--color-accent)',
                 color: 'var(--color-primary-dark)'
               }}
             >
-              Explore Our Services
+              Check Program Eligibility
             </Link>
           </div>
         </section>

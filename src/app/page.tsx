@@ -18,11 +18,13 @@ import ImpactModule from "@/components/ImpactModule";
 import ScholarshipCallout from "@/components/ScholarshipCallout";
 import Qualification from "@/components/Qualification";
 import CallPreview from "@/components/CallPreview";
+import MissionBanner from "@/components/MissionBanner";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="strip" />
       <main>
         {/* 1. HOOK — Promise + qualification-first hero */}
         <Hero />

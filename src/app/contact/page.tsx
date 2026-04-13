@@ -2,29 +2,31 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import MissionWrapper from "@/components/MissionWrapper";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Azgari Foundation",
-  description: "Get in touch with Azgari Foundation. We help professionals launch and acquire profitable service businesses.",
+  title: "Contact the Foundation | Azgari Foundation",
+  description: "Get in touch with Azgari Foundation, a 501(c)(3) nonprofit providing entrepreneurship education, mentorship, and workforce development programming.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero */}
-        <section 
-          className="pt-24 pb-12 md:pt-32 md:pb-16 text-center"
+        <section
+          className="pt-12 pb-12 md:pt-16 md:pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Let&apos;s Talk About Your Business Goals
+              Contact the Azgari Foundation
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to start or acquire a service business? We&apos;re here to help you find the right path.
+              General inquiries about our 501(c)(3) entrepreneurship education programs, scholarships, partnerships, and community resources.
             </p>
           </div>
         </section>
@@ -44,19 +46,19 @@ export default function ContactPage() {
               style={{ backgroundColor: 'var(--color-primary)' }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Schedule a Discovery Call
+                Apply for a Strategy Session
               </h2>
               <p className="text-white/90 mb-8 max-w-xl mx-auto">
-                Tell us about your goals and we&apos;ll help you determine the best path forward — whether that&apos;s starting fresh, buying an existing business, or scaling what you have.
+                Tell us about your educational goals and we can help you understand which Foundation programs, scholarships, or free resources may fit your situation.
               </p>
-              <Link 
+              <Link
                 href="/qualify"
                 className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
               >
-                Start the Conversation →
+                Apply for a Strategy Session →
               </Link>
               <p className="text-white/70 text-sm mt-4">
-                Takes about 2 minutes. No commitment required.
+                Brief intake form. No commitment required.
               </p>
             </div>
           </div>
@@ -122,7 +124,7 @@ export default function ContactPage() {
               Have Questions?
             </h2>
             <p className="text-gray-600 mb-6">
-              Check out our FAQ for answers to common questions about our programs, pricing, and process.
+              Check our FAQ for answers to common questions about Foundation programs, tuition, scholarships, and curriculum.
             </p>
             <Link href="/faq" className="btn btn-secondary">
               View FAQ →

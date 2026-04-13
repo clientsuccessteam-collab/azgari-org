@@ -3,14 +3,16 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQAccordion from "@/components/FAQAccordion";
+import MissionBanner from "@/components/MissionBanner";
 import JsonLd from "@/app/JsonLd";
+import { NONPROFIT } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "FAQ | Azgari Foundation",
-  description: "Get answers to frequently asked questions about starting a service business with Azgari. Learn about our programs, pricing, and how we help you succeed.",
+  description: "Answers to frequently asked questions about Azgari Foundation&apos;s entrepreneurship education program, nonprofit mission, and participant eligibility.",
   openGraph: {
     title: "FAQ | Azgari Foundation",
-    description: "Everything you need to know about starting your service business with Azgari.",
+    description: "Learn about our 501(c)(3) nonprofit entrepreneurship education programs, tuition, and participant pathways.",
     type: "website",
     url: "https://azgari.org/faq",
   },
@@ -18,97 +20,102 @@ export const metadata: Metadata = {
 
 const faqCategories = [
   {
-    title: "Before You Decide",
+    title: "About the Foundation",
     items: [
       {
-        question: "What if I fail?",
+        question: "Is Azgari Foundation a nonprofit?",
         answer:
-          "Business outcomes depend on three things: our proven framework (we own this), market conditions (nobody controls this), and your involvement as an owner (you own this). We can\u2019t guarantee you won\u2019t face challenges \u2014 but you won\u2019t face them alone. Our done-for-you build includes a launch guarantee with continued support if we miss the timeline, plus 12 months of ongoing support after launch.",
+          "Yes. Azgari Foundation is a 501(c)(3) nonprofit organization. Our mission is to expand economic mobility and create local jobs through entrepreneurship education. Program tuition from enrolled participants directly funds our educational services, scholarships for underserved founders, and free community training programs. We are not a franchise, a lender, or a for-profit consulting firm.",
       },
-      {
-        question: "Can I do this while keeping my full-time job?",
-        answer:
-          "Yes \u2014 that\u2019s the whole point. We build the business for you, including hiring and training your team and placing a manager. Your time commitment is roughly 1 hour per week for oversight. Most of our clients keep their full-time jobs while we build, then decide later whether to transition.",
-      },
-      {
-        question: "I don\u2019t have business experience. Am I qualified?",
-        answer:
-          "You don\u2019t need experience in the specific business we build for you. Our team handles business model selection, entity formation, branding, marketing systems, hiring, and operations. We\u2019ve built businesses for corporate professionals, veterans, trades workers, and career changers \u2014 all with different backgrounds.",
-      },
-      {
-        question: "How is Azgari different from buying a franchise?",
-        answer:
-          "Franchises give you a brand but take 3\u20138% in royalties forever and control how you run your business. With Azgari, we build your business from scratch and you own 100% \u2014 the brand, the systems, the customers, everything. No ongoing fees, no restrictions, no royalty payments. You keep every dollar you earn, and you can sell the business whenever you want \u2014 on your terms.",
-      },
-    ],
-  },
-  {
-    title: "About Azgari",
-    items: [
       {
         question: "What is Azgari Foundation?",
         answer:
-          "We\u2019re a done-for-you business building firm. We help professionals launch local service businesses by building the entire operation for them \u2014 entity, brand, marketing, team, customers, and operations. Founded by serial entrepreneur Azgari Lipshy, we\u2019re an alternative to franchises: you get a fully built business without franchise fees or royalties.",
+          "We are a 501(c)(3) nonprofit entrepreneurship education organization. Our curriculum guides participants through launching local service businesses they own outright \u2014 covering business model selection, entity formation, brand development, sales education and practicum, hiring, and operational readiness. Founded by serial entrepreneur Azgari Lipshy, the Foundation serves as a mentor-supported alternative to franchise models: participants complete a guided educational program while retaining 100% ownership, with no franchise fees or royalties.",
       },
       {
         question: "Is Azgari a franchise?",
         answer:
-          "No. You maintain 100% ownership and control of your business. We build it for you, but you own everything \u2014 the brand, the entity, the customer relationships, and all systems. There are no royalties, no territory restrictions, and no ongoing fees.",
+          "No. Participants maintain 100% ownership and control of their businesses. Our curriculum guides them through the launch process, but they own everything \u2014 the brand, the entity, the customer relationships, and all systems. There are no royalties, no territory restrictions, and no ongoing fees.",
       },
       {
         question: "Are you a lender?",
         answer:
-          "No. We help you prepare for SBA financing through our funding concierge service included in the program. All lending decisions are made by independent SBA lenders. We ensure your business plan, financials, and documentation are lender-ready.",
+          "No. Our curriculum includes funding readiness education to help participants prepare for SBA financing. All lending decisions are made by independent SBA lenders. We help ensure participant business plans, financials, and documentation are lender-ready.",
       },
     ],
   },
   {
-    title: "Investment & What\u2019s Included",
+    title: "Before You Enroll",
     items: [
       {
-        question: "What does the $50,000 investment cover?",
+        question: "What if I fail?",
         answer:
-          "Everything needed to build a fully operational service business you own 100%. That includes: data-driven business model selection from 50+ proven models, complete entity formation and compliance, full brand buildout (name, logo, website, marketing systems), B2B contract acquisition through our inside sales team so you have signed accounts before launch, a full operational team hired and trained, a manager placed to run day-to-day operations, SBA funding concierge if needed, and 12 months of ongoing support.",
+          "Business outcomes depend on three things: our educational framework and mentorship (we own this), market conditions (nobody controls this), and the participant&apos;s effort and involvement (the participant owns this). We do not guarantee any specific level of income or business success. Individual results vary based on effort, market conditions, and capital. " + NONPROFIT.programCommitment,
+      },
+      {
+        question: "Can I participate while keeping my full-time job?",
+        answer:
+          "Yes. Our guided curriculum is designed so participants can remain employed while they complete coursework and oversight. Time commitment is roughly 5\u201310 hours per week. Many participants keep their full-time jobs while completing the program, then decide later whether to transition.",
+      },
+      {
+        question: "I don\u2019t have business experience. Am I eligible?",
+        answer:
+          "You do not need prior experience in the specific business model you select. Our curriculum covers business model selection, entity formation, branding, marketing systems, hiring, and operations \u2014 with structured mentorship throughout. Past participants have come from corporate, military, skilled-trade, and career-change backgrounds.",
+      },
+      {
+        question: "How is Azgari different from a franchise?",
+        answer:
+          "Franchises license a brand in exchange for 3\u20138% royalties forever and operational control. Azgari Foundation is a nonprofit entrepreneurship education organization \u2014 we guide participants through launching a business they own 100%. No ongoing fees, no restrictions, no royalty payments. Participants keep every dollar they earn and may sell the business whenever they choose.",
+      },
+    ],
+  },
+  {
+    title: "Program Tuition & What\u2019s Included",
+    items: [
+      {
+        question: "What does the $50,000 program tuition cover?",
+        answer:
+          "The guided entrepreneurship education program includes: data-driven business model selection curriculum (50+ proven service models), entity formation and compliance coursework, mentor-supported brand development (name, logo, website, marketing systems), sales methodology training and practicum so participants secure paying customers before launch, team recruitment and hiring curriculum, manager placement and operational readiness coaching, funding readiness education for SBA qualification, and 12 months of ongoing mentorship and educational support. " + NONPROFIT.tuitionJustification,
       },
       {
         question: "Do you offer payment plans?",
         answer:
-          "Yes. Payment plans and SBA funding paths are available. We\u2019ll discuss the options that work best for your situation during the strategy call.",
+          "Yes. Payment plans and SBA funding paths are available. We will discuss the options that fit your situation during the strategy session.",
       },
       {
-        question: "What\u2019s the guarantee?",
+        question: "What is the Program Commitment?",
         answer:
-          "Your business will be operational with a manager in place within 180 days, or we continue building at no additional cost until it is. Your business results still depend on market conditions, the business model selected, and your involvement as an owner \u2014 we\u2019re transparent about that.",
+          NONPROFIT.programCommitment + " " + NONPROFIT.resultsDisclaimer,
       },
     ],
   },
   {
-    title: "Business Types We Work With",
+    title: "Business Models Covered in the Curriculum",
     items: [
       {
-        question: "What types of businesses do you build?",
+        question: "What types of businesses does the curriculum cover?",
         answer:
-          "We build B2B service businesses that win contracts with other businesses \u2014 not retail or walk-in models. Examples include commercial cleaning, commercial pressure washing, commercial HVAC, pest control (commercial accounts), staffing and recruiting agencies, fractional C-suite consulting, IT services, bookkeeping, and business consulting. At the $50K tier, your business sells to other businesses through our inside sales model: our team builds relationships remotely, and you\u2019re the face who meets decision-makers and signs the contract. We match the right model to your skills, capital, and market from our library of 50+ proven models.",
+          "Our curriculum covers B2B service businesses that secure contracts with other businesses \u2014 not retail or walk-in models. Examples include commercial cleaning, commercial pressure washing, commercial HVAC, pest control (commercial accounts), staffing and recruiting agencies, fractional C-suite consulting, IT services, bookkeeping, and business consulting. Participants learn an inside sales methodology in which they build relationships remotely and meet decision-makers to sign contracts. We help match participants to the right model from a library of 50+ proven service models based on their skills, capital, and market.",
       },
       {
-        question: "Can I start a professional services business, not just trades?",
+        question: "Can the curriculum support a professional services business, not just trades?",
         answer:
-          "Absolutely. We\u2019ve built recruiting firms, fractional CFO and COO practices, HR consulting businesses, and other professional service companies for clients. The same done-for-you framework applies: we select the model, build the systems, land the contracts through inside sales, and put the team in place. The difference is startup costs are often lower and margins can be higher with professional services.",
+          "Yes. Past program graduates have launched recruiting firms, fractional CFO and COO practices, HR consulting businesses, and other professional service companies. The same guided curriculum applies: we help participants select the model, build the systems, learn the sales methodology, and put the team in place. Startup costs are often lower and margins can be higher with professional services.",
       },
       {
-        question: "How do you land B2B contracts for my business?",
+        question: "How does the sales methodology work for securing B2B contracts?",
         answer:
-          "Through inside sales. Our team builds relationships with businesses in your market remotely \u2014 prospecting, outreach, follow-up, and qualifying leads. When a prospect is ready, you\u2019re the face who meets the decision-maker and signs the contract. This is how B2B service businesses work: relationships first, then contracts. You don\u2019t need to cold call or run ads to homeowners. Our inside sales model handles the pipeline so you can focus on closing and oversight.",
+          "Participants learn an inside sales approach: relationship-building with businesses in their market through prospecting, outreach, follow-up, and lead qualification. When a prospect is ready, the participant is the face who meets the decision-maker and signs the contract. This is how B2B service businesses work: relationships first, then contracts. Participants are not expected to cold-call homeowners or run consumer ads \u2014 the curriculum teaches the pipeline approach so they can focus on closing and oversight.",
       },
       {
-        question: "Do I need experience in the industry I choose?",
+        question: "Do I need prior experience in the industry I choose?",
         answer:
-          "No. We build the entire business for you, including training your team on the business model and operations. Many of our clients come from completely different backgrounds \u2014 corporate professionals, veterans, and career changers. Your role is ownership oversight, not day-to-day operations.",
+          "No. The curriculum covers the business model and operations in depth, including team training. Many program graduates came from completely different backgrounds \u2014 corporate, military, and career-change. A participant&apos;s role is ownership oversight, not day-to-day operations.",
       },
       {
-        question: "How much money do I need to start?",
+        question: "How much capital do I need?",
         answer:
-          "The done-for-you business build is $50,000, with payment plans and SBA funding paths available. Some business models also require working capital beyond the build fee, depending on the type of business (equipment, vehicles, etc.). We\u2019ll help you match your available capital to the right model during our discovery process.",
+          "The guided entrepreneurship education program is $50,000 in tuition, with payment plans and SBA funding paths available. Some business models also require working capital beyond tuition, depending on the business type (equipment, vehicles, etc.). We help participants match their available capital to the right model during the discovery process.",
       },
     ],
   },
@@ -116,19 +123,19 @@ const faqCategories = [
     title: "Results & Expectations",
     items: [
       {
-        question: "Do you guarantee results?",
+        question: "Do you guarantee business results?",
         answer:
-          "We guarantee your business will be operational with a manager in place within 180 days, or we continue building at no additional cost. Your actual business results \u2014 revenue, profit, growth \u2014 depend on the business model, market conditions, and your involvement as an owner. We do not guarantee any specific level of income or business success.",
+          "No. " + NONPROFIT.resultsDisclaimer + " " + NONPROFIT.programCommitment,
       },
       {
         question: "How long until the business is running?",
         answer:
-          "Our target is 180 days from kickoff to having an operational business with a manager in seat and contracts paying. The exact timeline depends on the business model, licensing requirements, hiring market, and other factors specific to your build.",
+          "The Foundation&apos;s educational objective is an operational business with a manager in seat within approximately 180 days of enrollment. Actual timelines vary based on business model, licensing requirements, hiring market, and participant-specific factors.",
       },
       {
-        question: "What happens after the build is complete?",
+        question: "What happens after the program is complete?",
         answer:
-          "You own 100% of your business and all the systems we built. The program includes 12 months of ongoing support after launch. Your manager handles day-to-day operations while you provide oversight \u2014 roughly 1 hour per week. Many clients use the framework to build additional businesses.",
+          "Participants own 100% of their business and all the systems developed through the curriculum. The program includes 12 months of ongoing mentorship and educational support after launch. The manager handles day-to-day operations while the participant provides oversight \u2014 roughly 1 hour per week. Many program graduates apply the framework to launch additional businesses.",
       },
     ],
   },
@@ -153,6 +160,7 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
+      <MissionBanner variant="full" />
       <JsonLd data={faqJsonLd} />
 
       {/* Hero Section */}
@@ -165,8 +173,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Everything you need to know about starting your service business with
-            Azgari.
+            Answers about our 501(c)(3) nonprofit entrepreneurship education programs, tuition, and participant pathways.
           </p>
         </div>
       </section>

@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GHL_LINKS } from "@/lib/links";
+import MissionBanner from "@/components/MissionBanner";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Client Stories | Azgari Foundation",
-  description: "Real video testimonials from real business owners. See how Azgari builds businesses people own 100%.",
+  title: "Participant Stories | Azgari Foundation",
+  description: "Real video testimonials from program participants and graduates of Azgari Foundation's entrepreneurship education programs.",
 };
 
 // Video testimonials data — real clients only
@@ -53,10 +54,11 @@ export default function CaseStudiesPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero */}
         <section
-          className="pt-24 md:pt-32 pb-16 text-center"
+          className="pt-12 md:pt-16 pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
@@ -64,13 +66,13 @@ export default function CaseStudiesPage() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              REAL CLIENTS • REAL VIDEO
+              501(C)(3) ENTREPRENEURSHIP EDUCATION
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Hear From People We&apos;ve Built Businesses For
+              Participant Stories &amp; Program Graduate Outcomes
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-              No stock photos. No fake names. Real business owners sharing their experience on camera.
+              Voluntary video reflections from program participants sharing their educational experience with the Foundation.
             </p>
           </div>
         </section>
@@ -86,10 +88,10 @@ export default function CaseStudiesPage() {
                 VIDEO TESTIMONIALS
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                Hear From Our Clients
+                Hear From Our Program Participants
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Real stories from corporate professionals who leveraged their expertise into businesses they own.
+                Reflections from participants who leveraged the Foundation&apos;s curriculum and mentorship to launch businesses they own outright.
               </p>
             </div>
 
@@ -162,9 +164,7 @@ export default function CaseStudiesPage() {
         <section className="py-8 border-t border-b bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-sm text-gray-500">
-              <strong>Disclaimer:</strong> These are real client experiences shared voluntarily.
-              Your results will vary based on effort, market conditions, experience, and many other factors.
-              We do not guarantee any level of income or business success.
+              <strong>Disclaimer:</strong> These are real participant experiences shared voluntarily. {NONPROFIT.resultsDisclaimer}
             </p>
           </div>
         </section>
@@ -173,17 +173,17 @@ export default function CaseStudiesPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Ready to Have Us Build Your Business?
+              Interested in the Foundation&apos;s Flagship Program?
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              We build it. You own it. Start with a 20-minute strategy call.
+              Our guided, mentor-supported curriculum helps participants launch service businesses they own. Start by checking program eligibility.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                See If You Qualify →
+                Check Program Eligibility →
               </Link>
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-secondary">
-                Book a Free Strategy Call
+                Apply for a Strategy Session
               </Link>
             </div>
           </div>
