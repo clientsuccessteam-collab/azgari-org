@@ -2,22 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { NONPROFIT } from "@/lib/links";
 
+// Footer columns for azgari.org (501(c)(3) nonprofit). Only charitable and
+// informational surfaces appear here. Paid program, paid courses, and
+// strategy-call links were removed to keep the .org surface area aligned
+// with the Foundation's exempt purpose.
 const footerLinks = {
-  programs: [
-    { label: "Programs & Tuition", href: "/services" },
-    { label: "Acquisition Education", href: "/acquisition" },
+  foundation: [
+    { label: "Our Mission", href: "/about" },
     { label: "Scholarships", href: "/scholarships" },
+    { label: "Participant Stories", href: "/case-studies" },
+    { label: "Media", href: "/media" },
   ],
   resources: [
-    { label: "Free Training", href: "/webinar" },
+    { label: "Free Educational Guides", href: "/guides" },
+    { label: "Free Educational Tools", href: "/tools" },
+    { label: "Videos", href: "/videos" },
     { label: "Blog", href: "https://azgari.blog" },
-    { label: "Courses", href: "/courses" },
-    { label: "Free Guides", href: "/guides" },
-    { label: "Business Tools", href: "/tools" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
-    { label: "Media", href: "/media" },
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" },
     { label: "Privacy Policy", href: "/privacy" },
@@ -47,12 +49,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Programs */}
+          {/* Foundation */}
           <div>
-            <h4 className="font-semibold mb-4">Programs</h4>
-            {footerLinks.programs.map((link) => (
-              <Link 
-                key={link.href} 
+            <h4 className="font-semibold mb-4">Foundation</h4>
+            {footerLinks.foundation.map((link) => (
+              <Link
+                key={link.href}
                 href={link.href}
                 className="block text-white/80 hover:text-amber-400 py-1 transition-colors"
               >

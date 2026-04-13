@@ -9,15 +9,20 @@ import { NONPROFIT } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "FAQ | Azgari Foundation",
-  description: "Answers to frequently asked questions about Azgari Foundation&apos;s entrepreneurship education program, nonprofit mission, and participant eligibility.",
+  description:
+    "Frequently asked questions about Azgari Foundation — a 501(c)(3) nonprofit entrepreneurship education organization, our scholarships, free community programs, and charitable mission.",
   openGraph: {
     title: "FAQ | Azgari Foundation",
-    description: "Learn about our 501(c)(3) nonprofit entrepreneurship education programs, tuition, and participant pathways.",
+    description:
+      "Learn about our 501(c)(3) nonprofit mission, scholarships, and free educational resources.",
     type: "website",
     url: "https://azgari.org/faq",
   },
 };
 
+// Azgari Foundation (501(c)(3) nonprofit) — FAQ restricted to charitable /
+// educational topics. Fee-based program details, strategy-call logistics,
+// and enrollment pathways live on the for-profit sister site at azgari.com.
 const faqCategories = [
   {
     title: "About the Foundation",
@@ -25,117 +30,76 @@ const faqCategories = [
       {
         question: "Is Azgari Foundation a nonprofit?",
         answer:
-          "Yes. Azgari Foundation is a 501(c)(3) nonprofit organization. Our mission is to expand economic mobility and create local jobs through entrepreneurship education. Program tuition from enrolled participants directly funds our educational services, scholarships for underserved founders, and free community training programs. We are not a franchise, a lender, or a for-profit consulting firm.",
+          "Yes. Azgari Foundation is a 501(c)(3) nonprofit organization. Our mission is to expand economic mobility, expand access to business ownership, and create jobs in underserved communities through entrepreneurship education, mentorship, and workforce development programs. We are not a franchise, a lender, or a for-profit consulting firm.",
       },
       {
-        question: "What is Azgari Foundation?",
-        answer:
-          "We are a 501(c)(3) nonprofit entrepreneurship education organization. Our curriculum guides participants through launching local service businesses they own outright \u2014 covering business model selection, entity formation, brand development, sales education and practicum, hiring, and operational readiness. Founded by serial entrepreneur Azgari Lipshy, the Foundation serves as a mentor-supported alternative to franchise models: participants complete a guided educational program while retaining 100% ownership, with no franchise fees or royalties.",
+        question: "What is the Foundation's charitable mission?",
+        answer: NONPROFIT.mission,
       },
       {
-        question: "Is Azgari a franchise?",
+        question: "Who runs the Foundation?",
         answer:
-          "No. Participants maintain 100% ownership and control of their businesses. Our curriculum guides them through the launch process, but they own everything \u2014 the brand, the entity, the customer relationships, and all systems. There are no royalties, no territory restrictions, and no ongoing fees.",
+          "The Foundation was founded by serial entrepreneur Azgari Lipshy, who leads its educational programming. The Foundation is governed in accordance with 501(c)(3) nonprofit requirements; governance information will be made publicly available as it is finalized.",
       },
       {
-        question: "Are you a lender?",
+        question: "Is the Foundation a franchise or a lender?",
         answer:
-          "No. Our curriculum includes funding readiness education to help participants prepare for SBA financing. All lending decisions are made by independent SBA lenders. We help ensure participant business plans, financials, and documentation are lender-ready.",
-      },
-    ],
-  },
-  {
-    title: "Before You Enroll",
-    items: [
-      {
-        question: "What if I fail?",
-        answer:
-          "Business outcomes depend on three things: our educational framework and mentorship (we own this), market conditions (nobody controls this), and the participant&apos;s effort and involvement (the participant owns this). We do not guarantee any specific level of income or business success. Individual results vary based on effort, market conditions, and capital. " + NONPROFIT.programCommitment,
-      },
-      {
-        question: "Can I participate while keeping my full-time job?",
-        answer:
-          "Yes. Our guided curriculum is designed so participants can remain employed while they complete coursework and oversight. Time commitment is roughly 5\u201310 hours per week. Many participants keep their full-time jobs while completing the program, then decide later whether to transition.",
-      },
-      {
-        question: "I don\u2019t have business experience. Am I eligible?",
-        answer:
-          "You do not need prior experience in the specific business model you select. Our curriculum covers business model selection, entity formation, branding, marketing systems, hiring, and operations \u2014 with structured mentorship throughout. Past participants have come from corporate, military, skilled-trade, and career-change backgrounds.",
-      },
-      {
-        question: "How is Azgari different from a franchise?",
-        answer:
-          "Franchises license a brand in exchange for 3\u20138% royalties forever and operational control. Azgari Foundation is a nonprofit entrepreneurship education organization \u2014 we guide participants through launching a business they own 100%. No ongoing fees, no restrictions, no royalty payments. Participants keep every dollar they earn and may sell the business whenever they choose.",
+          "No. The Foundation is an educational nonprofit. It is not a franchise — there are no franchise fees, territories, or royalty structures. It is not a lender — any SBA loans participants obtain are from independent SBA-approved lenders, and all credit decisions are made by those lenders.",
       },
     ],
   },
   {
-    title: "Program Tuition & What\u2019s Included",
+    title: "Communities We Serve",
     items: [
       {
-        question: "What does the $50,000 program tuition cover?",
+        question: "Who qualifies for the Foundation's scholarships and free programs?",
         answer:
-          "The guided entrepreneurship education program includes: data-driven business model selection curriculum (50+ proven service models), entity formation and compliance coursework, mentor-supported brand development (name, logo, website, marketing systems), sales methodology training and practicum so participants secure paying customers before launch, team recruitment and hiring curriculum, manager placement and operational readiness coaching, funding readiness education for SBA qualification, and 12 months of ongoing mentorship and educational support. " + NONPROFIT.tuitionJustification,
+          "The Foundation's scholarships and free community programming are directed to founders facing real barriers to business ownership — specifically aging-out foster youth (ages 18–24), veterans transitioning to civilian careers, single parents re-entering the workforce, and first-generation entrepreneurs from underserved communities.",
       },
       {
-        question: "Do you offer payment plans?",
+        question: "How do I apply for a scholarship?",
         answer:
-          "Yes. Payment plans and SBA funding paths are available. We will discuss the options that fit your situation during the strategy session.",
+          "Visit the Scholarships page to submit your application. The process includes a short online application (~10 minutes), a brief 15-minute video interview, documentation to verify eligibility, and a decision within two weeks.",
       },
       {
-        question: "What is the Program Commitment?",
+        question: "What does a scholarship cover?",
         answer:
-          NONPROFIT.programCommitment + " " + NONPROFIT.resultsDisclaimer,
+          "Scholarship recipients receive full access to the Foundation's educational curriculum at no cost — the same curriculum offered through the Foundation's fee-based programs. There are no strings attached and no hidden costs to the scholarship recipient.",
       },
     ],
   },
   {
-    title: "Business Models Covered in the Curriculum",
+    title: "Free Community Education",
     items: [
       {
-        question: "What types of businesses does the curriculum cover?",
+        question: "What free resources does the Foundation publish?",
         answer:
-          "Our curriculum covers B2B service businesses that secure contracts with other businesses \u2014 not retail or walk-in models. Examples include commercial cleaning, commercial pressure washing, commercial HVAC, pest control (commercial accounts), staffing and recruiting agencies, fractional C-suite consulting, IT services, bookkeeping, and business consulting. Participants learn an inside sales methodology in which they build relationships remotely and meet decision-makers to sign contracts. We help match participants to the right model from a library of 50+ proven service models based on their skills, capital, and market.",
+          "The Foundation publishes free educational guides, free educational tools and templates, and free community training videos. All free resources are available to the general public at no cost and no purchase is required.",
       },
       {
-        question: "Can the curriculum support a professional services business, not just trades?",
+        question: "Where can I find free educational resources?",
         answer:
-          "Yes. Past program graduates have launched recruiting firms, fractional CFO and COO practices, HR consulting businesses, and other professional service companies. The same guided curriculum applies: we help participants select the model, build the systems, learn the sales methodology, and put the team in place. Startup costs are often lower and margins can be higher with professional services.",
-      },
-      {
-        question: "How does the sales methodology work for securing B2B contracts?",
-        answer:
-          "Participants learn an inside sales approach: relationship-building with businesses in their market through prospecting, outreach, follow-up, and lead qualification. When a prospect is ready, the participant is the face who meets the decision-maker and signs the contract. This is how B2B service businesses work: relationships first, then contracts. Participants are not expected to cold-call homeowners or run consumer ads \u2014 the curriculum teaches the pipeline approach so they can focus on closing and oversight.",
-      },
-      {
-        question: "Do I need prior experience in the industry I choose?",
-        answer:
-          "No. The curriculum covers the business model and operations in depth, including team training. Many program graduates came from completely different backgrounds \u2014 corporate, military, and career-change. A participant&apos;s role is ownership oversight, not day-to-day operations.",
-      },
-      {
-        question: "How much capital do I need?",
-        answer:
-          "The guided entrepreneurship education program is $50,000 in tuition, with payment plans and SBA funding paths available. Some business models also require working capital beyond tuition, depending on the business type (equipment, vehicles, etc.). We help participants match their available capital to the right model during the discovery process.",
+          "Visit the Free Educational Guides page and the Free Educational Tools page. Additional educational videos and media are available from the Media and Videos pages.",
       },
     ],
   },
   {
-    title: "Results & Expectations",
+    title: "Funding & Compliance",
     items: [
       {
-        question: "Do you guarantee business results?",
+        question: "How are scholarships and free programs funded?",
         answer:
-          "No. " + NONPROFIT.resultsDisclaimer + " " + NONPROFIT.programCommitment,
+          "Scholarships and free community programming are funded through a combination of charitable contributions and a meaningful portion of program tuition from the Foundation's fee-based educational programs, which are operated separately. Donations directly expand the number of scholarship recipients the Foundation can support.",
       },
       {
-        question: "How long until the business is running?",
+        question: "Where can I learn about fee-based program tuition?",
         answer:
-          "The Foundation&apos;s educational objective is an operational business with a manager in seat within approximately 180 days of enrollment. Actual timelines vary based on business model, licensing requirements, hiring market, and participant-specific factors.",
+          "Fee-based program pricing, enrollment, and strategy-session booking are operated by the for-profit sister brand at azgari.com. Azgari Foundation (this site) covers only the nonprofit's mission, scholarships, and free community education.",
       },
       {
-        question: "What happens after the program is complete?",
+        question: "Does the Foundation guarantee business outcomes?",
         answer:
-          "Participants own 100% of their business and all the systems developed through the curriculum. The program includes 12 months of ongoing mentorship and educational support after launch. The manager handles day-to-day operations while the participant provides oversight \u2014 roughly 1 hour per week. Many program graduates apply the framework to launch additional businesses.",
+          "No. " + NONPROFIT.resultsDisclaimer,
       },
     ],
   },
@@ -173,7 +137,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Answers about our 501(c)(3) nonprofit entrepreneurship education programs, tuition, and participant pathways.
+            About the Foundation, our scholarships, and our free community programs.
           </p>
         </div>
       </section>
@@ -198,22 +162,20 @@ export default function FAQPage() {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="py-16 px-6"
-        style={{ backgroundColor: "var(--color-cream)" }}
-      >
+      <section className="py-16 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "var(--color-primary)" }}>
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{ color: "var(--color-primary)" }}
+          >
             Still have questions?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Let&apos;s talk. We&apos;re here to help you make the right decision for your future.
+            The Foundation&apos;s team is happy to help you understand the mission and the
+            scholarship process.
           </p>
-          <Link
-            href="/contact"
-            className="btn btn-primary inline-block"
-          >
-            Let&apos;s Talk
+          <Link href="/contact" className="btn btn-primary inline-block">
+            Contact the Foundation
           </Link>
         </div>
       </section>

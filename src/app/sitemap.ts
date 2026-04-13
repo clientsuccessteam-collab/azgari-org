@@ -4,6 +4,10 @@ import { stateData } from "@/lib/stateData";
 const BASE_URL = "https://azgari.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Sitemap surfaces only charitable / educational pages that remain on
+  // azgari.org. The commercial routes (/services, /qualify, /acquisition,
+  // /webinar, /courses) are 301-redirected to azgari.com in next.config.ts
+  // and intentionally excluded here.
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -12,22 +16,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/services`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${BASE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/courses`,
+      url: `${BASE_URL}/scholarships`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/contact`,
@@ -48,40 +46,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/media`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${BASE_URL}/tools`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/scholarships`,
+      url: `${BASE_URL}/media`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
-      url: `${BASE_URL}/acquisition`,
+      url: `${BASE_URL}/videos`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/case-studies`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/state`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/privacy`,

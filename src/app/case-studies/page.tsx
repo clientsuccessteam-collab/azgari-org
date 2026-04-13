@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MissionBanner from "@/components/MissionBanner";
-import { GHL_LINKS, NONPROFIT } from "@/lib/links";
+import { NONPROFIT } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Participant Stories | Azgari Foundation",
@@ -173,17 +173,19 @@ export default function CaseStudiesPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Interested in the Foundation&apos;s Flagship Program?
+              Support the Foundation&apos;s Educational Mission
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              Our guided, mentor-supported curriculum helps participants launch service businesses they own. Start by checking program eligibility.
+              Scholarships fund entrepreneurship education for founders from underserved
+              communities. Apply for a scholarship or access the Foundation&apos;s free
+              educational resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                Check Program Eligibility →
+              <Link href="/scholarships" className="btn btn-primary">
+                Apply for a Scholarship →
               </Link>
-              <Link href={GHL_LINKS.forms.bookCall} className="btn btn-secondary">
-                Apply for a Strategy Session
+              <Link href="/guides" className="btn btn-secondary">
+                Free Educational Resources
               </Link>
             </div>
           </div>

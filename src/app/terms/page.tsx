@@ -35,9 +35,9 @@ const sections = [
   {
     title: "Payment Terms",
     items: [
-      "Fees as listed on /services page",
-      "Payment plans available for select programs",
-      "Refund policy: Contact within 7 days for evaluation",
+      "Azgari Foundation (azgari.org) publishes only free educational resources and scholarship information; no paid products are sold on this site",
+      "Fee-based programs, pricing, and payment terms are operated separately by the for-profit sister brand at azgari.com",
+      "Scholarships awarded by the Foundation have no cost to the recipient",
     ],
   },
   {

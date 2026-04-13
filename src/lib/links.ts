@@ -1,189 +1,47 @@
 /**
- * Centralized GHL Links & Product Data
- * =====================================
- * Update URLs and products here — changes apply site-wide
- * 
- * TO ADD A NEW COURSE: Add to COURSES array below
- * TO ADD A NEW TOOL: Add to TOOLS array below
+ * Azgari Foundation — azgari.org link & content registry
+ * ========================================================
+ * azgari.org is the 501(c)(3) nonprofit surface. Only charitable /
+ * educational data belongs here (mission, scholarships, free resources,
+ * communities served). Commercial program pricing, paid courses, paid
+ * tools, and strategy-call booking are operated separately at azgari.com
+ * and reached via 301 redirects defined in `next.config.ts`.
  */
 
-// Commercial program pricing, enrollment, and booking live on the for-profit
-// sister site azgari.com. Azgari.org (this nonprofit site) routes all
-// program-pricing / call-booking CTAs to azgari.com. Only the Foundation's
-// nonprofit resources (scholarships, free guides, contact) remain on .org.
+// The commercial sister site. Any CTA that used to point at a paid
+// program funnel on this domain is routed here.
 const AZGARI_COM = "https://azgari.com";
 
 export const GHL_LINKS = {
-  // Main CTA (used across navbar, hero, footers) — commercial programs live on azgari.com
-  qualify: AZGARI_COM,
-  qualifyQuiz: AZGARI_COM,
-
-  // Program Pages — all pricing and enrollment handled on azgari.com
-  programs: {
-    quickWin: AZGARI_COM,
-    foundation: AZGARI_COM,
-    fullLaunch: AZGARI_COM,
-    scale: AZGARI_COM,
-    acquisition: AZGARI_COM,
-  },
-
-  // Lead Magnets (Free Downloads — routed through store for email capture)
+  // Lead magnets — truly free educational downloads available to the public.
   leadMagnets: {
     checklist: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
     assessment: "https://go.azgari.org/product-details/product/699b4bd9c0607441c091969e",
     sbaGuide: "https://go.azgari.org/product-details/product/699b4bf1aec1c12d84307715",
   },
 
-  // Forms
+  // Forms — all charitable/informational.
   forms: {
     contact: "https://go.azgari.org/contact",
     scholarship: "https://go.azgari.org/non-for-profit-home-page-page",
-    // Strategy-call booking is a commercial interaction — handled on azgari.com
-    bookCall: AZGARI_COM,
   },
-  
-  // All Courses Page
-  allCourses: "https://go.azgari.org/digitalcoursespage",
-  
-  // All Tools Page  
-  allTools: "https://go.azgari.org/products-list",
-};
 
-// Default CTA configuration
-export const DEFAULT_CTA = {
-  text: "Check Program Eligibility →",
-  href: GHL_LINKS.qualify,
+  // Commercial sister site (for any residual references). Strategy calls,
+  // program pricing, and enrollment all happen there.
+  commercialSite: AZGARI_COM,
 };
 
 // ============================================
-// PROGRAMS (Services Page & Homepage Tuition)
+// FREE EDUCATIONAL TOOLS (published by the Foundation)
 // ============================================
-// Flagship entrepreneurship education program
-export const PROGRAMS = [
-  {
-    name: "Flagship Entrepreneurship Program",
-    price: "$50,000",
-    priceLabel: "Program Tuition",
-    note: "$50K tuition paid in full, or $10K down + $6,667.67/mo × 6",
-    description: "A guided entrepreneurship education program for participants launching service businesses they will own outright. Our curriculum covers business model selection, entity formation, brand development, sales education and practicum, and operational readiness — delivered through structured mentorship and hands-on coursework.",
-    whoItsFor: "Participants with 5–10 hrs/wk for coursework and oversight, $50K+ capital capacity, and existing earned income",
-    guarantee: "Program Commitment: If a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met.",
-    timeCommitment: "5–10 hrs/wk",
-    features: [
-      "Curriculum covers data-driven business model selection (50+ proven service models)",
-      "Guided entity formation, licensing, and compliance coursework",
-      "Mentor-supported brand development (name, logo, website, marketing systems)",
-      "Sales education and practicum — securing paying customers before official launch",
-      "Hands-on team recruitment, hiring, and training curriculum",
-      "Manager placement and operational readiness coaching",
-      "Funding readiness education for SBA loan qualification",
-      "12 months of ongoing mentorship and educational support",
-    ],
-    tuitionJustification:
-      "Program tuition supports: educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
-    graduation: null,
-    href: GHL_LINKS.programs.scale,
-    featured: true,
-  },
-];
-
-// ============================================
-// COURSES (Courses Page)
-// To add a course: copy a block, update fields
-// ============================================
-export const COURSES = [
-  {
-    id: "acquisition-accelerator",
-    title: "Small Business Acquisition Accelerator",
-    tagline: "Buy a real business without overpaying.",
-    price: "$297",
-    href: "https://go.azgari.org/product-details/product/691a490c8a72126f6ccd8cd3",
-    features: [
-      "How to value a business",
-      "How to read financials (real-life examples)",
-      "What sellers hide",
-      "Due-diligence templates",
-      "Deal negotiation scripts",
-    ],
-    perfectFor: "Anyone researching BizBuySell or thinking of replacing their job with a business purchase.",
-    featured: true,
-  },
-  {
-    id: "franchise-blueprint",
-    title: "Franchise Buying Blueprint",
-    tagline: "Avoid the traps. Choose the RIGHT franchise.",
-    price: "$247",
-    href: "https://go.azgari.org/product-details/product/691a6125c9b6806d37b01793",
-    features: [
-      "Full due-diligence SOP",
-      "Item 19 breakdowns",
-      "Red flag detection",
-      "Interview scripts",
-      "Franchise broker scripts (to protect yourself)",
-    ],
-    perfectFor: "Buyers who want clarity BEFORE committing $50K–$150K to a franchise.",
-    featured: false,
-  },
-  {
-    id: "30-day-launch",
-    title: "Start a Service Business in 30 Days",
-    tagline: "Launch a local service business fast — with proven templates.",
-    price: "$247",
-    href: "https://go.azgari.org/product-details/product/691a5d8eb1ec060e1770b2f2",
-    features: [
-      "30-day launch roadmap",
-      "Pricing templates",
-      "Marketing scripts",
-      "Operations & workflow templates",
-      "Step-by-step launch instructions",
-    ],
-    perfectFor: "People who want a fast, profitable business they own 100%.",
-    featured: true,
-  },
-  {
-    id: "sba-masterclass",
-    title: "SBA Loan Approval Masterclass",
-    tagline: "Get SBA-approved without a broker. Step-by-step.",
-    price: "$297",
-    href: "https://go.azgari.org/product-details/product/691aa46eb1ec0612d4953f38",
-    features: [
-      "Exact documents, templates & loan packaging checklist",
-      "Funding readiness assessment",
-      "Underwriter psychology: what gets approved",
-      "Credit, debt, utilization, and income structuring",
-      "How to submit your application correctly",
-    ],
-    perfectFor: "Anyone who needs funding to start or buy a business.",
-    featured: false,
-  },
-  {
-    id: "slack-community",
-    title: "Unlimited Slack Access + Weekly Live Calls",
-    tagline: "Get daily support. Get answers. Get unstuck.",
-    price: "$67",
-    href: "https://go.azgari.org/product-details/product/691aad968a721238effd6684",
-    features: [
-      "Unlimited Slack support",
-      "Weekly Coffee & Chat live Q&A",
-      "Fireside Chats",
-      "Daily help with any digital course",
-    ],
-    perfectFor: "Anyone who wants personal support with any of our digital programs.",
-    featured: false,
-  },
-];
-
-// ============================================
-// TOOLS (Tools Page)
-// To add a tool: copy a block, update fields
-// category: "free" | "starter" | "premium" | "vault"
-// ============================================
+// Only truly free resources live on azgari.org. Paid templates, kits, and
+// the Vault are operated separately at azgari.com.
 export const TOOLS = [
-  // FREE
   {
     id: "startup-checklist",
     title: "47-Step Service Business Launch Checklist",
-    description: "The exact checklist our team uses to launch businesses. Covers entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
+    description:
+      "Step-by-step educational checklist covering entity formation, licensing, insurance, banking, marketing setup, and first-customer outreach — published by the Foundation as free community education.",
     price: "Free",
     href: GHL_LINKS.leadMagnets.checklist,
     category: "free",
@@ -192,158 +50,29 @@ export const TOOLS = [
   {
     id: "business-assessment",
     title: "Which Business Is Right for Me? (2-Min Quiz)",
-    description: "Answer 12 quick questions about your skills, capital, and lifestyle — get a personalized recommendation from our library of 50+ proven service business models.",
+    description:
+      "A free educational self-assessment. Answer 12 questions about your skills, capital, and lifestyle — receive a personalized recommendation from the Foundation's library of service business models.",
     price: "Free",
     href: GHL_LINKS.leadMagnets.assessment,
     category: "free",
     popular: false,
   },
-  
-  // STARTER ($27-$47)
-  {
-    id: "business-model-canvas",
-    title: "Business Model Canvas for Service Businesses",
-    description: "Visual framework to map your value proposition, revenue streams, and customer segments.",
-    price: "$27",
-    href: "https://go.azgari.org/product-details/product/6965204d936bd80d7c7e566b",
-    category: "starter",
-    popular: false,
-  },
-  {
-    id: "pricing-calculator",
-    title: "Pricing Calculator Spreadsheet",
-    description: "Automated tool to calculate profitable pricing based on costs, labor, and market rates.",
-    price: "$37",
-    href: "https://go.azgari.org/product-details/product/698520f2504addb78dcd9411",
-    category: "starter",
-    popular: true,
-  },
-  {
-    id: "customer-acquisition",
-    title: "Customer Acquisition Playbook",
-    description: "Proven strategies to find, attract, and convert your first 100 customers.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/696523f4936bd836a77e56c7",
-    category: "starter",
-    popular: false,
-  },
-  {
-    id: "sop-templates",
-    title: "Operations SOP Templates",
-    description: "Ready-to-use standard operating procedures for daily business operations.",
-    price: "$37",
-    href: "https://go.azgari.org/product-details/product/698520fd8b0f990bbc48d29e",
-    category: "starter",
-    popular: false,
-  },
-  {
-    id: "30-day-action-plan",
-    title: "First 30 Days Action Plan",
-    description: "Day-by-day roadmap for your critical first month as a business owner.",
-    price: "$27",
-    href: "https://go.azgari.org/product-details/product/6965204d936bd8267a7e566d",
-    category: "starter",
-    popular: false,
-  },
-  
-  // INDUSTRY STARTUP KITS ($47)
-  {
-    id: "pressure-washing-kit",
-    title: "Pressure Washing Startup Kit",
-    description: "Complete launch package: equipment checklist, pricing calculator, 30-day plan, customer scripts, and licensing guide.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/699b3720c8397947f9fd7a54",
-    category: "starter",
-    popular: true,
-  },
-  {
-    id: "lawn-care-kit",
-    title: "Lawn Care Startup Kit",
-    description: "Everything to launch a lawn care business: equipment guide, route pricing, 30-day plan, scripts, and insurance checklist.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/699b3720c83979b2d4fd7a65",
-    category: "starter",
-    popular: false,
-  },
-  {
-    id: "junk-removal-kit",
-    title: "Junk Removal Startup Kit",
-    description: "Full junk removal launch package: truck buying guide, volume pricing calculator, dump site strategy, and customer scripts.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/699b3721aec1c161782b3f23",
-    category: "starter",
-    popular: false,
-  },
-  
-  // PREMIUM ($67-$147)
-  {
-    id: "boring-business-kit",
-    title: "Boring Business Starter Kit",
-    description: "Everything you need to launch a cash-flow-positive service business that runs without you.",
-    price: "$97",
-    href: "https://go.azgari.org/product-details/product/698520e5504add54e6cd91bd",
-    category: "premium",
-    popular: true,
-  },
-  {
-    id: "veteran-launch-kit",
-    title: "Veteran Launch Kit",
-    description: "Resources specifically designed for veterans transitioning to business ownership.",
-    price: "$67",
-    href: "https://go.azgari.org/product-details/product/698520e5c3023e6137d825d7",
-    category: "premium",
-    popular: false,
-  },
-  {
-    id: "commercial-cleaning",
-    title: "Commercial Cleaning Accelerator",
-    description: "Complete toolkit for starting and scaling a commercial cleaning business.",
-    price: "$147",
-    href: "https://go.azgari.org/product-details/product/698520e639b827283a615377",
-    category: "premium",
-    popular: false,
-  },
-  {
-    id: "cash-flow-kit",
-    title: "Cash Flow Mastery Kit",
-    description: "Templates and systems to manage cash flow and stay profitable from day one.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/698520e647316204892b4f1e",
-    category: "premium",
-    popular: false,
-  },
-  {
-    id: "local-marketing",
-    title: "Local Marketing Toolkit",
-    description: "Proven local marketing strategies that work for service businesses.",
-    price: "$47",
-    href: "https://go.azgari.org/product-details/product/698520e63b1e97cdb46f82c1",
-    category: "premium",
-    popular: false,
-  },
-  
-  // VAULT
-  {
-    id: "complete-vault",
-    title: "The Complete Vault",
-    description: "Every tool, template, and resource we offer — plus lifetime updates. Best value for serious entrepreneurs.",
-    price: "$697",
-    href: "https://go.azgari.org/product-details/product/698520fe08999c7b243fce35",
-    category: "vault",
-    popular: false,
-  },
 ];
 
+// Helper used by /tools page — kept for compatibility with the page's
+// existing filtering logic.
+export const getToolsByCategory = (category: string) =>
+  TOOLS.filter((tool) => tool.category === category);
+
 // ============================================
-// MEDIA / PODCASTS (Media Page)
-// To add a podcast: copy a block, update fields
-// NOTE: Update externalUrl with actual podcast links
+// MEDIA / PODCASTS (educational interviews & appearances)
 // ============================================
 export const MEDIA = [
   {
     id: "built-online",
     title: "Built Online with Cody McGuffie",
-    description: "In this episode of Built Online, we sit down with Azgari Lipshy, founder of Azgari.com and veteran operator across CPG and local services.",
+    description:
+      "Azgari Lipshy, founder of Azgari Foundation, discusses validating demand, door-knocking, micro-influencer marketing, and building recurring revenue models.",
     highlights: [
       "How to validate demand before you build",
       "Why door knocking still works in 2025",
@@ -358,7 +87,8 @@ export const MEDIA = [
   {
     id: "elite-league",
     title: "Elite League Podcast with Greg Carlson",
-    description: "Feeling stuck in a corporate job you don't love? Azgari Lipshy shares how professionals can quit corporate and start business ventures to achieve freedom.",
+    description:
+      "Azgari Lipshy shares how professionals can leave corporate for business ownership and achieve economic freedom.",
     highlights: [
       "The 'golden handcuffs' problem in corporate",
       "Matching business models to lifestyle",
@@ -373,7 +103,8 @@ export const MEDIA = [
   {
     id: "profitable-service-90-days",
     title: "How to Start a Profitable Service Business in 90 Days",
-    description: "Azgari Lipshy breaks down the exact steps to go from idea to profitable service business in just 90 days.",
+    description:
+      "Educational interview breaking down the step-by-step path from idea to profitable service business.",
     highlights: [
       "The 90-day launch framework",
       "Picking a service model with proven demand",
@@ -387,7 +118,8 @@ export const MEDIA = [
   {
     id: "systems-over-hustle",
     title: "Systems Over Hustle",
-    description: "Why building systems beats grinding 80-hour weeks. Azgari Lipshy explains how operators can work smarter, not harder.",
+    description:
+      "Azgari Lipshy explains why building systems beats grinding 80-hour weeks, and how operators can work smarter, not harder.",
     highlights: [
       "Why hustle culture kills businesses",
       "Building repeatable systems early",
@@ -401,11 +133,12 @@ export const MEDIA = [
   {
     id: "solution-for-that",
     title: "There Is A Solution For That",
-    description: "Azgari Lipshy, founder of Azgari.com, discusses how to start a cash-flow positive business with a launch partner.",
+    description:
+      "Azgari Lipshy discusses how to start a cash-flow positive service business with a seasoned launch team.",
     highlights: [
-      "Why 90% of solo entrepreneurs fail",
+      "Why many solo founders struggle",
       "The importance of a seasoned launch team",
-      "Securing SBA loans for your business",
+      "Educational resources for SBA loans",
       "Selecting profitable business models",
     ],
     image: "/images/founder/azgari-speaking.jpg",
@@ -415,7 +148,8 @@ export const MEDIA = [
   {
     id: "build-scale-2026",
     title: "How to Build & Scale Your Business in 2026",
-    description: "A forward-looking conversation about what it takes to build and scale a service business in the current market.",
+    description:
+      "A forward-looking educational conversation about building and scaling a service business in the current market.",
     highlights: [
       "Market trends for service businesses in 2026",
       "Scaling strategies that actually work",
@@ -429,7 +163,8 @@ export const MEDIA = [
   {
     id: "scale-service-business",
     title: "How to Scale a Service Business",
-    description: "Azgari Lipshy shares tactical advice on taking a service business from six figures to seven figures and beyond.",
+    description:
+      "Tactical educational discussion on growing a service business through key inflection points.",
     highlights: [
       "The inflection points in scaling",
       "Hiring your first team members",
@@ -443,7 +178,8 @@ export const MEDIA = [
   {
     id: "mens-mental-health",
     title: "Men's Mental Health & Entrepreneurship",
-    description: "A candid conversation about the mental health challenges entrepreneurs face and how to build resilience while building a business.",
+    description:
+      "A candid conversation about the mental-health challenges founders face and how to build resilience.",
     highlights: [
       "The loneliness of entrepreneurship",
       "Managing stress and uncertainty",
@@ -457,7 +193,8 @@ export const MEDIA = [
   {
     id: "exit-corporate-1",
     title: "How to Exit Corporate the Smart Way",
-    description: "The step-by-step playbook for leaving your corporate job and transitioning into business ownership without blowing up your finances.",
+    description:
+      "The educational playbook for leaving a corporate job and transitioning into business ownership.",
     highlights: [
       "When to quit vs. when to build on the side",
       "Financial runway planning",
@@ -471,7 +208,8 @@ export const MEDIA = [
   {
     id: "exit-corporate-2",
     title: "How to Exit Corporate the Smart Way (Part 2)",
-    description: "Continuing the conversation on leaving corporate — this episode dives deeper into execution and first steps.",
+    description:
+      "Continuing the educational conversation — deeper on execution and first steps.",
     highlights: [
       "Building momentum while still employed",
       "The first 30 days after quitting",
@@ -485,12 +223,13 @@ export const MEDIA = [
   {
     id: "default-profitable",
     title: "Default Profitable Podcast",
-    description: "In this episode, we meet Azgari Lipshy, a true serial entrepreneur who's been hustling since she was 16, jumping from supplement manufacturing and garment exports to running two construction companies today.",
+    description:
+      "Azgari Lipshy discusses bootstrapping, the 8-phase blueprint for launches in 120 days, SBA loans, and starting cash-positive.",
     highlights: [
       "Bootstrapping a supplement line as a teenager",
-      "The 8-phase blueprint that guarantees launches in 120 days",
-      "How to snag SBA loans",
-      "Starting cash-positive with pre-booked clients",
+      "The 8-phase educational blueprint",
+      "Funding readiness education for SBA loans",
+      "Starting cash-positive with pre-booked contracts",
       "Validating ideas to scaling with teams and tech",
     ],
     image: "/images/founder/azgari-headshot.jpg",
@@ -500,12 +239,13 @@ export const MEDIA = [
   {
     id: "amr-internet-guy",
     title: "Amr The Internet Guy Podcast",
-    description: "Azgari Lipshy joins Amr to discuss digital marketing strategies specifically designed for local service businesses.",
+    description:
+      "Azgari Lipshy discusses digital-marketing strategies for local service businesses.",
     highlights: [
       "Local SEO for service businesses",
       "Leveraging Google Business Profile",
       "Social media strategies that work for local markets",
-      "Building a lead generation machine",
+      "Building a lead-generation approach",
     ],
     image: "/images/founder/azgari-headshot.jpg",
     videoUrl: "https://www.youtube.com/embed/wqbOtsiknEk",
@@ -514,9 +254,10 @@ export const MEDIA = [
   {
     id: "melvin-edwards",
     title: "MelvinE.Edwards Show",
-    description: "Azgari Lipshy joins Melvin E. Edwards to discuss the fundamentals of building scalable service-based businesses.",
+    description:
+      "Azgari Lipshy discusses the fundamentals of building scalable service-based businesses.",
     highlights: [
-      "Why service businesses offer the best path to ownership",
+      "Why service businesses offer a path to ownership",
       "How to identify profitable markets",
       "Building systems that allow you to step back",
       "Creating wealth through business equity",
@@ -528,7 +269,8 @@ export const MEDIA = [
   {
     id: "shebecameceo",
     title: "SheBecameCEO Podcast",
-    description: "Azgari Lipshy shares her inspiring journey as a female entrepreneur and offers advice for women looking to make the leap into business ownership.",
+    description:
+      "Azgari Lipshy shares her journey and advice for women founders considering business ownership.",
     highlights: [
       "Starting businesses as a teenager",
       "Overcoming imposter syndrome",
@@ -543,12 +285,13 @@ export const MEDIA = [
   {
     id: "start-small-business-2026",
     title: "How To Start A Small Business In 2026",
-    description: "A comprehensive guide to starting a small business in 2026 — covering market selection, funding, and launch strategies.",
+    description:
+      "A comprehensive educational guide to starting a small business — market selection, funding, and launch strategies.",
     highlights: [
-      "Best business models for 2026",
+      "Common business models for 2026",
       "Funding options beyond personal savings",
-      "The first 90 days blueprint",
-      "Common mistakes that kill new businesses",
+      "The first 90 days framework",
+      "Common mistakes that affect new businesses",
     ],
     image: "/images/founder/azgari-speaking.jpg",
     videoUrl: "https://www.youtube.com/embed/VGXXO71z_d8",
@@ -557,7 +300,7 @@ export const MEDIA = [
 ];
 
 // ============================================
-// TRUST BADGES (Homepage)
+// TRUST BADGES (external third-party profiles)
 // ============================================
 export const TRUST_LINKS = {
   googleBusiness: "https://share.google/SlJmbdLaQ1oJGkgeX",
@@ -568,47 +311,47 @@ export const TRUST_LINKS = {
   youtube: "https://www.youtube.com/@azgarilipshy",
 };
 
-// Lead magnet data (for guides page)
+// ============================================
+// LEAD MAGNETS (free educational downloads)
+// ============================================
 export const LEAD_MAGNETS = [
   {
     id: "checklist",
     icon: "📋",
-    type: "Instant Download",
+    type: "Free Download",
     title: "47-Step Service Business Launch Checklist",
-    description: "The exact checklist our team uses to launch 160+ businesses. Entity formation, licensing, insurance, banking, marketing setup, and first-customer acquisition — nothing left to guesswork.",
+    description:
+      "Educational checklist published by the Foundation covering entity formation, licensing, insurance, banking, marketing setup, and first-customer outreach.",
     cta: "Get the Checklist",
     href: GHL_LINKS.leadMagnets.checklist,
   },
   {
     id: "assessment",
     icon: "🎯",
-    type: "2-Minute Quiz",
+    type: "Free 2-Minute Quiz",
     title: "Which Business Is Right for Me?",
-    description: "Answer 12 questions about your skills, capital, and lifestyle goals — get a personalized business model recommendation from our library of 50+ proven models.",
+    description:
+      "Free educational self-assessment — 12 questions about your skills, capital, and lifestyle yield a personalized recommendation from the Foundation's library of service business models.",
     cta: "Take the Quiz",
     href: GHL_LINKS.leadMagnets.assessment,
   },
   {
     id: "sba-guide",
     icon: "🏦",
-    type: "Instant Download",
+    type: "Free Download",
     title: "SBA Loan Readiness Guide",
-    description: "The step-by-step guide to getting SBA-approved without a broker. Credit requirements, exact documents needed, underwriter psychology, and how to package your application for approval.",
+    description:
+      "A free educational guide covering SBA credit requirements, document preparation, underwriter expectations, and application packaging. Lending decisions are made by independent SBA-approved lenders.",
     cta: "Get the SBA Guide",
     href: GHL_LINKS.leadMagnets.sbaGuide,
   },
 ];
 
-// Helper to filter tools by category
-export const getToolsByCategory = (category: string) => 
-  TOOLS.filter(tool => tool.category === category);
-
 // ============================================
-// CASE STUDIES (Case Studies Page)
-// Detailed client success stories with metrics
+// PARTICIPANT STORIES (/case-studies)
 // ============================================
-// Case studies — only include real, verified clients
-// Add entries here as real client stories become available.
+// Only include real, verified participants with signed permission.
+// Leave empty until verified stories are collected.
 export const CASE_STUDIES: {
   id: string;
   name: string;
@@ -624,37 +367,19 @@ export const CASE_STUDIES: {
 }[] = [];
 
 // ============================================
-// TESTIMONIALS (Homepage Component)
-// Only real, verified client testimonials
+// IMPACT METRICS (Social Mission)
+// Used by ImpactModule component
 // ============================================
-export const TESTIMONIALS: {
-  id: string;
-  name: string;
-  role: string;
-  location: string;
-  quote: string;
-  rating: number;
-  videoSrc?: string;
-}[] = [
-  // NOTE: Add real client testimonials here as they are collected.
-  // Only include clients who have given permission and can be verified.
-  // Video testimonials are preferred — reference /videos/testimonials/ directory.
+export const IMPACT_METRICS = [
+  { value: "20+", label: "Years of Experience" },
+  { value: "50+", label: "Business Models Covered" },
+  { value: "100%", label: "Participant Ownership" },
+  { value: "35+", label: "Communities Served" },
 ];
 
 // ============================================
-// STATS (For Case Studies Page)
-// Aggregate metrics across all clients
-// ============================================
-export const AGGREGATE_STATS = {
-  yearsExperience: "20+",
-  businessModels: "50+",
-  clientOwnership: "100%",
-  launchGuarantee: "120 days",
-};
-
-// ============================================
 // NONPROFIT COMPLIANCE DATA
-// Single source of truth for all compliance copy
+// Single source of truth for 501(c)(3) disclosures used site-wide.
 // ============================================
 export const NONPROFIT = {
   name: "Azgari Foundation",
@@ -662,46 +387,27 @@ export const NONPROFIT = {
   // EIN: 9-digit XX-XXXXXXX format, confirmed by Foundation leadership.
   ein: "41-2896092",
 
-  // Full charitable mission statement (used to lead every page)
+  // Full charitable mission statement (leads every page).
   mission:
     "Azgari Foundation is a 501(c)(3) nonprofit organization whose mission is to increase economic mobility, expand access to business ownership, and create jobs in underserved communities through entrepreneurship education, mentorship, and workforce development programs.",
 
-  // Short mission (for tight spaces like footer tagline)
+  // Short mission (tight spaces).
   missionShort:
     "Entrepreneurship education, mentorship & workforce development for economic mobility and community job creation.",
 
-  // Revenue reinvestment disclosure (BRD §5.2, §10)
+  // Reinvestment disclosure — no specific tuition amount referenced on .org.
   reinvestmentStatement:
-    "As a 501(c)(3) nonprofit, program tuition funds educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
+    "As a 501(c)(3) nonprofit, Foundation revenue funds charitable educational services, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
 
-  // Global legal disclosure (BRD §10) — rendered site-wide in the footer
+  // Global legal disclosure (rendered site-wide in the footer).
   legalDisclosure:
-    "Azgari Foundation is a tax-exempt nonprofit organization under Section 501(c)(3) of the Internal Revenue Code. Program tuition supports educational services, scholarships, and workforce development initiatives.",
+    "Azgari Foundation is a tax-exempt nonprofit organization under Section 501(c)(3) of the Internal Revenue Code. Foundation revenue supports charitable educational services, scholarships, and workforce development initiatives.",
 
-  // Tuition-justification language appended beneath every tuition mention
-  tuitionJustification:
-    "Program tuition supports: educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
-
-  // Scholarship allocation statement (replaces "10% of enrollments" language)
+  // Scholarship allocation statement.
   scholarshipAllocation:
-    "A meaningful portion of all program tuition is allocated directly to scholarships and free programming for underserved founders — including aging-out foster youth, veterans, single parents, and first-generation entrepreneurs from underserved communities.",
+    "A meaningful portion of Foundation revenue is allocated directly to scholarships and free programming for underserved founders — including aging-out foster youth, veterans, single parents, and first-generation entrepreneurs from underserved communities.",
 
-  // Program commitment (replaces "guarantee" language)
-  programCommitment:
-    "Program Commitment: If a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met.",
-
-  // Results disclaimer (FTC-safe) — required on any outcome-mentioning page
+  // Results disclaimer (FTC-safe) — required on any page that mentions outcomes.
   resultsDisclaimer:
     "Individual results vary based on effort, market conditions, and capital. Azgari Foundation does not guarantee any specific level of income or business success.",
 };
-
-// ============================================
-// IMPACT METRICS (Social Mission)
-// Used by ImpactModule component
-// ============================================
-export const IMPACT_METRICS = [
-  { value: "20+", label: "Years of Experience" },
-  { value: "50+", label: "Business Models Available" },
-  { value: "100%", label: "Client Ownership" },
-  { value: "35+", label: "Communities Served" },
-];
