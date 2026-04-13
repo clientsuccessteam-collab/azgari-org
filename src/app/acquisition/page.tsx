@@ -1,79 +1,80 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GHL_LINKS } from "@/lib/links";
+import MissionBanner from "@/components/MissionBanner";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 const costOfBadAcquisition = [
   {
     cost: "$30K–$80K",
     label: "Overpaying Without Proper Valuation",
-    detail: "First-time buyers overpay by 15–40% without professional deal analysis. On a $200K acquisition, that's $30K–$80K you'll never recover — and it kills your cash flow from day one.",
+    detail: "First-time buyers can overpay by 15–40% without rigorous deal analysis. On a $200K acquisition, that is $30K–$80K of avoidable cost. Our curriculum covers valuation fundamentals so participants can assess deals accurately.",
   },
   {
     cost: "$50K–$200K+",
     label: "Buying a Business With Hidden Problems",
-    detail: "Undisclosed liabilities, inflated revenue, key employee departures, equipment that needs replacing. Bad due diligence doesn't just cost money — it can wipe out your entire investment.",
+    detail: "Undisclosed liabilities, inflated revenue, key employee departures, and aging equipment are common due-diligence failures. Our curriculum covers structured due diligence to help participants surface these risks before closing.",
   },
   {
     cost: "$5K–$15K",
     label: "Failed SBA Applications",
-    detail: "42% of SBA loan applications are denied on first submission. Each rejection costs months of delays, application fees, and lost deals. The right packaging gets approved the first time.",
+    detail: "A significant share of SBA loan applications are denied on first submission. Each rejection costs time, application fees, and lost deals. Our curriculum covers funding readiness and SBA documentation so participants can submit stronger applications.",
   },
   {
     cost: "6–18 Months",
     label: "Searching Alone Without a Network",
-    detail: "Good deals don't sit on BizBuySell. They're found through broker relationships, off-market networks, and industry connections. Solo searchers waste 6–18 months looking in the wrong places.",
+    detail: "Quality deals are often sourced through broker relationships, off-market networks, and industry connections. Our curriculum covers deal-sourcing strategies and the networks participants can build to shorten their search.",
   },
 ];
 
 const whyBuyReasons = [
   {
-    metric: "$0 → $300K+",
-    title: "Immediate Revenue",
-    desc: "No 12–18 month ramp-up. You acquire a business already generating $200K–$500K+ in annual revenue and start collecting income from day one.",
+    metric: "Existing Revenue",
+    title: "Established Cash Flow",
+    desc: "Acquiring an established business can mean inheriting existing revenue streams rather than building from zero. Outcomes vary significantly based on deal quality and market conditions.",
   },
   {
-    metric: "90%",
-    title: "SBA Finances 90%",
-    desc: "SBA 7(a) loans cover up to 90% of acquisition cost. A $200K business may only need $20K–$30K out of pocket — less than most franchise fees.",
+    metric: "Up to 90%",
+    title: "SBA 7(a) Financing",
+    desc: "SBA 7(a) loans may cover up to 90% of acquisition cost. Our curriculum covers funding readiness and how to position an application for lender review.",
   },
   {
     metric: "2–3x",
-    title: "Built-In Asset Value",
-    desc: "You're buying a sellable asset worth 2–3x annual profit. A business earning $100K/year in profit is worth $200K–$300K the day you buy it.",
+    title: "Typical Valuation Range",
+    desc: "Small service businesses commonly trade at multiples of 2–3x annual earnings. Our curriculum covers how these multiples work and how to evaluate asking prices.",
   },
   {
     metric: "Day 1",
-    title: "Customers, Staff & Systems",
-    desc: "No hiring from scratch, no building a customer base, no figuring out operations. Everything is already running — you just step in and improve.",
+    title: "Existing Team & Systems",
+    desc: "An acquired business often comes with an existing team, customer base, and operational systems. The curriculum covers how to evaluate those assets and plan the ownership transition.",
   },
 ];
 
 const processSteps = [
   {
     number: 1,
-    title: "Define Your Criteria",
-    desc: "Industry, location, revenue range, lifestyle goals, and capital. We match your profile to the right type of acquisition.",
+    title: "Define Acquisition Criteria",
+    desc: "The curriculum covers how to define industry, location, revenue range, lifestyle goals, and capital — and how to match a participant profile to the right type of acquisition.",
   },
   {
     number: 2,
-    title: "Source & Screen",
-    desc: "We tap broker networks, off-market leads, and industry contacts to surface deals that match — then filter for quality before you see them.",
+    title: "Source & Screen Deals",
+    desc: "Participants learn to use broker networks, off-market leads, and industry contacts to surface deals, then apply screening frameworks to filter for quality.",
   },
   {
     number: 3,
     title: "Due Diligence & Valuation",
-    desc: "Financial analysis, operational review, customer concentration risk, equipment assessment, and fair market valuation. No surprises after closing.",
+    desc: "The curriculum covers financial analysis, operational review, customer concentration risk, equipment assessment, and fair market valuation methods.",
   },
   {
     number: 4,
     title: "SBA Loan Packaging",
-    desc: "We prepare your full loan package — business plan, projections, documentation — and introduce you to SBA lenders who fund acquisitions.",
+    desc: "Participants are guided through preparing a full loan package — business plan, projections, documentation — and understanding how SBA lenders evaluate acquisition financing.",
   },
   {
     number: 5,
     title: "Negotiate, Close & Transition",
-    desc: "Deal structuring, seller negotiations, closing coordination, and 90-day post-close support to ensure a smooth ownership transfer.",
+    desc: "Mentors guide participants through deal structuring, seller negotiations, closing coordination, and the 90-day post-close transition period.",
   },
 ];
 
@@ -81,95 +82,96 @@ const advisorComparison = [
   {
     name: "Business Broker",
     cost: "$15K–$50K",
-    detail: "10–12% of sale price (paid by seller, but inflates asking price). They represent the seller, not you.",
-    downside: "Their incentive is to close fast at the highest price — not to protect your interests.",
+    detail: "Typically paid 10–12% of sale price (paid by the seller, but often factored into the asking price). Brokers generally represent the seller.",
+    downside: "Understanding broker incentives is part of learning to evaluate deals objectively.",
   },
   {
     name: "M&A Attorney",
     cost: "$10K–$25K",
-    detail: "$350–$750/hr for deal review, LOI drafting, and closing docs. Essential but expensive, and they don't find deals.",
-    downside: "Handles legal only. No deal sourcing, no valuation, no SBA guidance, no post-close support.",
+    detail: "$350–$750/hr for deal review, LOI drafting, and closing documents. Legal counsel is essential in any acquisition.",
+    downside: "Attorneys handle legal work only — understanding how that fits into overall due diligence is part of the curriculum.",
   },
   {
     name: "CPA / Accountant",
     cost: "$3K–$8K",
-    detail: "Financial due diligence, tax review, and projection modeling. Important but narrow scope.",
-    downside: "Reviews the numbers but can't assess operations, customer risk, or market position.",
+    detail: "Financial due diligence, tax review, and projection modeling. Narrow in scope but important.",
+    downside: "CPAs review the numbers — the curriculum covers how operational and market risk fit alongside the financials.",
   },
   {
     name: "Business Valuator",
     cost: "$3K–$10K",
-    detail: "Formal business appraisal required by some lenders. Takes 2–4 weeks.",
-    downside: "Gives you a number. Doesn't tell you if the business is actually worth buying.",
+    detail: "Formal business appraisal required by some lenders. Typically takes 2–4 weeks.",
+    downside: "A valuation is one data point — the curriculum covers how to contextualize it in an acquisition decision.",
   },
 ];
 
 const valueStackItems = [
   {
-    item: "Acquisition Criteria Development & Business Matching",
-    separate: "$2,000–$5,000",
-    detail: "Acquisition consultants charge $200–$400/hr for search strategy",
+    item: "Acquisition Criteria Development Curriculum",
+    separate: "Educational",
+    detail: "Coursework on defining search strategy and matching models to participant capacity",
   },
   {
-    item: "Deal Sourcing (Broker Network + Off-Market Access)",
-    separate: "$5,000–$15,000",
-    detail: "Buyer's agents charge retainers plus success fees for deal flow",
+    item: "Deal Sourcing Coursework (Broker + Off-Market Networks)",
+    separate: "Educational",
+    detail: "How to build broker relationships and identify off-market opportunities",
   },
   {
-    item: "Financial Due Diligence & Valuation Analysis",
-    separate: "$5,000–$15,000",
-    detail: "CPAs + valuators charge separately for financials and appraisals",
+    item: "Financial Due Diligence & Valuation Coursework",
+    separate: "Educational",
+    detail: "Frameworks for financial review, quality-of-earnings analysis, and valuation",
   },
   {
-    item: "Operational Due Diligence (Staff, Systems, Risk)",
-    separate: "$3,000–$8,000",
-    detail: "Operations consultants charge $200–$500/hr for business assessment",
+    item: "Operational Due Diligence Coursework (Staff, Systems, Risk)",
+    separate: "Educational",
+    detail: "How to assess operations, customer concentration, and transition risk",
   },
   {
-    item: "SBA Loan Packaging & Lender Introductions",
-    separate: "$3,000–$7,000",
-    detail: "SBA consultants and loan brokers charge 1–3% of loan amount",
+    item: "SBA Funding Readiness Curriculum",
+    separate: "Educational",
+    detail: "Loan packaging, documentation standards, and lender-review expectations",
   },
   {
-    item: "Deal Structuring & Negotiation Support",
-    separate: "$5,000–$15,000",
-    detail: "M&A advisors charge 3–5% of deal value for negotiation",
+    item: "Deal Structuring & Negotiation Training",
+    separate: "Educational",
+    detail: "Coursework on LOI terms, seller notes, earnouts, and structure",
   },
   {
-    item: "90-Day Post-Close Transition Support",
-    separate: "$5,000–$10,000",
-    detail: "Business coaches charge $1,000–$2,500/month for transition guidance",
+    item: "90-Day Post-Close Transition Mentorship",
+    separate: "Educational",
+    detail: "Ongoing mentor support during the ownership transition period",
   },
   {
-    item: "Ongoing Access to Azgari&apos;s Deal Network",
-    separate: "Priceless",
-    detail: "No other advisor gives you ongoing access to their pipeline",
+    item: "Access to Foundation Mentor Community",
+    separate: "Educational",
+    detail: "Peer and mentor community for ongoing learning and accountability",
   },
 ];
 
 const acquisitionCaseStudy = {
-  name: "Hypothetical Example",
-  location: "Based on typical SBA acquisition",
+  name: "Illustrative Educational Example",
+  location: "Representative SBA-financed acquisition scenario",
   business: "Commercial HVAC Service Company",
   purchasePrice: "$250K",
   downPayment: "$30K",
   annualRevenue: "$350K",
   ownerTakeHome: "$120K",
-  timeline: "Typical timeline: 60–90 days from LOI to close",
-  quote: "This is a representative example of a typical SBA-financed service business acquisition. Actual results vary significantly based on deal quality, market conditions, and buyer execution. We help you find, evaluate, and close the right deal for your situation.",
+  timeline: "Illustrative timeline: 60–90 days from LOI to close",
+  quote: "This is an illustrative example used in the curriculum to show how an SBA-financed acquisition can be structured. It is not a guarantee of outcomes. Individual results vary based on effort, market conditions, and capital.",
 };
 
 const idealCandidates = [
   { text: "$50K+ available for down payment (or SBA-financeable)" },
-  { text: "Good credit (680+ for SBA qualification)" },
-  { text: "Management or industry experience preferred (not required)" },
-  { text: "Ready to be an owner-operator or install a manager" },
+  { text: "Credit position that supports SBA qualification (typically 680+)" },
+  { text: "Management or industry experience helpful (not required)" },
+  { text: "Prepared to operate the business or install a manager" },
 ];
 
 export default function AcquisitionPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="strip" />
       <main>
         {/* Hero Section */}
         <section
@@ -181,26 +183,29 @@ export default function AcquisitionPage() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              ACQUISITION ADVISORY
+              501(c)(3) ENTREPRENEURSHIP EDUCATION
             </span>
 
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
               style={{ color: 'var(--color-primary)' }}
             >
-              Why Build From Scratch<br />When You Can Buy Proven Cash Flow?
+              Business Acquisition Curriculum
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-              We help you find, evaluate, and acquire local service businesses using SBA financing — with revenue from day one and 90% lender coverage.
+              Understanding your options for business ownership education. Our acquisition curriculum guides participants through finding, evaluating, and acquiring established local service businesses using SBA financing.
+            </p>
+            <p className="text-sm max-w-2xl mx-auto mb-4 text-gray-500 italic">
+              {NONPROFIT.resultsDisclaimer}
             </p>
             <p className="text-sm font-semibold max-w-2xl mx-auto mb-8" style={{ color: 'var(--color-accent)' }}>
-              Average acquisition: $200K–$400K revenue business. Average down payment: $20K–$50K via SBA 7(a).
+              Illustrative acquisition range covered in the curriculum: $200K–$400K revenue businesses; typical SBA 7(a) down payment: $20K–$50K.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                Schedule a Discovery Call →
+                Apply for a Strategy Session →
               </Link>
               <Link href="#value" className="btn btn-secondary">
                 See What&apos;s Included
@@ -209,13 +214,13 @@ export default function AcquisitionPage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-600">
               <span className="flex items-center justify-center gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Revenue From Day One
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Mentor-Supported Curriculum
               </span>
               <span className="flex items-center justify-center gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> SBA Finances Up to 90%
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> SBA Funding Readiness Education
               </span>
               <span className="flex items-center justify-center gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 90-Day Post-Close Support
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> 90-Day Post-Close Mentorship
               </span>
             </div>
           </div>
@@ -227,15 +232,15 @@ export default function AcquisitionPage() {
             <div className="text-center mb-4">
               <span
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
-                style={{ backgroundColor: '#FEE2E2', color: '#991B1B' }}
+                style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                THE COST OF GETTING IT WRONG
+                WHY STRUCTURED EDUCATION MATTERS
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                A Bad Acquisition Can Cost You Everything
+                Common Pitfalls Our Curriculum Addresses
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Buying a business without expert guidance isn&apos;t just risky — it&apos;s expensive. Here&apos;s what first-time buyers lose when they go it alone:
+                Attempting a business acquisition without structured education can be costly. Here are common pitfalls first-time buyers encounter that our curriculum is designed to help participants avoid:
               </p>
             </div>
 
@@ -261,10 +266,10 @@ export default function AcquisitionPage() {
                 style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
               >
                 <p className="text-lg font-semibold mb-2">
-                  A $2,500 retainer protects you from $50K–$200K+ in acquisition mistakes.
+                  Structured entrepreneurship education can help participants avoid common, costly acquisition mistakes.
                 </p>
-                <p className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
-                  That&apos;s the most important investment you&apos;ll make in this process.
+                <p className="text-base md:text-lg" style={{ color: 'var(--color-accent)' }}>
+                  That educational foundation is the focus of the Foundation&apos;s acquisition curriculum.
                 </p>
               </div>
             </div>
@@ -279,17 +284,16 @@ export default function AcquisitionPage() {
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                BUY VS. BUILD
+                ACQUIRE VS. BUILD
               </span>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Why Buy Instead of Starting From Zero?
+                Understanding Acquisition as a Pathway
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Starting from scratch means 12–18 months before profitability and an 80% failure rate.
-                Buying an existing business means proven revenue, customers, and systems from day one.
+                Starting a business from scratch and acquiring an existing business are both valid paths to ownership. Our curriculum covers both — this section introduces key differences participants will learn to evaluate.
               </p>
             </div>
 
@@ -321,26 +325,26 @@ export default function AcquisitionPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                Acquisition vs. Franchise: The Real Numbers
+                Acquisition vs. Franchise: Understanding Your Options
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                A franchise gives you a logo and rules. An acquisition gives you proven revenue and full ownership.
+                Understanding your options for business ownership education. The table below summarizes common differences between acquiring an independent business and purchasing a franchise, for educational context.
               </p>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-3 gap-4 text-center mb-2">
                 <div></div>
                 <div className="font-bold text-sm py-2 rounded-t-lg" style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}>Acquire a Business</div>
-                <div className="font-bold text-sm py-2 rounded-t-lg bg-gray-100 text-gray-600">Buy a Franchise</div>
+                <div className="font-bold text-sm py-2 rounded-t-lg bg-gray-100 text-gray-600">Franchise Purchase</div>
               </div>
               {[
-                { label: "Upfront Cost", acquire: "$20K–$50K down (SBA)", franchise: "$50K–$300K+ franchise fee" },
-                { label: "Revenue Day One", acquire: "Yes — existing customers", franchise: "No — you start from zero" },
-                { label: "Ongoing Fees", acquire: "None — ever", franchise: "3–8% royalties + ad fees forever" },
-                { label: "10-Year Royalty Cost", acquire: "$0", franchise: "$90K–$240K (on $300K revenue)" },
-                { label: "Ownership", acquire: "100% yours to sell anytime", franchise: "You're a licensee" },
-                { label: "Flexibility", acquire: "Full control of everything", franchise: "Must follow their playbook" },
-                { label: "Exit Strategy", acquire: "Sell at full market value", franchise: "Requires franchisor approval" },
+                { label: "Typical Upfront Cost", acquire: "$20K–$50K down (SBA)", franchise: "$50K–$300K+ franchise fee" },
+                { label: "Existing Revenue at Start", acquire: "Often — established customers", franchise: "No — customer base is built from zero" },
+                { label: "Ongoing Fees", acquire: "None", franchise: "Typically 3–8% royalties plus marketing fees" },
+                { label: "Illustrative 10-Year Royalty Cost", acquire: "$0", franchise: "$90K–$240K (on $300K revenue)" },
+                { label: "Ownership Structure", acquire: "100% independent ownership", franchise: "Licensee of the franchisor" },
+                { label: "Operational Flexibility", acquire: "Independent operating decisions", franchise: "Guided by franchisor playbook" },
+                { label: "Exit Options", acquire: "Sell independently at market value", franchise: "Subject to franchisor approval" },
               ].map((row, i) => (
                 <div key={i} className="grid grid-cols-3 gap-4 text-sm py-3 border-b border-gray-200">
                   <div className="font-medium text-gray-700 text-left">{row.label}</div>
@@ -349,8 +353,8 @@ export default function AcquisitionPage() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-sm mt-8 max-w-2xl mx-auto font-semibold" style={{ color: 'var(--color-primary)' }}>
-              On a $300K-revenue business, franchise royalties alone cost $90K–$240K over 10 years. With an acquisition, you keep every dollar.
+            <p className="text-center text-sm mt-8 max-w-2xl mx-auto" style={{ color: 'var(--color-primary)' }}>
+              On an illustrative $300K-revenue business, franchise royalties over 10 years commonly range $90K–$240K. Independent acquisition does not carry royalty obligations. Individual results vary.
             </p>
           </div>
         </section>
@@ -371,10 +375,10 @@ export default function AcquisitionPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
-              Our 5-Step Acquisition Process
+              The 5-Step Acquisition Curriculum
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto mb-16">
-              From criteria to closing and beyond — we guide you through every stage.
+              From criteria through closing and beyond — mentors guide participants through each stage of the educational program.
             </p>
 
             <div className="grid md:grid-cols-5 gap-6">
@@ -407,13 +411,13 @@ export default function AcquisitionPage() {
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                COMPARE YOUR OPTIONS
+                UNDERSTANDING ADVISOR ROLES
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                What You&apos;d Pay Hiring Each Advisor Separately
+                Understanding the Professionals Involved in an Acquisition
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Most buyers cobble together 4–5 separate professionals — none of whom talk to each other. Here&apos;s what that actually costs:
+                Our curriculum covers the different professionals typically involved in a business acquisition, their roles, typical costs, and how to evaluate their input. Participants learn how to coordinate across these advisors rather than replace them.
               </p>
             </div>
 
@@ -435,10 +439,10 @@ export default function AcquisitionPage() {
             </div>
 
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-sm text-gray-500 mb-2">Total cost hiring separately:</p>
-              <p className="text-3xl font-bold text-gray-400 line-through mb-4">$31,000–$93,000</p>
-              <p className="font-semibold" style={{ color: 'var(--color-primary)' }}>
-                And none of them give you a unified system, post-close support, or ongoing deal access.
+              <p className="text-sm text-gray-500 mb-2">Typical combined professional fees for a full acquisition:</p>
+              <p className="text-3xl font-bold text-gray-500 mb-4">$31,000–$93,000</p>
+              <p style={{ color: 'var(--color-primary)' }}>
+                Our curriculum teaches participants how to evaluate and coordinate these professionals — not to replace them — while building the foundational knowledge to oversee the process.
               </p>
             </div>
           </div>
@@ -449,13 +453,13 @@ export default function AcquisitionPage() {
           <div className="max-w-4xl mx-auto px-6">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-white/20 text-white">
-                WHAT YOU ACTUALLY GET
+                WHAT THE CURRICULUM INCLUDES
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Everything Included in Acquisition Advisory
+                What&apos;s Covered in the Acquisition Curriculum
               </h2>
               <p className="text-white/70 max-w-2xl mx-auto">
-                One team. One retainer. Every service you need from search to close — and 90 days beyond.
+                A structured educational program with mentor support — from criteria-setting through closing and the 90-day post-close transition period.
               </p>
             </div>
 
@@ -479,54 +483,47 @@ export default function AcquisitionPage() {
 
               <div className="border-t-2 border-gray-200">
                 <div className="p-6 sm:p-8 text-center">
-                  <p className="text-sm text-gray-500 mb-2">
-                    Total value if hired separately:
-                  </p>
-                  <p className="text-3xl font-bold text-gray-400 line-through mb-4">
-                    $28,000–$75,000
-                  </p>
-
                   <p className="text-sm font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>
-                    Your advisory retainer:
+                    Program Tuition
                   </p>
                   <p className="text-5xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>
-                    $2,500
+                    $50,000
                   </p>
-                  <p className="text-sm text-gray-500 mb-2">
-                    + success fee on closed deals (aligned with your outcome)
+                  <p className="text-sm text-gray-600 mb-4 max-w-xl mx-auto">
+                    {NONPROFIT.tuitionJustification}
                   </p>
-                  <p className="text-xs text-gray-400 mb-6">
-                    Retainer is applied toward success fee — so you never pay twice.
+                  <p className="text-xs text-gray-500 mb-6 max-w-xl mx-auto italic">
+                    {NONPROFIT.resultsDisclaimer}
                   </p>
 
-                  {/* ROI Box */}
+                  {/* Illustrative Example Box */}
                   <div
                     className="rounded-xl p-5 mb-6 max-w-lg mx-auto"
                     style={{ backgroundColor: 'var(--color-cream)' }}
                   >
                     <p className="text-sm font-semibold mb-3" style={{ color: 'var(--color-primary)' }}>
-                      The math on a typical acquisition:
+                      Illustrative curriculum example:
                     </p>
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
                         <div className="text-lg font-bold" style={{ color: 'var(--color-primary)' }}>$30K</div>
-                        <div className="text-xs text-gray-500">Down Payment</div>
+                        <div className="text-xs text-gray-500">Illustrative Down Payment</div>
                       </div>
                       <div className="flex items-center justify-center">
                         <span className="text-xl" style={{ color: 'var(--color-accent)' }}>→</span>
                       </div>
                       <div>
                         <div className="text-lg font-bold" style={{ color: 'var(--color-accent)' }}>$250K</div>
-                        <div className="text-xs text-gray-500">Business Value</div>
+                        <div className="text-xs text-gray-500">Illustrative Deal Size</div>
                       </div>
                     </div>
                     <p className="text-center mt-3 text-xs text-gray-500">
-                      Hypothetical example. Actual results vary based on deal, market, and execution.
+                      Educational illustration only. Individual results vary based on effort, market conditions, and capital.
                     </p>
                   </div>
 
                   <Link href={GHL_LINKS.qualify} className="btn btn-primary text-lg px-10 py-4">
-                    Schedule a Discovery Call →
+                    Apply for a Strategy Session →
                   </Link>
                 </div>
               </div>
@@ -542,11 +539,14 @@ export default function AcquisitionPage() {
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                REAL ACQUISITION
+                ILLUSTRATIVE CURRICULUM EXAMPLE
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-                What a Typical Acquisition Looks Like
+                What an Acquisition Scenario Can Look Like
               </h2>
+              <p className="text-sm text-gray-500 italic max-w-2xl mx-auto">
+                {NONPROFIT.resultsDisclaimer}
+              </p>
             </div>
 
             <div
@@ -594,7 +594,7 @@ export default function AcquisitionPage() {
                 </blockquote>
 
                 <p className="text-xs text-gray-400 mt-4 italic">
-                  *Hypothetical example for illustrative purposes. Individual results vary based on deal, market, and execution.
+                  *Illustrative educational example only. Individual results vary based on effort, market conditions, and capital. Azgari Foundation does not guarantee any specific level of income or business success.
                 </p>
               </div>
             </div>
@@ -609,19 +609,19 @@ export default function AcquisitionPage() {
                 className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
                 style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
               >
-                YOUR INVESTMENT
+                PROGRAM TUITION
               </span>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Aligned Pricing — We Only Win When You Win
+                Acquisition Curriculum Tuition
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mb-2">
-                Our fee structure is designed so our incentives match yours. The retainer covers our work to find you the right deal. The success fee means we&apos;re invested in your outcome.
+                The acquisition curriculum is offered through Azgari Foundation&apos;s flagship entrepreneurship education program. Tuition supports educational services for enrolled participants and the Foundation&apos;s charitable mission.
               </p>
-              <p className="text-sm font-semibold max-w-xl mx-auto" style={{ color: 'var(--color-accent)' }}>
-                Our retainer is a fraction of what you&apos;d pay hiring advisors separately — and it credits toward your success fee.
+              <p className="text-sm max-w-xl mx-auto" style={{ color: 'var(--color-accent)' }}>
+                {NONPROFIT.tuitionJustification}
               </p>
             </div>
 
@@ -637,30 +637,17 @@ export default function AcquisitionPage() {
                         className="text-xl font-bold"
                         style={{ color: 'var(--color-primary)' }}
                       >
-                        Advisory Retainer
+                        Acquisition Curriculum (Coursework Phase)
                       </h3>
-                      <p className="text-xs text-gray-500">Applied toward success fee if you close</p>
+                      <p className="text-xs text-gray-500">Curriculum foundations and mentor-guided search preparation</p>
                     </div>
-                    <span
-                      className="text-3xl font-bold"
-                      style={{ color: 'var(--color-accent)' }}
-                    >
-                      $2,500
-                    </span>
                   </div>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Acquisition criteria development</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Deal sourcing (broker + off-market network)</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Initial screening and shortlisting</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Preliminary financial review</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Acquisition criteria development coursework</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Deal sourcing coursework (broker + off-market networks)</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Initial screening frameworks and shortlisting</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Preliminary financial review instruction</li>
                   </ul>
-                  <div
-                    className="mt-4 rounded-lg p-3 text-xs"
-                    style={{ backgroundColor: 'var(--color-cream)' }}
-                  >
-                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Value context:</span>{" "}
-                    <span className="text-gray-600">Hiring these services separately costs $7K–$20K. The retainer credits toward your success fee — so you never pay twice.</span>
-                  </div>
                 </div>
 
                 <div
@@ -673,32 +660,29 @@ export default function AcquisitionPage() {
                         className="text-xl font-bold"
                         style={{ color: 'var(--color-primary)' }}
                       >
-                        Success Fee
+                        Deal Execution Curriculum (Practicum Phase)
                       </h3>
-                      <p className="text-xs text-gray-500">Only on closed acquisitions</p>
+                      <p className="text-xs text-gray-500">Mentor-supported practicum through close and transition</p>
                     </div>
-                    <span className="text-lg font-semibold text-gray-600">
-                      % of deal value
-                    </span>
                   </div>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Full due diligence and valuation</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> SBA loan packaging and lender intros</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Deal structuring and negotiation</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Closing coordination</li>
-                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> 90-day post-close transition support</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Full due diligence and valuation coursework</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> SBA funding readiness education</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Deal structuring and negotiation training</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> Closing coordination mentorship</li>
+                    <li className="flex gap-2"><span style={{ color: 'var(--color-primary)' }}>✓</span> 90-day post-close transition mentorship</li>
                   </ul>
                   <div
                     className="mt-4 rounded-lg p-3 text-xs"
                     style={{ backgroundColor: 'var(--color-cream)' }}
                   >
-                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Alignment:</span>{" "}
-                    <span className="text-gray-600">We only earn the success fee when you close a deal you&apos;re happy with. If we don&apos;t find the right business, you owe nothing beyond the retainer.</span>
+                    <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Program Commitment:</span>{" "}
+                    <span className="text-gray-600">{NONPROFIT.programCommitment}</span>
                   </div>
                 </div>
 
                 <p className="text-gray-500 text-sm italic">
-                  Every acquisition is unique. Schedule a call to discuss your specific goals, budget, and timeline.
+                  Every participant&apos;s path is unique. Apply for a strategy session to discuss goals, capital, and timeline with a Foundation mentor.
                 </p>
               </div>
 
@@ -708,10 +692,10 @@ export default function AcquisitionPage() {
                 style={{ backgroundColor: 'var(--color-primary)' }}
               >
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  Is Acquisition Right for You?
+                  Is the Acquisition Curriculum a Fit for You?
                 </h3>
                 <p className="text-white/70 text-sm mb-8">
-                  Our acquisition advisory works best for individuals who meet these criteria:
+                  The acquisition curriculum tends to fit participants who meet these criteria:
                 </p>
 
                 <div className="space-y-4">
@@ -729,16 +713,16 @@ export default function AcquisitionPage() {
 
                 <div className="mt-6 p-4 rounded-xl" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
                   <p className="text-sm" style={{ color: 'var(--color-accent)' }}>
-                    Don&apos;t have $50K+ saved? SBA 7(a) loans finance up to 90% of acquisition price. A $200K business may only need $20K–$30K down — we guide you through the entire SBA process.
+                    SBA 7(a) loans may finance up to 90% of acquisition price. The curriculum covers SBA funding readiness and how to structure an application for lender review.
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-white/20 space-y-4">
                   <Link href={GHL_LINKS.qualify} className="btn btn-primary w-full text-center">
-                    Schedule a Discovery Call →
+                    Apply for a Strategy Session →
                   </Link>
                   <p className="text-white/50 text-xs text-center">
-                    Free 30-minute call. No obligation. We&apos;ll tell you honestly if acquisition is the right path for you.
+                    Educational conversation only. No obligation. A mentor will discuss whether the acquisition curriculum is a fit for your situation.
                   </p>
                 </div>
               </div>
@@ -753,24 +737,27 @@ export default function AcquisitionPage() {
         >
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Own a Profitable Business — Without Building From Scratch?
+              Learn the Acquisition Pathway to Business Ownership
             </h2>
             <p className="opacity-90 max-w-2xl mx-auto mb-4">
-              Acquire an established business with proven cash flow, existing customers, and SBA financing covering up to 90%.
+              Our acquisition curriculum guides participants through evaluating, financing, and acquiring established local service businesses — grounded in structured education and mentorship.
             </p>
-            <p className="text-sm mb-8" style={{ color: 'var(--color-accent)' }}>
-              Average acquisition: $200K–$400K revenue. Average down payment: $20K–$50K. Revenue from day one.
+            <p className="text-sm mb-4" style={{ color: 'var(--color-accent)' }}>
+              Curriculum scope: service businesses typically in the $200K–$400K revenue range; SBA 7(a) pathways covered in coursework.
+            </p>
+            <p className="text-xs mb-8 text-white/70 italic max-w-2xl mx-auto">
+              {NONPROFIT.resultsDisclaimer}
             </p>
 
             <Link
               href={GHL_LINKS.qualify}
               className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
             >
-              Schedule a Discovery Call →
+              Apply for a Strategy Session →
             </Link>
 
             <p className="text-white/60 text-sm mt-6">
-              Free 30-minute call &bull; No obligation &bull; We&apos;ll tell you if acquisition is right for you
+              Educational conversation only &bull; No obligation &bull; A mentor will help you understand whether the curriculum is a fit
             </p>
           </div>
         </section>

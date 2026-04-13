@@ -1,8 +1,8 @@
 const commitments = [
-  "We build your business using frameworks proven over 20+ years — not theories, not hype",
-  "Our team handles execution — entity setup, branding, marketing, hiring, operations",
-  "Your success depends on choosing the right market and business model — we use data to eliminate guesswork",
-  "We\u2019re not a franchise and not a lender — you own 100% of what we build, and SBA decisions are made by independent lenders",
+  "Our curriculum is grounded in frameworks refined over 20+ years of hands-on service business experience",
+  "Participants are guided through every module — entity setup, branding, marketing, hiring, operations — with mentor support",
+  "Program outcomes depend on market selection and business model fit; our curriculum uses data to inform those decisions",
+  "The Foundation is a 501(c)(3) nonprofit, not a franchise or a lender — participants own 100% of the businesses they build, and SBA approval is determined solely by independent lenders",
 ];
 
 export default function Transparency() {

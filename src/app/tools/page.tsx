@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import { GHL_LINKS, getToolsByCategory } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Business Tools & Templates | Azgari Foundation",
-  description: "Battle-tested templates, calculators, and guides used by successful service business owners.",
+  title: "Educational Tools & Templates | Azgari Foundation",
+  description: "Educational tools, templates, and calculators used in Azgari Foundation coursework to support entrepreneurship education.",
 };
 
 export default function ToolsPage() {
@@ -18,47 +19,48 @@ export default function ToolsPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero */}
-        <section 
-          className="pt-24 md:pt-32 pb-16 text-center"
+        <section
+          className="pt-12 md:pt-16 pb-16 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-4xl mx-auto px-6">
-            <span 
+            <span
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              BUSINESS TOOLS & TEMPLATES
+              501(C)(3) ENTREPRENEURSHIP EDUCATION
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-              Tools to Launch and Scale Your Service Business
+              Educational Tools &amp; Templates
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Battle-tested templates, calculators, and guides used by successful business owners.
+              Educational tools, templates, and calculators used in Foundation coursework to support entrepreneurship learning.
             </p>
           </div>
         </section>
 
-        {/* Free Training Video */}
+        {/* Free Educational Training */}
         <section className="py-16" style={{ backgroundColor: 'var(--color-primary)' }}>
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20 text-white">
-                  FREE TRAINING
+                  FREE EDUCATIONAL TRAINING
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  How to Launch a Profitable Service Business in 180 Days
+                  Educational Training: The 180-Day Service Business Framework
                 </h2>
                 <p className="text-white/80 mb-6">
-                  Watch our free 30-minute training where Azgari Lipshy breaks down the exact 8-step framework we use to build businesses for our clients. Learn which business models work, how to get your first customers, and the #1 mistake that kills new businesses.
+                  Watch a free 30-minute educational training where Azgari Lipshy walks through the 8-step framework the Foundation&apos;s curriculum covers. Learn about common business models, customer acquisition fundamentals, and frequent launch pitfalls.
                 </p>
                 <Link
                   href={GHL_LINKS.qualify}
                   className="btn btn-primary"
                 >
-                  Watch Free Training →
+                  Watch Educational Training →
                 </Link>
                 <p className="text-white/50 text-xs mt-3">Enter your email and phone to get instant access.</p>
               </div>
@@ -67,7 +69,7 @@ export default function ToolsPage() {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 bg-white/20">
                     <span className="text-3xl text-white">▶</span>
                   </div>
-                  <p className="text-white/60 text-sm">Free 30-min training</p>
+                  <p className="text-white/60 text-sm">Free 30-min educational training</p>
                 </div>
               </div>
             </div>
@@ -78,9 +80,9 @@ export default function ToolsPage() {
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-              Free Resources to Get Started
+              Free Educational Resources
             </h2>
-            <p className="text-gray-600 mb-8">Enter your email for instant access — no credit card required</p>
+            <p className="text-gray-600 mb-8">Community education materials — enter your email for instant access, no credit card required</p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {freeTools.map((tool) => (
@@ -108,9 +110,9 @@ export default function ToolsPage() {
         <section className="py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-              Starter Tools
+              Starter Educational Tools
             </h2>
-            <p className="text-gray-600 mb-8">$27–$47 — Essential templates and guides</p>
+            <p className="text-gray-600 mb-8">$27–$47 — Foundational templates and educational guides used in coursework</p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {starterTools.map((tool) => (
@@ -146,9 +148,9 @@ export default function ToolsPage() {
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-              Premium Bundles
+              Premium Educational Bundles
             </h2>
-            <p className="text-gray-600 mb-8">$47–$147 — Comprehensive toolkits</p>
+            <p className="text-gray-600 mb-8">$47–$147 — Comprehensive educational toolkits supporting Foundation coursework</p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {premiumTools.map((tool) => (
@@ -210,14 +212,14 @@ export default function ToolsPage() {
               Not Sure What You Need?
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              Start with our free assessment to discover which tools match your goals.
+              Start with our free educational assessment to discover which tools best match your learning goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={GHL_LINKS.leadMagnets.assessment} className="btn btn-primary">
-                Take Free Assessment
+                Take Free Educational Assessment
               </Link>
               <Link href={GHL_LINKS.forms.bookCall} className="btn btn-secondary">
-                Talk to Our Team
+                Apply for a Strategy Session
               </Link>
             </div>
           </div>

@@ -7,15 +7,15 @@ import Link from 'next/link';
 interface UrgencyItem {
   /** Unique identifier for the item */
   id: string;
-  /** Title of the urgency item */
+  /** Title of the informational item */
   title: string;
-  /** Description explaining the urgency */
+  /** Description providing context */
   description: string;
   /** Optional icon (emoji or string) */
   icon?: string;
-  /** Priority level affecting styling */
+  /** Informational category */
   priority: 'low' | 'medium' | 'high' | 'critical';
-  /** Optional deadline timestamp */
+  /** Optional scheduled date */
   deadline?: Date;
   /** Whether the item is actionable */
   actionable?: boolean;
@@ -28,7 +28,7 @@ interface UrgencyItem {
 interface UrgencyContextPanelProps {
   /** Panel title */
   title?: string;
-  /** Array of urgency items to display */
+  /** Array of informational items to display */
   items: UrgencyItem[];
   /** Optional additional CSS classes */
   className?: string;
@@ -42,7 +42,7 @@ interface UrgencyContextPanelProps {
   onActionTaken?: (itemId: string) => void;
 }
 
-// Constants
+// Neutral informational styling by category
 const PRIORITY_COLORS: Record<UrgencyItem['priority'], { bg: string; border: string; text: string }> = {
   low: {
     bg: 'bg-blue-50',
@@ -50,37 +50,35 @@ const PRIORITY_COLORS: Record<UrgencyItem['priority'], { bg: string; border: str
     text: 'text-blue-700',
   },
   medium: {
-    bg: 'bg-yellow-50',
-    border: 'border-yellow-200',
-    text: 'text-yellow-700',
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-700',
   },
   high: {
-    bg: 'bg-orange-50',
-    border: 'border-orange-200',
-    text: 'text-orange-700',
+    bg: 'bg-emerald-50',
+    border: 'border-emerald-200',
+    text: 'text-emerald-700',
   },
   critical: {
-    bg: 'bg-red-50',
-    border: 'border-red-200',
-    text: 'text-red-700',
+    bg: 'bg-emerald-50',
+    border: 'border-emerald-200',
+    text: 'text-emerald-700',
   },
 };
 
 const PRIORITY_LABELS: Record<UrgencyItem['priority'], string> = {
-  low: 'Low Priority',
-  medium: 'Medium Priority',
-  high: 'High Priority',
-  critical: 'Critical',
+  low: 'Informational',
+  medium: 'Upcoming',
+  high: 'Current Cohort',
+  critical: 'Enrolling Now',
 };
 
 /**
- * UrgencyContextPanel - Displays urgency items with priority-based styling
- * 
- * Use this component to show time-sensitive information, deadlines,
- * or important context that requires user attention.
+ * UrgencyContextPanel - Informational panel displaying current cohort schedule,
+ * upcoming enrollment windows, and relevant educational program updates.
  */
 export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
-  title = 'Urgency Context',
+  title = 'Current Cohort Schedule',
   items,
   className = '',
   maxItems = 5,
@@ -96,16 +94,12 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
 
   const formatDeadline = (date?: Date): string => {
     if (!date) return '';
-    
-    const now = new Date();
-    const diffMs = date.getTime() - now.getTime();
-    const diffHours = Math.ceil(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
-    if (diffHours < 0) return 'Overdue';
-    if (diffHours < 24) return `${diffHours}h remaining`;
-    if (diffDays === 1) return '1 day remaining';
-    return `${diffDays} days remaining`;
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    });
   };
 
   const handleActionClick = (itemId: string): void => {
@@ -113,9 +107,6 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
       onActionTaken(itemId);
     }
   };
-
-  const criticalCount = items.filter((item) => item.priority === 'critical').length;
-  const highCount = items.filter((item) => item.priority === 'high').length;
 
   return (
     <div
@@ -127,27 +118,13 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
         style={{ backgroundColor: 'var(--color-cream)' }}
       >
         <div className="flex items-center gap-3">
-          <span className="text-2xl">⏰</span>
+          <span className="text-2xl">📅</span>
           <h3
             className="text-lg font-bold"
             style={{ color: 'var(--color-primary)' }}
           >
             {title}
           </h3>
-          {(criticalCount > 0 || highCount > 0) && (
-            <span className="flex gap-2">
-              {criticalCount > 0 && (
-                <span className="text-xs font-bold px-2 py-1 rounded-full bg-red-100 text-red-700">
-                  {criticalCount} Critical
-                </span>
-              )}
-              {highCount > 0 && (
-                <span className="text-xs font-bold px-2 py-1 rounded-full bg-orange-100 text-orange-700">
-                  {highCount} High
-                </span>
-              )}
-            </span>
-          )}
         </div>
         {collapsible && (
           <button
@@ -167,8 +144,8 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
         <div className="panel-content">
           {items.length === 0 ? (
             <div className="p-6 text-center text-gray-500">
-              <span className="text-4xl mb-2 block">✅</span>
-              <p>No urgent items at this time</p>
+              <span className="text-4xl mb-2 block">📖</span>
+              <p>No scheduled updates at this time</p>
             </div>
           ) : (
             <>
@@ -199,14 +176,8 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
                             {item.description}
                           </p>
                           {item.deadline && (
-                            <p
-                              className={`text-xs mt-2 font-medium ${
-                                item.deadline < new Date()
-                                  ? 'text-red-600'
-                                  : 'text-gray-500'
-                              }`}
-                            >
-                              📅 {formatDeadline(item.deadline)}
+                            <p className="text-xs mt-2 font-medium text-gray-500">
+                              📆 {formatDeadline(item.deadline)}
                             </p>
                           )}
                           {item.actionable && item.actionHref && (
@@ -217,7 +188,7 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
                                 className="inline-flex items-center gap-1 text-sm font-medium"
                                 style={{ color: 'var(--color-accent)' }}
                               >
-                                {item.actionText || 'Take Action'} →
+                                {item.actionText || 'Learn More'} →
                               </Link>
                             </div>
                           )}
@@ -250,12 +221,7 @@ export const UrgencyContextPanel: React.FC<UrgencyContextPanelProps> = ({
       {/* Footer */}
       {!isCollapsed && items.length > 0 && (
         <div className="panel-footer px-4 py-3 sm:px-6 bg-gray-50 border-t border-gray-100 text-xs text-gray-500 text-center">
-          Last updated: {new Date().toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-          })}
+          The Foundation runs structured enrollment cohorts. Contact our team for the most current schedule.
         </div>
       )}
     </div>

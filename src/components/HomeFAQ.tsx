@@ -4,39 +4,44 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 const homeFaqItems = [
   {
-    question: "What exactly do you build for me?",
+    question: "Is Azgari Foundation a nonprofit?",
     answer:
-      "Everything. We select the right business model for your market, form the entity, handle licensing and compliance, build the brand, run inside sales to land B2B contracts, hire and train your team, place a manager, and deliver signed accounts. You spend about an hour a week on oversight. We handle the rest.",
+      "Yes. Azgari Foundation is a 501(c)(3) nonprofit organization. Our mission is to expand economic mobility and create local jobs through entrepreneurship education. Program tuition from enrolled participants directly funds our educational services, scholarships for underserved founders, and free community training programs. We are not a franchise, a lender, or a for-profit consulting firm.",
+  },
+  {
+    question: "What does the flagship entrepreneurship program cover?",
+    answer:
+      "The curriculum covers the complete business-launch journey: selecting the right service business model for your market, forming the entity, handling licensing and compliance, building a brand, a sales methodology practicum to secure B2B contracts, team hiring and training, and manager placement. Participants learn through structured coursework with mentor support and hands-on guidance. Once operational, participants spend roughly an hour a week on oversight.",
   },
   {
     question: "How is this different from a franchise?",
     answer:
-      "Franchises give you a brand but take 3\u20138% in royalties forever and control how you run your business. With Azgari, you get the same level of structure AND 100% ownership. No ongoing fees, no restrictions, no royalty payments. You keep every dollar you earn, and you can sell the business whenever you want \u2014 on your terms.",
+      "Franchises give you a brand but charge 3\u20138% in royalties indefinitely and control how you run your business. Our flagship program is an educational program — participants own 100% of the businesses they build with no ongoing fees, no territory restrictions, and no royalty payments. Participants can sell, expand, or operate their business on their own terms.",
   },
   {
-    question: "How long does it take?",
+    question: "How long is the program?",
     answer:
-      "Our guarantee is an operational business with a manager in seat within 180 days. Most clients land their first contracts well before that. If we miss the timeline, we keep working until we deliver.",
+      "The flagship program is structured around a 180-day guided curriculum leading to an operational business with a manager in seat. Many participants secure their first contracts before the 180-day mark. Program Commitment: if a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met.",
   },
   {
-    question: "Can I do this while keeping my full-time job?",
+    question: "Can I do the program while keeping my full-time job?",
     answer:
-      "Yes. That\u2019s the point. Because we handle execution and place a manager to run day-to-day operations, your time commitment is about an hour a week for oversight calls and key decisions. Most clients keep their jobs until the business is generating consistent revenue.",
+      "Yes. The curriculum is designed around a 5\u201310 hr/week coursework commitment during the program, and roughly 1 hr/week once the business is operational and a manager is in place. Most participants keep their existing jobs while the business reaches operational status.",
   },
   {
     question: "What if I don\u2019t have business experience?",
     answer:
-      "Most of our clients don\u2019t. That\u2019s why this is done-for-you, not done-with-you. Our team has 20+ years of experience building service businesses. You bring the capital and the commitment \u2014 we bring the expertise and execution.",
+      "Most participants do not arrive with prior business-ownership experience. That\u2019s why the program is a guided, mentor-supported curriculum rather than self-directed learning. The Foundation\u2019s team brings 20+ years of experience building service businesses, and participants bring their professional expertise and commitment to the coursework.",
   },
   {
-    question: "How do you land B2B contracts remotely?",
+    question: "How does the sales education and practicum work?",
     answer:
-      "Inside sales. Our team prospects, builds relationships, and qualifies leads with businesses in your market \u2014 all remotely. When a prospect is ready to sign, you\u2019re the face who meets the decision-maker and closes the contract. You\u2019re not cold calling or running ads to consumers. We handle the pipeline, you close the deals.",
+      "Participants learn a structured B2B sales methodology as part of the curriculum. The practicum covers remote prospecting, relationship-building, and qualification. When a prospect is ready to sign, the participant meets with the decision-maker and finalizes the contract \u2014 applying the methodology in real-world situations rather than cold calling or running consumer ads.",
   },
   {
-    question: "Do you guarantee results?",
+    question: "Do you guarantee outcomes?",
     answer:
-      "We guarantee an operational business with a manager in seat and signed contracts within 180 days. If we don\u2019t deliver, we keep working at no additional cost until we do. Individual revenue results vary based on market, business model, and many factors \u2014 we\u2019re transparent about that.",
+      "No. As a 501(c)(3) nonprofit educational organization, we do not guarantee specific income levels or business outcomes. We do make a Program Commitment: if a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met. Individual results vary based on effort, market conditions, and capital.",
   },
 ];
 
@@ -57,7 +62,7 @@ export default function HomeFAQ() {
           </h2>
           <p className="text-gray-600">
             Answers to the questions we hear most from professionals considering
-            business ownership.
+            business ownership education.
           </p>
         </div>
         <FAQAccordion items={homeFaqItems} />

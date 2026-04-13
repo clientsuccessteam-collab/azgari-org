@@ -51,33 +51,36 @@ export const GHL_LINKS = {
 
 // Default CTA configuration
 export const DEFAULT_CTA = {
-  text: "See If You Qualify →",
+  text: "Check Program Eligibility →",
   href: GHL_LINKS.qualify,
 };
 
 // ============================================
-// PROGRAMS (Services Page & Homepage Pricing)
+// PROGRAMS (Services Page & Homepage Tuition)
 // ============================================
-// One flagship offer — done-for-you business building
+// Flagship entrepreneurship education program
 export const PROGRAMS = [
   {
-    name: "Done-for-You Business Build",
+    name: "Flagship Entrepreneurship Program",
     price: "$50,000",
-    note: "$50K upfront or $10K down + $6,667.67/mo × 6",
-    description: "Stop running your business — start owning it. We hire your team, train your manager, and get you to true business ownership. You become an OWNER, not an operator.",
-    whoItsFor: "5–10 hrs/wk (oversight only), $50K+ capital, existing revenue",
-    guarantee: "Business operational in 180 days with manager in seat or continued support",
+    priceLabel: "Program Tuition",
+    note: "$50K tuition paid in full, or $10K down + $6,667.67/mo × 6",
+    description: "A guided entrepreneurship education program for participants launching service businesses they will own outright. Our curriculum covers business model selection, entity formation, brand development, sales education and practicum, and operational readiness — delivered through structured mentorship and hands-on coursework.",
+    whoItsFor: "Participants with 5–10 hrs/wk for coursework and oversight, $50K+ capital capacity, and existing earned income",
+    guarantee: "Program Commitment: If a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met.",
     timeCommitment: "5–10 hrs/wk",
     features: [
-      "Data-driven business model selection (50+ proven models)",
-      "Full entity formation, licensing, and compliance — handled",
-      "Complete brand buildout (name, logo, website, marketing systems)",
-      "Customer acquisition — paying clients before official launch",
-      "Full operational team hired and trained",
-      "Manager placed and running day-to-day operations",
-      "Funding concierge for SBA loan qualification",
-      "12 months of ongoing support",
+      "Curriculum covers data-driven business model selection (50+ proven service models)",
+      "Guided entity formation, licensing, and compliance coursework",
+      "Mentor-supported brand development (name, logo, website, marketing systems)",
+      "Sales education and practicum — securing paying customers before official launch",
+      "Hands-on team recruitment, hiring, and training curriculum",
+      "Manager placement and operational readiness coaching",
+      "Funding readiness education for SBA loan qualification",
+      "12 months of ongoing mentorship and educational support",
     ],
+    tuitionJustification:
+      "Program tuition supports: educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
     graduation: null,
     href: GHL_LINKS.programs.scale,
     featured: true,
@@ -656,27 +659,41 @@ export const AGGREGATE_STATS = {
 export const NONPROFIT = {
   name: "Azgari Foundation",
   type: "501(c)(3) Nonprofit Organization",
-  ein: "32-1032584-33",
+  // EIN: the prior value did not match the 9-digit XX-XXXXXXX format.
+  // Placeholder until legal/ops confirms the correct EIN.
+  ein: "[VERIFY — CORRECT 9-DIGIT FORMAT: XX-XXXXXXX]",
 
-  // Mission statement — BRD "north star"
+  // Full charitable mission statement (used to lead every page)
   mission:
-    "Azgari Foundation delivers entrepreneurship training that increases income potential, expands economic mobility, and creates jobs in local communities.",
+    "Azgari Foundation is a 501(c)(3) nonprofit organization whose mission is to increase economic mobility, expand access to business ownership, and create jobs in underserved communities through entrepreneurship education, mentorship, and workforce development programs.",
 
   // Short mission (for tight spaces like footer tagline)
   missionShort:
-    "Entrepreneurship training for economic mobility and community job creation.",
+    "Entrepreneurship education, mentorship & workforce development for economic mobility and community job creation.",
 
   // Revenue reinvestment disclosure (BRD §5.2, §10)
   reinvestmentStatement:
-    "As a 501(c)(3) nonprofit, 100% of proceeds to the Foundation fund scholarships, free business building services, and expansion of our workforce initiatives.",
+    "As a 501(c)(3) nonprofit, program tuition funds educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
 
-  // Global legal disclosure (BRD §10)
+  // Global legal disclosure (BRD §10) — rendered site-wide in the footer
   legalDisclosure:
-    "Azgari Foundation is a 501(c)(3) nonprofit. 100% of proceeds are reinvested into scholarships, free programs, and economic mobility initiatives. Paid commercial programs are offered separately at azgari.com.",
+    "Azgari Foundation is a tax-exempt nonprofit organization under Section 501(c)(3) of the Internal Revenue Code. Program tuition supports educational services, scholarships, and workforce development initiatives.",
 
-  // Results disclaimer (FTC-safe)
+  // Tuition-justification language appended beneath every tuition mention
+  tuitionJustification:
+    "Program tuition supports: educational services and mentorship for enrolled participants, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
+
+  // Scholarship allocation statement (replaces "10% of enrollments" language)
+  scholarshipAllocation:
+    "A meaningful portion of all program tuition is allocated directly to scholarships and free programming for underserved founders — including aging-out foster youth, veterans, single parents, and first-generation entrepreneurs from underserved communities.",
+
+  // Program commitment (replaces "guarantee" language)
+  programCommitment:
+    "Program Commitment: If a participant has not achieved an operational business within 180 days of enrollment, the Foundation will continue providing mentorship and educational support at no additional tuition cost until program objectives are met.",
+
+  // Results disclaimer (FTC-safe) — required on any outcome-mentioning page
   resultsDisclaimer:
-    "Individual results vary based on effort, market conditions, and capital. We do not guarantee any level of income or business success.",
+    "Individual results vary based on effort, market conditions, and capital. Azgari Foundation does not guarantee any specific level of income or business success.",
 };
 
 // ============================================

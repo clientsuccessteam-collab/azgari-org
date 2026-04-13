@@ -4,8 +4,8 @@ import { NONPROFIT } from "@/lib/links";
 
 const footerLinks = {
   programs: [
-    { label: "Services & Pricing", href: "/services" },
-    { label: "Acquisition Advisory", href: "/acquisition" },
+    { label: "Programs & Tuition", href: "/services" },
+    { label: "Acquisition Education", href: "/acquisition" },
     { label: "Scholarships", href: "/scholarships" },
   ],
   resources: [
@@ -105,6 +105,9 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-6 mb-6 text-center">
           <p className="text-xs text-white/50">
             {NONPROFIT.type} · EIN: {NONPROFIT.ein}
+          </p>
+          <p className="text-xs text-white/40 mt-2 max-w-2xl mx-auto">
+            {NONPROFIT.legalDisclosure}
           </p>
           <p className="text-xs text-white/40 mt-2 max-w-2xl mx-auto">
             {NONPROFIT.reinvestmentStatement}

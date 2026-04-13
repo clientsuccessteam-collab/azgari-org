@@ -2,42 +2,75 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import ImpactModule from "@/components/ImpactModule";
+import { NONPROFIT } from "@/lib/links";
 
 const missionPoints = [
-  "Help corporate professionals leverage their industry expertise into businesses they own 100%",
-  "Alternative to franchises — expert guidance without franchise fees or royalties",
-  "Based in Austin, TX",
+  "Deliver entrepreneurship education, mentorship, and workforce development to underserved communities",
+  "Expand access to business ownership for veterans, foster youth, single parents, and first-generation entrepreneurs",
+  "Headquartered in Austin, TX; programming serves participants nationwide",
 ];
 
-const whyWeExist = [
-  { title: "Proven Wealth Builders", desc: "Service businesses generate predictable cash flow and build real equity" },
-  { title: "Structure Over Effort", desc: "Most people fail because of lack of structure, not lack of effort" },
-  { title: "Framework That Works", desc: "We provide the system that turns ambition into action" },
+const communitiesServed = [
+  {
+    icon: "🎖️",
+    title: "Veterans",
+    desc: "Transition-focused coursework and mentorship for service members entering civilian business ownership.",
+  },
+  {
+    icon: "🧑‍🎓",
+    title: "Aging-Out Foster Youth",
+    desc: "Scholarship-supported programming that opens entrepreneurship pathways for young adults leaving the foster system.",
+  },
+  {
+    icon: "👩‍👧",
+    title: "Single Parents",
+    desc: "Flexible, mentor-supported curriculum designed for learners balancing family responsibilities.",
+  },
+  {
+    icon: "🌱",
+    title: "First-Generation Entrepreneurs",
+    desc: "Structured education for learners whose families have not previously owned businesses.",
+  },
+  {
+    icon: "🏘️",
+    title: "Underserved Communities",
+    desc: "Free community workshops, training programs, and scholarship pathways expanding economic mobility.",
+  },
 ];
 
-const ourApproach = [
-  { icon: "📋", title: "SBA-Aligned Models", desc: "Business plans structured for lender approval" },
-  { icon: "📅", title: "180-Day Framework", desc: "Clear milestones from day one to first revenue" },
-  { icon: "✓", title: "Compliance-First", desc: "Entity, licensing, and legal handled properly" },
-  { icon: "⚡", title: "No Hype", desc: "Just proven systems and realistic expectations" },
+const educationalOutcomes = [
+  {
+    title: "Foundational Business Education",
+    desc: "Participants graduate with a working knowledge of business model selection, compliance, operations, and sales methodology.",
+  },
+  {
+    title: "Mentor-Supported Practicum",
+    desc: "Every learner receives hands-on mentorship as they apply curriculum concepts to a real service business launch.",
+  },
+  {
+    title: "Workforce &amp; Ownership Pathways",
+    desc: "Graduates are prepared to create jobs in their communities by launching and operating their own service enterprises.",
+  },
 ];
 
 const transparencyPoints = [
-  "We don't promise outcomes — success depends on you",
-  "We provide education, tools, and guidance",
-  "Results depend on individual execution, market conditions, and capital",
-  "This is not a franchise — you own 100% of what you build",
+  "We do not promise any specific income or business outcome — individual results vary",
+  "We provide education, mentorship, and structured coursework",
+  "Outcomes depend on participant effort, market conditions, and available capital",
+  "As a 501(c)(3) nonprofit, program tuition funds educational services, scholarships, and community programming",
 ];
 
 export default function AboutPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero */}
         <section
-          className="pt-24 pb-12 md:pt-32 md:pb-20 text-center"
+          className="pt-10 pb-12 md:pt-16 md:pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
@@ -52,207 +85,75 @@ export default function AboutPage() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{ color: 'var(--color-primary)' }}
             >
-              Helping Professionals Build Real Wealth<br />
-              Through Business Ownership
+              Educating Founders.<br />
+              Building Communities.
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Founded by serial entrepreneur Azgari Lipshy, who&apos;s launched 4 businesses, failed twice, and turned those lessons into a done-for-you framework that helps professionals build businesses they own 100%.
+              {NONPROFIT.mission}
             </p>
           </div>
         </section>
 
-        {/* Founder Story */}
+        {/* Communities We Serve */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: 'var(--color-primary)' }}>
-                Why I Built Azgari
+            <div className="text-center mb-14">
+              <h2
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--color-primary)' }}
+              >
+                Communities We Serve
               </h2>
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  I started my first business at 16 — a supplement company that did $500K in first-year revenue. I thought I had it all figured out.
-                </p>
-                <p>
-                  Then I failed. Twice.
-                </p>
-                <p>
-                  After years of launching, scaling, and failing across CPG, construction, and local services, I realized something critical: <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>the people who succeed aren&apos;t the ones who work hardest — they&apos;re the ones with structure.</span>
-                </p>
-                <p>
-                  I rebuilt my approach from the ground up — clear models, compliance first, realistic systems, weekly accountability. That company did $3M in revenue and ran without me.
-                </p>
-                <p>
-                  So I asked myself: what if I could teach this framework to others? What if I could help thousands of people avoid my early mistakes and build something real?
-                </p>
-                <p className="font-semibold" style={{ color: 'var(--color-primary)' }}>
-                  That&apos;s Azgari. We don&apos;t promise you&apos;ll get rich. We promise you&apos;ll know exactly what to do — every step of the way.
-                </p>
-              </div>
-              <p className="mt-8 text-sm text-gray-500 italic">
-                — Azgari Lipshy, Founder
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Azgari Foundation focuses its educational programming and scholarship resources on learners who have historically had limited access to entrepreneurship education.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Meet Azgari */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Image */}
-              <div className="relative order-2 lg:order-1">
-                <div className="relative">
-                  {/* Decorative background */}
-                  <div
-                    className="absolute -inset-4 rounded-3xl opacity-20"
-                    style={{ backgroundColor: 'var(--color-accent)' }}
-                  />
-
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src="/images/founder/azgari-speaking.jpg"
-                      alt="Azgari Lipshy speaking at a conference"
-                      width={600}
-                      height={600}
-                      className="object-cover w-full"
-                    />
-                  </div>
-
-                  {/* Floating card */}
-                  <div
-                    className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-5 border border-gray-100"
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {communitiesServed.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl p-6 bg-white border border-gray-100 shadow-sm"
+                >
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-semibold mb-3"
+                    style={{ color: 'var(--color-primary)' }}
                   >
-                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>20+</div>
-                    <div className="text-sm text-gray-600">Years of Experience</div>
-                  </div>
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600">{item.desc}</p>
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="order-1 lg:order-2">
-                <span
-                  className="inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4"
-                  style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
-                >
-                  MEET THE FOUNDER
-                </span>
-
-                <h2
-                  className="text-3xl md:text-4xl font-bold mb-6"
-                  style={{ color: 'var(--color-primary)' }}
-                >
-                  Azgari Lipshy
-                </h2>
-
-                <p className="text-lg text-gray-600 mb-6">
-                  Azgari founded the Azgari Foundation to help working professionals build
-                  real wealth through local service business ownership — without the franchise
-                  fees, royalties, or corporate restrictions.
-                </p>
-
-                <p className="text-lg text-gray-600 mb-6">
-                  After seeing too many capable people fail at business — not from lack of
-                  effort, but lack of structure — she created a proven 180-day framework
-                  that transforms ambition into action.
-                </p>
-
-                <p className="text-lg text-gray-600 mb-8">
-                  Today, she works with corporate professionals ready to leverage their
-                  industry expertise into businesses they truly own.
-                </p>
-
-                <div className="flex flex-wrap gap-4">
-                  <Link href="/media" className="btn btn-secondary">
-                    Watch Interviews →
-                  </Link>
-                  <Link href="/case-studies" className="btn btn-secondary">
-                    See Client Results →
-                  </Link>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Mission */}
+        {/* Educational Outcomes */}
         <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2
-                  className="text-3xl md:text-4xl font-bold mb-6"
-                  style={{ color: 'var(--color-primary)' }}
-                >
-                  Our Mission
-                </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  We exist to make business ownership accessible to working professionals
-                  who have the drive but need the structure. No franchises. No royalties.
-                  Just a proven path to building something you own.
-                </p>
-                <ul className="space-y-4">
-                  {missionPoints.map((point, i) => (
-                    <li key={i} className="flex gap-4 items-start">
-                      <span
-                        className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
-                        style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
-                      >
-                        ✓
-                      </span>
-                      <span className="text-gray-700">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div
-                className="bg-white rounded-2xl p-6 sm:p-12 text-center shadow-sm"
+            <div className="text-center mb-14">
+              <h2
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--color-primary)' }}
               >
-                <div
-                  className="text-6xl font-bold mb-2"
-                  style={{ color: 'var(--color-primary)' }}
-                >
-                  180
-                </div>
-                <div className="text-lg text-gray-600 mb-6">Days to Launch</div>
-                <div
-                  className="text-6xl font-bold mb-2"
-                  style={{ color: 'var(--color-accent)' }}
-                >
-                  100%
-                </div>
-                <div className="text-lg text-gray-600">Your Ownership</div>
-              </div>
+                Educational Outcomes
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Our curriculum is structured so participants leave the program with durable business-ownership knowledge and real-world, mentor-supported experience.
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* Impact Metrics */}
-        <ImpactModule />
-
-        {/* Why We Exist */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--color-primary)' }}
-            >
-              Why We Exist
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-16">
-              Too many capable people fail at business — not because they lack ambition,
-              but because they lack the framework to turn that ambition into results.
-            </p>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {whyWeExist.map((item, i) => (
+              {educationalOutcomes.map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
-                  style={{ backgroundColor: 'var(--color-cream)' }}
+                  className="rounded-xl p-8 bg-white shadow-sm"
                 >
                   <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 bg-white"
+                    className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
+                    style={{ backgroundColor: 'var(--color-accent-light)' }}
                   >
                     <span
                       className="text-xl font-bold"
@@ -274,38 +175,126 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Approach */}
+        {/* Mission */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2
+                  className="text-3xl md:text-4xl font-bold mb-6"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  Our Mission
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Azgari Foundation exists to expand access to entrepreneurship education and mentorship. Our programming supports learners as they develop the skills, confidence, and community needed to own service businesses and create jobs in their neighborhoods.
+                </p>
+                <ul className="space-y-4">
+                  {missionPoints.map((point, i) => (
+                    <li key={i} className="flex gap-4 items-start">
+                      <span
+                        className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                        style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
+                      >
+                        ✓
+                      </span>
+                      <span className="text-gray-700">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div
+                className="rounded-2xl p-6 sm:p-12 text-center shadow-sm"
+                style={{ backgroundColor: 'var(--color-cream)' }}
+              >
+                <div
+                  className="text-6xl font-bold mb-2"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  180
+                </div>
+                <div className="text-lg text-gray-600 mb-6">Days of Guided Coursework</div>
+                <div
+                  className="text-6xl font-bold mb-2"
+                  style={{ color: 'var(--color-accent)' }}
+                >
+                  501(c)(3)
+                </div>
+                <div className="text-lg text-gray-600">Nonprofit Organization</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Metrics */}
+        <ImpactModule />
+
+        {/* Founder */}
         <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: 'var(--color-primary)' }}
-              >
-                Our Approach
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                No hype. No get-rich-quick promises. Just a methodical approach
-                to building a real business.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {ourApproach.map((item, i) => (
-                <div
-                  key={i}
-                  className="p-6 rounded-xl bg-white border-2 border-gray-100 hover:border-gray-200 transition-colors"
-                >
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h4
-                    className="text-lg font-semibold mb-2"
-                    style={{ color: 'var(--color-primary)' }}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image */}
+              <div className="relative order-2 lg:order-1">
+                <div className="relative">
+                  <div
+                    className="absolute -inset-4 rounded-3xl opacity-20"
+                    style={{ backgroundColor: 'var(--color-accent)' }}
+                  />
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/images/founder/azgari-speaking.jpg"
+                      alt="Azgari Lipshy, Founder of Azgari Foundation"
+                      width={600}
+                      height={600}
+                      className="object-cover w-full"
+                    />
+                  </div>
+                  <div
+                    className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-5 border border-gray-100"
                   >
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>20+</div>
+                    <div className="text-sm text-gray-600">Years of Experience</div>
+                  </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Content */}
+              <div className="order-1 lg:order-2">
+                <span
+                  className="inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                  style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
+                >
+                  FOUNDER &amp; EXECUTIVE DIRECTOR
+                </span>
+
+                <h2
+                  className="text-3xl md:text-4xl font-bold mb-6"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  Azgari Lipshy
+                </h2>
+
+                <p className="text-lg text-gray-600 mb-6">
+                  Azgari Lipshy founded the Azgari Foundation to expand access to entrepreneurship education for communities historically excluded from business-ownership pathways.
+                </p>
+
+                <p className="text-lg text-gray-600 mb-6">
+                  After two decades of operating service businesses, she channeled what she learned into a structured educational mission — focused on mentorship, coursework, and scholarship-supported access for veterans, foster youth, single parents, and first-generation founders.
+                </p>
+
+                <p className="text-lg text-gray-600 mb-8">
+                  Today, Azgari leads the Foundation&apos;s educational programs, mentor network, and community workshops, working with participants across the country.
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/media" className="btn btn-secondary">
+                    Watch Interviews →
+                  </Link>
+                  <Link href="/case-studies" className="btn btn-secondary">
+                    See Participant Stories →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -317,8 +306,7 @@ export default function AboutPage() {
               Our Commitment to Transparency
             </h2>
             <p className="text-center text-white/70 max-w-2xl mx-auto mb-12">
-              We believe in honest conversations about what business ownership takes.
-              Here&apos;s what you can expect from us.
+              We believe in honest conversations about what entrepreneurship education can and cannot do. Here&apos;s what participants and donors can expect from the Foundation.
             </p>
 
             <div className="max-w-3xl mx-auto">
@@ -345,15 +333,18 @@ export default function AboutPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
-              Ready to Start?
+              Explore Our Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Explore our services and see how we can help you build a business
-              that creates real wealth — on your terms.
+              Learn about our flagship entrepreneurship program, scholarships for underserved founders, and community workshops.
             </p>
             <Link href="/services" className="btn btn-primary">
-              View Our Services →
+              View Programs &amp; Tuition →
             </Link>
+
+            <p className="mt-10 text-xs text-gray-500 max-w-2xl mx-auto italic">
+              {NONPROFIT.resultsDisclaimer}
+            </p>
           </div>
         </section>
       </main>

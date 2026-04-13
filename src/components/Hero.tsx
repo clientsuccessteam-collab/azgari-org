@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { GHL_LINKS } from "@/lib/links";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 export default function Hero() {
   return (
@@ -13,24 +13,24 @@ export default function Hero() {
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              DONE-FOR-YOU BUSINESS BUILDING
+              501(c)(3) ENTREPRENEURSHIP EDUCATION
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight" style={{ color: 'var(--color-primary)' }}>
               Your Expertise Deserves Its Own Business.{" "}
-              <span style={{ color: 'var(--color-accent)' }}>We&apos;ll Build It For You.</span>
+              <span style={{ color: 'var(--color-accent)' }}>We&apos;ll Guide You Through Building It.</span>
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mb-4">
-              We take corporate professionals with 7+ years of industry experience and launch fully operational businesses — from legal formation to first paying clients — in 180 days.
+              Our flagship entrepreneurship program supports corporate professionals with 7+ years of industry experience as they launch operational service businesses — from legal formation to first paying customers — over a 180-day guided curriculum.
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mb-8">
-              You bring the expertise. We build the entity, brand, marketing, team, and client pipeline. You own 100%. No franchise fees. No royalties.
+              You bring the expertise. Our curriculum and mentors guide you through building the entity, brand, marketing, team, and customer pipeline. You own 100%. No franchise fees. No royalties.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                Apply For A Strategy Call →
+                Check Program Eligibility →
               </Link>
               <Link href="#how-it-works" className="btn btn-secondary">
                 See How It Works
@@ -45,9 +45,12 @@ export default function Hero() {
                 <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> ~1 hr/wk Once Operational
               </span>
               <span className="flex items-center justify-center lg:justify-start gap-2">
-                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Done-for-You — We Build Everything
+                <span className="font-bold" style={{ color: 'var(--color-primary)' }}>✓</span> Hands-on Educational Curriculum
               </span>
             </div>
+            <p className="text-xs text-gray-500 mt-4 max-w-2xl">
+              {NONPROFIT.resultsDisclaimer}
+            </p>
           </div>
 
           {/* Right - Founder Image */}
@@ -76,7 +79,7 @@ export default function Hero() {
                 className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
                 <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>20+ Years</div>
-                <div className="text-sm text-gray-600">Building Businesses</div>
+                <div className="text-sm text-gray-600">Entrepreneurship Education</div>
               </div>
 
               {/* Floating stat card - right */}
@@ -84,7 +87,7 @@ export default function Hero() {
                 className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 border border-gray-100"
               >
                 <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>100%</div>
-                <div className="text-sm text-gray-600">Owner Ownership</div>
+                <div className="text-sm text-gray-600">Participant Ownership</div>
               </div>
             </div>
           </div>

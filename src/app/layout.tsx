@@ -4,22 +4,22 @@ import "./globals.css";
 import JsonLd from "@/app/JsonLd";
 
 export const metadata: Metadata = {
-  title: "We Build Service Businesses You Own 100% | Azgari Foundation",
-  description: "Done-for-you business building. We select the business, set up operations, hire your team, and deliver paying customers. You own 100% — no franchise fees, no royalties.",
-  keywords: "service business, done for you business, franchise alternative, business building, business ownership",
+  title: "Azgari Foundation | 501(c)(3) Nonprofit Entrepreneurship Education",
+  description: "Azgari Foundation is a 501(c)(3) nonprofit providing entrepreneurship education, mentorship, and workforce development programs to increase economic mobility and expand access to business ownership in underserved communities.",
+  keywords: "501(c)(3) nonprofit, entrepreneurship education, business ownership education, mentorship program, workforce development, scholarships, economic mobility",
   alternates: {
     canonical: "https://azgari.org",
   },
   openGraph: {
-    title: "We Build Service Businesses You Own 100% | Azgari Foundation",
-    description: "Done-for-you business building. We handle everything — you become an owner, not an operator. No franchise fees. No royalties. Full ownership.",
+    title: "Azgari Foundation | 501(c)(3) Nonprofit Entrepreneurship Education",
+    description: "A 501(c)(3) nonprofit delivering entrepreneurship education, mentorship, and workforce development to expand access to business ownership in underserved communities.",
     type: "website",
     url: "https://azgari.org",
   },
   twitter: {
     card: "summary_large_image",
-    title: "We Build Service Businesses You Own 100% | Azgari Foundation",
-    description: "Done-for-you business building. You invest, we build, you own everything.",
+    title: "Azgari Foundation | 501(c)(3) Nonprofit Entrepreneurship Education",
+    description: "A 501(c)(3) nonprofit expanding access to business ownership through entrepreneurship education and mentorship.",
   },
 };
 
@@ -29,7 +29,7 @@ const organizationJsonLd: Record<string, unknown> = {
   name: "Azgari Foundation",
   url: "https://azgari.org",
   description:
-    "Business consulting helping professionals launch and acquire profitable local service businesses",
+    "501(c)(3) nonprofit providing entrepreneurship education, mentorship, and workforce development programs for underserved communities.",
   foundingLocation: {
     "@type": "Place",
     address: "Austin, TX",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 import { stateData, getStateBySlug, getAllStateSlugs } from "@/lib/stateData";
 
 interface StatePageProps {
@@ -42,8 +43,9 @@ export default async function StatePage({ params }: StatePageProps) {
   return (
     <>
       <Navbar />
-      
-      <main className="pt-24">
+      <MissionBanner variant="strip" />
+
+      <main className="pt-8">
         {/* Hero Section */}
         <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--color-cream)' }}>
           <div className="max-w-4xl mx-auto px-6 text-center">
@@ -145,27 +147,27 @@ export default async function StatePage({ params }: StatePageProps) {
         >
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Start in {stateInfo.name}?
+              Ready to Learn More About Building in {stateInfo.name}?
             </h2>
             <p className="text-lg text-white/90 mb-8">
-              Let us help you launch your service business with expert guidance, proven systems, and ongoing support. No franchise fees. No royalties. Full ownership.
+              The Foundation&apos;s mentor-supported curriculum guides participants through service business education — business model selection, entity formation, and operational readiness — so graduates own their businesses 100%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="inline-block px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-xl hover:-translate-y-1"
-                style={{ 
+                style={{
                   backgroundColor: 'var(--color-accent)',
                   color: 'var(--color-primary-dark)'
                 }}
               >
-                Explore Our Services
+                Check Program Eligibility
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="inline-block px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white text-white transition-all hover:bg-white hover:text-gray-900"
               >
-                Contact Us
+                Apply for a Strategy Session
               </Link>
             </div>
           </div>

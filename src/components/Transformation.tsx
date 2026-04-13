@@ -43,10 +43,10 @@ export default function Transformation() {
             THE OUTCOME
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            What You Get When We Build It for You
+            What Program Graduates Experience
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            This isn&apos;t about motivation or mindset. It&apos;s about what actually happens when a professional team builds your business from the ground up.
+            This isn&apos;t about motivation or mindset. It&apos;s about what participants learn to build through our guided curriculum and mentorship.
           </p>
         </div>
 

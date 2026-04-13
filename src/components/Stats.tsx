@@ -1,10 +1,10 @@
 import { NONPROFIT } from "@/lib/links";
 
 const stats = [
-  { number: "20+", label: "Years Building Businesses", detail: "across dozens of service industries" },
-  { number: "50+", label: "Proven Business Models", detail: "data-selected for your local market" },
-  { number: "100%", label: "Your Ownership", detail: "no franchise fees, no royalties, ever" },
-  { number: "180", label: "Days to Operational Business", detail: "with manager in seat and contracts paying" },
+  { number: "20+", label: "Years of Entrepreneurship Education", detail: "across dozens of service industries" },
+  { number: "50+", label: "Business Models in the Curriculum", detail: "examined against local market data" },
+  { number: "100%", label: "Participant Ownership", detail: "no franchise fees, no royalties, ever" },
+  { number: "180", label: "Days of Guided Program", detail: "toward an operational business with a manager in seat" },
 ];
 
 export default function Stats() {
@@ -12,10 +12,10 @@ export default function Stats() {
     <section className="py-16 md:py-24 text-white text-center" style={{ backgroundColor: 'var(--color-primary)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          What We Bring to the Table
+          What Our Curriculum Brings to Participants
         </h2>
         <p className="opacity-90 max-w-2xl mx-auto mb-12">
-          Two decades of hands-on experience building service businesses — distilled into a done-for-you system.
+          Two decades of hands-on experience building service businesses — distilled into a structured educational program.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

@@ -1,54 +1,54 @@
 import Link from "next/link";
-import { GHL_LINKS } from "@/lib/links";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 const alternatives = [
   {
     name: "Buy a Franchise",
     cost: "$50K–$500K",
-    ongoing: "+ 3–8% royalties forever",
+    ongoing: "+ 3–8% ongoing royalties",
     downsides: [
-      "You don't own the brand — they do",
-      "Territory restrictions limit your growth",
-      "Must follow their playbook, not yours",
-      "Can't sell without franchisor approval",
+      "Brand is owned by the franchisor",
+      "Territory restrictions limit growth",
+      "Operations must follow the franchisor&apos;s playbook",
+      "Resale typically requires franchisor approval",
     ],
-    verdict: "You pay more, own less, and never stop paying.",
+    verdict: "Structured support, but ongoing fees and limited ownership.",
   },
   {
-    name: "Get an MBA",
+    name: "Pursue an MBA",
     cost: "$60K–$180K",
-    ongoing: "+ 2 years of your life",
+    ongoing: "+ 2 years of study",
     downsides: [
-      "Theory-heavy, not practitioner-led",
-      "No business at the end — just a degree",
-      "Designed for corporate, not entrepreneurship",
-      "Opportunity cost of 2 years' lost income",
+      "Theory-heavy, rarely practitioner-led",
+      "Results in a degree, not an operating business",
+      "Designed largely for corporate career paths",
+      "Opportunity cost of 2 years of potential income",
     ],
-    verdict: "You learn about business. You don't build one.",
+    verdict: "Strong academic credential, but not a business build.",
   },
   {
     name: "Hire Consultants",
     cost: "$30K–$100K+",
-    ongoing: "$150–$500/hr, no guarantees",
+    ongoing: "$150–$500/hr, per-engagement",
     downsides: [
-      "Piecemeal advice, no unified system",
-      "No accountability — they bill and leave",
-      "No guarantee you'll actually launch",
-      "You manage 5+ vendors instead of building",
+      "Advice is often piecemeal rather than integrated",
+      "Accountability typically ends when the engagement ends",
+      "No structured educational arc",
+      "Founders often coordinate multiple vendors",
     ],
-    verdict: "You get advice. You don't get a business.",
+    verdict: "Tactical help, without a unified curriculum.",
   },
   {
-    name: "Figure It Out Alone",
-    cost: "$15K–$50K in mistakes",
-    ongoing: "+ 2–5 years of trial and error",
+    name: "Self-Directed Learning",
+    cost: "$15K–$50K in learning costs",
+    ongoing: "+ 2–5 years of iteration",
     downsides: [
-      "80% failure rate within 18 months",
-      "No framework — you guess at every step",
-      "Expensive mistakes in legal, pricing, marketing",
-      "No one to call when you're stuck at 2 AM",
+      "High industry failure rate within 18 months",
+      "No framework — each decision made from scratch",
+      "Learning expenses in legal, pricing, and marketing",
+      "Limited access to experienced mentors",
     ],
-    verdict: "The \"cheapest\" option that costs the most.",
+    verdict: "Lowest upfront cost, highest time investment.",
   },
 ];
 
@@ -61,13 +61,13 @@ export default function ValueComparison() {
             className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
             style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
           >
-            WHY AZGARI IS DIFFERENT
+            UNDERSTANDING YOUR EDUCATION OPTIONS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>
-            Compare Your Options — Then Decide
+            Understanding Your Options for Business Ownership Education
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            There are many paths to business ownership. Only one gives you a done-for-you buildout, full ownership, AND a launch guarantee.
+            There are several educational paths toward business ownership. Each has trade-offs. The table below is meant as neutral context as you evaluate which path fits your situation.
           </p>
         </div>
 
@@ -110,27 +110,27 @@ export default function ValueComparison() {
                 className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
                 style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
               >
-                THE AZGARI ALTERNATIVE
+                FLAGSHIP EDUCATION PROGRAM
               </span>
               <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                Done-for-You Business Build: $50,000
+                Flagship Entrepreneurship Program: $50,000 Tuition
               </h3>
-              <p className="text-sm text-white/60 mb-4">Payment plans and SBA funding available</p>
+              <p className="text-sm text-white/60 mb-4">Payment plans and scholarship applications available</p>
               <p className="text-white/90 mb-6">
-                We build your entire business — entity, brand, marketing, team, customers, operations. You own 100%, pay zero royalties, and spend about an hour a week overseeing it.
+                Our curriculum covers the full business-building journey — entity, brand, marketing, team, customers, operations — with mentor support throughout. Participants own 100% of the business they build, pay no royalties, and typically spend about an hour a week on oversight once operational.
               </p>
               <Link href={GHL_LINKS.qualify} className="btn btn-primary">
-                See If You Qualify →
+                Check Program Eligibility →
               </Link>
             </div>
             <div className="space-y-3">
               {[
-                "100% ownership — no royalties, ever",
-                "Operational in 180 days with manager in seat",
-                "50+ proven business models to choose from",
-                "Marketing, hiring, operations — all built for you",
-                "12 months of ongoing support",
-                "SBA funding concierge included",
+                "100% participant ownership — no royalties",
+                "Designed to reach operational status in 180 days",
+                "50+ business models covered in the curriculum",
+                "Marketing, hiring, operations modules included",
+                "12 months of ongoing educational support",
+                "SBA funding education and concierge guidance",
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 items-start">
                   <span className="flex-shrink-0" style={{ color: 'var(--color-accent)' }}>✓</span>
@@ -140,6 +140,9 @@ export default function ValueComparison() {
             </div>
           </div>
         </div>
+        <p className="text-xs text-gray-500 mt-6 max-w-2xl mx-auto text-center">
+          {NONPROFIT.resultsDisclaimer}
+        </p>
       </div>
     </section>
   );

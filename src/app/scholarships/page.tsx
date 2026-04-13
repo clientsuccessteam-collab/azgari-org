@@ -3,7 +3,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ShareButton from "@/components/ShareButton";
-import { GHL_LINKS } from "@/lib/links";
+import MissionBanner from "@/components/MissionBanner";
+import { GHL_LINKS, NONPROFIT } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Scholarships & Free Programs | Azgari Foundation",
@@ -79,9 +80,10 @@ export default function ScholarshipsPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero Section */}
-        <section 
+        <section
           className="pt-24 md:pt-32 pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
@@ -101,8 +103,7 @@ export default function ScholarshipsPage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Paid tuition funds free programs and scholarships for underserved founders. 
-              If you qualify, you get the same world-class training — at no cost.
+              {NONPROFIT.scholarshipAllocation} If you qualify, you receive full access to the same educational curriculum — at no cost.
             </p>
             
             <Link href={GHL_LINKS.forms.scholarship} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
@@ -236,7 +237,7 @@ export default function ScholarshipsPage() {
               Our Commitment to You
             </h2>
             <p className="opacity-90 max-w-xl mx-auto mb-12">
-              This isn&apos;t charity. It&apos;s an investment in founders who deserve a real shot.
+              Our scholarship programs exist to expand access to entrepreneurship education for founders facing real barriers to business ownership.
             </p>
             
             <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
@@ -255,10 +256,10 @@ export default function ScholarshipsPage() {
             
             <div className="bg-white/10 backdrop-blur rounded-xl p-8 max-w-2xl mx-auto">
               <p className="text-lg mb-2">
-                &quot;Every paid enrollment helps fund a scholarship.&quot;
+                &quot;Every tuition-paying participant helps fund a scholarship.&quot;
               </p>
               <p className="text-white/70 text-sm">
-                When you invest in Azgari, you&apos;re also investing in someone else&apos;s future.
+                {NONPROFIT.scholarshipAllocation}
               </p>
             </div>
           </div>

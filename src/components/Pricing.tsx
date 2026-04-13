@@ -10,10 +10,10 @@ export default function Pricing() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--color-primary)' }}>
-            One Offer. Everything Included.
+            One Flagship Program. Everything Included.
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            We don&apos;t sell tiers. We build businesses. One investment, one outcome: a fully operational business you own.
+            The Foundation offers a single flagship entrepreneurship program. One program tuition, one structured curriculum, one outcome: a participant equipped to launch and operate their own business.
           </p>
           <p className="text-xs text-gray-400 mt-3 max-w-lg mx-auto">
             {NONPROFIT.resultsDisclaimer}
@@ -32,17 +32,23 @@ export default function Pricing() {
             className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full"
             style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}
           >
-            DONE-FOR-YOU
+            FLAGSHIP EDUCATION PROGRAM
           </span>
 
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>{plan.name}</h3>
-            <p className="text-xs text-gray-500 mb-4">{plan.timeCommitment} commitment</p>
+            <p className="text-xs text-gray-500 mb-4">{plan.timeCommitment} coursework commitment</p>
 
+            <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
+              {plan.priceLabel}
+            </p>
             <div className="text-4xl md:text-5xl font-bold mb-1" style={{ color: 'var(--color-primary)' }}>
               {plan.price}
             </div>
             <p className="text-sm text-gray-500">{plan.note}</p>
+            <p className="text-xs text-gray-500 mt-4 max-w-xl mx-auto">
+              {NONPROFIT.tuitionJustification}
+            </p>
           </div>
 
           <p className="text-gray-600 text-center mb-8 max-w-xl mx-auto">{plan.description}</p>
@@ -57,10 +63,10 @@ export default function Pricing() {
             ))}
           </div>
 
-          {/* Guarantee */}
+          {/* Program Commitment */}
           <div className="rounded-lg p-4 mb-8 text-center" style={{ backgroundColor: 'var(--color-cream)' }}>
-            <span className="font-bold text-sm" style={{ color: 'var(--color-primary)' }}>Guarantee:</span>{" "}
-            <span className="text-gray-600 text-sm">{plan.guarantee}</span>
+            <span className="font-bold text-sm" style={{ color: 'var(--color-primary)' }}>Program Commitment:</span>{" "}
+            <span className="text-gray-600 text-sm">{NONPROFIT.programCommitment}</span>
           </div>
 
           {/* CTA */}
@@ -69,29 +75,29 @@ export default function Pricing() {
               href={plan.href}
               className="btn btn-primary text-lg px-10 py-4 block sm:inline-block"
             >
-              Apply Now →
+              Apply for Enrollment →
             </Link>
             <div>
               <Link
                 href={GHL_LINKS.forms.bookCall}
                 className="btn btn-secondary text-sm py-3 block sm:inline-block"
               >
-                Book a Free Strategy Call First
+                Apply for a Strategy Session First
               </Link>
             </div>
           </div>
         </div>
 
-        {/* SBA Investment Callout */}
+        {/* SBA Callout */}
         <div className="max-w-3xl mx-auto mb-8 rounded-2xl p-6 sm:p-8 border-2" style={{ borderColor: 'var(--color-primary)', backgroundColor: 'var(--color-cream)' }}>
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <span className="text-3xl shrink-0">🏦</span>
             <div>
               <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
-                Your Investment Counts Toward SBA Funding
+                Program Tuition Can Support SBA Funding Readiness
               </h3>
               <p className="text-sm text-gray-700">
-                SBA lenders require you to show <strong>30% of the loan amount</strong> already invested in your business before they&apos;ll approve funding. Our program fees count toward that investment. You&apos;re not financing our service with an SBA loan — you&apos;re building toward one.
+                SBA lenders typically require participants to show <strong>30% of the loan amount</strong> already invested in their business before approving funding. Program tuition and the resulting business assets can contribute toward that readiness. SBA loan approval is determined solely by independent lenders, not by the Foundation.
               </p>
             </div>
           </div>

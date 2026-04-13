@@ -9,20 +9,20 @@ export default function CTA() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to Own a Business Without Running It?
+          Ready to Learn More About the Flagship Program?
         </h2>
         <p className="opacity-90 max-w-xl mx-auto mb-4">
-          We build it. You own it. The next step is a 20-minute strategy call to evaluate your market fit and build your launch timeline. If it&apos;s not a fit, we&apos;ll tell you honestly.
+          The next step is a 20-minute strategy session with a program advisor to review your situation and discuss whether the flagship entrepreneurship program is the right educational fit.
         </p>
 
         <Link
           href={GHL_LINKS.qualify}
           className="btn btn-primary text-lg px-10 py-5"
         >
-          Apply for a Strategy Call →
+          Apply for a Strategy Session →
         </Link>
         <p className="text-sm text-white/70 mt-4">
-          20 minutes. No credit card. Honest evaluation.
+          20 minutes. No credit card required.
         </p>
       </div>
     </section>

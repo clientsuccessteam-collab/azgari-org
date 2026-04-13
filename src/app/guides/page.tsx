@@ -3,14 +3,15 @@ import Link from "next/link";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionBanner from "@/components/MissionBanner";
 
 export const metadata: Metadata = {
-  title: "Free Business Startup Guides & Resources | Azgari Foundation",
-  description: "Free guides, templates, and tools to start a profitable service business. State rankings, SBA loan guides, and launch checklists.",
-  keywords: "free business guides, startup resources, service business templates, SBA loan guide, business launch checklist",
+  title: "Free Educational Guides & Community Resources | Azgari Foundation",
+  description: "Free educational guides, templates, and community education materials from Azgari Foundation, a 501(c)(3) nonprofit supporting aspiring entrepreneurs.",
+  keywords: "free educational guides, community education, service business templates, SBA loan guide, business launch checklist",
   openGraph: {
-    title: "Free Resources to Start Your Service Business",
-    description: "Guides, templates, and tools to help you start a profitable local service business.",
+    title: "Free Educational Resources from the Foundation",
+    description: "Educational guides, templates, and community education materials from Azgari Foundation.",
     url: "https://azgari.org/guides",
     type: "website",
   },
@@ -151,37 +152,38 @@ export default function GuidesPage() {
   return (
     <>
       <Navbar />
+      <MissionBanner variant="full" />
       <main>
         {/* Hero Section */}
-        <section 
-          className="pt-24 md:pt-32 pb-20 text-center"
+        <section
+          className="pt-12 md:pt-16 pb-20 text-center"
           style={{ background: 'linear-gradient(135deg, var(--color-cream) 0%, white 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
-            <span 
+            <span
               className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
               style={{ backgroundColor: 'var(--color-accent-light)', color: 'var(--color-primary)' }}
             >
-              FREE RESOURCES
+              FREE EDUCATIONAL RESOURCES
             </span>
-            
-            <h1 
+
+            <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{ color: 'var(--color-primary)' }}
             >
-              Free Resources to Start Your Business Journey
+              Free Educational Guides &amp; Community Resources
             </h1>
-            
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Guides, quizzes, and tools from the same framework we use to build businesses for our clients.
+              Free educational guides, quizzes, and community education materials developed by the Foundation to support aspiring entrepreneurs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#guides" className="btn btn-primary">
-                Browse How-To Guides
+                Browse Educational Guides
               </Link>
               <Link href="#downloads" className="btn btn-secondary">
-                Free Downloads
+                Free Educational Downloads
               </Link>
             </div>
           </div>
@@ -191,14 +193,14 @@ export default function GuidesPage() {
         <section id="guides" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                How to Start Guides
+                How to Start Educational Guides
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Step-by-step guides for the most profitable service businesses. Written by founders who&apos;ve done it.
+                Step-by-step educational guides covering the most common service business models. Published as community education by the Foundation.
               </p>
             </div>
             
@@ -304,14 +306,14 @@ export default function GuidesPage() {
               >
                 EMAIL REQUIRED
               </span>
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--color-primary)' }}
               >
-                Free Downloads & Tools
+                Free Educational Downloads &amp; Tools
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Premium resources to accelerate your launch. Just enter your email for instant access.
+                Community education resources to support your learning journey. Enter your email for instant access.
               </p>
             </div>
             
@@ -420,29 +422,29 @@ export default function GuidesPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
-              Ready for Personalized Guidance?
+              Ready for Mentor-Supported Learning?
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-              Our free resources are just the beginning. Get hands-on support to launch your business with confidence — from validation to first customers.
+              Our free educational resources are just the beginning. The Foundation&apos;s flagship program offers hands-on educational guidance through mentor-supported coursework — from validation to operational readiness.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="btn btn-primary"
               >
-                Explore Our Programs →
+                Explore Foundation Programs →
               </Link>
-              <Link 
+              <Link
                 href="https://go.azgari.org/question-flow-d"
                 className="btn btn-secondary"
               >
-                See If You Qualify
+                Check Program Eligibility
               </Link>
             </div>
 
             <p className="mt-6 text-gray-500 text-sm">
-              Paid programs fund free resources and scholarships for underserved founders.
+              Program tuition funds free educational resources and scholarships for underserved founders.
             </p>
           </div>
         </section>
