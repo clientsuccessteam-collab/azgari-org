@@ -387,13 +387,19 @@ export const NONPROFIT = {
   // EIN: 9-digit XX-XXXXXXX format, confirmed by Foundation leadership.
   ein: "41-2896092",
 
-  // Full charitable mission statement (leads every page).
+  // Full charitable mission statement (leads every page). Covers both the
+  // Foundation's current program (24-week online entrepreneurship education
+  // with scholarships) and its planned expansion (residential transitional
+  // housing paired with the curriculum) contingent on grant capital. This is
+  // the "organizational purpose" statement for Form 1023 and funder review —
+  // the site's current programs are described separately and accurately in
+  // each page's "What We Do Today" section.
   mission:
-    "Azgari Foundation is a 501(c)(3) nonprofit organization whose mission is to increase economic mobility, expand access to business ownership, and create jobs in underserved communities through entrepreneurship education, mentorship, and workforce development programs.",
+    "Azgari Foundation is a 501(c)(3) nonprofit entrepreneurship-education and workforce-development organization serving out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans. Our current program delivers a 24-week online entrepreneurship education curriculum with scholarship support. As funding permits, the Foundation is developing transitional-housing programs that pair residential stability with basic-needs support, training stipends, and post-program job-placement and micro-enterprise seed grants — to expand economic mobility and create jobs in underserved communities.",
 
   // Short mission (tight spaces).
   missionShort:
-    "Entrepreneurship education, mentorship & workforce development for economic mobility and community job creation.",
+    "Entrepreneurship education, workforce development & economic mobility for out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans.",
 
   // Reinvestment disclosure — no specific tuition amount referenced on .org.
   reinvestmentStatement:
