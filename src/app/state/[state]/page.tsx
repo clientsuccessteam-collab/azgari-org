@@ -147,27 +147,28 @@ export default async function StatePage({ params }: StatePageProps) {
         >
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Learn More About Building in {stateInfo.name}?
+              Learn About Entrepreneurship Education in {stateInfo.name}
             </h2>
             <p className="text-lg text-white/90 mb-8">
-              The Foundation&apos;s mentor-supported curriculum guides participants through service business education — business model selection, entity formation, and operational readiness — so graduates own their businesses 100%.
+              Explore the Foundation&apos;s scholarships, free educational guides, and charitable
+              programming for founders in underserved communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
+                href="/scholarships"
                 className="inline-block px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-xl hover:-translate-y-1"
                 style={{
                   backgroundColor: 'var(--color-accent)',
                   color: 'var(--color-primary-dark)'
                 }}
               >
-                Check Program Eligibility
+                Apply for a Scholarship
               </Link>
               <Link
-                href="/contact"
+                href="/guides"
                 className="inline-block px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white text-white transition-all hover:bg-white hover:text-gray-900"
               >
-                Apply for a Strategy Session
+                Free Educational Resources
               </Link>
             </div>
           </div>

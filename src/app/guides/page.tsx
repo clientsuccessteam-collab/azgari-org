@@ -422,30 +422,21 @@ export default function GuidesPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
-              Ready for Mentor-Supported Learning?
+              Need More Support Than Free Resources Provide?
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-              Our free educational resources are just the beginning. The Foundation&apos;s flagship program offers hands-on educational guidance through mentor-supported coursework — from validation to operational readiness.
+              The Foundation offers full scholarship access to its mentor-supported entrepreneurship
+              education for founders from underserved communities — at no cost to the recipient.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
-                className="btn btn-primary"
-              >
-                Explore Foundation Programs →
+              <Link href="/scholarships" className="btn btn-primary">
+                Apply for a Scholarship →
               </Link>
-              <Link
-                href="https://go.azgari.org/question-flow-d"
-                className="btn btn-secondary"
-              >
-                Check Program Eligibility
+              <Link href="/contact" className="btn btn-secondary">
+                Contact the Foundation
               </Link>
             </div>
-
-            <p className="mt-6 text-gray-500 text-sm">
-              Program tuition funds free educational resources and scholarships for underserved founders.
-            </p>
           </div>
         </section>
       </main>

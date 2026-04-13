@@ -333,14 +333,20 @@ export default function AboutPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--color-primary)' }}
             >
-              Explore Our Programs
+              Support the Foundation&apos;s Mission
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Learn about our flagship entrepreneurship program, scholarships for underserved founders, and community workshops.
+              Apply for a scholarship, access free community education, or contact the Foundation
+              to learn how to support entrepreneurship education in underserved communities.
             </p>
-            <Link href="/services" className="btn btn-primary">
-              View Programs &amp; Tuition →
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/scholarships" className="btn btn-primary">
+                Apply for a Scholarship →
+              </Link>
+              <Link href="/guides" className="btn btn-secondary">
+                Free Educational Resources
+              </Link>
+            </div>
 
             <p className="mt-10 text-xs text-gray-500 max-w-2xl mx-auto italic">
               {NONPROFIT.resultsDisclaimer}

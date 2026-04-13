@@ -77,20 +77,21 @@ export default function StateSelectorPage() {
         >
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Not Sure Which Business is Right for You?
+              Learn More About the Foundation
             </h2>
             <p className="text-lg text-white/90 mb-8">
-              The Foundation&apos;s educational programs can help you evaluate your skills, market conditions, and local opportunities to find the right educational path.
+              Explore scholarships, free educational guides, and the Foundation&apos;s
+              charitable mission.
             </p>
             <Link
-              href="/services"
+              href="/scholarships"
               className="inline-block px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-xl hover:-translate-y-1"
               style={{
                 backgroundColor: 'var(--color-accent)',
                 color: 'var(--color-primary-dark)'
               }}
             >
-              Check Program Eligibility
+              Apply for a Scholarship
             </Link>
           </div>
         </section>

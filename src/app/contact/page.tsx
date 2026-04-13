@@ -46,19 +46,20 @@ export default function ContactPage() {
               style={{ backgroundColor: 'var(--color-primary)' }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Apply for a Strategy Session
+                Apply for a Scholarship
               </h2>
               <p className="text-white/90 mb-8 max-w-xl mx-auto">
-                Tell us about your educational goals and we can help you understand which Foundation programs, scholarships, or free resources may fit your situation.
+                Scholarships provide full access to the Foundation&apos;s entrepreneurship
+                education at no cost for qualifying applicants from underserved communities.
               </p>
               <Link
-                href="/qualify"
+                href="/scholarships"
                 className="btn btn-primary text-base sm:text-lg px-6 py-4 sm:px-10 sm:py-5"
               >
-                Apply for a Strategy Session →
+                Apply for a Scholarship →
               </Link>
               <p className="text-white/70 text-sm mt-4">
-                Brief intake form. No commitment required.
+                Brief application. No commitment required.
               </p>
             </div>
           </div>
