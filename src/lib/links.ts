@@ -659,9 +659,8 @@ export const AGGREGATE_STATS = {
 export const NONPROFIT = {
   name: "Azgari Foundation",
   type: "501(c)(3) Nonprofit Organization",
-  // EIN: the prior value did not match the 9-digit XX-XXXXXXX format.
-  // Placeholder until legal/ops confirms the correct EIN.
-  ein: "[VERIFY — CORRECT 9-DIGIT FORMAT: XX-XXXXXXX]",
+  // EIN: 9-digit XX-XXXXXXX format, confirmed by Foundation leadership.
+  ein: "41-2896092",
 
   // Full charitable mission statement (used to lead every page)
   mission:
