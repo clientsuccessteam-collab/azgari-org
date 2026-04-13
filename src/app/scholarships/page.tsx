@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Business training scholarships for foster youth, veterans, single parents, and first-generation entrepreneurs. Full Foundation program access at no cost.",
   openGraph: {
     title: "Free Business Training for Those Who Need It Most | Azgari",
-    description: "10% of paid enrollments fund scholarships for underserved founders. Apply today.",
+    description: "100% of proceeds fund scholarships for underserved founders. Apply today.",
     type: "website",
     url: "https://azgari.org/scholarships",
   },
@@ -70,8 +70,8 @@ const applicationSteps = [
 ];
 
 const commitments = [
-  { stat: "10%", label: "of paid enrollments fund scholarships" },
-  { stat: "100%", label: "same quality training as paid programs" },
+  { stat: "100%", label: "of Foundation proceeds fund scholarships & free programs" },
+  { stat: "100%", label: "same quality training as commercial programs" },
   { stat: "$0", label: "cost to you — no strings attached" },
 ];
 

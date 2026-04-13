@@ -7,32 +7,39 @@
  * TO ADD A NEW TOOL: Add to TOOLS array below
  */
 
+// Commercial program pricing, enrollment, and booking live on the for-profit
+// sister site azgari.com. Azgari.org (this nonprofit site) routes all
+// program-pricing / call-booking CTAs to azgari.com. Only the Foundation's
+// nonprofit resources (scholarships, free guides, contact) remain on .org.
+const AZGARI_COM = "https://azgari.com";
+
 export const GHL_LINKS = {
-  // Main CTA (used across navbar, hero, footers)
-  qualify: "/qualify",
-  qualifyQuiz: "https://go.azgari.org/question-flow-d",
-  
-  // Program Pages
+  // Main CTA (used across navbar, hero, footers) — commercial programs live on azgari.com
+  qualify: AZGARI_COM,
+  qualifyQuiz: AZGARI_COM,
+
+  // Program Pages — all pricing and enrollment handled on azgari.com
   programs: {
-    quickWin: "https://go.azgari.org/quick-win",
-    foundation: "https://go.azgari.org/foundation",
-    fullLaunch: "https://go.azgari.org/full-launch",
-    scale: "https://go.azgari.org/scale",
-    acquisition: "https://go.azgari.org/question-flow-d",
+    quickWin: AZGARI_COM,
+    foundation: AZGARI_COM,
+    fullLaunch: AZGARI_COM,
+    scale: AZGARI_COM,
+    acquisition: AZGARI_COM,
   },
-  
+
   // Lead Magnets (Free Downloads — routed through store for email capture)
   leadMagnets: {
     checklist: "https://go.azgari.org/product-details/product/699b4bc7ea607e2e0d1a7f29",
     assessment: "https://go.azgari.org/product-details/product/699b4bd9c0607441c091969e",
     sbaGuide: "https://go.azgari.org/product-details/product/699b4bf1aec1c12d84307715",
   },
-  
+
   // Forms
   forms: {
     contact: "https://go.azgari.org/contact",
     scholarship: "https://go.azgari.org/non-for-profit-home-page-page",
-    bookCall: "https://go.azgari.org/book-call",
+    // Strategy-call booking is a commercial interaction — handled on azgari.com
+    bookCall: AZGARI_COM,
   },
   
   // All Courses Page
@@ -661,11 +668,11 @@ export const NONPROFIT = {
 
   // Revenue reinvestment disclosure (BRD §5.2, §10)
   reinvestmentStatement:
-    "Program fees support business building services, scholarships, and expansion of our workforce initiatives.",
+    "As a 501(c)(3) nonprofit, 100% of proceeds to the Foundation fund scholarships, free business building services, and expansion of our workforce initiatives.",
 
   // Global legal disclosure (BRD §10)
   legalDisclosure:
-    "Azgari Foundation is a 501(c)(3) nonprofit. Revenue is reinvested into services, scholarships, and economic mobility initiatives.",
+    "Azgari Foundation is a 501(c)(3) nonprofit. 100% of proceeds are reinvested into scholarships, free programs, and economic mobility initiatives. Paid commercial programs are offered separately at azgari.com.",
 
   // Results disclaimer (FTC-safe)
   resultsDisclaimer:
