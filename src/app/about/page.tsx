@@ -45,8 +45,8 @@ const currentProgramFacts = [
     desc: "Every current participant attends through a Foundation scholarship. There is no paid enrollment on azgari.org; fee-based programming is operated separately at the commercial sister site, azgari.com.",
   },
   {
-    title: "Founded January 2026",
-    desc: "The Foundation is newly incorporated. As of April 2026, eight participants have been awarded scholarships. Outcome data is collected continuously and will be published as cohorts complete the program.",
+    title: "Founded January 2026 · IRS Recognized",
+    desc: "The Foundation was incorporated in January 2026 and received IRS 501(c)(3) determination (Letter 947) effective December 1, 2025. As of April 2026, eight participants have been awarded scholarships. Outcome data is collected continuously and will be published as cohorts complete the program.",
   },
 ];
 
@@ -70,7 +70,7 @@ const plannedExpansion = [
 ];
 
 const transparencyPoints = [
-  "The Foundation is a Delaware-incorporated 501(c)(3) nonprofit with foreign-entity registrations in Texas and Florida. Our IRS Form 1023 determination is pending as of April 2026.",
+  "The Foundation is a Delaware-incorporated, federally recognized 501(c)(3) public charity with foreign-entity registrations in Texas and Florida. IRS determination effective December 1, 2025 (Letter 947). EIN: 41-2896092.",
   "The only programs operating today are the 24-week online curriculum and scholarships. Planned housing, stipend, and campus programming are not currently operating.",
   "We do not promise any specific income or business outcome. Individual results vary based on effort, market conditions, and capital.",
   "The Foundation does not sell paid programs on azgari.org. Any fee-based educational offerings are operated separately by the for-profit sister brand at azgari.com.",

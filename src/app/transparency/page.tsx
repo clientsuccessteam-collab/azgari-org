@@ -28,11 +28,16 @@ const legalFacts = [
   { label: "Legal Name", value: NONPROFIT.name },
   { label: "Organization Type", value: NONPROFIT.type },
   { label: "EIN", value: NONPROFIT.ein },
+  { label: "IRS Determination", value: "Approved — IRS Letter 947 issued" },
+  { label: "Effective Date of Exemption", value: NONPROFIT.determinationDate },
+  { label: "Public Charity Classification", value: NONPROFIT.publicCharityStatus },
+  { label: "Contribution Deductibility", value: NONPROFIT.contributionDeductibility },
+  { label: "DLN (Determination Letter Number)", value: NONPROFIT.dln },
+  { label: "Accounting Period", value: NONPROFIT.accountingPeriod },
   { label: "State of Incorporation", value: "Delaware" },
   { label: "Foreign Entity Registrations", value: "Texas, Florida" },
   { label: "Year Incorporated", value: "2026" },
-  { label: "Primary Operating Address", value: "Published upon request" },
-  { label: "IRS Form 1023 Status", value: "Filed — determination pending" },
+  { label: "Primary Operating Address", value: "10328 Ember Glen Drive, Austin, TX 78726" },
 ];
 
 const governanceCommitments = [
@@ -43,8 +48,8 @@ const governanceCommitments = [
   },
   {
     title: "Conflict of Interest Policy",
-    desc: "A written conflict-of-interest policy consistent with IRS Form 1023 requirements is in place and will be published on this page.",
-    status: "Adopted · publication pending",
+    desc: "A written conflict-of-interest policy consistent with IRS requirements is in place and available upon request.",
+    status: "Adopted",
   },
   {
     title: "Executive Compensation",
@@ -61,7 +66,7 @@ const governanceCommitments = [
 const financialCommitments = [
   {
     title: "Annual Form 990 Filing",
-    desc: "Upon receipt of 501(c)(3) determination, the Foundation will file Form 990-N, 990-EZ, or 990 (as required by size) with the IRS and publish a link from this page.",
+    desc: "The Foundation will file Form 990-N, 990-EZ, or 990 (as required by size) with the IRS annually (calendar-year accounting period ending December 31). A link to each filing will be published on this page.",
   },
   {
     title: "Audited Financial Statements",
@@ -78,12 +83,13 @@ const financialCommitments = [
 ];
 
 const disclosures = [
-  "The Foundation's Form 1023 application has been submitted to the IRS and is awaiting determination. In the interim, contributions are handled through a fiscal-sponsorship arrangement where applicable; tax deductibility depends on the specific receiving entity. Donors should consult their tax advisor.",
+  "Azgari Foundation has received its IRS determination letter (Letter 947) recognizing the Foundation as a tax-exempt public charity under IRC § 501(c)(3), effective December 1, 2025. Contributions to the Foundation are tax-deductible to the extent permitted by law under IRC §§ 170, 2055, 2106, and 2522. The Foundation is classified as a public charity under IRC § 170(b)(1)(A)(vi).",
   "azgari.org publishes only free educational resources and scholarship information. The Foundation does not sell paid programs on this site. Any fee-based educational offerings are operated separately by the for-profit sister brand at azgari.com.",
   "The Foundation's planned residential, transitional-housing, stipend, and self-sustaining-campus programs are not currently operating. Their launch is contingent on government grants, foundation awards, and capital-campaign funding.",
   "The Foundation does not guarantee any specific level of income or business success for participants. Individual results vary based on effort, market conditions, and capital.",
   "The Foundation does not engage in political-campaign activity on behalf of or in opposition to any candidate for public office, consistent with IRC § 501(c)(3) restrictions.",
   "Lobbying activities, if any, will be limited and reported as required under IRC § 501(h) or the substantial-part test, whichever is elected.",
+  "The Foundation is required to file Form 990 annually with the IRS (accounting period ending December 31). Missing three consecutive annual filings results in automatic revocation of exempt status.",
 ];
 
 export default function TransparencyPage() {
@@ -229,7 +235,7 @@ export default function TransparencyPage() {
             </h2>
             <p className="text-gray-600 mb-8">
               The Foundation is happy to share its articles of incorporation, bylaws,
-              Form 1023 filing confirmation, or conflict-of-interest policy upon request
+              IRS determination letter (Letter 947), or conflict-of-interest policy upon request
               from donors, funders, or accredited journalists.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

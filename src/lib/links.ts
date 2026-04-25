@@ -380,34 +380,38 @@ export const IMPACT_METRICS = [
 // ============================================
 // NONPROFIT COMPLIANCE DATA
 // Single source of truth for 501(c)(3) disclosures used site-wide.
+//
+// The IRS issued Letter 947 granting Azgari Foundation tax-exempt
+// status under IRC § 501(c)(3).  Key determination facts are stored
+// here so every page renders consistent, up-to-date disclosures.
 // ============================================
 export const NONPROFIT = {
   name: "Azgari Foundation",
-  type: "501(c)(3) Nonprofit Organization",
-  // EIN: 9-digit XX-XXXXXXX format, confirmed by Foundation leadership.
+  type: "501(c)(3) Public Charity",
   ein: "41-2896092",
 
-  // Full charitable mission statement (leads every page). Covers both the
-  // Foundation's current program (24-week online entrepreneurship education
-  // with scholarships) and its planned expansion (residential transitional
-  // housing paired with the curriculum) contingent on grant capital. This is
-  // the "organizational purpose" statement for Form 1023 and funder review —
-  // the site's current programs are described separately and accurately in
-  // each page's "What We Do Today" section.
+  // IRS determination details (Letter 947)
+  determinationDate: "December 1, 2025",
+  publicCharityStatus: "IRC § 170(b)(1)(A)(vi)",
+  dln: "26053739005955",
+  accountingPeriod: "December 31 (calendar year)",
+  contributionDeductibility: "Yes — deductible under IRC §§ 170, 2055, 2106, 2522",
+
+  // Full charitable mission statement (leads every page).
   mission:
-    "Azgari Foundation is a 501(c)(3) nonprofit entrepreneurship-education and workforce-development organization serving out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans. Our current program delivers a 24-week online entrepreneurship education curriculum with scholarship support. As funding permits, the Foundation is developing transitional-housing programs that pair residential stability with basic-needs support, training stipends, and post-program job-placement and micro-enterprise seed grants — to expand economic mobility and create jobs in underserved communities.",
+    "Azgari Foundation is a federally recognized 501(c)(3) public charity providing entrepreneurship education and workforce development for out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans. Our current program delivers a 24-week online entrepreneurship education curriculum with scholarship support. As funding permits, the Foundation is developing transitional-housing programs that pair residential stability with basic-needs support, training stipends, and post-program job-placement and micro-enterprise seed grants — to expand economic mobility and create jobs in underserved communities.",
 
   // Short mission (tight spaces).
   missionShort:
-    "Entrepreneurship education, workforce development & economic mobility for out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans.",
+    "A federally recognized 501(c)(3) public charity — entrepreneurship education, workforce development & economic mobility for out-of-school youth, aging-out foster youth, justice-involved young adults, and low-income veterans.",
 
-  // Reinvestment disclosure — no specific tuition amount referenced on .org.
+  // Reinvestment disclosure.
   reinvestmentStatement:
-    "As a 501(c)(3) nonprofit, Foundation revenue funds charitable educational services, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
+    "As a federally recognized 501(c)(3) public charity, Foundation revenue funds charitable educational services, scholarships for veterans, foster youth, single parents & first-generation entrepreneurs, free community training programs, and expansion of Foundation programming to underserved communities.",
 
   // Global legal disclosure (rendered site-wide in the footer).
   legalDisclosure:
-    "Azgari Foundation is a tax-exempt nonprofit organization under Section 501(c)(3) of the Internal Revenue Code. Foundation revenue supports charitable educational services, scholarships, and workforce development initiatives.",
+    "Azgari Foundation is a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (EIN 41-2896092). Contributions are tax-deductible to the extent permitted by law. Foundation revenue supports charitable educational services, scholarships, and workforce development initiatives.",
 
   // Scholarship allocation statement.
   scholarshipAllocation:

@@ -87,8 +87,9 @@ export default function Home() {
                 Our Current Program
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                The Foundation was incorporated in January 2026. Everything below describes
-                programs we operate today — on a scholarship basis, fully online.
+                The Foundation was incorporated in January 2026 and received IRS 501(c)(3)
+                determination (Letter 947) effective December 1, 2025. Everything below
+                describes programs we operate today — on a scholarship basis, fully online.
               </p>
             </div>
 
