@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://azgari.org";
+const BASE_URL = "https://www.azgari.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // The pilot-program site is a single static page served from
