@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://azgari.org/sitemap.xml",
+    sitemap: "https://www.azgari.org/sitemap.xml",
   };
 }
